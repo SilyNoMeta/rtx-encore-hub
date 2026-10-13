@@ -1,0 +1,36 @@
+name: Bug report / Signaler un problème
+description: Report a reproducible Hub problem. / Signaler un problème reproductible du Hub.
+title: "[Hub] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        English and French reports are welcome. For a rendering problem in the mod itself, use the RTX Encore issue tracker instead. Remove personal paths and account details from attachments.
+        Les retours en anglais et en français sont bienvenus. Pour un problème de rendu du mod lui-même, utilisez les tickets RTX Encore. Retirez les chemins personnels et les informations de compte des pièces jointes.
+  - type: input
+    id: hub-version
+    attributes:
+      label: Hub version / Version du Hub
+      placeholder: Version and download source / Version et source du téléchargement
+    validations:
+      required: true
+  - type: textarea
+    id: system
+    attributes:
+      label: Setup / Configuration
+      description: Windows version, GPU, driver, game and game version, launcher, mod version and source.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps and result / Étapes et résultat
+      description: Steps, expected result, actual result and exact error message. / Étapes, résultat attendu, résultat obtenu et message exact.
+    validations:
+      required: true
+  - type: textarea
+    id: restore
+    attributes:
+      label: Restoration and attachments / Restauration et pièces jointes
+      description: If relevant, did Restore help? Attach redacted screenshots or logs. / Si pertinent, Restaurer a-t-il aidé ? Ajoutez des captures ou journaux anonymisés.

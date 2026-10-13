@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: RTX Encore mod support / Assistance pour le mod RTX Encore
+    url: https://github.com/SilyNoMeta/rtx-encore/issues
+    about: Rendering, frame generation and mod compatibility. / Rendu, génération d'images et compatibilité du mod.

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="310" height="64" viewBox="0 0 310 64" role="img" aria-labelledby="title">
+  <title id="title">Download latest — Windows x64</title>
+  <rect x=".5" y=".5" width="309" height="63" rx="12" fill="#c2f970" stroke="#d4ffa4"/>
+  <path d="M31 20v19m-8-8 8 8 8-8m-18 9v6h20v-6" fill="none" stroke="#162218" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#162218" font-family="Segoe UI,Arial,sans-serif">
+    <text x="58" y="28" font-size="17" font-weight="700">Download latest</text>
+    <text x="58" y="46" font-size="12">Windows x64 · RTX Encore Hub</text>
+  </g>
+  <path d="m282 27 5 5-5 5" fill="none" stroke="#162218" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

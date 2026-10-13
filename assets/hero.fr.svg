@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-labelledby="title desc">
+  <title id="title">RTX Encore Hub — vos jeux, un seul endroit</title>
+  <desc id="desc">Bannière sombre aux accents verts avec un motif reliant bibliothèque, inspection, installation et restauration.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#10161d"/><stop offset="1" stop-color="#1a2823"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#a6ed59" stop-opacity=".17"/><stop offset="1" stop-color="#a6ed59" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#c2f970" stroke-opacity=".05"/></pattern>
+  </defs>
+  <rect width="1280" height="400" rx="24" fill="url(#bg)"/>
+  <rect width="1280" height="400" rx="24" fill="url(#grid)"/>
+  <ellipse cx="1030" cy="170" rx="400" ry="320" fill="url(#glow)"/>
+  <g font-family="Segoe UI,Inter,Arial,sans-serif">
+    <text x="48" y="69" fill="#e5eddf" font-size="17" font-weight="700" letter-spacing="3">RTX ENCORE HUB</text>
+    <rect x="1052" y="44" width="180" height="32" rx="16" fill="#c2f970" fill-opacity=".08" stroke="#c2f970" stroke-opacity=".3"/>
+    <circle cx="1071" cy="60" r="4" fill="#c2f970"/>
+    <text x="1084" y="65" fill="#d2f9a6" font-size="12" font-weight="600" letter-spacing="1">VERSION CANDIDATE</text>
+    <text x="48" y="170" fill="#f4f8f1" font-size="68" font-weight="700" letter-spacing="-2">Vos jeux.</text>
+    <text x="48" y="243" fill="#c2f970" font-size="62" font-weight="700" letter-spacing="-2">Un seul endroit.</text>
+    <text x="51" y="293" fill="#aab8b3" font-size="20">Le compagnon de vos installations RTX Encore.</text>
+    <text x="51" y="355" fill="#d9e6dd" font-size="12" font-weight="600" letter-spacing="1.5">RETROUVER<tspan fill="#6a8971">   /   </tspan>INSPECTER<tspan fill="#6a8971">   /   </tspan>INSTALLER<tspan fill="#6a8971">   /   </tspan>RESTAURER</text>
+  </g>
+  <g fill="none" stroke="#95d364" stroke-opacity=".23">
+    <circle cx="990" cy="223" r="117"/><circle cx="990" cy="223" r="160" stroke-dasharray="3 10"/>
+    <path d="M875 155 1100 155 1100 290 875 290Z" stroke-width="2"/>
+  </g>
+  <g stroke="#709451" stroke-width="1">
+    <rect x="826" y="112" width="94" height="86" rx="18" fill="#18261f"/>
+    <rect x="1055" y="112" width="94" height="86" rx="18" fill="#18261f"/>
+    <rect x="826" y="249" width="94" height="86" rx="18" fill="#18261f"/>
+    <rect x="1055" y="249" width="94" height="86" rx="18" fill="#18261f"/>
+  </g>
+  <g fill="none" stroke="#c2f970" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="853" y="136" width="14" height="37" rx="2"/><rect x="876" y="136" width="14" height="37" rx="2"/>
+    <circle cx="1098" cy="151" r="14"/><path d="m1109 162 13 13m-32-25 6 6 9-10"/>
+    <path d="M858 287h29m-14-12 14 12-14 12m-15 5h29"/>
+    <path d="M1118 291a16 16 0 1 1-5-11m0-8v11h-11"/>
+  </g>
+  <rect x="941" y="200" width="98" height="46" rx="23" fill="#c2f970"/>
+  <text x="990" y="229" text-anchor="middle" fill="#142016" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2">HUB</text>
+</svg>
