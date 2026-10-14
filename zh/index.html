@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RTX Encore Hub — 您的游戏，集中一处</title>
+<meta name="description" content="RTX Encore 的 Windows 配套应用：它会找到您的游戏，连同所需的 NVIDIA 文件一起安装模组，让一切保持最新，并且随时可以把游戏恢复原状。">
+<link rel="canonical" href="https://encore.nometa.fr/zh/">
+<link rel="alternate" hreflang="en" href="https://encore.nometa.fr/">
+<link rel="alternate" hreflang="fr" href="https://encore.nometa.fr/fr/">
+<link rel="alternate" hreflang="zh-CN" href="https://encore.nometa.fr/zh/">
+<link rel="icon" type="image/png" href="../assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RTX Encore Hub — 您的游戏，集中一处">
+<meta property="og:description" content="RTX Encore 的 Windows 配套应用：它会找到您的游戏，连同所需的 NVIDIA 文件一起安装模组，让一切保持最新，并且随时可以把游戏恢复原状。">
+<meta property="og:url" content="https://encore.nometa.fr/zh/">
+<meta property="og:image" content="https://encore.nometa.fr/assets/library.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0e13">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="nav"><div class="wrap">
+<a class="brand" href="../zh/"><img src="../assets/logo.png" alt="" width="30" height="30">RTX Encore Hub</a>
+<nav><a href="#why">为什么用 Hub</a><a href="#features">功能</a><a href="#start">快速开始</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub">GitHub</a></nav>
+<div class="langs"><a href="../" hreflang="en">English</a><a href="../fr/" hreflang="fr">Français</a><a href="../zh/" hreflang="zh-CN" aria-current="true">简体中文</a></div>
+</div></header>
+
+<main>
+<div class="wrap hero">
+<span class="badge">候选发布版</span>
+<h1>您的游戏库。您的安装。<em>您的回退之路。</em></h1>
+<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> 的 Windows 配套应用。它会找到您的游戏，连同所需的 NVIDIA 文件一起安装模组，让一切保持最新，并且随时可以把游戏恢复原状。</p>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Windows 版</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore-hub/blob/main/docs/USER-GUIDE.zh-CN.md">用户指南</a></div>
+<p class="under">Windows 10 和 11，x64 · 英语、法语和简体中文 · 安装无需管理员权限</p>
+<div class="shot"><img src="../assets/library.zh.jpg" alt="Hub 的游戏库，包含每个安装的状态和更新横幅" width="1440" height="900"></div>
+<p class="caption">真实应用截图，使用由替身游戏文件夹组成的演示游戏库。</p>
+</div>
+
+<section id="why"><div class="wrap">
+<h2>为什么使用 Hub，而不是手动复制文件</h2>
+<p class="sub">在多个游戏中安装模组，意味着要找文件夹、核对 DLL 版本、保存备份，还要记住哪些需要更新。Hub 会替您完成，并在动手之前先展示它要做什么。</p>
+<div class="heads"><span>手动操作</span><span>使用 Hub</span></div>
+<div class="compare">
+<div class="row"><div class="hand">找到游戏文件夹，选一个未被占用的代理名称，复制正确的文件。</div><div class="hub">自动找到您的 <b>Steam、Epic 和 GOG</b> 游戏；Hub 会选择一个空闲的名称，并把 ReShade、OptiScaler 或 Special K 的名称留给它们。</div></div>
+<div class="row"><div class="hand">逐个版本地寻找合适的 DLSS 和 Streamline 文件。</div><div class="hub">自动采用模组支持的最新 <b>DLSS、Ray Reconstruction 和帧生成</b> DLL，并整套更换 <b>Streamline 插件</b>。游戏自身的 interposer 从不被替换。</div></div>
+<div class="row"><div class="hand">自己去找 NVIDIA 的 Neural Rendering DLL。</div><div class="hub"><code>nvngx_dlssnr.dll</code> 310.8.0，也就是模组要求的那个确切构建，会被<b>下载、验证</b>并放在模组旁边。</div></div>
+<div class="row"><div class="hand">每出一个新版本，就在每个游戏里重做一遍。</div><div class="hub"><b>全部更新</b>会更新所有游戏中的模组、NVIDIA DLL 和 Streamline 插件。Hub 自身也会自动更新。</div></div>
+<div class="row"><div class="hand">自己保存备份，然后听天由命。</div><div class="hub">每个被替换的文件都会先备份；<b>还原游戏</b>会把一切恢复原状，包括驱动设置。</div></div>
+<div class="row"><div class="hand">修改设置文件全靠猜。</div><div class="hub">表单会<b>解释每一项设置</b>，把对您的显卡无效的设置变灰，并且只提供游戏 DLL 支持的预设。</div></div>
+<div class="row"><div class="hand">出了问题却不知道原因。</div><div class="hub"><b>启动并验证</b>会观察游戏的第一分钟并说明发生了什么；还可以准备一份用于报告的诊断。</div></div>
+</div>
+</div></section>
+
+<section id="features"><div class="wrap">
+<h2>它能做什么</h2>
+<p class="sub"></p>
+<div class="grid">
+<div class="card"><h3>一个游戏库</h3><p>Steam、Epic 和 GOG 的游戏、您添加的文件夹，或通过可执行文件添加的单个游戏。每个磁贴都会显示游戏的状态：未安装、已安装、待更新、被游戏修改、失败。</p></div>
+<div class="card"><h3>每个游戏一个页面</h3><p>RTX Encore 在您的显卡和驱动上能做什么：帧生成、DLSS 渲染比例、Smooth Motion、Neural Rendering，以及原因。</p></div>
+<div class="card"><h3>合适的 NVIDIA 文件</h3><p>游戏中的 RTX Encore 所支持的最新 DLSS 和 Streamline 版本，来源是本机已有的文件或下载。只有带有效 NVIDIA 签名的 DLL 才会被接受。</p></div>
+<div class="card"><h3>为所有游戏统一选择一次</h3><p>在设置中统一选择 DLSS 和 Streamline 的版本以及您的 DLSS 预设。在某个游戏中取消勾选的内容会在该游戏中保持不变。</p></div>
+<div class="card"><h3>可回退的安装</h3><p>写入任何内容之前先显示方案，要么完整写入，要么完全不写，并撤销被中断的安装。只有在文件夹需要时才请求管理员权限。</p></div>
+<div class="card"><h3>更新</h3><p>RTX Encore 的发布版本及其说明，可更新单个游戏或全部游戏。Hub 会查找自身的新版本；更新带有签名。</p></div>
+<div class="card"><h3>设置</h3><p>用表单编辑 <code>rtx-encore.jsonc</code>，为每个游戏保存命名的设置组合，为您的显卡建议起始设置，并在驱动配置文件中设置 DLSS Super Resolution 模型。</p></div>
+<div class="card"><h3>健康与备份</h3><p>启动游戏，观察其第一分钟，并列出游戏可以还原到的每个状态。</p></div>
+</div>
+</div></section>
+
+<section id="look"><div class="wrap">
+<h2>安装之前先看清楚</h2>
+<p class="sub">Hub 对一个游戏的说明是根据其文件、您的显卡和驱动推断出来的。这并不保证某项功能在该游戏中可用，也不测量任何性能。</p>
+<div class="look">
+<figure><div class="shot"><img src="../assets/game-inspection.zh.jpg" alt="在您做出任何更改之前，游戏页面会说明这里能做什么，每一行都给出原因。" width="1440" height="900" loading="lazy"></div><figcaption>在您做出任何更改之前，游戏页面会说明这里能做什么，每一行都给出原因。</figcaption></figure>
+<figure><div class="shot"><img src="../assets/nvidia-files.zh.jpg" alt="每个 NVIDIA DLL 都会显示游戏中的版本、本机已有的最佳副本以及 Hub 的建议；Streamline 插件整套更换。" width="1440" height="900" loading="lazy"></div><figcaption>每个 NVIDIA DLL 都会显示游戏中的版本、本机已有的最佳副本以及 Hub 的建议；Streamline 插件整套更换。</figcaption></figure>
+</div>
+</div></section>
+
+<section id="start"><div class="wrap">
+<h2>快速开始</h2>
+<p class="sub"></p>
+<ol class="steps">
+<li><span>从<a href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">发布页面</a>下载 <code>RTX-Encore-Hub-Setup-&lt;version&gt;.exe</code> 并运行。它只为您的账户安装。</span></li>
+<li><span>打开<strong>游戏库</strong>。Steam、Epic 和 GOG 的游戏已经在那里；可在<strong>设置</strong>中添加其他文件夹。</span></li>
+<li><span>打开某个游戏的页面，查看这里能做什么，然后点击<strong>安装</strong>。写入任何内容之前，方案会列出每一个文件。</span></li>
+<li><span>在<strong>健康检查</strong>中，<strong>启动并验证</strong>会启动游戏，并告诉您它的第一分钟情况如何。</span></li>
+<li><span>RTX Encore 发布新版本时，游戏库中的<strong>全部更新</strong>会更新所有游戏。</span></li>
+</ol>
+</div></section>
+
+<section><div class="wrap">
+<div class="notes">
+<div class="note "><strong>候选发布版。</strong>在收集反馈期间，Hub 以预发布版的形式发布。安装程序尚未进行代码签名：首次运行时 Windows 可能显示 SmartScreen 警告，每个发布版本都会给出安装程序的 SHA-256。</div>
+<div class="note "><strong>社区配置</strong>用于浏览、导入和分享每个游戏的设置，已内置于应用中，但社区尚未开放。</div>
+<div class="note warn"><strong>反作弊。</strong>在受反作弊保护的游戏中安装模组，可能导致游戏无法启动或使您的账号面临风险。Hub 会明确指出，未经您确认风险不会在其中写入任何内容。</div>
+</div>
+</div></section>
+
+<div class="wrap cta">
+<h2>准备好试试了吗？</h2>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Windows 版</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
+</div>
+</main>
+
+<footer><div class="wrap">
+<div class="links"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">发布版本</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub/blob/main/docs/USER-GUIDE.zh-CN.md">用户指南</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose">报告问题</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub/blob/main/docs/NOTICES.zh-CN.md">项目声明</a></div>
+<p>RTX Encore Hub 是一个独立项目，与 NVIDIA 或游戏发行商无关。NVIDIA、GeForce、RTX 和 DLSS 是 NVIDIA Corporation 的商标。截图中可见的游戏美术作品归其各自所有者所有。应用的源代码在别处维护。</p>
+</div></footer>
+</body>
+</html>

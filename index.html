@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RTX Encore Hub — your games, one place</title>
+<meta name="description" content="The Windows companion for RTX Encore: it finds your games, installs the mod with the NVIDIA files it needs, keeps everything up to date and can always put a game back as it was.">
+<link rel="canonical" href="https://encore.nometa.fr/">
+<link rel="alternate" hreflang="en" href="https://encore.nometa.fr/">
+<link rel="alternate" hreflang="fr" href="https://encore.nometa.fr/fr/">
+<link rel="alternate" hreflang="zh-CN" href="https://encore.nometa.fr/zh/">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RTX Encore Hub — your games, one place">
+<meta property="og:description" content="The Windows companion for RTX Encore: it finds your games, installs the mod with the NVIDIA files it needs, keeps everything up to date and can always put a game back as it was.">
+<meta property="og:url" content="https://encore.nometa.fr/">
+<meta property="og:image" content="https://encore.nometa.fr/assets/library.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0e13">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="nav"><div class="wrap">
+<a class="brand" href="./"><img src="assets/logo.png" alt="" width="30" height="30">RTX Encore Hub</a>
+<nav><a href="#why">Why the Hub</a><a href="#features">Features</a><a href="#start">Get started</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub">GitHub</a></nav>
+<div class="langs"><a href="" hreflang="en" aria-current="true">English</a><a href="fr/" hreflang="fr">Français</a><a href="zh/" hreflang="zh-CN">简体中文</a></div>
+</div></header>
+
+<main>
+<div class="wrap hero">
+<span class="badge">Release candidate</span>
+<h1>Your library. Your installs. <em>Your way back.</em></h1>
+<p class="lead">The Windows companion for <a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a>. It finds your games, installs the mod with the NVIDIA files it needs, keeps all of it up to date, and can always put a game back as it was.</p>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download for Windows</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore-hub/blob/main/docs/USER-GUIDE.md">User guide</a></div>
+<p class="under">Windows 10 and 11, x64 · English, French and Simplified Chinese · installs without administrator rights</p>
+<div class="shot"><img src="assets/library.jpg" alt="The Hub&#x27;s game library, with the state of each install and the update banner" width="1440" height="900"></div>
+<p class="caption">Real application capture, on a demonstration library of stand-in game folders.</p>
+</div>
+
+<section id="why"><div class="wrap">
+<h2>Why use the Hub rather than copy files by hand</h2>
+<p class="sub">Installing a mod in several games means finding folders, checking DLL versions, keeping backups and remembering what needs updating. The Hub does it for you, and shows what it will do before it does it.</p>
+<div class="heads"><span>By hand</span><span>With the Hub</span></div>
+<div class="compare">
+<div class="row"><div class="hand">Find the game folder, pick a proxy name that is free, copy the right file.</div><div class="hub">Your <b>Steam, Epic and GOG</b> games are found by themselves; the Hub picks a free name and leaves ReShade, OptiScaler or Special K theirs.</div></div>
+<div class="row"><div class="hand">Hunt for the right DLSS and Streamline files, version by version.</div><div class="hub">The <b>latest DLSS, Ray Reconstruction and frame generation</b> DLLs the mod admits are taken for you, and the <b>Streamline plugins</b> as a matched set. The game's own interposer is never replaced.</div></div>
+<div class="row"><div class="hand">Find NVIDIA&#x27;s Neural Rendering DLL yourself.</div><div class="hub"><code>nvngx_dlssnr.dll</code> 310.8.0, the exact build the mod requires, is <b>downloaded, verified</b> and put beside the mod.</div></div>
+<div class="row"><div class="hand">Redo it all in every game at each new version.</div><div class="hub"><b>Update all</b> updates the mod, the NVIDIA DLLs and the Streamline plugins in every game. The Hub updates itself too.</div></div>
+<div class="row"><div class="hand">Keep your own backups, and hope.</div><div class="hub">Every replaced file is backed up first; <b>Restore game</b> puts everything back, driver setting included.</div></div>
+<div class="row"><div class="hand">Edit a settings file and guess.</div><div class="hub">A form <b>explains every setting</b>, greys what has no effect on your card, and offers only the presets your game's DLLs take.</div></div>
+<div class="row"><div class="hand">Something goes wrong and you do not know why.</div><div class="hub"><b>Launch and verify</b> watches the game's first minute and says what happened; a diagnostic is ready for a report.</div></div>
+</div>
+</div></section>
+
+<section id="features"><div class="wrap">
+<h2>What it does</h2>
+<p class="sub"></p>
+<div class="grid">
+<div class="card"><h3>One game library</h3><p>The games of Steam, Epic and GOG, the folders you add, or a single game by its executable. Each tile says where the game stands: not installed, installed, to update, changed by the game, failing.</p></div>
+<div class="card"><h3>A page for every game</h3><p>What RTX Encore can do there on your card and driver, frame generation, DLSS render scale, Smooth Motion, Neural Rendering, and why.</p></div>
+<div class="card"><h3>The right NVIDIA files</h3><p>The most recent DLSS and Streamline versions the game's RTX Encore admits, from what your machine already has or from a download. A DLL is accepted only with a valid NVIDIA signature.</p></div>
+<div class="card"><h3>Chosen once for every game</h3><p>Pick the versions of DLSS and Streamline and your DLSS presets once in Settings. What you untick in one game stays left alone there.</p></div>
+<div class="card"><h3>Install with a way back</h3><p>The plan is shown before anything is written, written whole or not at all, and an interrupted install is undone. Administrator rights only where a folder needs them.</p></div>
+<div class="card"><h3>Updates</h3><p>The releases of RTX Encore with their notes, one game or all of them. The Hub looks for its own new version; updates are signed.</p></div>
+<div class="card"><h3>Settings</h3><p>A form for <code>rtx-encore.jsonc</code>, named sets of settings per game, starting settings for your card, and the DLSS Super Resolution model in the driver profile.</p></div>
+<div class="card"><h3>Health and backups</h3><p>Start the game, watch its first minute, and list every state the game can be put back to.</p></div>
+</div>
+</div></section>
+
+<section id="look"><div class="wrap">
+<h2>Look before you install</h2>
+<p class="sub">What the Hub says of a game is deduced from its files, your card and your driver. It is not a certification that a feature works in that game, and it measures no performance.</p>
+<div class="look">
+<figure><div class="shot"><img src="assets/game-inspection.jpg" alt="The page of a game says what is possible before you change anything, and each line gives its reason." width="1440" height="900" loading="lazy"></div><figcaption>The page of a game says what is possible before you change anything, and each line gives its reason.</figcaption></figure>
+<figure><div class="shot"><img src="assets/nvidia-files.jpg" alt="Each NVIDIA DLL with the version in the game, the best copy on this machine and what the Hub proposes; the Streamline plugins are replaced as a set." width="1440" height="900" loading="lazy"></div><figcaption>Each NVIDIA DLL with the version in the game, the best copy on this machine and what the Hub proposes; the Streamline plugins are replaced as a set.</figcaption></figure>
+</div>
+</div></section>
+
+<section id="start"><div class="wrap">
+<h2>Get started</h2>
+<p class="sub"></p>
+<ol class="steps">
+<li><span>Download <code>RTX-Encore-Hub-Setup-&lt;version&gt;.exe</code> from the <a href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">releases</a> and run it. It installs for your account only.</span></li>
+<li><span>Open <strong>Library</strong>. Steam, Epic and GOG games are there; add other folders under <strong>Settings</strong>.</span></li>
+<li><span>Open a game's page, read what is possible there, and press <strong>Install</strong>. The plan lists every file before anything is written.</span></li>
+<li><span>Under <strong>Health</strong>, <strong>Launch and verify</strong> starts the game and tells you how its first minute went.</span></li>
+<li><span>When a new RTX Encore is out, <strong>Update all</strong> in the library updates every game.</span></li>
+</ol>
+</div></section>
+
+<section><div class="wrap">
+<div class="notes">
+<div class="note "><strong>Release candidate.</strong> The Hub is published as a pre-release while it gathers feedback. The installer is not code-signed yet: Windows may show a SmartScreen warning the first time, and each release gives the SHA-256 of its installer.</div>
+<div class="note "><strong>Community profiles</strong>, to browse, import and share settings per game, are built into the application, but the community is not open yet.</div>
+<div class="note warn"><strong>Anti-cheat.</strong> Installing a mod in a game an anti-cheat protects can block its startup or put your account at risk. The Hub says so and writes nothing there without your word on the risk.</div>
+</div>
+</div></section>
+
+<div class="wrap cta">
+<h2>Ready to try it?</h2>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download for Windows</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
+</div>
+</main>
+
+<footer><div class="wrap">
+<div class="links"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Releases</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub/blob/main/docs/USER-GUIDE.md">User guide</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose">Report an issue</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub/blob/main/docs/NOTICES.md">Project notices</a></div>
+<p>RTX Encore Hub is an independent project, unaffiliated with NVIDIA or game publishers. NVIDIA, GeForce, RTX and DLSS are trademarks of NVIDIA Corporation. Game artwork visible in the captures belongs to its respective owners. The application source is maintained separately.</p>
+</div></footer>
+</body>
+</html>
