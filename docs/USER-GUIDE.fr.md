@@ -97,7 +97,7 @@ Il n'y a pas de compte. Une clé est créée sur votre machine et y reste ; vous
 
 ## Mettre à jour le mod
 
-**Paramètres → D'où vient RTX Encore** : les publications publiques du dépôt RTX Encore, vérifiées par leur SHA-256, ou un dossier local contenant un build du mod. Dans **Mises à jour**, le **canal du mod** se choisit comme celui du Hub : **Stable** ne propose que les versions finales, **Candidat** suit aussi les préversions. La page dit quelle version du mod chaque jeu porte, et montre les notes de chaque publication.
+**Paramètres → D'où vient RTX Encore** : les publications publiques du dépôt RTX Encore, vérifiées par leur SHA-256, ou un dossier local contenant un build du mod. Dans **Mises à jour**, le **canal du mod** se choisit comme celui du Hub : **Stable** ne propose que les versions finales, **Candidat** suit aussi les préversions. Tant que vous n'avez rien choisi, un Hub qui est lui-même une préversion suit le canal candidat, pour lui comme pour le mod. La page dit quelle version du mod chaque jeu porte, et montre les notes de chaque publication.
 
 ## Données, réseau et vie privée
 

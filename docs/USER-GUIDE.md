@@ -97,7 +97,7 @@ There is no account. A key is made on your machine and stays there; you choose a
 
 ## Update the mod
 
-**Settings → RTX Encore source**: the public releases of the RTX Encore repository, verified by their SHA-256, or a local folder holding a build of the mod. In **Updates**, the **Mod channel** is chosen like the Hub's: **Stable** only offers final versions, **Candidate** also follows pre-releases. The page says which version of the mod each game holds, and shows the notes of each release.
+**Settings → RTX Encore source**: the public releases of the RTX Encore repository, verified by their SHA-256, or a local folder holding a build of the mod. In **Updates**, the **Mod channel** is chosen like the Hub's: **Stable** only offers final versions, **Candidate** also follows pre-releases. Until you choose, a Hub that is itself a pre-release follows the candidate channel, for itself and for the mod. The page says which version of the mod each game holds, and shows the notes of each release.
 
 ## Data, network and privacy
 

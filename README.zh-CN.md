@@ -15,7 +15,7 @@
 
 [![下载适用于 Windows x64 的最新版本](assets/download.zh-CN.svg)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 
-[用户指南](docs/USER-GUIDE.zh-CN.md) · [所有版本](https://github.com/SilyNoMeta/rtx-encore-hub/releases) · [报告问题](https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose) · **[English](README.md)** · **[Français](README.fr.md)**
+[网站](https://encore.nometa.fr/zh/) · [用户指南](docs/USER-GUIDE.zh-CN.md) · [所有版本](https://github.com/SilyNoMeta/rtx-encore-hub/releases) · [报告问题](https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose) · **[English](README.md)** · **[Français](README.fr.md)**
 
 </div>
 

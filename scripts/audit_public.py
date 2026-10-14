@@ -28,6 +28,10 @@ ALLOWED = {
     "screenshots/nvidia-files.fr.png", "screenshots/library.zh.png",
     "screenshots/game-inspection.zh.png", "screenshots/nvidia-files.zh.png",
 }
+# The files of the project's page, on its own branch (gh-pages): built from this repository's logo and captures.
+SITE = {".nojekyll", "index.html", "404.html", "fr/index.html", "zh/index.html", "assets/site.css", "assets/logo.png"} | {
+    f"assets/{name}{language}.jpg" for name in ("library", "game-inspection", "nvidia-files") for language in ("", ".fr", ".zh")
+}
 PRIVATE_REFERENCE = re.compile(
     r"rtx-encore(?:-hub)?-private|claude\.ai/artifact/|"
     r"[A-Za-z]:[/\\](?:Users|Games)[/\\]|docs/" r"private/[^\s*]|"
@@ -103,7 +107,7 @@ def main():
             errors.append(f"Unreviewed tracked file: {name}")
     for commit in git("rev-list", "--all").splitlines():
         for name in git("ls-tree", "-r", "--name-only", commit).splitlines():
-            if name not in ALLOWED:
+            if name not in ALLOWED and name not in SITE:
                 errors.append(f"Unreviewed historical file: {name}")
     if errors:
         for error in errors:

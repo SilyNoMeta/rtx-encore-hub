@@ -15,7 +15,7 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 
 [![Download the latest version for Windows x64](assets/download.svg)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 
-[User guide](docs/USER-GUIDE.md) · [All releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) · [Report an issue](https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose) · **[Français](README.fr.md)** · **[简体中文](README.zh-CN.md)**
+[Website](https://encore.nometa.fr/) · [User guide](docs/USER-GUIDE.md) · [All releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) · [Report an issue](https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose) · **[Français](README.fr.md)** · **[简体中文](README.zh-CN.md)**
 
 </div>
 
