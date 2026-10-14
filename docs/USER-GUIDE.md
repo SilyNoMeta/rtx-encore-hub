@@ -86,9 +86,10 @@ Nothing is written before you saw the changes. The last change is undone with on
 
 ## Community profiles
 
-**The community is not open yet**: the page says so, and nothing is read from it or sent to it. Once it is, this is what it does.
+The community is open since 1.0.0-rc.2. It is experimental and lightly tested, and it starts empty: the first profiles will be yours.
 
 - A game's profiles are listed **nearest to your machine first**, with the reason: same card, same resolution, older driver… By default, only profiles made on a card of your family are shown.
+- The page first shows a dozen profiles; **Show more profiles** adds to them. **Filters** narrow the list: my profiles, same card, same resolution, confirmed by others, official, with a measurement, Neural Rendering, Smooth Motion, fixed or dynamic FG multiplier. Only those that tell the profiles apart are offered.
 - **Import** first shows what would change, section by section. Keyboard shortcuts are taken only if you ask; diagnostics, never. Your settings of before are kept under the name "Before import", and one button puts the file back exactly as it was.
 - **Like**, **It works on my machine** and **Report** take one click and can be taken back.
 - **Publish my profile**: the machine and the versions are filled in by the Hub; you add the DLSS mode, the ray tracing level, a note. **Everything that leaves is shown before it is sent, as it leaves.** No file path, user name or machine name: a note that holds one is refused.
@@ -106,7 +107,8 @@ The Hub keeps its settings, its downloads, its covers and the backups of each ga
 The Hub contacts, without an account and without sending anything of yours:
 
 - GitHub, for the releases of the mod, those of the Hub, and NVIDIA's DLLs;
-- `encore-dl.nometa.fr`, for Neural Rendering's DLL, a version you chose to take, and the list of sources;
+- `encore-dl.nometa.fr`, for Neural Rendering's DLL, a version you chose to take, the list of sources, and the community's profiles when you open its page;
+- `encore-community.nometa.fr`, only when you publish, remove, like, confirm or report a profile: what you read, signed by your machine's key. To turn the community off, put `"Community": "off"` in `%LOCALAPPDATA%\EncoreHub\settings.json`;
 - Steam and Wikipedia, for the covers that are missing: the game's title is sent to them. **Settings → Cover images** turns that search off.
 
 There is no telemetry.

@@ -77,9 +77,9 @@ The interface follows the language of Windows: **English, French or Simplified C
 
 Read the **[user guide](docs/USER-GUIDE.md)** for updates, restoration, where the Hub keeps its data and what it reads on the network.
 
-## Not open yet
+## Community profiles
 
-**Community profiles**: the screens to browse, import and share settings per game are in the application, but the community is not open yet. Its page says so, and nothing is read or sent.
+Since 1.0.0-rc.2, the Hub reads the community's profiles: settings per game shared by other players, ranked by how close their machine is to yours, a few at a time, with filters (same card, Neural Rendering, Smooth Motion…). Importing one shows what would change, section by section, and can be undone; publishing yours shows exactly what is sent before it is. There is no account: a key made on your machine signs what you send. The community is experimental and lightly tested, and it starts empty.
 
 ## About this repository
 

@@ -86,9 +86,10 @@ Rien n'est écrit avant que vous ayez vu les changements. Le dernier changement 
 
 ## Profils de la communauté
 
-**La communauté n'est pas encore ouverte** : la page le dit, et rien n'y est lu ni envoyé. Quand elle le sera, voici ce qu'elle fait.
+La communauté est ouverte depuis la 1.0.0-rc.2. Elle est expérimentale et peu testée, et elle commence vide : les premiers profils seront les vôtres.
 
 - Les profils d'un jeu sont classés **du plus proche de votre machine au plus lointain**, avec la raison : même carte, même définition, pilote plus ancien… Par défaut, seuls les profils faits sur une carte de votre famille sont montrés.
+- La page montre d'abord une douzaine de profils ; **Afficher plus de profils** en ajoute. Des **filtres** resserrent la liste : mes profils, même carte, même définition, confirmés par d'autres, officiels, avec mesure, Neural Rendering, Smooth Motion, FG à multiplicateur fixe ou dynamique. Seuls ceux qui départagent les profils sont proposés.
 - **Importer** montre d'abord ce qui changerait, section par section. Les raccourcis clavier ne sont pris que si vous le demandez ; les diagnostics, jamais. Vos réglages d'avant sont gardés sous le nom « Avant import », et un bouton remet le fichier exactement comme il était.
 - **J'aime**, **Ça marche chez moi** et **Signaler** tiennent en un clic et se retirent.
 - **Publier mon profil** : la machine et les versions sont remplies par le Hub ; vous ajoutez le mode DLSS, le niveau de ray tracing, une note. **Tout ce qui part est affiché avant l'envoi, tel qu'il part.** Ni chemin de fichier, ni nom d'utilisateur, ni nom de machine : une note qui en contient est refusée.
@@ -106,7 +107,8 @@ Le Hub garde ses réglages, ses téléchargements, ses jaquettes et les sauvegar
 Le Hub contacte, sans compte et sans rien envoyer de vous :
 
 - GitHub, pour les publications du mod, celles du Hub, et les DLL de NVIDIA ;
-- `encore-dl.nometa.fr`, pour la DLL de Neural Rendering, une version au choix quand vous la prenez, et la liste des sources ;
+- `encore-dl.nometa.fr`, pour la DLL de Neural Rendering, une version au choix quand vous la prenez, la liste des sources, et les profils de la communauté quand vous ouvrez sa page ;
+- `encore-community.nometa.fr`, seulement quand vous publiez, retirez, aimez, confirmez ou signalez un profil : ce que vous avez relu, signé par la clé de votre machine. Pour couper la communauté, mettez `"Community": "off"` dans `%LOCALAPPDATA%\EncoreHub\settings.json` ;
 - Steam et Wikipédia, pour les jaquettes qui manquent : le titre du jeu leur est envoyé. **Paramètres → Jaquettes** coupe cette recherche.
 
 Il n'y a aucune télémétrie.

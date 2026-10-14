@@ -77,9 +77,9 @@ L'interface suit la langue de Windows : **français, anglais ou chinois simplifi
 
 Lisez le **[guide d'utilisation](docs/USER-GUIDE.fr.md)** pour les mises à jour, la restauration, l'endroit où le Hub garde ses données et ce qu'il lit sur le réseau.
 
-## Pas encore ouvert
+## Profils de la communauté
 
-**Profils de la communauté** : les écrans pour parcourir, importer et partager des réglages par jeu sont dans l'application, mais la communauté n'est pas encore ouverte. Sa page le dit, et rien n'est lu ni envoyé.
+Depuis la 1.0.0-rc.2, le Hub lit les profils de la communauté : des réglages par jeu partagés par d'autres joueurs, classés selon la proximité de leur machine avec la vôtre, quelques-uns à la fois, avec des filtres (même carte, Neural Rendering, Smooth Motion…). En importer un montre ce qui changerait, section par section, et peut s'annuler ; publier le vôtre montre exactement ce qui part avant l'envoi. Pas de compte : une clé créée sur votre machine signe ce que vous envoyez. La communauté est expérimentale et peu testée, et elle commence vide.
 
 ## À propos de ce dépôt
 
