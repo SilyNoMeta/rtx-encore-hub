@@ -11,7 +11,11 @@
 Le compagnon Windows de **[RTX Encore](https://github.com/SilyNoMeta/rtx-encore)**.<br>
 Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tient le tout à jour, et peut toujours remettre un jeu comme il était.
 
-[![Version candidate](https://img.shields.io/badge/état-version_candidate-c2f970?style=flat-square&labelColor=171c22)](https://github.com/SilyNoMeta/rtx-encore-hub/releases) [![Windows 10 et 11, x64](https://img.shields.io/badge/plateforme-Windows_10_%C2%B7_11_x64-8ab4f8?style=flat-square&labelColor=171c22)](#bien-démarrer) [![Interface anglais, français et chinois](https://img.shields.io/badge/interface-EN_%C2%B7_FR_%C2%B7_ZH-c4b5fd?style=flat-square&labelColor=171c22)](#bien-démarrer)
+[![Dernière version](https://img.shields.io/github/v/release/SilyNoMeta/rtx-encore-hub?include_prereleases&style=for-the-badge&label=Version&color=76b900)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
+[![Téléchargements](https://img.shields.io/github/downloads/SilyNoMeta/rtx-encore-hub/total?style=for-the-badge&label=T%C3%A9l%C3%A9chargements&color=2f81f7)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
+
+[![Windows 10 et 11, x64](https://img.shields.io/badge/plateforme-Windows_10_%C2%B7_11_x64-8ab4f8?style=flat-square&labelColor=171c22)](#bien-démarrer)
+[![Interface anglais, français et chinois](https://img.shields.io/badge/interface-EN_%C2%B7_FR_%C2%B7_ZH-c4b5fd?style=flat-square&labelColor=171c22)](#bien-démarrer)
 
 [![Télécharger la dernière version pour Windows x64](assets/download.fr.svg)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 

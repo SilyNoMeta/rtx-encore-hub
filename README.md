@@ -11,7 +11,11 @@
 The Windows companion for **[RTX Encore](https://github.com/SilyNoMeta/rtx-encore)**.<br>
 It finds your games, installs the mod with the NVIDIA files it needs, keeps all of it up to date, and can always put a game back as it was.
 
-[![Release candidate](https://img.shields.io/badge/status-release_candidate-c2f970?style=flat-square&labelColor=171c22)](https://github.com/SilyNoMeta/rtx-encore-hub/releases) [![Windows 10 and 11, x64](https://img.shields.io/badge/platform-Windows_10_%C2%B7_11_x64-8ab4f8?style=flat-square&labelColor=171c22)](#getting-started) [![English, French and Chinese interface](https://img.shields.io/badge/interface-EN_%C2%B7_FR_%C2%B7_ZH-c4b5fd?style=flat-square&labelColor=171c22)](#getting-started)
+[![Latest release](https://img.shields.io/github/v/release/SilyNoMeta/rtx-encore-hub?include_prereleases&style=for-the-badge&label=Latest&color=76b900)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
+[![Downloads](https://img.shields.io/github/downloads/SilyNoMeta/rtx-encore-hub/total?style=for-the-badge&color=2f81f7)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
+
+[![Windows 10 and 11, x64](https://img.shields.io/badge/platform-Windows_10_%C2%B7_11_x64-8ab4f8?style=flat-square&labelColor=171c22)](#getting-started)
+[![English, French and Chinese interface](https://img.shields.io/badge/interface-EN_%C2%B7_FR_%C2%B7_ZH-c4b5fd?style=flat-square&labelColor=171c22)](#getting-started)
 
 [![Download the latest version for Windows x64](assets/download.svg)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 
