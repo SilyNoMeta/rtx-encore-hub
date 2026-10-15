@@ -11,7 +11,11 @@
 **[RTX Encore](https://github.com/SilyNoMeta/rtx-encore)** 的 Windows 配套应用。<br>
 它会找到您的游戏，连同所需的 NVIDIA 文件一起安装模组，让一切保持最新，并且随时可以把游戏恢复原状。
 
-[![候选发布版](https://img.shields.io/badge/状态-候选发布版-c2f970?style=flat-square&labelColor=171c22)](https://github.com/SilyNoMeta/rtx-encore-hub/releases) [![Windows 10 和 11，x64](https://img.shields.io/badge/平台-Windows_10_%C2%B7_11_x64-8ab4f8?style=flat-square&labelColor=171c22)](#快速开始) [![英语、法语和中文界面](https://img.shields.io/badge/界面-EN_%C2%B7_FR_%C2%B7_ZH-c4b5fd?style=flat-square&labelColor=171c22)](#快速开始)
+[![最新版本](https://img.shields.io/github/v/release/SilyNoMeta/rtx-encore-hub?include_prereleases&style=for-the-badge&label=Latest&color=76b900)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
+[![下载量](https://img.shields.io/github/downloads/SilyNoMeta/rtx-encore-hub/total?style=for-the-badge&color=2f81f7)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
+
+[![Windows 10 和 11，x64](https://img.shields.io/badge/平台-Windows_10_%C2%B7_11_x64-8ab4f8?style=flat-square&labelColor=171c22)](#快速开始)
+[![英语、法语和中文界面](https://img.shields.io/badge/界面-EN_%C2%B7_FR_%C2%B7_ZH-c4b5fd?style=flat-square&labelColor=171c22)](#快速开始)
 
 [![下载适用于 Windows x64 的最新版本](assets/download.zh-CN.svg)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 
