@@ -23,6 +23,8 @@ Le Hub cherche ses propres mises à jour à son démarrage, puis une fois par jo
 - **Paramètres → Dossiers de jeux → Ajouter un dossier…** : chaque sous-dossier qui contient un exécutable reconnu devient un jeu ;
 - **Ajouter un jeu** : désignez directement l'exécutable d'un jeu.
 
+Le mod va à côté du programme qui dessine le jeu : derrière un lanceur (The Witcher 3 de GOG démarre `REDprelauncher.exe`), le Hub prend le jeu que le lanceur démarre ; derrière RTX Remix, le mod va à côté de `NvRemixBridge.exe`, dans le dossier `.trex` du jeu.
+
 Une tuile dit l'état du jeu par un pictogramme et un mot : non installé, installé, à mettre à jour, modifié par le jeu, en échec. La recherche (`Ctrl+F`) ignore les accents et la ponctuation ; un filtre limite la liste à une API graphique ; `F5` relit les dossiers. Le volet rappelle votre machine : carte, mémoire, pilote, écran.
 
 ## Lire la fiche d'un jeu
@@ -37,7 +39,7 @@ Choisissez une tuile.
 - **Ce que vous décochez dans un jeu y reste laissé de côté** : une DLL NVIDIA, les plugins Streamline ou vos presets par défaut décochés sur la fiche d'un jeu sont retenus pour ce jeu. La fiche le rappelle, « Tout mettre à jour » n'y touche pas, et recocher la case le reprend.
 - **Modèle DLSS Super Resolution** : le Hub peut écrire le modèle choisi dans le profil de pilote du jeu, comme les outils de NVIDIA. Tant que son effet n'a pas été constaté en jeu sur votre pilote, la fiche dit « non confirmé en jeu ».
 - **Réglages de départ** : une proposition pour votre carte. Le multiplicateur de génération d'images est, par défaut, celui que le jeu décide ; ×2, ×3 et ×4 sont au choix.
-- **Nom du proxy** : le nom sous lequel le jeu charge le mod (`version.dll`, `dxgi.dll`, `winmm.dll`, `dinput8.dll`). Pour chacun, la fiche dit si le jeu le chargera et pourquoi : ce que son exécutable importe, un correctif de compatibilité que Windows applique au jeu, un autre outil déjà présent, ce qui s'est passé au dernier lancement, et ce que disent les profils de la communauté. Le nom recommandé en découle ; vous pouvez passer à un autre en une opération, annulable comme les autres. Dans un jeu doté d'un chargeur ASI, le mod peut aussi être un plugin, `rtx-encore.asi`. Un outil déjà présent sous un nom n'est jamais écrasé.
+- **Nom du proxy** : le nom sous lequel le jeu charge le mod (`version.dll`, `dxgi.dll`, `winmm.dll`, `dinput8.dll`). Pour chacun, la fiche dit si le jeu le chargera et pourquoi : ce que son exécutable importe, un correctif de compatibilité que Windows applique au jeu, un autre outil déjà présent, ce qui s'est passé au dernier lancement, et ce que disent les profils de la communauté. Le nom recommandé en découle ; vous pouvez passer à un autre en une opération, annulable comme les autres. Dans un jeu doté d'un chargeur ASI, le mod peut aussi être un plugin, `rtx-encore.asi`. Un outil déjà présent sous un nom n'est jamais écrasé. Un mode de compatibilité que Windows applique au jeu se retire depuis sa fiche, pour votre compte et, après la demande des droits d'administrateur par Windows, pour tous les comptes ; le Hub note ce qu'il a retiré, et **Remettre** le rétablit tel qu'il était.
 
 **Anti-triche.** Quand le Hub reconnaît un anti-triche (EasyAntiCheat, BattlEye…), la tuile et la fiche le nomment. Votre compte peut être banni, ou le mod peut ne pas se charger : rien n'est écrit dans ce jeu avant que vous ayez accepté ce risque dans la fenêtre de validation. La détection repose sur des fichiers connus et peut manquer une protection.
 

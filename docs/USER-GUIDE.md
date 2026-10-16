@@ -23,6 +23,8 @@ The Hub looks for its own updates when it starts, then once a day. **Updates** s
 - **Settings → Game folders → Add a folder…**: each sub-folder that holds a recognized executable becomes a game;
 - **Add a game**: point directly at a game's executable.
 
+The mod goes beside the program that draws the game: behind a launcher (The Witcher 3 on GOG starts `REDprelauncher.exe`), the Hub takes the game the launcher starts; behind RTX Remix, the mod goes beside `NvRemixBridge.exe`, in the game's `.trex` folder.
+
 A tile says the state of the game by a glyph and a word: not installed, installed, to update, changed by the game, failing. The search (`Ctrl+F`) ignores accents and punctuation; a filter limits the list to one graphics API; `F5` reads the folders again. The pane recalls your machine: card, memory, driver, screen.
 
 ## Read a game's page
@@ -37,7 +39,7 @@ Choose a tile.
 - **What you untick in a game stays left alone there**: an NVIDIA DLL, the Streamline plugins or your default presets unticked on a game's page are remembered for that game. The page reminds you, "Update all" does not touch them, and ticking the box again takes them back.
 - **DLSS Super Resolution model**: the Hub can write the chosen model in the game's driver profile, as NVIDIA's tools do. Until its effect has been seen in a game on your driver, the page says "not confirmed in a game".
 - **Starting settings**: a proposal for your card. The frame generation multiplier is, by default, the one the game decides; ×2, ×3 and ×4 are yours to choose.
-- **Proxy name**: the name the game loads the mod under (`version.dll`, `dxgi.dll`, `winmm.dll`, `dinput8.dll`). For each, the page says whether the game will load it and why: what its executable imports, a compatibility fix Windows applies to the game, another tool already there, what happened at the last launch, and what community profiles report. The recommended name follows; you can switch to another in one operation, undone like any other. In a game with an ASI loader, the mod can also be a plugin, `rtx-encore.asi`. A tool already there under a name is never overwritten.
+- **Proxy name**: the name the game loads the mod under (`version.dll`, `dxgi.dll`, `winmm.dll`, `dinput8.dll`). For each, the page says whether the game will load it and why: what its executable imports, a compatibility fix Windows applies to the game, another tool already there, what happened at the last launch, and what community profiles report. The recommended name follows; you can switch to another in one operation, undone like any other. In a game with an ASI loader, the mod can also be a plugin, `rtx-encore.asi`. A tool already there under a name is never overwritten. A compatibility mode Windows applies to the game can be removed from its page, for your account and, after Windows asks for administrator rights, for every account; the Hub notes what it removed, and **Put back** restores it as it was.
 
 **Anti-cheat.** When the Hub recognizes an anti-cheat (EasyAntiCheat, BattlEye…), the tile and the page name it. Your account may get banned, or the mod may not load: nothing is written in that game before you accepted that risk in the confirmation window. The detection rests on known files and may miss a protection.
 
