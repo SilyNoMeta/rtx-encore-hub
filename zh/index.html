@@ -28,7 +28,7 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">候选发布版</span>
+<span class="badge">1.0 版</span>
 <h1>您的游戏库。您的安装。<em>您的回退之路。</em></h1>
 <p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> 的 Windows 配套应用。它会找到您的游戏，连同所需的 NVIDIA 文件一起安装模组，让一切保持最新，并且随时可以把游戏恢复原状。</p>
 <div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Windows 版</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore-hub/blob/main/docs/USER-GUIDE.zh-CN.md">用户指南</a></div>
@@ -42,7 +42,7 @@
 <p class="sub">在多个游戏中安装模组，意味着要找文件夹、核对 DLL 版本、保存备份，还要记住哪些需要更新。Hub 会替您完成，并在动手之前先展示它要做什么。</p>
 <div class="heads"><span>手动操作</span><span>使用 Hub</span></div>
 <div class="compare">
-<div class="row"><div class="hand">找到游戏文件夹，选一个未被占用的代理名称，复制正确的文件。</div><div class="hub">自动找到您的 <b>Steam、Epic 和 GOG</b> 游戏；Hub 会选择一个空闲的名称，并把 ReShade、OptiScaler 或 Special K 的名称留给它们。</div></div>
+<div class="row"><div class="hand">找到游戏文件夹，选一个未被占用的代理名称，复制正确的文件。</div><div class="hub">自动找到您的 <b>Steam、Epic 和 GOG</b> 游戏；Hub 会选择游戏真正会加载的名称，并把 ReShade、OptiScaler 或 Special K 的名称留给它们。</div></div>
 <div class="row"><div class="hand">逐个版本地寻找合适的 DLSS 和 Streamline 文件。</div><div class="hub">自动采用模组支持的最新 <b>DLSS、Ray Reconstruction 和帧生成</b> DLL，并整套更换 <b>Streamline 插件</b>。游戏自身的 interposer 从不被替换。</div></div>
 <div class="row"><div class="hand">自己去找 NVIDIA 的 Neural Rendering DLL。</div><div class="hub"><code>nvngx_dlssnr.dll</code> 310.8.0，也就是模组要求的那个确切构建，会被<b>下载、验证</b>并放在模组旁边。</div></div>
 <div class="row"><div class="hand">每出一个新版本，就在每个游戏里重做一遍。</div><div class="hub"><b>全部更新</b>会更新所有游戏中的模组、NVIDIA DLL 和 Streamline 插件。Hub 自身也会自动更新。</div></div>
@@ -90,7 +90,7 @@
 
 <section><div class="wrap">
 <div class="notes">
-<div class="note "><strong>候选发布版。</strong>在收集反馈期间，Hub 以预发布版的形式发布。安装程序尚未进行代码签名：首次运行时 Windows 可能显示 SmartScreen 警告，每个发布版本都会给出安装程序的 SHA-256。</div>
+<div class="note "><strong>1.0 版。</strong>安装程序尚未进行代码签名：首次运行时 Windows 可能显示 SmartScreen 警告，每个发布版本都会给出安装程序的 SHA-256。</div>
 <div class="note "><strong>社区配置</strong>：浏览、导入和分享每个游戏的设置，按您的机器排序并可筛选。自 1.0.0-rc.2 起开放；仍是实验性的、测试较少，并且一开始是空的。</div>
 <div class="note warn"><strong>反作弊。</strong>在受反作弊保护的游戏中安装模组，可能导致游戏无法启动或使您的账号面临风险。Hub 会明确指出，未经您确认风险不会在其中写入任何内容。</div>
 </div>
