@@ -24,7 +24,7 @@
 </div>
 
 > [!NOTE]
-> **候选发布版。** 在收集反馈期间，Hub 以预发布版的形式发布：请打开[发布页面](https://github.com/SilyNoMeta/rtx-encore-hub/releases)并下载 `RTX-Encore-Hub-Setup-<version>.exe`。安装程序尚未进行代码签名，因此首次运行时 Windows 可能显示 SmartScreen 警告；每个发布版本都会给出安装程序的 SHA-256。Hub 与 RTX Encore 模组分别发布。
+> **1.0 版。** 请打开[发布页面](https://github.com/SilyNoMeta/rtx-encore-hub/releases)并下载 `RTX-Encore-Hub-Setup-<version>.exe`，或无需安装的 `RTX-Encore-Hub-Portable-<version>.zip`。安装程序尚未进行代码签名，因此首次运行时 Windows 可能显示 SmartScreen 警告；每个发布版本都会给出安装程序的 SHA-256。Hub 与 RTX Encore 模组分别发布。
 
 ![Hub 的游戏库，包含封面、每个安装的状态和更新横幅](screenshots/library.zh.png)
 
@@ -34,7 +34,7 @@
 
 | 手动操作 | 使用 Hub |
 | :--- | :--- |
-| 找到游戏文件夹，选一个未被占用的代理名称，复制正确的文件。 | 自动找到您的 Steam、Epic 和 GOG 游戏；Hub 会选择一个空闲的名称，并把 ReShade、OptiScaler 或 Special K 的名称留给它们。 |
+| 找到游戏文件夹，选一个未被占用的代理名称，复制正确的文件。 | 自动找到您的 Steam、Epic 和 GOG 游戏；Hub 会选择游戏真正会加载的名称，并把 ReShade、OptiScaler 或 Special K 的名称留给它们。 |
 | 逐个版本地寻找合适的 DLSS 和 Streamline 文件。 | 自动采用模组支持的最新 DLSS、Ray Reconstruction 和帧生成 DLL，并整套更换 Streamline 插件。游戏自身的 interposer 从不被替换。 |
 | 自己去找 NVIDIA 的 Neural Rendering DLL。 | `nvngx_dlssnr.dll` 310.8.0，也就是模组要求的那个确切构建，会被下载、验证并放在模组旁边。 |
 | 每出一个新版本，就在每个游戏里重做一遍。 | **全部更新**会更新所有游戏中的模组、NVIDIA DLL 和 Streamline 插件。Hub 自身也会自动更新。 |

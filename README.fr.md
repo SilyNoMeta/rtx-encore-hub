@@ -24,7 +24,7 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 </div>
 
 > [!NOTE]
-> **Version candidate.** Le Hub est publié en préversion le temps de recueillir des retours : ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.
+> **Version 1.0.** Ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`, ou `RTX-Encore-Hub-Portable-<version>.zip`, qui n'installe rien. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.
 
 ![La bibliothèque du Hub, avec les jaquettes, l'état de chaque installation et le bandeau des mises à jour](screenshots/library.fr.png)
 
@@ -34,7 +34,7 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 
 | À la main | Avec le Hub |
 | :--- | :--- |
-| Trouver le dossier du jeu, choisir un nom de proxy libre, copier le bon fichier. | Vos jeux Steam, Epic et GOG sont trouvés tout seuls ; le Hub choisit un nom libre et laisse le leur à ReShade, OptiScaler ou Special K. |
+| Trouver le dossier du jeu, choisir un nom de proxy libre, copier le bon fichier. | Vos jeux Steam, Epic et GOG sont trouvés tout seuls ; le Hub choisit le nom que le jeu charge vraiment et laisse le leur à ReShade, OptiScaler ou Special K. |
 | Chercher les bons fichiers DLSS et Streamline, version par version. | Les DLL DLSS, Ray Reconstruction et génération d'images les plus récentes que le mod admet sont prises pour vous, et les plugins Streamline par jeu complet. L'interposer du jeu n'est jamais remplacé. |
 | Trouver vous-même la DLL Neural Rendering de NVIDIA. | `nvngx_dlssnr.dll` 310.8.0, le build exact que le mod exige, est téléchargée, vérifiée et posée à côté du mod. |
 | Tout refaire dans chaque jeu à chaque nouvelle version. | **Tout mettre à jour** met à jour le mod, les DLL NVIDIA et les plugins Streamline dans tous les jeux. Le Hub se met aussi à jour lui-même. |

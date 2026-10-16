@@ -14,6 +14,8 @@ The installer is not signed: Windows may show a SmartScreen warning the first ti
 
 The Hub looks for its own updates when it starts, then once a day. **Updates** shows the new version and its notes; **Update and restart** downloads the installer, verifies its digest, runs it and starts the Hub again. You can choose **Later**, or **Ignore this version**. An update waits for an install going on in a game to end. Your settings and your backups are never touched by an update or an uninstall.
 
+**Portable version.** `RTX-Encore-Hub-Portable-<version>.zip` installs nothing: extract it into a folder you can write to (not under Program Files) and start `rtx-encore-hub.exe`. The file `portable.txt` beside it makes the Hub keep everything in the `data` folder next to it, your backups included: keep that folder. The portable version does not update itself: **Download the portable version**, in **Updates**, opens the release page; close the Hub, then replace `rtx-encore-hub.exe` and `encorehub-elevated.exe` with the new archive's.
+
 ## Find your games
 
 **Library** gathers the games of Steam, Epic and GOG installed on the machine. For the others:
@@ -35,7 +37,7 @@ Choose a tile.
 - **What you untick in a game stays left alone there**: an NVIDIA DLL, the Streamline plugins or your default presets unticked on a game's page are remembered for that game. The page reminds you, "Update all" does not touch them, and ticking the box again takes them back.
 - **DLSS Super Resolution model**: the Hub can write the chosen model in the game's driver profile, as NVIDIA's tools do. Until its effect has been seen in a game on your driver, the page says "not confirmed in a game".
 - **Starting settings**: a proposal for your card. The frame generation multiplier is, by default, the one the game decides; ×2, ×3 and ×4 are yours to choose.
-- **Conflicts**: another tool already there under the name the mod would take. The Hub does not overwrite it; it takes another name, or tells you none is free.
+- **Proxy name**: the name the game loads the mod under (`version.dll`, `dxgi.dll`, `winmm.dll`, `dinput8.dll`). For each, the page says whether the game will load it and why: what its executable imports, a compatibility fix Windows applies to the game, another tool already there, what happened at the last launch, and what community profiles report. The recommended name follows; you can switch to another in one operation, undone like any other. In a game with an ASI loader, the mod can also be a plugin, `rtx-encore.asi`. A tool already there under a name is never overwritten.
 
 **Anti-cheat.** When the Hub recognizes an anti-cheat (EasyAntiCheat, BattlEye…), the tile and the page name it. Your account may get banned, or the mod may not load: nothing is written in that game before you accepted that risk in the confirmation window. The detection rests on known files and may miss a protection.
 
@@ -57,7 +59,7 @@ If the game folder refuses writes to your account, Windows asks for administrato
 
 **Launch the game**, at the top of a game's page, starts it as its launcher would, and watches nothing.
 
-**Health → Launch and verify** starts the game and watches its first minute: does the process stay up, did the mod load, what does its log say. The result fits in one sentence, "All is well", or the cause in plain words, then in findings: card and architecture recognized, driver recognized or not, modules accepted, Neural Rendering ready or not.
+**Health → Launch and verify** starts the game and watches its first minute: does the process stay up, did the mod load, what does its log say. The result fits in one sentence, "All is well", or the cause in plain words, then in findings: card and architecture recognized, driver recognized or not, modules accepted, Neural Rendering ready or not. When the game took another file under the mod's name or never asked for it, the page says so and proposes the name to switch to; it also warns when the earlier dlssg_for_sm86 mod is still loaded in the game.
 
 If the game stops in its first minute or the mod does not load, the page offers to **restore** the state of before in one click. After two failures in a row on the same install, it is the main button. **Prepare a diagnostic** makes an archive of text files, without your user name or the machine's, to read and then attach yourself to an issue: the Hub sends nothing.
 
@@ -82,6 +84,8 @@ If an update or a repair of the game replaced files of the install, the page say
 
 **All the settings of this game** edits `rtx-encore.jsonc` through a form that follows the sections of the file. Each setting carries its explanation, its default value and, where it applies, "restart needed". A setting without effect on your card is greyed, with the reason. The DLSS presets follow the game's DLLs: the form only offers those the installed DLL takes, and says why the others are missing; frame generation preset C, for instance, only exists in DLSS-G 310.9.16. Comments and keys the Hub does not know are kept as they are.
 
+A game that closes at launch with the mod's in-game menu (Star Wars Outlaws) can do without it: turn on `disableInGameMenu` under Compatibility, and change the settings here. When a game closes in its first minute with the mod loaded, **Launch and verify** offers **Launch again without the in-game menu**, which does it for you.
+
 Nothing is written before you saw the changes. The last change is undone with one button. **Profiles of this game** keeps the settings in force under a name, and goes back to them in one click.
 
 ## Community profiles
@@ -102,7 +106,7 @@ There is no account. A key is made on your machine and stays there; you choose a
 
 ## Data, network and privacy
 
-The Hub keeps its settings, its downloads, its covers and the backups of each game in `%LOCALAPPDATA%\EncoreHub`. That folder is your way back: do not delete it while games hold an install of the Hub.
+The Hub keeps its settings, its downloads, its covers and the backups of each game in `%LOCALAPPDATA%\EncoreHub` (in `data` beside the portable version). That folder is your way back: do not delete it while games hold an install of the Hub.
 
 The Hub contacts, without an account and without sending anything of yours:
 

@@ -24,7 +24,7 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 </div>
 
 > [!NOTE]
-> **Release candidate.** The Hub is published as a pre-release while it gathers feedback: open the [releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) and download `RTX-Encore-Hub-Setup-<version>.exe`. The installer is not code-signed yet, so Windows may show a SmartScreen warning the first time; each release gives the SHA-256 of its installer. The Hub and the RTX Encore mod have separate releases.
+> **Version 1.0.** Open the [releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) and download `RTX-Encore-Hub-Setup-<version>.exe`, or `RTX-Encore-Hub-Portable-<version>.zip`, which installs nothing. The installer is not code-signed yet, so Windows may show a SmartScreen warning the first time; each release gives the SHA-256 of its installer. The Hub and the RTX Encore mod have separate releases.
 
 ![The Hub's game library, with cover art, the state of each install and the update banner](screenshots/library.png)
 
@@ -34,7 +34,7 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 
 | By hand | With the Hub |
 | :--- | :--- |
-| Find the game folder, pick a proxy name that is free, copy the right file. | Your Steam, Epic and GOG games are found by themselves; the Hub picks a free name and leaves ReShade, OptiScaler or Special K theirs. |
+| Find the game folder, pick a proxy name that is free, copy the right file. | Your Steam, Epic and GOG games are found by themselves; the Hub picks the name the game really loads and leaves ReShade, OptiScaler or Special K theirs. |
 | Hunt for the right DLSS and Streamline files, version by version. | The latest DLSS, Ray Reconstruction and frame generation DLLs the mod admits are taken for you, and the Streamline plugins as a matched set. The game's own interposer is never replaced. |
 | Find NVIDIA's Neural Rendering DLL yourself. | `nvngx_dlssnr.dll` 310.8.0, the exact build the mod requires, is downloaded, verified and put beside the mod. |
 | Redo it all in every game at each new version. | **Update all** updates the mod, the NVIDIA DLLs and the Streamline plugins in every game. The Hub updates itself too. |

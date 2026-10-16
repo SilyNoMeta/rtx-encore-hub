@@ -14,6 +14,8 @@ L'installateur n'est pas signé : Windows peut afficher un avertissement SmartSc
 
 Le Hub cherche ses propres mises à jour à son démarrage, puis une fois par jour. **Mises à jour** montre la nouvelle version et ses notes ; **Mettre à jour et relancer** télécharge l'installateur, vérifie son empreinte, l'exécute et relance le Hub. Vous pouvez remettre à plus tard, ou ignorer une version. Une mise à jour attend la fin d'une installation en cours dans un jeu. Vos réglages et vos sauvegardes ne sont jamais touchés par une mise à jour ni par une désinstallation.
 
+**Version portable.** `RTX-Encore-Hub-Portable-<version>.zip` n'installe rien : décompressez-la dans un dossier où vous pouvez écrire (pas sous Program Files) et lancez `rtx-encore-hub.exe`. Le fichier `portable.txt` à côté fait garder au Hub tout ce qu'il écrit dans le dossier `data` voisin, sauvegardes comprises : gardez ce dossier. La version portable ne se met pas à jour elle-même : **Télécharger la version portable**, dans **Mises à jour**, ouvre la page de la publication ; fermez le Hub, puis remplacez `rtx-encore-hub.exe` et `encorehub-elevated.exe` par ceux de la nouvelle archive.
+
 ## Retrouver vos jeux
 
 **Bibliothèque** réunit les jeux de Steam, Epic et GOG installés sur la machine. Pour les autres :
@@ -35,7 +37,7 @@ Choisissez une tuile.
 - **Ce que vous décochez dans un jeu y reste laissé de côté** : une DLL NVIDIA, les plugins Streamline ou vos presets par défaut décochés sur la fiche d'un jeu sont retenus pour ce jeu. La fiche le rappelle, « Tout mettre à jour » n'y touche pas, et recocher la case le reprend.
 - **Modèle DLSS Super Resolution** : le Hub peut écrire le modèle choisi dans le profil de pilote du jeu, comme les outils de NVIDIA. Tant que son effet n'a pas été constaté en jeu sur votre pilote, la fiche dit « non confirmé en jeu ».
 - **Réglages de départ** : une proposition pour votre carte. Le multiplicateur de génération d'images est, par défaut, celui que le jeu décide ; ×2, ×3 et ×4 sont au choix.
-- **Conflits** : un autre outil déjà présent sous le nom que le mod prendrait. Le Hub ne l'écrase pas ; il prend un autre nom, ou vous dit qu'aucun n'est libre.
+- **Nom du proxy** : le nom sous lequel le jeu charge le mod (`version.dll`, `dxgi.dll`, `winmm.dll`, `dinput8.dll`). Pour chacun, la fiche dit si le jeu le chargera et pourquoi : ce que son exécutable importe, un correctif de compatibilité que Windows applique au jeu, un autre outil déjà présent, ce qui s'est passé au dernier lancement, et ce que disent les profils de la communauté. Le nom recommandé en découle ; vous pouvez passer à un autre en une opération, annulable comme les autres. Dans un jeu doté d'un chargeur ASI, le mod peut aussi être un plugin, `rtx-encore.asi`. Un outil déjà présent sous un nom n'est jamais écrasé.
 
 **Anti-triche.** Quand le Hub reconnaît un anti-triche (EasyAntiCheat, BattlEye…), la tuile et la fiche le nomment. Votre compte peut être banni, ou le mod peut ne pas se charger : rien n'est écrit dans ce jeu avant que vous ayez accepté ce risque dans la fenêtre de validation. La détection repose sur des fichiers connus et peut manquer une protection.
 
@@ -57,7 +59,7 @@ Si le dossier du jeu refuse l'écriture à votre compte, Windows demande les dro
 
 **Lancer le jeu**, en haut de la fiche d'un jeu, le démarre comme son lanceur le ferait, sans rien observer.
 
-**Santé → Lancer et vérifier** démarre le jeu et l'observe pendant sa première minute : le processus tient-il, le mod s'est-il chargé, que dit son journal. Le résultat tient en une phrase, « Tout va bien », ou la cause en clair, puis en constats : carte et architecture reconnues, pilote reconnu ou non, modules acceptés, Neural Rendering prêt ou non.
+**Santé → Lancer et vérifier** démarre le jeu et l'observe pendant sa première minute : le processus tient-il, le mod s'est-il chargé, que dit son journal. Le résultat tient en une phrase, « Tout va bien », ou la cause en clair, puis en constats : carte et architecture reconnues, pilote reconnu ou non, modules acceptés, Neural Rendering prêt ou non. Quand le jeu a pris un autre fichier sous le nom du mod, ou ne l'a jamais demandé, la page le dit et propose le nom vers lequel passer ; elle prévient aussi quand l'ancien mod dlssg_for_sm86 est encore chargé dans le jeu.
 
 Si le jeu s'arrête dans la première minute ou si le mod ne se charge pas, la page propose de **restaurer** l'état d'avant en un clic. Après deux échecs de suite sur la même installation, c'est le bouton principal. **Préparer un diagnostic** fait une archive de fichiers texte, sans votre nom d'utilisateur ni celui de la machine, à relire puis à joindre vous-même à un ticket : le Hub n'envoie rien.
 
@@ -82,6 +84,8 @@ Si une mise à jour ou une réparation du jeu a remplacé des fichiers de l'inst
 
 **Tous les réglages de ce jeu** édite `rtx-encore.jsonc` par un formulaire qui reprend les sections du fichier. Chaque réglage porte son explication, sa valeur par défaut et, s'il y a lieu, « redémarrage nécessaire ». Un réglage sans effet sur votre carte est grisé, avec la raison. Les presets DLSS suivent les DLL du jeu : le formulaire ne propose que ceux que la DLL installée prend, et dit pourquoi les autres manquent ; le preset C de génération d'images, par exemple, n'existe que dans DLSS-G 310.9.16. Les commentaires et les clés que le Hub ne connaît pas sont gardés tels quels.
 
+Un jeu qui se ferme au lancement avec le menu du mod (Star Wars Outlaws) peut s'en passer : activez `disableInGameMenu` dans Compatibilité, et changez les réglages ici. Quand un jeu se ferme dans sa première minute avec le mod chargé, **Lancer et vérifier** propose **Relancer sans le menu en jeu**, qui le fait pour vous.
+
 Rien n'est écrit avant que vous ayez vu les changements. Le dernier changement s'annule d'un bouton. **Profils de ce jeu** enregistre les réglages en vigueur sous un nom, et y revient en un clic.
 
 ## Profils de la communauté
@@ -102,7 +106,7 @@ Il n'y a pas de compte. Une clé est créée sur votre machine et y reste ; vous
 
 ## Données, réseau et vie privée
 
-Le Hub garde ses réglages, ses téléchargements, ses jaquettes et les sauvegardes de chaque jeu dans `%LOCALAPPDATA%\EncoreHub`. Ce dossier est votre retour arrière : ne le supprimez pas tant que des jeux portent une installation du Hub.
+Le Hub garde ses réglages, ses téléchargements, ses jaquettes et les sauvegardes de chaque jeu dans `%LOCALAPPDATA%\EncoreHub` (dans `data` à côté de la version portable). Ce dossier est votre retour arrière : ne le supprimez pas tant que des jeux portent une installation du Hub.
 
 Le Hub contacte, sans compte et sans rien envoyer de vous :
 
