@@ -51,7 +51,7 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 | **The right NVIDIA files** | Takes the most recent DLSS and Streamline versions the game's RTX Encore admits, from what your machine already has or from a download. A DLL is accepted only with a valid NVIDIA signature. You choose the versions once for every game in Settings, and what you untick in one game stays left alone there. |
 | **Install with a way back** | Shows the plan before anything is written, writes it whole or not at all, and undoes an install that was interrupted. Administrator rights are asked only where a folder needs them, for that one operation. |
 | **Updates** | Reads the releases of RTX Encore, with their notes, and updates one game or all of them. Looks for its own new version and installs it when you say so; updates are signed. |
-| **Settings** | Edits `rtx-encore.jsonc` through a form, keeps named sets of settings per game, proposes starting settings for your card and the DLSS Super Resolution model in the game's driver profile. |
+| **Settings** | Edits `rtx-encore.jsonc` through a form, keeps named sets of settings per game, proposes starting settings for your card, and sets the DLSS Super Resolution model, which RTX Encore applies when the game starts. |
 | **Health and backups** | Starts the game, watches its first minute, and lists every state the game can be put back to. |
 
 **What the Hub says of a game is deduced from its files, your card and your driver.** It is not a certification that a feature works in that game, and it measures no performance. RTX Encore's own [documentation](https://github.com/SilyNoMeta/rtx-encore) remains the reference for the mod.

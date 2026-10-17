@@ -37,7 +37,7 @@ Choose a tile.
 - **Streamline plugins**: for a game that uses Streamline, the Hub replaces its plugins by those of the most recent version the game's RTX Encore admits ("Take the Streamline plugins in …", ticked by default). They are taken all together, never one by one. The game's interposer (`sl.interposer.dll`) is never replaced, as in NVIDIA's own updates; the page says its version and warns you when it differs from that of the plugins taken. 2.14.1 comes from NVIDIA's production SDK; 2.14.16, from the NVIDIA app beta, is taken with RTX Encore 1.0.0-rc.1 or later.
 - **Choose once for every game**: in **Settings → Defaults at install**, you say what the Hub takes by default: the version of the Streamline plugins, that of DLSS, Ray Reconstruction and frame generation ("the most recent the mod admits", "do not replace", or a version), and your DLSS presets. Each game's page starts from these choices and lets you change them for that game. A preset chosen this way is written only in a game that does not have its own yet, and only when its DLLs take it; the page says so with the "Write your default presets" box.
 - **What you untick in a game stays left alone there**: an NVIDIA DLL, the Streamline plugins or your default presets unticked on a game's page are remembered for that game. The page reminds you, "Update all" does not touch them, and ticking the box again takes them back.
-- **DLSS Super Resolution model**: the Hub can write the chosen model in the game's driver profile, as NVIDIA's tools do. Until its effect has been seen in a game on your driver, the page says "not confirmed in a game".
+- **DLSS Super Resolution model**: the Hub writes the chosen model in the game's `rtx-encore.jsonc` (`dlssSrPreset`), and RTX Encore applies it when the game starts. The Hub never changes the game's NVIDIA driver profile; when that profile forces a model of its own (set with the NVIDIA app, for example), the page says so, because it may take precedence with a mod older than 1.1.0.
 - **Starting settings**: a proposal for your card. The frame generation multiplier is, by default, the one the game decides; ×2, ×3 and ×4 are yours to choose.
 - **Proxy name**: the name the game loads the mod under (`version.dll`, `dxgi.dll`, `winmm.dll`, `dinput8.dll`). For each, the page says whether the game will load it and why: what its executable imports, a compatibility fix Windows applies to the game, another tool already there, what happened at the last launch, and what community profiles report. The recommended name follows; you can switch to another in one operation, undone like any other. In a game with an ASI loader, the mod can also be a plugin, `rtx-encore.asi`. A tool already there under a name is never overwritten. A compatibility mode Windows applies to the game can be removed from its page, for your account and, after Windows asks for administrator rights, for every account; the Hub notes what it removed, and **Put back** restores it as it was.
 
@@ -112,10 +112,12 @@ The Hub keeps its settings, its downloads, its covers and the backups of each ga
 
 The Hub contacts, without an account and without sending anything of yours:
 
-- GitHub, for the releases of the mod, those of the Hub, and NVIDIA's DLLs;
+- GitHub, for the releases of the mod, those of the Hub, NVIDIA's DLLs and the Streamline plugins;
 - `encore-dl.nometa.fr`, for Neural Rendering's DLL, a version you chose to take, the list of sources, and the community's profiles when you open its page;
 - `encore-community.nometa.fr`, only when you publish, remove, like, confirm or report a profile: what you read, signed by your machine's key. To turn the community off, put `"Community": "off"` in `%LOCALAPPDATA%\EncoreHub\settings.json`;
 - Steam and Wikipedia, for the covers that are missing: the game's title is sent to them. **Settings → Cover images** turns that search off.
+
+At launch, the Hub puts in its own folder the NVIDIA DLLs an install takes by default, about 200 MB at most: an identical copy already on this computer is copied, the rest is downloaded. Every DLL written in a game comes from that folder. **Updates** shows where it stands. On a metered connection, turn off **Settings → NVIDIA DLLs → Prepare NVIDIA DLLs at launch**: each DLL is then downloaded when an install needs it.
 
 There is no telemetry.
 
