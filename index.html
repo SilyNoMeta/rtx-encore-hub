@@ -3,16 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RTX Encore Hub — your games, one place</title>
-<meta name="description" content="The Windows companion for RTX Encore: it finds your games, installs the mod with the NVIDIA files it needs, keeps everything up to date and can always put a game back as it was.">
+<title>RTX Encore Hub: frame generation and Neural Rendering on RTX 20, 30 and 40</title>
+<meta name="description" content="RTX Encore brings DLSS frame generation up to X6, Neural Rendering and a faster DLSS to GeForce RTX 20, 30 and 40. RTX Encore Hub installs it in your games, keeps it up to date and can always put a game back as it was.">
 <link rel="canonical" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="en" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="fr" href="https://encore.nometa.fr/fr/">
 <link rel="alternate" hreflang="zh-CN" href="https://encore.nometa.fr/zh/">
 <link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preload" href="assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
-<meta property="og:title" content="RTX Encore Hub — your games, one place">
-<meta property="og:description" content="The Windows companion for RTX Encore: it finds your games, installs the mod with the NVIDIA files it needs, keeps everything up to date and can always put a game back as it was.">
+<meta property="og:title" content="RTX Encore Hub: frame generation and Neural Rendering on RTX 20, 30 and 40">
+<meta property="og:description" content="RTX Encore brings DLSS frame generation up to X6, Neural Rendering and a faster DLSS to GeForce RTX 20, 30 and 40. RTX Encore Hub installs it in your games, keeps it up to date and can always put a game back as it was.">
 <meta property="og:url" content="https://encore.nometa.fr/">
 <meta property="og:image" content="https://encore.nometa.fr/assets/library.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -22,57 +23,78 @@
 <body>
 <header class="nav"><div class="wrap">
 <a class="brand" href="./"><img src="assets/logo.png" alt="" width="30" height="30">RTX Encore Hub</a>
-<nav><a href="#new">New</a><a href="#why">Why the Hub</a><a href="#features">Features</a><a href="#start">Get started</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub">GitHub</a></nav>
+<nav><a href="#perf">Performance</a><a href="#nr">Neural Rendering</a><a href="#hub">The Hub</a><a href="#start">Get started</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub">GitHub</a></nav>
+<a class="nav-support" href="#support"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.2 6.9 13.2C3 9.7.5 7.4.5 4.6.5 2.3 2.3.5 4.6.5c1.3 0 2.6.6 3.4 1.6C8.8 1.1 10.1.5 11.4.5c2.3 0 4.1 1.8 4.1 4.1 0 2.8-2.5 5.1-6.4 8.6L8 14.2Z"/></svg><span>Support the project</span></a>
 <div class="langs"><a href="" hreflang="en" aria-current="true">English</a><a href="fr/" hreflang="fr">Français</a><a href="zh/" hreflang="zh-CN">简体中文</a></div>
 </div></header>
 
 <main>
 <div class="wrap hero">
-<span class="badge">Version 1.1</span>
-<h1>Your library. Your installs. <em>Your way back.</em></h1>
-<p class="lead">The Windows companion for <a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a>. It finds your games, installs the mod with the NVIDIA files it needs, keeps all of it up to date, and can always put a game back as it was.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download for Windows</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore-hub/blob/main/docs/USER-GUIDE.md">User guide</a></div>
+<span class="badge">RTX Encore 1.1 · Hub 1.1</span>
+<h1>Frame generation and Neural Rendering on <em>your</em> RTX&nbsp;20, 30 and 40.</h1>
+<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> is a free mod that brings DLSS frame generation up to X6, Neural Rendering and a faster DLSS to GeForce RTX 20, 30 and 40. <strong>RTX Encore Hub</strong> installs it in your games, keeps it up to date, and can always put a game back as it was.</p>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download RTX Encore Hub</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore on GitHub</a></div>
 <p class="under">Windows 10 and 11, x64 · English, French and Simplified Chinese · installs without administrator rights</p>
-<div class="shot"><img src="assets/library.jpg" alt="The Hub&#x27;s game library, with the state of each install and the update banner" width="1440" height="900"></div>
-<p class="caption">Real application capture, on a demonstration library of stand-in game folders.</p>
 </div>
 
-<section id="new"><div class="wrap">
-<h2>New in RTX Encore 1.1: faster DLSS</h2>
-<p class="sub">Two speed gains of the mod, offered on a game&#x27;s page with RTX Encore 1.1.0 and later. The figures come from one RTX 3070 Ti Laptop and a few games: yours will depend on your card and the game.</p>
-<div class="grid">
-<div class="card new"><h3>Fast super resolution (RTX 30)</h3><p class="stat">−18 %</p><p class="stat-label">DLSS upscaling time with preset M, on our bench</p><p>On RTX 30 cards in DirectX 12, DLSS Super Resolution presets <b>M and L</b> run a faster version of NVIDIA's model, calibrated on captures from real games. About 18 % less upscaling time with M and 15 % with L on our bench, <b>22 % in The Witcher 3 and 25 % in Black Myth: Wukong</b> with M, with no visible difference in our tests. Off by default. RTX 20, 40 and 50 cards are left as they are.</p></div>
-<div class="card new"><h3>A much faster Neural Rendering</h3><p class="stat">27 → 15 ms</p><p class="stat-label">NR time at 1080p, in a local test</p><p>With NVIDIA's <code>nvngx_dlssnr.dll</code> <b>310.9.16</b>, the new <b>NR model preset B</b>, the default, is a smaller network: about 15 ms of NR time against 27 ms for A, the network of 310.8.0. Its image can differ from A's. RTX Encore's optimizations for <b>RTX 20 and 30</b> apply to both networks. The Hub offers this file per game, downloaded and verified; 310.8.0 stays the default. Experimental and lightly tested.</p></div>
+<section class="band" id="perf"><div class="wrap">
+<div class="stats">
+<div class="stat"><span class="figure">73.8 → 94.9</span><span class="unit">FPS</span><span class="context">Black Myth: Wukong benchmark, Neural Rendering in Ultra-fast mode, frame generation X3</span></div>
+<div class="stat"><span class="figure">−43 %</span><span class="unit">Neural Rendering time</span><span class="context">NR 310.9.16, preset B against preset A, at 1080p</span></div>
+<div class="stat"><span class="figure">−25 %</span><span class="unit">upscaling time</span><span class="context">Fast super resolution with preset M, in Black Myth: Wukong</span></div>
+</div>
+<p class="stats-note">Measured on one RTX 3070 Ti Laptop, often with one run per configuration. Your gain will depend on your card and the game.</p>
+</div></section>
+
+<section id="nr"><div class="wrap">
+<h2>Neural Rendering, before and after</h2>
+<p class="sub">Neural Rendering is NVIDIA&#x27;s network that works on the image DLSS produces: one to four passes, a style for each, HDR included. RTX Encore runs it on RTX 20, 30 and 40, with its own optimizations for RTX 30. Experimental, off by default.</p>
+<div class="compare-nr">
+<input type="radio" name="nr-view" id="nr-on" checked><input type="radio" name="nr-view" id="nr-off">
+<div class="tabs"><label for="nr-on">With Neural Rendering</label><label for="nr-off">Without Neural Rendering</label></div>
+<div class="frames shot"><img class="on" src="assets/nr-on.jpg" alt="With Neural Rendering" width="1920" height="1080" loading="lazy"><img class="off" src="assets/nr-off.jpg" alt="Without Neural Rendering" width="1920" height="1080" loading="lazy"></div>
+<p class="caption">The Blood of Dawnwalker at 2560 × 1440, frame generation X4, NR 310.9.16 working at 1472 × 828. The overlay in the corner gives the cost: 181 FPS without NR, 132 with it.</p>
 </div>
 </div></section>
 
-<section id="why"><div class="wrap">
-<h2>Why use the Hub rather than copy files by hand</h2>
-<p class="sub">Installing a mod in several games means finding folders, checking DLL versions, keeping backups and remembering what needs updating. The Hub does it for you, and shows what it will do before it does it.</p>
-<div class="heads"><span>By hand</span><span>With the Hub</span></div>
-<div class="compare">
-<div class="row"><div class="hand">Find the game folder, pick a proxy name that is free, copy the right file.</div><div class="hub">Your <b>Steam, Epic and GOG</b> games are found by themselves; the Hub picks the name the game really loads and leaves ReShade, OptiScaler or Special K theirs.</div></div>
-<div class="row"><div class="hand">Hunt for the right DLSS and Streamline files, version by version.</div><div class="hub">The <b>latest DLSS, Ray Reconstruction and frame generation</b> DLLs the mod admits are taken for you, and the <b>Streamline plugins</b> as a matched set. The game's own interposer is never replaced.</div></div>
-<div class="row"><div class="hand">Find NVIDIA&#x27;s Neural Rendering DLL yourself.</div><div class="hub"><code>nvngx_dlssnr.dll</code>, in the exact build the mod requires, is <b>downloaded, verified</b> and put beside the mod: 310.8.0, or with RTX Encore 1.1 <b>310.9.16</b> and its much faster network, chosen per game.</div></div>
-<div class="row"><div class="hand">Redo it all in every game at each new version.</div><div class="hub"><b>Update all</b> updates the mod, the NVIDIA DLLs and the Streamline plugins in every game. The Hub updates itself too.</div></div>
-<div class="row"><div class="hand">Keep your own backups, and hope.</div><div class="hub">Every replaced file is backed up first; <b>Restore game</b> puts everything back, driver setting included.</div></div>
-<div class="row"><div class="hand">Edit a settings file and guess.</div><div class="hub">A form <b>explains every setting</b>, greys what has no effect on your card, and offers only the presets your game's DLLs take.</div></div>
-<div class="row"><div class="hand">Something goes wrong and you do not know why.</div><div class="hub"><b>Launch and verify</b> watches the game's first minute and says what happened; a diagnostic is ready for a report.</div></div>
+<section><div class="wrap split">
+<div>
+<h2>Where the GPU time goes</h2>
+<p class="sub">Share of the GPU time of each pass that RTX Encore saves, measured on an RTX 3070 Ti Laptop.</p>
+<div class="chart" role="img" aria-label="Bar chart of the GPU time saved per optimization, in percent.">
+<div class="c-row" title="NR, Ultra-fast mode, Wukong, 18.7 → 9.8 ms: −48 %"><div class="c-label"><span class="c-name">NR, Ultra-fast mode</span><span class="c-where">Wukong, 18.7 → 9.8 ms</span></div><div class="c-track"><span class="c-bar" style="width:80.0%"></span><span class="c-value">−48 %</span></div></div>
+<div class="c-row" title="NR 310.9.16, preset B, 1080p, 26.7 → 15.1 ms: −43 %"><div class="c-label"><span class="c-name">NR 310.9.16, preset B</span><span class="c-where">1080p, 26.7 → 15.1 ms</span></div><div class="c-track"><span class="c-bar" style="width:71.7%"></span><span class="c-value">−43 %</span></div></div>
+<div class="c-row" title="Fast SR, preset M, Black Myth: Wukong: −25 %"><div class="c-label"><span class="c-name">Fast SR, preset M</span><span class="c-where">Black Myth: Wukong</span></div><div class="c-track"><span class="c-bar" style="width:41.7%"></span><span class="c-value">−25 %</span></div></div>
+<div class="c-row" title="Fast SR, preset M, The Witcher 3: −22 %"><div class="c-label"><span class="c-name">Fast SR, preset M</span><span class="c-where">The Witcher 3</span></div><div class="c-track"><span class="c-bar" style="width:36.7%"></span><span class="c-value">−22 %</span></div></div>
+<div class="c-row" title="Fast SR, preset M, bench: −18 %"><div class="c-label"><span class="c-name">Fast SR, preset M</span><span class="c-where">bench</span></div><div class="c-track"><span class="c-bar" style="width:30.0%"></span><span class="c-value">−18 %</span></div></div>
+<div class="c-row" title="Fast SR, preset L, bench: −15 %"><div class="c-label"><span class="c-name">Fast SR, preset L</span><span class="c-where">bench</span></div><div class="c-track"><span class="c-bar" style="width:25.0%"></span><span class="c-value">−15 %</span></div></div>
+</div>
+</div>
+<div class="news">
+<h2>New in RTX Encore 1.1</h2>
+<div class="card"><h3>Fast super resolution (RTX 30)</h3><p>On RTX 30 cards in DirectX 12, DLSS Super Resolution presets <b>M and L</b> run a faster version of NVIDIA's model, calibrated on captures from real games, with no visible difference in our tests. Off by default. RTX 20, 40 and 50 cards are left as they are.</p></div>
+<div class="card"><h3>A much faster Neural Rendering</h3><p>With <code>nvngx_dlssnr.dll</code> <b>310.9.16</b>, NR model preset <b>B</b>, the default, is a smaller network than A, the network of 310.8.0; its image can differ from A's. RTX Encore's optimizations for RTX 20 and 30 apply to both. Experimental and lightly tested.</p></div>
 </div>
 </div></section>
 
-<section id="features"><div class="wrap">
-<h2>What it does</h2>
-<p class="sub"></p>
-<div class="grid">
-<div class="card"><h3>One game library</h3><p>The games of Steam, Epic and GOG, the folders you add, or a single game by its executable. Each tile says where the game stands: not installed, installed, to update, changed by the game, failing.</p></div>
-<div class="card"><h3>A page for every game</h3><p>What RTX Encore can do there on your card and driver, frame generation, DLSS render scale, Smooth Motion, Neural Rendering, and why.</p></div>
-<div class="card"><h3>The right NVIDIA files</h3><p>The most recent DLSS and Streamline versions the game's RTX Encore admits, from what your machine already has or from a download. A DLL is accepted only with a valid NVIDIA signature.</p></div>
-<div class="card"><h3>Chosen once for every game</h3><p>Pick the versions of DLSS and Streamline and your DLSS presets once in Settings. What you untick in one game stays left alone there.</p></div>
-<div class="card"><h3>Install with a way back</h3><p>The plan is shown before anything is written, written whole or not at all, and an interrupted install is undone. Administrator rights only where a folder needs them.</p></div>
-<div class="card"><h3>Updates</h3><p>The releases of RTX Encore with their notes, one game or all of them. The Hub looks for its own new version; updates are signed.</p></div>
-<div class="card"><h3>Settings</h3><p>A form for <code>rtx-encore.jsonc</code>, named sets of settings per game, starting settings for your card, and the DLSS model presets, which RTX Encore applies even over the driver profile.</p></div>
-<div class="card"><h3>Health and backups</h3><p>Start the game, watch its first minute, and list every state the game can be put back to.</p></div>
+<section class="band" id="hub"><div class="wrap">
+<h2>RTX Encore Hub does the installing</h2>
+<p class="sub">Finding folders, matching DLL versions, keeping backups: the Hub does it, and shows what it will do before it does it.</p>
+<div class="hub">
+<figure><div class="shot"><img src="assets/library.jpg" alt="The Hub&#x27;s game library, with the state of each install and the update banner" width="1440" height="900" loading="lazy"></div><figcaption>Real application capture, on a demonstration library of stand-in game folders.</figcaption></figure>
+<ol class="points">
+<li><h3>Finds your games</h3><p>Steam, Epic and GOG are found by themselves; add any other folder. Each game says where it stands.</p></li>
+<li><h3>Installs with a way back</h3><p>The plan is shown before anything is written. Every replaced file is backed up first, and <b>Restore game</b> puts everything back.</p></li>
+<li><h3>Keeps everything current</h3><p><b>Update all</b> updates the mod, the NVIDIA DLLs and the Streamline plugins in every game. The Hub updates itself too.</p></li>
+</ol>
+</div>
+<div class="more">
+<div><h3>The right NVIDIA files</h3><p>DLSS, frame generation and Streamline, the latest the mod admits, accepted only with a valid NVIDIA signature.</p></div>
+<div><h3>Neural Rendering&#x27;s DLL</h3><p><code>nvngx_dlssnr.dll</code> 310.8.0, or 310.9.16 per game, downloaded and verified.</p></div>
+<div><h3>Every setting explained</h3><p>A form for <code>rtx-encore.jsonc</code>, greyed where a setting has no effect on your card.</p></div>
+<div><h3>Launch and verify</h3><p>Watches the game's first minute and says what happened, with a diagnostic ready for a report.</p></div>
+<div><h3>Community profiles</h3><p>Settings shared per game, ranked for your machine. Experimental, lightly tested.</p></div>
+<div><h3>At ease with other mods</h3><p>ReShade, OptiScaler and Special K keep their file names; the Hub picks the one the game really loads.</p></div>
 </div>
 </div></section>
 
@@ -81,39 +103,43 @@
 <p class="sub">What the Hub says of a game is deduced from its files, your card and your driver. It is not a certification that a feature works in that game, and it measures no performance.</p>
 <div class="look">
 <figure><div class="shot"><img src="assets/game-inspection.jpg" alt="The page of a game says what is possible before you change anything, and each line gives its reason." width="1440" height="900" loading="lazy"></div><figcaption>The page of a game says what is possible before you change anything, and each line gives its reason.</figcaption></figure>
-<figure><div class="shot"><img src="assets/nvidia-files.jpg" alt="Each NVIDIA DLL with the version in the game, the best copy on this machine and what the Hub proposes; the Streamline plugins are replaced as a set." width="1440" height="900" loading="lazy"></div><figcaption>Each NVIDIA DLL with the version in the game, the best copy on this machine and what the Hub proposes; the Streamline plugins are replaced as a set.</figcaption></figure>
+<figure><div class="shot"><img src="assets/nvidia-files.jpg" alt="Each NVIDIA DLL with the version in the game, the best copy on this machine and what the Hub proposes." width="1440" height="900" loading="lazy"></div><figcaption>Each NVIDIA DLL with the version in the game, the best copy on this machine and what the Hub proposes.</figcaption></figure>
 </div>
 </div></section>
 
 <section id="start"><div class="wrap">
 <h2>Get started</h2>
-<p class="sub"></p>
 <ol class="steps">
-<li><span>Download <code>RTX-Encore-Hub-Setup-&lt;version&gt;.exe</code> from the <a href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">releases</a> and run it. It installs for your account only. Or take <code>RTX-Encore-Hub-Portable-&lt;version&gt;.zip</code>, which installs nothing: extract it and start <code>rtx-encore-hub.exe</code>.</span></li>
-<li><span>Open <strong>Library</strong>. Steam, Epic and GOG games are there; add other folders under <strong>Settings</strong>.</span></li>
-<li><span>Open a game's page, read what is possible there, and press <strong>Install</strong>. The plan lists every file before anything is written.</span></li>
-<li><span>Under <strong>Health</strong>, <strong>Launch and verify</strong> starts the game and tells you how its first minute went.</span></li>
-<li><span>When a new RTX Encore is out, <strong>Update all</strong> in the library updates every game.</span></li>
+<li><span>Download <code>RTX-Encore-Hub-Setup-&lt;version&gt;.exe</code> from the <a href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">releases</a> and run it: it installs for your account only. Or take the portable <code>.zip</code>, which installs nothing.</span></li>
+<li><span>Open a game's page in the <strong>Library</strong>, read what is possible there, and press <strong>Install</strong>.</span></li>
+<li><span>Under <strong>Health</strong>, <strong>Launch and verify</strong> checks the first minute. When a new RTX Encore is out, <strong>Update all</strong>.</span></li>
 </ol>
-</div></section>
-
-<section><div class="wrap">
 <div class="notes">
 <div class="note "><strong>Version 1.1.</strong> The installer is not code-signed yet: Windows may show a SmartScreen warning the first time, and each release gives the SHA-256 of its installer.</div>
-<div class="note "><strong>Community profiles</strong>: browse, import and share settings per game, ranked for your machine and narrowed by filters. Open since 1.0.0-rc.2; experimental and lightly tested, and it starts empty.</div>
 <div class="note warn"><strong>Anti-cheat.</strong> Installing a mod in a game an anti-cheat protects can block its startup or put your account at risk. The Hub says so and writes nothing there without your word on the risk.</div>
+</div>
+</div></section>
+
+<section id="support"><div class="wrap">
+<div class="support">
+<div>
+<h2>Support the project</h2>
+<p>RTX Encore and RTX Encore Hub are free and made on free evenings. A sponsorship, monthly or once, helps keep them free and moving.</p>
+<p class="thanks">Thank you to our first sponsors: <strong>mennogreg</strong>, and one who prefers to stay anonymous.</p>
+</div>
+<div class="support-actions"><a class="button sponsor" href="https://github.com/sponsors/SilyNoMeta"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.2 6.9 13.2C3 9.7.5 7.4.5 4.6.5 2.3 2.3.5 4.6.5c1.3 0 2.6.6 3.4 1.6C8.8 1.1 10.1.5 11.4.5c2.3 0 4.1 1.8 4.1 4.1 0 2.8-2.5 5.1-6.4 8.6L8 14.2Z"/></svg>Sponsor on GitHub</a><a class="button kofi" href="https://ko-fi.com/silynometa"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.2 6.9 13.2C3 9.7.5 7.4.5 4.6.5 2.3 2.3.5 4.6.5c1.3 0 2.6.6 3.4 1.6C8.8 1.1 10.1.5 11.4.5c2.3 0 4.1 1.8 4.1 4.1 0 2.8-2.5 5.1-6.4 8.6L8 14.2Z"/></svg>Support on Ko-fi</a></div>
 </div>
 </div></section>
 
 <div class="wrap cta">
 <h2>Ready to try it?</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download for Windows</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download RTX Encore Hub</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
 </div>
 </main>
 
 <footer><div class="wrap">
 <div class="links"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Releases</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub/blob/main/docs/USER-GUIDE.md">User guide</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose">Report an issue</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub/blob/main/docs/NOTICES.md">Project notices</a></div>
-<p>RTX Encore Hub is an independent project, unaffiliated with NVIDIA or game publishers. NVIDIA, GeForce, RTX and DLSS are trademarks of NVIDIA Corporation. Game artwork visible in the captures belongs to its respective owners. The application source is maintained separately.</p>
+<p>RTX Encore and RTX Encore Hub are independent projects, unaffiliated with NVIDIA or game publishers. NVIDIA, GeForce, RTX and DLSS are trademarks of NVIDIA Corporation. Game artwork visible in the captures belongs to its respective owners. Titles set in Space Grotesk (SIL Open Font License).</p>
 </div></footer>
 </body>
 </html>
