@@ -1,19 +1,23 @@
-name: Feature request / Suggestion
-description: Suggest an improvement to the Hub. / Proposer une amélioration du Hub.
-title: "[Suggestion] "
+name: Feature request
+description: Suggest an improvement to the Hub.
+title: "[Request] "
 labels: [enhancement]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        **You can write in any language.** The form is in English, but requests in French, Chinese or any other language are welcome: write in the one you are most comfortable with.
   - type: textarea
     id: problem
     attributes:
-      label: What would this help you do? / Quel besoin cela résoudrait-il ?
-      description: Describe your workflow and what currently gets in the way. / Décrivez votre usage et ce qui vous gêne aujourd'hui.
+      label: What would this help you do?
+      description: Describe how you use the Hub and what gets in the way today.
     validations:
       required: true
   - type: textarea
     id: solution
     attributes:
-      label: Suggested behavior / Comportement proposé
-      description: Describe the change and any useful examples. / Décrivez le changement et des exemples utiles.
+      label: Suggested behavior
+      description: Describe the change and any example that helps.
     validations:
       required: true

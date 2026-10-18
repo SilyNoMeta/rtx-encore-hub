@@ -1,36 +1,38 @@
-name: Bug report / Signaler un problème
-description: Report a reproducible Hub problem. / Signaler un problème reproductible du Hub.
+name: Bug report
+description: Report a reproducible problem with the RTX Encore Hub program.
 title: "[Hub] "
 labels: [bug]
 body:
   - type: markdown
     attributes:
       value: |
-        English and French reports are welcome. For a rendering problem in the mod itself, use the RTX Encore issue tracker instead. Remove personal paths and account details from attachments.
-        Les retours en anglais et en français sont bienvenus. Pour un problème de rendu du mod lui-même, utilisez les tickets RTX Encore. Retirez les chemins personnels et les informations de compte des pièces jointes.
+        **You can write in any language.** The form is in English, but reports in French, Chinese or any other language are welcome: write in the one you are most comfortable with.
+
+        For a rendering, frame generation or game compatibility problem with the mod itself, use the [RTX Encore issue tracker](https://github.com/SilyNoMeta/rtx-encore/issues). Remove personal paths and account details from attachments.
   - type: input
     id: hub-version
     attributes:
-      label: Hub version / Version du Hub
-      placeholder: Version and download source / Version et source du téléchargement
+      label: Hub version
+      description: The version shown in the Hub, and where you downloaded it.
+      placeholder: "1.1.0, GitHub release"
     validations:
       required: true
   - type: textarea
     id: system
     attributes:
-      label: Setup / Configuration
-      description: Windows version, GPU, driver, game and game version, launcher, mod version and source.
+      label: Setup
+      description: Windows version, GPU and NVIDIA driver, the game and its version, its launcher or store, and the RTX Encore version installed.
     validations:
       required: true
   - type: textarea
     id: reproduce
     attributes:
-      label: Steps and result / Étapes et résultat
-      description: Steps, expected result, actual result and exact error message. / Étapes, résultat attendu, résultat obtenu et message exact.
+      label: Steps and result
+      description: Steps to reproduce, what you expected, what happened instead, and the exact error message.
     validations:
       required: true
   - type: textarea
     id: restore
     attributes:
-      label: Restoration and attachments / Restauration et pièces jointes
-      description: If relevant, did Restore help? Attach redacted screenshots or logs. / Si pertinent, Restaurer a-t-il aidé ? Ajoutez des captures ou journaux anonymisés.
+      label: Restore and attachments
+      description: If relevant, did Restore help? Attach redacted screenshots or logs.
