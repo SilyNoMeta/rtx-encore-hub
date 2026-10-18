@@ -74,6 +74,9 @@ h2 { font-size: clamp(24px, 3.4vw, 34px); line-height: 1.2; margin: 0 0 8px; let
 .card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 20px 22px; }
 .card h3 { margin: 0 0 6px; font-size: 17px; }
 .card p { margin: 0; color: var(--ink-2); font-size: 15px; }
+.card.new { border-color: rgba(194, 249, 112, 0.35); padding: 24px 26px; }
+.card .stat { color: var(--lime); font-size: clamp(32px, 4.4vw, 44px); font-weight: 800; line-height: 1.1; letter-spacing: -0.5px; margin-top: 10px; }
+.card .stat-label { color: var(--ink-3); font-size: 13px; margin: 2px 0 14px; }
 
 .look { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .look figure { margin: 0; }

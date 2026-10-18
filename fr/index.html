@@ -22,13 +22,13 @@
 <body>
 <header class="nav"><div class="wrap">
 <a class="brand" href="../fr/"><img src="../assets/logo.png" alt="" width="30" height="30">RTX Encore Hub</a>
-<nav><a href="#why">Pourquoi le Hub</a><a href="#features">Fonctions</a><a href="#start">Bien démarrer</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub">GitHub</a></nav>
+<nav><a href="#new">Nouveau</a><a href="#why">Pourquoi le Hub</a><a href="#features">Fonctions</a><a href="#start">Bien démarrer</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub">GitHub</a></nav>
 <div class="langs"><a href="../" hreflang="en">English</a><a href="../fr/" hreflang="fr" aria-current="true">Français</a><a href="../zh/" hreflang="zh-CN">简体中文</a></div>
 </div></header>
 
 <main>
 <div class="wrap hero">
-<span class="badge">Version 1.0</span>
+<span class="badge">Version 1.1</span>
 <h1>Votre bibliothèque. Vos installations. <em>Votre retour en arrière.</em></h1>
 <p class="lead">Le compagnon Windows de <a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a>. Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tient le tout à jour, et peut toujours remettre un jeu comme il était.</p>
 <div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Télécharger pour Windows</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore-hub/blob/main/docs/USER-GUIDE.fr.md">Guide d&#x27;utilisation</a></div>
@@ -37,6 +37,15 @@
 <p class="caption">Capture de l&#x27;application réelle, sur une bibliothèque de démonstration faite de dossiers de jeux factices.</p>
 </div>
 
+<section id="new"><div class="wrap">
+<h2>Nouveau dans RTX Encore 1.1 : un DLSS plus rapide</h2>
+<p class="sub">Deux gains de vitesse du mod, proposés sur la fiche d&#x27;un jeu avec RTX Encore 1.1.0 et suivants. Les chiffres viennent d&#x27;un RTX 3070 Ti Laptop et de quelques jeux : votre gain dépendra de votre carte et du jeu.</p>
+<div class="grid">
+<div class="card new"><h3>Fast super resolution (RTX 30)</h3><p class="stat">−18 %</p><p class="stat-label">Temps de l&#x27;upscaling DLSS avec le preset M, sur notre banc</p><p>Sur les cartes RTX 30 en DirectX 12, les presets <b>M et L</b> de DLSS Super Resolution passent par une version plus rapide du modèle de NVIDIA, calibrée sur des captures de vrais jeux. Environ 18 % de temps d'upscaling en moins avec M et 15 % avec L sur notre banc, <b>22 % dans The Witcher 3 et 25 % dans Black Myth: Wukong</b> avec M, sans différence visible dans nos essais. Désactivée par défaut. Les cartes RTX 20, 40 et 50 restent comme elles sont.</p></div>
+<div class="card new"><h3>Un Neural Rendering bien plus rapide</h3><p class="stat">27 → 15 ms</p><p class="stat-label">Temps NR en 1080p, dans un essai local</p><p>Avec <code>nvngx_dlssnr.dll</code> <b>310.9.16</b> de NVIDIA, le nouveau <b>preset de modèle NR B</b>, celui par défaut, est un réseau plus petit : environ 15 ms de temps NR contre 27 ms pour A, le réseau de la 310.8.0. Son image peut différer de celle de A. Les optimisations de RTX Encore pour les <b>RTX 20 et 30</b> s'appliquent aux deux réseaux. Le Hub propose ce fichier jeu par jeu, téléchargé et vérifié ; la 310.8.0 reste celle par défaut. Expérimental et peu testé.</p></div>
+</div>
+</div></section>
+
 <section id="why"><div class="wrap">
 <h2>Pourquoi passer par le Hub plutôt que copier les fichiers à la main</h2>
 <p class="sub">Installer un mod dans plusieurs jeux, c&#x27;est trouver des dossiers, vérifier des versions de DLL, tenir des sauvegardes et se rappeler ce qui est à mettre à jour. Le Hub le fait pour vous, et montre ce qu&#x27;il va faire avant de le faire.</p>
@@ -44,7 +53,7 @@
 <div class="compare">
 <div class="row"><div class="hand">Trouver le dossier du jeu, choisir un nom de proxy libre, copier le bon fichier.</div><div class="hub">Vos jeux <b>Steam, Epic et GOG</b> sont trouvés tout seuls ; le Hub choisit le nom que le jeu charge vraiment et laisse le leur à ReShade, OptiScaler ou Special K.</div></div>
 <div class="row"><div class="hand">Chercher les bons fichiers DLSS et Streamline, version par version.</div><div class="hub">Les DLL <b>DLSS, Ray Reconstruction et génération d'images</b> les plus récentes que le mod admet sont prises pour vous, et les <b>plugins Streamline</b> par jeu complet. L'interposer du jeu n'est jamais remplacé.</div></div>
-<div class="row"><div class="hand">Trouver vous-même la DLL Neural Rendering de NVIDIA.</div><div class="hub"><code>nvngx_dlssnr.dll</code> 310.8.0, le build exact que le mod exige, est <b>téléchargée, vérifiée</b> et posée à côté du mod.</div></div>
+<div class="row"><div class="hand">Trouver vous-même la DLL Neural Rendering de NVIDIA.</div><div class="hub"><code>nvngx_dlssnr.dll</code>, dans le build exact que le mod exige, est <b>téléchargée, vérifiée</b> et posée à côté du mod : la 310.8.0, ou avec RTX Encore 1.1 la <b>310.9.16</b> et son réseau bien plus rapide, au choix jeu par jeu.</div></div>
 <div class="row"><div class="hand">Tout refaire dans chaque jeu à chaque nouvelle version.</div><div class="hub"><b>Tout mettre à jour</b> met à jour le mod, les DLL NVIDIA et les plugins Streamline dans tous les jeux. Le Hub se met aussi à jour lui-même.</div></div>
 <div class="row"><div class="hand">Tenir vos propres sauvegardes, et espérer.</div><div class="hub">Chaque fichier remplacé est sauvegardé d'abord ; <b>Restaurer le jeu</b> remet tout en place, réglage du pilote compris.</div></div>
 <div class="row"><div class="hand">Modifier un fichier de réglages à l&#x27;aveugle.</div><div class="hub">Un formulaire <b>explique chaque réglage</b>, grise ce qui n'a pas d'effet sur votre carte, et ne propose que les presets que les DLL de votre jeu prennent.</div></div>
@@ -62,7 +71,7 @@
 <div class="card"><h3>Choisi une fois pour tous les jeux</h3><p>Choisissez les versions de DLSS et de Streamline et vos presets DLSS une fois dans les paramètres. Ce que vous décochez dans un jeu y reste laissé de côté.</p></div>
 <div class="card"><h3>Installer avec un retour arrière</h3><p>Le plan est montré avant d'écrire quoi que ce soit, écrit en entier ou pas du tout, et une installation interrompue est annulée. Les droits d'administrateur seulement là où un dossier l'exige.</p></div>
 <div class="card"><h3>Mises à jour</h3><p>Les publications de RTX Encore avec leurs notes, un jeu ou tous. Le Hub cherche sa propre nouvelle version ; les mises à jour sont signées.</p></div>
-<div class="card"><h3>Réglages</h3><p>Un formulaire pour <code>rtx-encore.jsonc</code>, des jeux de réglages nommés par jeu, des réglages de départ pour votre carte, et le modèle DLSS Super Resolution dans le profil de pilote.</p></div>
+<div class="card"><h3>Réglages</h3><p>Un formulaire pour <code>rtx-encore.jsonc</code>, des jeux de réglages nommés par jeu, des réglages de départ pour votre carte, et les presets de modèle DLSS, que RTX Encore applique même par-dessus le profil de pilote.</p></div>
 <div class="card"><h3>Santé et sauvegardes</h3><p>Lancer le jeu, observer sa première minute, et lister chaque état auquel le jeu peut revenir.</p></div>
 </div>
 </div></section>
@@ -90,7 +99,7 @@
 
 <section><div class="wrap">
 <div class="notes">
-<div class="note "><strong>Version 1.0.</strong> L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement, et chaque publication donne le SHA-256 de son installateur.</div>
+<div class="note "><strong>Version 1.1.</strong> L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement, et chaque publication donne le SHA-256 de son installateur.</div>
 <div class="note "><strong>Les profils de la communauté</strong> : parcourir, importer et partager des réglages par jeu, classés pour votre machine et resserrés par des filtres. Ouverts depuis la 1.0.0-rc.2 ; expérimentaux et peu testés, et vides au départ.</div>
 <div class="note warn"><strong>Anti-triche.</strong> Installer un mod dans un jeu protégé par un anti-triche peut empêcher son démarrage ou mettre votre compte en danger. Le Hub le signale et n'y écrit rien sans votre accord sur le risque.</div>
 </div>

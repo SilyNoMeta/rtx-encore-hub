@@ -22,13 +22,13 @@
 <body>
 <header class="nav"><div class="wrap">
 <a class="brand" href="../zh/"><img src="../assets/logo.png" alt="" width="30" height="30">RTX Encore Hub</a>
-<nav><a href="#why">为什么用 Hub</a><a href="#features">功能</a><a href="#start">快速开始</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub">GitHub</a></nav>
+<nav><a href="#new">新功能</a><a href="#why">为什么用 Hub</a><a href="#features">功能</a><a href="#start">快速开始</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub">GitHub</a></nav>
 <div class="langs"><a href="../" hreflang="en">English</a><a href="../fr/" hreflang="fr">Français</a><a href="../zh/" hreflang="zh-CN" aria-current="true">简体中文</a></div>
 </div></header>
 
 <main>
 <div class="wrap hero">
-<span class="badge">1.0 版</span>
+<span class="badge">1.1 版</span>
 <h1>您的游戏库。您的安装。<em>您的回退之路。</em></h1>
 <p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> 的 Windows 配套应用。它会找到您的游戏，连同所需的 NVIDIA 文件一起安装模组，让一切保持最新，并且随时可以把游戏恢复原状。</p>
 <div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Windows 版</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore-hub/blob/main/docs/USER-GUIDE.zh-CN.md">用户指南</a></div>
@@ -37,6 +37,15 @@
 <p class="caption">真实应用截图，使用由替身游戏文件夹组成的演示游戏库。</p>
 </div>
 
+<section id="new"><div class="wrap">
+<h2>RTX Encore 1.1 新功能：更快的 DLSS</h2>
+<p class="sub">模组带来的两项提速，在 RTX Encore 1.1.0 及更高版本中可于游戏页面启用。以下数据来自一台 RTX 3070 Ti Laptop 和少数几款游戏：实际收益取决于您的显卡和游戏。</p>
+<div class="grid">
+<div class="card new"><h3>Fast super resolution (RTX 30)</h3><p class="stat">−18%</p><p class="stat-label">使用预设 M 时 DLSS 放大的 GPU 时间（测试台）</p><p>在 RTX 30 显卡上的 DirectX 12 游戏中，DLSS Super Resolution 的预设 <b>M 和 L</b> 会使用更快版本的 NVIDIA 模型，并以真实游戏的截取数据校准。在我们的测试台上，放大时间 M 减少约 18%，L 减少约 15%；使用 M 时，<b>The Witcher 3 减少 22%，Black Myth: Wukong 减少 25%</b>，在我们的测试中看不出画面差别。默认关闭。RTX 20、40 和 50 显卡保持不变。</p></div>
+<div class="card new"><h3>快得多的 Neural Rendering</h3><p class="stat">27 → 15 ms</p><p class="stat-label">1080p 下的 NR 时间（本地测试）</p><p>使用 NVIDIA 的 <code>nvngx_dlssnr.dll</code> <b>310.9.16</b> 时，新的 <b>NR 模型预设 B</b>（默认）是一个更小的网络：NR 时间约 15 ms，而 A（310.8.0 的网络）约 27 ms。其画面可能与 A 不同。RTX Encore 针对 <b>RTX 20 和 30</b> 的优化同样适用于这两个网络。Hub 可按游戏提供该文件，下载并验证；默认仍为 310.8.0。实验性功能，测试有限。</p></div>
+</div>
+</div></section>
+
 <section id="why"><div class="wrap">
 <h2>为什么使用 Hub，而不是手动复制文件</h2>
 <p class="sub">在多个游戏中安装模组，意味着要找文件夹、核对 DLL 版本、保存备份，还要记住哪些需要更新。Hub 会替您完成，并在动手之前先展示它要做什么。</p>
@@ -44,7 +53,7 @@
 <div class="compare">
 <div class="row"><div class="hand">找到游戏文件夹，选一个未被占用的代理名称，复制正确的文件。</div><div class="hub">自动找到您的 <b>Steam、Epic 和 GOG</b> 游戏；Hub 会选择游戏真正会加载的名称，并把 ReShade、OptiScaler 或 Special K 的名称留给它们。</div></div>
 <div class="row"><div class="hand">逐个版本地寻找合适的 DLSS 和 Streamline 文件。</div><div class="hub">自动采用模组支持的最新 <b>DLSS、Ray Reconstruction 和帧生成</b> DLL，并整套更换 <b>Streamline 插件</b>。游戏自身的 interposer 从不被替换。</div></div>
-<div class="row"><div class="hand">自己去找 NVIDIA 的 Neural Rendering DLL。</div><div class="hub"><code>nvngx_dlssnr.dll</code> 310.8.0，也就是模组要求的那个确切构建，会被<b>下载、验证</b>并放在模组旁边。</div></div>
+<div class="row"><div class="hand">自己去找 NVIDIA 的 Neural Rendering DLL。</div><div class="hub">模组要求的确切构建的 <code>nvngx_dlssnr.dll</code> 会被<b>下载、验证</b>并放在模组旁边：310.8.0，或在 RTX Encore 1.1 中按游戏选择 <b>310.9.16</b> 及其快得多的网络。</div></div>
 <div class="row"><div class="hand">每出一个新版本，就在每个游戏里重做一遍。</div><div class="hub"><b>全部更新</b>会更新所有游戏中的模组、NVIDIA DLL 和 Streamline 插件。Hub 自身也会自动更新。</div></div>
 <div class="row"><div class="hand">自己保存备份，然后听天由命。</div><div class="hub">每个被替换的文件都会先备份；<b>还原游戏</b>会把一切恢复原状，包括驱动设置。</div></div>
 <div class="row"><div class="hand">修改设置文件全靠猜。</div><div class="hub">表单会<b>解释每一项设置</b>，把对您的显卡无效的设置变灰，并且只提供游戏 DLL 支持的预设。</div></div>
@@ -62,7 +71,7 @@
 <div class="card"><h3>为所有游戏统一选择一次</h3><p>在设置中统一选择 DLSS 和 Streamline 的版本以及您的 DLSS 预设。在某个游戏中取消勾选的内容会在该游戏中保持不变。</p></div>
 <div class="card"><h3>可回退的安装</h3><p>写入任何内容之前先显示方案，要么完整写入，要么完全不写，并撤销被中断的安装。只有在文件夹需要时才请求管理员权限。</p></div>
 <div class="card"><h3>更新</h3><p>RTX Encore 的发布版本及其说明，可更新单个游戏或全部游戏。Hub 会查找自身的新版本；更新带有签名。</p></div>
-<div class="card"><h3>设置</h3><p>用表单编辑 <code>rtx-encore.jsonc</code>，为每个游戏保存命名的设置组合，为您的显卡建议起始设置，并在驱动配置文件中设置 DLSS Super Resolution 模型。</p></div>
+<div class="card"><h3>设置</h3><p>用表单编辑 <code>rtx-encore.jsonc</code>，为每个游戏保存命名的设置组合，为您的显卡建议起始设置，并选择 DLSS 模型预设，RTX Encore 会应用它们，即使驱动配置文件另有设置。</p></div>
 <div class="card"><h3>健康与备份</h3><p>启动游戏，观察其第一分钟，并列出游戏可以还原到的每个状态。</p></div>
 </div>
 </div></section>
@@ -90,7 +99,7 @@
 
 <section><div class="wrap">
 <div class="notes">
-<div class="note "><strong>1.0 版。</strong>安装程序尚未进行代码签名：首次运行时 Windows 可能显示 SmartScreen 警告，每个发布版本都会给出安装程序的 SHA-256。</div>
+<div class="note "><strong>1.1 版。</strong>安装程序尚未进行代码签名：首次运行时 Windows 可能显示 SmartScreen 警告，每个发布版本都会给出安装程序的 SHA-256。</div>
 <div class="note "><strong>社区配置</strong>：浏览、导入和分享每个游戏的设置，按您的机器排序并可筛选。自 1.0.0-rc.2 起开放；仍是实验性的、测试较少，并且一开始是空的。</div>
 <div class="note warn"><strong>反作弊。</strong>在受反作弊保护的游戏中安装模组，可能导致游戏无法启动或使您的账号面临风险。Hub 会明确指出，未经您确认风险不会在其中写入任何内容。</div>
 </div>
