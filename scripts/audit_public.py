@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Audit this documentation-only checkout before committing or publishing it."""
 
+import argparse
 import hashlib
 import re
 import struct
@@ -11,7 +12,10 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
+# Run this copy from a prepared public checkout (copied as scripts/audit_public.py).
 ALLOWED = {
+    ".github/FUNDING.yml",
+    "docs/notes/1.2.0-beta.1.md", "docs/notes/1.2.0-beta.1.fr.md", "docs/notes/1.2.0-beta.1.zh-CN.md",
     ".gitattributes", ".gitignore", "README.md", "README.fr.md", "README.zh-CN.md",
     ".github/ISSUE_TEMPLATE/bug-report.yml",
     ".github/ISSUE_TEMPLATE/feature-request.yml",
@@ -49,6 +53,13 @@ def git(*args):
 
 
 def main():
+    global ROOT
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--current-tree", action="store_true", help="audit the prepared files and index only; do not claim a history audit")
+    parser.add_argument("--root", type=Path, help="prepared public checkout to inspect")
+    args = parser.parse_args()
+    if args.root:
+        ROOT = args.root.resolve()
     errors = []
     files = {
         path.relative_to(ROOT).as_posix(): path
@@ -105,7 +116,7 @@ def main():
     for name in git("ls-files", "-z").split("\0"):
         if name and name not in ALLOWED:
             errors.append(f"Unreviewed tracked file: {name}")
-    for commit in git("rev-list", "--all").splitlines():
+    for commit in ([] if args.current_tree else git("rev-list", "--all").splitlines()):
         for name in git("ls-tree", "-r", "--name-only", commit).splitlines():
             if name not in ALLOWED and name not in SITE:
                 errors.append(f"Unreviewed historical file: {name}")
@@ -113,9 +124,9 @@ def main():
         for error in errors:
             print(f"FAIL: {error}", file=sys.stderr)
         return 1
-    print(f"PASS: {len(files)} reviewed files; local links, SVGs, index and history checked.")
+    print(f"PASS: {len(files)} reviewed files; local links, SVGs and index checked" + ("; history NOT checked (--current-tree)." if args.current_tree else "; history checked."))
     print("Manual visual review of screenshots is also required.")
-    print("The latest-download URL requires the first published Hub release.")
+    print("Beta documentation does not create a release; download links must target published releases.")
     return 0
 
 

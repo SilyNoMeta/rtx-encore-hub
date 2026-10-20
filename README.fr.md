@@ -24,7 +24,23 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 </div>
 
 > [!NOTE]
-> **Version 1.0.** Ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`, ou `RTX-Encore-Hub-Portable-<version>.zip`, qui n'installe rien. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.
+> **Windows x64.** Ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`, ou `RTX-Encore-Hub-Portable-<version>.zip`, qui n'installe rien. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.
+
+## 1.2.0-beta.1
+
+**XeSS / XeFG : TRÈS EXPÉRIMENTAL.** Cette intégration a été particulièrement pénible à mettre au point :) Attendez-vous à des bugs, crashs, artefacts et différences entre jeux et API graphiques. N’hésitez pas à remonter les problèmes : dans RTX Encore Hub, ouvrez la page **Santé** du jeu, choisissez **Préparer un diagnostic**, relisez l’archive pour retirer les informations personnelles, puis joignez-la à une [issue RTX Encore](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose). Indiquez les moteurs choisis, l’API graphique et le multiplicateur demandé. Le Hub ne téléverse pas l’archive à votre place.
+
+Il s’agit d’une préversion. Pour recevoir les mises à jour bêta dans le Hub, choisissez **Candidat** dans **Mises à jour** ; le canal Stable conserve les versions stables.
+
+- **Moteurs Intel et dépendances** — Avec RTX Encore 1.2.0-beta.1, choisissez la reconstruction XeSS ou la génération d’images XeFG là où le mod les prend en charge. Le Hub installe et vérifie les fichiers Intel et leur licence avec le mod ; ils sont sauvegardés et restaurés dans la même opération. Leur présence ne prouve pas qu’un moteur est actif.
+- **Neural Rendering, passe par passe** — Pour chacune des quatre passes possibles, réglez l’intensité, le ton local, la structure locale, la structure de peau et le masque de personnage, ou suivez le réglage global. Une intensité à zéro laisse la passe tourner et ne supprime pas son coût.
+- **Entrée HDR et exposition** — Les réglages communs `srHdr` et `srAutoExposure` suivent le moteur de reconstruction choisi. Ils suivent le jeu par défaut et demandent un redémarrage. L’entrée HDR n’active pas le HDR de l’écran et ne convertit pas une image SDR en HDR.
+- **Retrouver le bon jeu** — La recherche globale ouvre directement les jeux. Lorsque l’exécutable est incertain, la fiche propose des candidats et retient votre choix. Vous pouvez revenir à la sélection automatique.
+- **Diagnostics plus utiles** — Santé indique le fournisseur de génération d’images et son admission : profil exact, heuristique non qualifiée ou refus. L’archive de diagnostic comprend les logs texte du mod, ses réglages et la liste du dossier du jeu. Relisez-la avant de la partager ; le Hub ne l’envoie pas.
+
+Les nouveaux réglages Intel, d’entrée commune, de NR par passe et de politique des fournisseurs demandent un mod identifié 1.2.0-beta.1 ou ultérieur. Les anciens mods gardent leurs contrôles compatibles. Les routes XeFG sont expérimentales et dépendent du mod, de l’API graphique, du jeu et du runtime. Les multiplicateurs élevés sont conditionnels ; un multiplicateur demandé ne prouve pas les images affichées.
+
+[Notes de la bêta](docs/notes/1.2.0-beta.1.fr.md)
 
 ![La bibliothèque du Hub, avec les jaquettes, l'état de chaque installation et le bandeau des mises à jour](screenshots/library.fr.png)
 
@@ -36,7 +52,7 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 | :--- | :--- |
 | Trouver le dossier du jeu, choisir un nom de proxy libre, copier le bon fichier. | Vos jeux Steam, Epic et GOG sont trouvés tout seuls ; le Hub choisit le nom que le jeu charge vraiment et laisse le leur à ReShade, OptiScaler ou Special K. |
 | Chercher les bons fichiers DLSS et Streamline, version par version. | Les DLL DLSS, Ray Reconstruction et génération d'images les plus récentes que le mod admet sont prises pour vous, et les plugins Streamline par jeu complet. L'interposer du jeu n'est jamais remplacé. |
-| Trouver vous-même la DLL Neural Rendering de NVIDIA. | `nvngx_dlssnr.dll` 310.8.0, le build exact que le mod exige, est téléchargée, vérifiée et posée à côté du mod. |
+| Trouver vous-même la DLL Neural Rendering de NVIDIA. | `nvngx_dlssnr.dll` 310.9.16, le build exact que le mod exige, est téléchargée, vérifiée et posée à côté du mod. |
 | Tout refaire dans chaque jeu à chaque nouvelle version. | **Tout mettre à jour** met à jour le mod, les DLL NVIDIA et les plugins Streamline dans tous les jeux. Le Hub se met aussi à jour lui-même. |
 | Tenir vos propres sauvegardes, et espérer. | Chaque fichier remplacé est sauvegardé d'abord ; **Restaurer le jeu** remet tout en place, réglage du pilote compris. |
 | Modifier un fichier de réglages à l'aveugle. | Un formulaire explique chaque réglage, grise ce qui n'a pas d'effet sur votre carte, et ne propose que les presets que les DLL de votre jeu prennent. |
@@ -50,7 +66,7 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 | **Une fiche par jeu** | Dit ce que RTX Encore peut y faire sur votre carte et votre pilote (génération d'images, échelle de rendu DLSS, Smooth Motion, Neural Rendering) et pourquoi, et compare les DLL NVIDIA du jeu à ce qu'il propose. |
 | **Les bons fichiers NVIDIA** | Prend les versions de DLSS et de Streamline les plus récentes que le RTX Encore du jeu admet, depuis ce que votre machine a déjà ou par téléchargement. Une DLL n'est acceptée qu'avec une signature NVIDIA valide. Vous choisissez les versions une fois pour tous les jeux dans les paramètres, et ce que vous décochez dans un jeu y reste laissé de côté. |
 | **Installer avec un retour arrière** | Montre le plan avant d'écrire quoi que ce soit, l'écrit en entier ou pas du tout, et annule une installation interrompue. Les droits d'administrateur ne sont demandés que là où un dossier l'exige, pour cette seule opération. |
-| **Mises à jour** | Lit les publications de RTX Encore, avec leurs notes, et met à jour un jeu ou tous. Cherche sa propre nouvelle version et l'installe quand vous le dites ; les mises à jour sont signées. |
+| **Mises à jour** | Lit les publications de RTX Encore, avec leurs notes, et met à jour un jeu ou tous. Cherche sa propre nouvelle version et l'installe quand vous le dites ; le téléchargement de la mise à jour est vérifié. |
 | **Réglages** | Édite `rtx-encore.jsonc` par un formulaire, garde des jeux de réglages nommés par jeu, propose des réglages de départ pour votre carte, et règle le modèle DLSS Super Resolution, que RTX Encore applique au lancement du jeu. |
 | **Santé et sauvegardes** | Lance le jeu, observe sa première minute, et liste chaque état auquel le jeu peut revenir. |
 

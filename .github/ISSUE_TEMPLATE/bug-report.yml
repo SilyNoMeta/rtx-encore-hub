@@ -14,7 +14,7 @@ body:
     attributes:
       label: Hub version
       description: The version shown in the Hub, and where you downloaded it.
-      placeholder: "1.1.0, GitHub release"
+      placeholder: "1.2.0-beta.1, GitHub release"
     validations:
       required: true
   - type: textarea
@@ -35,4 +35,7 @@ body:
     id: restore
     attributes:
       label: Restore and attachments
-      description: If relevant, did Restore help? Attach redacted screenshots or logs.
+      description: |
+        For a game-specific problem, reproduce it, open the game in the Hub, go to Health and choose Prepare a diagnostic. Review the archive for personal information, then drag and drop it here; the Hub does not upload it automatically. If relevant, did Restore help? If the Hub cannot open or the diagnostic fails, explain why and attach the available Hub logs and redacted screenshots. XeSS/XeFG rendering issues belong in the mod tracker linked above, with the same diagnostic archive.
+    validations:
+      required: true
