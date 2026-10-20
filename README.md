@@ -24,7 +24,23 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 </div>
 
 > [!NOTE]
-> **Version 1.0.** Open the [releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) and download `RTX-Encore-Hub-Setup-<version>.exe`, or `RTX-Encore-Hub-Portable-<version>.zip`, which installs nothing. The installer is not code-signed yet, so Windows may show a SmartScreen warning the first time; each release gives the SHA-256 of its installer. The Hub and the RTX Encore mod have separate releases.
+> **Windows x64.** Open the [releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) and download `RTX-Encore-Hub-Setup-<version>.exe`, or `RTX-Encore-Hub-Portable-<version>.zip`, which installs nothing. The installer is not code-signed yet, so Windows may show a SmartScreen warning the first time; each release gives the SHA-256 of its installer. The Hub and the RTX Encore mod have separate releases.
+
+## 1.2.0-beta.1
+
+**XeSS / XeFG: VERY EXPERIMENTAL.** Getting this integration working was a particularly difficult and frustrating part of development :) Expect bugs, crashes, visual artifacts and differences between games and graphics APIs. Please report problems: in RTX Encore Hub, open the game’s **Health** page, choose **Prepare a diagnostic**, review the archive for personal information, then attach it to an [RTX Encore issue](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose). Include your engine choices, graphics API and requested multiplier. The Hub does not upload the archive for you.
+
+This is a pre-release. To receive beta updates in the Hub, select **Candidate** on the **Updates** page; the Stable channel stays on stable releases.
+
+- **Intel engines, with their dependencies** — With RTX Encore 1.2.0-beta.1, choose XeSS reconstruction or XeFG frame generation where the mod supports them. The Hub installs and verifies the Intel files and their license with the mod; they are backed up and restored in the same operation. Installed files do not establish that an engine is active.
+- **Neural Rendering, pass by pass** — For each of the four possible passes, adjust intensity, local tone, local structure, skin structure and the character mask, or inherit the global setting. Setting intensity to zero still runs the pass and does not remove its cost.
+- **HDR input and exposure** — The common `srHdr` and `srAutoExposure` controls follow the chosen reconstruction engine. Both default to the game and require a restart. HDR input does not enable HDR on the display or convert SDR to HDR.
+- **Find the right game** — The global search opens games directly. When the executable is uncertain, the game page offers candidates and remembers your choice. You can return to automatic selection.
+- **More useful diagnostics** — Health reports the FG provider and whether a provider was accepted by an exact profile, admitted heuristically without qualification, or refused. The diagnostic archive includes the mod’s text logs, settings and a game-folder listing. Review it before sharing; the Hub does not upload it.
+
+New Intel, common-input, per-pass NR and provider-policy settings require an identified mod 1.2.0-beta.1 or later. Older mods keep their supported controls. XeFG routes are experimental and limited by the mod, graphics API, game and runtime. Higher multipliers are conditional; a requested multiplier is not proof of displayed frames.
+
+[Beta notes](docs/notes/1.2.0-beta.1.md)
 
 ![The Hub's game library, with cover art, the state of each install and the update banner](screenshots/library.png)
 
@@ -36,7 +52,7 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 | :--- | :--- |
 | Find the game folder, pick a proxy name that is free, copy the right file. | Your Steam, Epic and GOG games are found by themselves; the Hub picks the name the game really loads and leaves ReShade, OptiScaler or Special K theirs. |
 | Hunt for the right DLSS and Streamline files, version by version. | The latest DLSS, Ray Reconstruction and frame generation DLLs the mod admits are taken for you, and the Streamline plugins as a matched set. The game's own interposer is never replaced. |
-| Find NVIDIA's Neural Rendering DLL yourself. | `nvngx_dlssnr.dll` 310.8.0, the exact build the mod requires, is downloaded, verified and put beside the mod. |
+| Find NVIDIA's Neural Rendering DLL yourself. | `nvngx_dlssnr.dll` 310.9.16, the exact build the mod requires, is downloaded, verified and put beside the mod. |
 | Redo it all in every game at each new version. | **Update all** updates the mod, the NVIDIA DLLs and the Streamline plugins in every game. The Hub updates itself too. |
 | Keep your own backups, and hope. | Every replaced file is backed up first; **Restore game** puts everything back, driver setting included. |
 | Edit a settings file and guess. | A form explains every setting, greys what has no effect on your card, and offers only the presets your game's DLLs take. |
@@ -50,7 +66,7 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 | **A page for every game** | Says what RTX Encore can do there on your card and driver (frame generation, DLSS render scale, Smooth Motion, Neural Rendering) and why, and compares the game's NVIDIA DLLs with what it proposes. |
 | **The right NVIDIA files** | Takes the most recent DLSS and Streamline versions the game's RTX Encore admits, from what your machine already has or from a download. A DLL is accepted only with a valid NVIDIA signature. You choose the versions once for every game in Settings, and what you untick in one game stays left alone there. |
 | **Install with a way back** | Shows the plan before anything is written, writes it whole or not at all, and undoes an install that was interrupted. Administrator rights are asked only where a folder needs them, for that one operation. |
-| **Updates** | Reads the releases of RTX Encore, with their notes, and updates one game or all of them. Looks for its own new version and installs it when you say so; updates are signed. |
+| **Updates** | Reads the releases of RTX Encore, with their notes, and updates one game or all of them. Looks for its own new version and installs it when you say so; the downloaded update is verified. |
 | **Settings** | Edits `rtx-encore.jsonc` through a form, keeps named sets of settings per game, proposes starting settings for your card, and sets the DLSS Super Resolution model, which RTX Encore applies when the game starts. |
 | **Health and backups** | Starts the game, watches its first minute, and lists every state the game can be put back to. |
 

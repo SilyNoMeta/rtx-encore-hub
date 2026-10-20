@@ -6,6 +6,36 @@
 
 RTX Encore Hub installs [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) in your games, keeps the mod and the NVIDIA DLLs up to date, checks that a game starts well with it, and can always go back. The interface follows the language of Windows: French, English or Simplified Chinese; other languages use English. This guide uses the English labels of the application.
 
+## Using the 1.2 beta
+
+**XeSS / XeFG: VERY EXPERIMENTAL.** Getting this integration working was a particularly difficult and frustrating part of development :) Expect bugs, crashes, visual artifacts and differences between games and graphics APIs. Please report problems: in RTX Encore Hub, open the game’s **Health** page, choose **Prepare a diagnostic**, review the archive for personal information, then attach it to an [RTX Encore issue](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose). Include your engine choices, graphics API and requested multiplier. The Hub does not upload the archive for you.
+
+This is a pre-release. To receive beta updates in the Hub, select **Candidate** on the **Updates** page; the Stable channel stays on stable releases.
+
+New Intel, common-input, per-pass NR and provider-policy settings require an identified mod 1.2.0-beta.1 or later. Older mods keep their supported controls. XeFG routes are experimental and limited by the mod, graphics API, game and runtime. Higher multipliers are conditional; a requested multiplier is not proof of displayed frames.
+
+### Intel engines, with their dependencies
+
+With RTX Encore 1.2.0-beta.1, choose XeSS reconstruction or XeFG frame generation where the mod supports them. The Hub installs and verifies the Intel files and their license with the mod; they are backed up and restored in the same operation. Installed files do not establish that an engine is active.
+
+### Neural Rendering, pass by pass
+
+For each of the four possible passes, adjust intensity, local tone, local structure, skin structure and the character mask, or inherit the global setting. Setting intensity to zero still runs the pass and does not remove its cost.
+
+With RTX Encore 1.2.0-beta.1, NR can also run after Ray Reconstruction in compatible Direct3D 12 games that provide linear depth. Direct3D 11 and Vulkan still do not support this linear-depth case. Local testing in 007 First Light with path tracing confirmed that NR runs; image quality and cost have not been measured. The intermittent startup crash remains unresolved.
+
+### HDR input and exposure
+
+The common `srHdr` and `srAutoExposure` controls follow the chosen reconstruction engine. Both default to the game and require a restart. HDR input does not enable HDR on the display or convert SDR to HDR.
+
+Leave both controls on `game` unless the game’s input format is known. Incorrect HDR input can degrade the image. Auto exposure may help exposure-related ghosting, but is not a general fix; some DLSS models impose it. XeSS auto exposure has a GPU cost and is not recommended for LDR. XeSS Vulkan with LDR and manual exposure remains unsupported. Ray Reconstruction and frame generation are unchanged.
+
+Provider policy is local to the game: `exact` accepts reviewed NVIDIA providers; `heuristic`, the mod’s default, also allows guarded compatibility with other signed providers. A heuristic admission remains unqualified and is identified in Health. Restart after changing this policy; it is excluded from community profiles.
+
+With XeFG, changing the FPS limit requires a game restart. Variable pacing for higher XeFG multipliers is experimental. An FPS cap does not establish the cadence of source frames.
+
+[Beta notes](notes/1.2.0-beta.1.md)
+
 ## Install the Hub
 
 Download `RTX-Encore-Hub-Setup-<version>.exe` from the releases page and run it. It installs for your account only, **without administrator rights**, in `%LOCALAPPDATA%\Programs\RTX Encore Hub`. Nothing else has to be installed first.
@@ -27,17 +57,20 @@ The mod goes beside the program that draws the game: behind a launcher (The Witc
 
 A tile says the state of the game by a glyph and a word: not installed, installed, to update, changed by the game, failing. The search (`Ctrl+F`) ignores accents and punctuation; a filter limits the list to one graphics API; `F5` reads the folders again. The pane recalls your machine: card, memory, driver, screen.
 
+When the game page is unsure which executable is the game, review the alternatives it offers. Choose the actual game, then return to automatic selection if needed. The global search in the window’s title bar also finds games in your library.
+
 ## Read a game's page
 
 Choose a tile.
 
 - **What is possible here** says, for frame generation, DLSS Super Resolution, Smooth Motion and Neural Rendering, whether the feature is possible on your card and driver, and if not, why. It is deduced from the files and the driver: it is not evidence in the game.
 - **NVIDIA DLLs** compares, DLL by DLL, the game's version, the best copy already on the machine and what the Hub proposes. A DLL the machine does not have is downloaded: DLSS, Ray Reconstruction and frame generation from NVIDIA's own repository on GitHub, Neural Rendering's DLL from the project's bucket. **A DLL is accepted only with a valid NVIDIA signature**; Neural Rendering's must also be exactly the build the mod expects.
-- **The most recent version, by default**: for a DLL the game already has, the Hub takes the most recent version the game's RTX Encore admits, as NVIDIA's own updates do. The version it proposed until then stays yours to choose under the same line ("Take … in … rather than the proposed version"), and every box remains yours. A newer DLL in the game is never stepped back. The DLSS 310.9.16 batch of the NVIDIA app beta is prepared this way: it is taken by default with RTX Encore 1.0.0-rc.1 or later; with a beta of the mod, it is 310.9.1. Frame generation 310.9.16 is the only one that accepts preset C, Lite composition: faster, with image-quality trade-offs, without the anti-tearing protection or UI recomposition.
-- **Streamline plugins**: for a game that uses Streamline, the Hub replaces its plugins by those of the most recent version the game's RTX Encore admits ("Take the Streamline plugins in …", ticked by default). They are taken all together, never one by one. The game's interposer (`sl.interposer.dll`) is never replaced, as in NVIDIA's own updates; the page says its version and warns you when it differs from that of the plugins taken. 2.14.1 comes from NVIDIA's production SDK; 2.14.16, from the NVIDIA app beta, is taken with RTX Encore 1.0.0-rc.1 or later.
+- **Current NVIDIA downloads**: the bundled catalog offers DLSS SR, RR, FG and NR 310.9.16, plus Streamline plugins 2.14.16. A file requiring a newer mod is explained instead of replaced with an older download. A newer DLL already in the game is kept. FG preset C needs compatible 310.9.16; Lite composition has image-quality trade-offs and does not use the normal protection or UI recomposition controls.
+- **Streamline plugins** are taken together as a matched set. The game’s own `sl.interposer.dll` is kept. The page shows its version separately from the plugins and explains any difference.
 - **Choose once for every game**: in **Settings → Defaults at install**, you say what the Hub takes by default: the version of the Streamline plugins, that of DLSS, Ray Reconstruction and frame generation ("the most recent the mod admits", "do not replace", or a version), and your DLSS presets. Each game's page starts from these choices and lets you change them for that game. A preset chosen this way is written only in a game that does not have its own yet, and only when its DLLs take it; the page says so with the "Write your default presets" box.
 - **What you untick in a game stays left alone there**: an NVIDIA DLL, the Streamline plugins or your default presets unticked on a game's page are remembered for that game. The page reminds you, "Update all" does not touch them, and ticking the box again takes them back.
 - **DLSS Super Resolution model**: the Hub writes the chosen model in the game's `rtx-encore.jsonc` (`dlssSrPreset`), and RTX Encore applies it when the game starts. The Hub never changes the game's NVIDIA driver profile; when that profile forces a model of its own (set with the NVIDIA app, for example), the page says so, because it may take precedence with a mod older than 1.1.0.
+
 - **Starting settings**: a proposal for your card. The frame generation multiplier is, by default, the one the game decides; ×2, ×3 and ×4 are yours to choose.
 - **Proxy name**: the name the game loads the mod under (`version.dll`, `dxgi.dll`, `winmm.dll`, `dinput8.dll`). For each, the page says whether the game will load it and why: what its executable imports, a compatibility fix Windows applies to the game, another tool already there, what happened at the last launch, and what community profiles report. The recommended name follows; you can switch to another in one operation, undone like any other. In a game with an ASI loader, the mod can also be a plugin, `rtx-encore.asi`. A tool already there under a name is never overwritten. A compatibility mode Windows applies to the game can be removed from its page, for your account and, after Windows asks for administrator rights, for every account; the Hub notes what it removed, and **Put back** restores it as it was.
 
@@ -112,12 +145,13 @@ The Hub keeps its settings, its downloads, its covers and the backups of each ga
 
 The Hub contacts, without an account and without sending anything of yours:
 
+- GitHub and Intel’s official XeSS release archive, for the Intel dependencies required by a compatible mod;
 - GitHub, for the releases of the mod, those of the Hub, NVIDIA's DLLs and the Streamline plugins;
 - `encore-dl.nometa.fr`, for Neural Rendering's DLL, a version you chose to take, the list of sources, and the community's profiles when you open its page;
 - `encore-community.nometa.fr`, only when you publish, remove, like, confirm or report a profile: what you read, signed by your machine's key. To turn the community off, put `"Community": "off"` in `%LOCALAPPDATA%\EncoreHub\settings.json`;
 - Steam and Wikipedia, for the covers that are missing: the game's title is sent to them. **Settings → Cover images** turns that search off.
 
-At launch, the Hub puts in its own folder the NVIDIA DLLs an install takes by default, about 200 MB at most: an identical copy already on this computer is copied, the rest is downloaded. Every DLL written in a game comes from that folder. **Updates** shows where it stands. On a metered connection, turn off **Settings → NVIDIA DLLs → Prepare NVIDIA DLLs at launch**: each DLL is then downloaded when an install needs it.
+The Hub prepares the NVIDIA downloads selected by your defaults in its own data folder, reusing identical verified copies already on the computer. Download and storage sizes depend on the components. The launch-prefetch switch controls NVIDIA files; the Intel files required by a compatible mod are still obtained when installing or updating that mod.
 
 There is no telemetry.
 
