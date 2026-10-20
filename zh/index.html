@@ -30,10 +30,11 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.1 · Hub 1.1</span>
+<span class="badge">1.2.0-beta.1 · 实验测试版</span>
 <h1>在<em>您的</em> RTX&nbsp;20、30 或 40 上启用帧生成与 Neural Rendering。</h1>
 <p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> 是一个免费模组，为 GeForce RTX 20、30 和 40 带来最高 X6 的 DLSS 帧生成、Neural Rendering 和更快的 DLSS。<strong>RTX Encore Hub</strong> 会把它安装到您的游戏中，保持最新，并且随时可以把游戏恢复原状。</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 RTX Encore Hub</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">GitHub 上的 RTX Encore</a></div>
+<p class="sub">XeSS / XeFG：高度实验性。 这部分集成的开发过程非常艰难，也相当折腾 :) 请预期可能出现错误、崩溃、画面伪影，以及不同游戏和图形 API 之间的行为差异。欢迎报告问题：在 RTX Encore Hub 中打开游戏的 健康检查 页面，选择 生成诊断包，检查并移除个人信息后，将诊断压缩包附加到 RTX Encore issue。请注明选择的引擎、图形 API 和请求的倍率。Hub 不会自动上传该压缩包。 <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">报告问题</a>.</p>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">查看已发布的下载</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">GitHub 上的 RTX Encore</a></div>
 <p class="under">Windows 10 和 11，x64 · 英语、法语和简体中文 · 安装无需管理员权限</p>
 </div>
 
@@ -71,9 +72,11 @@
 </div>
 </div>
 <div class="news">
-<h2>RTX Encore 1.1 新功能</h2>
-<div class="card"><h3>Fast super resolution (RTX 30)</h3><p>在 RTX 30 显卡上的 DirectX 12 游戏中，DLSS Super Resolution 的预设 <b>M 和 L</b> 会使用更快版本的 NVIDIA 模型，并以真实游戏的截取数据校准，在我们的测试中看不出画面差别。默认关闭。RTX 20、40 和 50 显卡保持不变。</p></div>
-<div class="card"><h3>快得多的 Neural Rendering</h3><p>使用 <code>nvngx_dlssnr.dll</code> <b>310.9.16</b> 时，默认的 NR 模型预设 <b>B</b> 是比 A（310.8.0 的网络）更小的网络，其画面可能与 A 不同。RTX Encore 针对 RTX 20 和 30 的优化同样适用于两者。实验性功能，测试有限。</p></div>
+<h2>1.2.0-beta.1</h2>
+<p class="sub">新的 Intel、共用输入、逐轮 NR 和提供程序策略设置需要已识别的模组 1.2.0-beta.1 或更高版本。旧模组保留其支持的控制项。XeFG 路径仍属实验性，取决于模组、图形 API、游戏和运行库。更高倍率有使用条件；请求的倍率不能证明实际显示的帧数。</p>
+<div class="card"><h3>Intel 引擎及依赖</h3><p>搭配 RTX Encore 1.2.0-beta.1，可在模组支持的场景中选择 XeSS 重建或 XeFG 帧生成。Hub 会随模组安装并验证 Intel 文件及许可证，在同一操作中备份和还原它们。文件已安装不能证明引擎已激活。</p></div>
+<div class="card"><h3>逐轮调整 Neural Rendering</h3><p>四轮处理中的每一轮都可以调整强度、局部色调、局部结构、皮肤结构和角色遮罩，也可以继承全局设置。强度设为零仍会运行该轮处理，不会消除其计算开销。</p></div>
+<div class="card"><h3>HDR 输入与曝光</h3><p>共用设置 srHdr 和 srAutoExposure 跟随所选重建引擎，默认跟随游戏，需要重启生效。HDR 输入不会开启显示器 HDR，也不会将 SDR 转换为 HDR。</p></div>
 </div>
 </div></section>
 
@@ -83,14 +86,14 @@
 <div class="hub">
 <figure><div class="shot"><img src="../assets/library.zh.jpg" alt="Hub 的游戏库，包含每个安装的状态和更新横幅" width="1440" height="900" loading="lazy"></div><figcaption>真实应用截图，使用由替身游戏文件夹组成的演示游戏库。</figcaption></figure>
 <ol class="points">
-<li><h3>找到您的游戏</h3><p>自动找到 Steam、Epic 和 GOG 的游戏；也可以添加任何其他文件夹。每个游戏都会显示其状态。</p></li>
-<li><h3>可回退的安装</h3><p>写入任何内容之前先显示方案。每个被替换的文件都会先备份，<b>还原游戏</b>会把一切恢复原状。</p></li>
-<li><h3>让一切保持最新</h3><p><b>全部更新</b>会更新所有游戏中的模组、NVIDIA DLL 和 Streamline 插件。Hub 自身也会自动更新。</p></li>
+<li><h3>找到正确的游戏</h3><p>全局搜索可直接打开游戏页面。当可执行文件不确定时，游戏页面会提供候选项并记住您的选择，也可以恢复自动选择。</p></li>
+<li><h3>更有用的诊断</h3><p>健康页面报告帧生成提供程序，以及精确配置准入、未经认证的启发式准入或拒绝。诊断压缩包包含模组文本日志、设置和游戏目录文件列表。分享前请检查内容；Hub 不会自动上传。</p></li>
+<li><h3>统一安装和还原</h3><p>搭配 RTX Encore 1.2.0-beta.1，可在模组支持的场景中选择 XeSS 重建或 XeFG 帧生成。Hub 会随模组安装并验证 Intel 文件及许可证，在同一操作中备份和还原它们。文件已安装不能证明引擎已激活。</p></li>
 </ol>
 </div>
 <div class="more">
 <div><h3>合适的 NVIDIA 文件</h3><p>模组支持的最新 DLSS、帧生成和 Streamline，只接受带有效 NVIDIA 签名的文件。</p></div>
-<div><h3>Neural Rendering 的 DLL</h3><p><code>nvngx_dlssnr.dll</code> 310.8.0，或按游戏选择 310.9.16，下载并验证。</p></div>
+<div><h3>Neural Rendering 的 DLL</h3><p><code>nvngx_dlssnr.dll</code> 310.9.16，下载并验证。</p></div>
 <div><h3>每项设置都有说明</h3><p>用表单编辑 <code>rtx-encore.jsonc</code>，对您的显卡无效的设置会变灰。</p></div>
 <div><h3>启动并验证</h3><p>观察游戏的第一分钟并说明发生了什么，还可以准备一份用于报告的诊断。</p></div>
 <div><h3>社区配置</h3><p>按游戏分享的设置，按您的机器排序。实验性，测试较少。</p></div>
@@ -133,7 +136,7 @@
 
 <div class="wrap cta">
 <h2>准备好试试了吗？</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 RTX Encore Hub</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">查看已发布的下载</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
 </div>
 </main>
 

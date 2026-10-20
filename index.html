@@ -30,10 +30,11 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.1 · Hub 1.1</span>
+<span class="badge">1.2.0-beta.1 · experimental beta</span>
 <h1>Frame generation and Neural Rendering on <em>your</em> RTX&nbsp;20, 30 and 40.</h1>
 <p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> is a free mod that brings DLSS frame generation up to X6, Neural Rendering and a faster DLSS to GeForce RTX 20, 30 and 40. <strong>RTX Encore Hub</strong> installs it in your games, keeps it up to date, and can always put a game back as it was.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download RTX Encore Hub</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore on GitHub</a></div>
+<p class="sub">XeSS / XeFG: VERY EXPERIMENTAL. Getting this integration working was a particularly difficult and frustrating part of development :) Expect bugs, crashes, visual artifacts and differences between games and graphics APIs. Please report problems: in RTX Encore Hub, open the game’s Health page, choose Prepare a diagnostic, review the archive for personal information, then attach it to an RTX Encore issue. Include your engine choices, graphics API and requested multiplier. The Hub does not upload the archive for you. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Report an issue</a>.</p>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">View published downloads</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore on GitHub</a></div>
 <p class="under">Windows 10 and 11, x64 · English, French and Simplified Chinese · installs without administrator rights</p>
 </div>
 
@@ -71,9 +72,11 @@
 </div>
 </div>
 <div class="news">
-<h2>New in RTX Encore 1.1</h2>
-<div class="card"><h3>Fast super resolution (RTX 30)</h3><p>On RTX 30 cards in DirectX 12, DLSS Super Resolution presets <b>M and L</b> run a faster version of NVIDIA's model, calibrated on captures from real games, with no visible difference in our tests. Off by default. RTX 20, 40 and 50 cards are left as they are.</p></div>
-<div class="card"><h3>A much faster Neural Rendering</h3><p>With <code>nvngx_dlssnr.dll</code> <b>310.9.16</b>, NR model preset <b>B</b>, the default, is a smaller network than A, the network of 310.8.0; its image can differ from A's. RTX Encore's optimizations for RTX 20 and 30 apply to both. Experimental and lightly tested.</p></div>
+<h2>1.2.0-beta.1</h2>
+<p class="sub">New Intel, common-input, per-pass NR and provider-policy settings require an identified mod 1.2.0-beta.1 or later. Older mods keep their supported controls. XeFG routes are experimental and limited by the mod, graphics API, game and runtime. Higher multipliers are conditional; a requested multiplier is not proof of displayed frames.</p>
+<div class="card"><h3>Intel engines, with their dependencies</h3><p>With RTX Encore 1.2.0-beta.1, choose XeSS reconstruction or XeFG frame generation where the mod supports them. The Hub installs and verifies the Intel files and their license with the mod; they are backed up and restored in the same operation. Installed files do not establish that an engine is active.</p></div>
+<div class="card"><h3>Neural Rendering, pass by pass</h3><p>For each of the four possible passes, adjust intensity, local tone, local structure, skin structure and the character mask, or inherit the global setting. Setting intensity to zero still runs the pass and does not remove its cost.</p></div>
+<div class="card"><h3>HDR input and exposure</h3><p>The common srHdr and srAutoExposure controls follow the chosen reconstruction engine. Both default to the game and require a restart. HDR input does not enable HDR on the display or convert SDR to HDR.</p></div>
 </div>
 </div></section>
 
@@ -83,14 +86,14 @@
 <div class="hub">
 <figure><div class="shot"><img src="assets/library.jpg" alt="The Hub&#x27;s game library, with the state of each install and the update banner" width="1440" height="900" loading="lazy"></div><figcaption>Real application capture, on a demonstration library of stand-in game folders.</figcaption></figure>
 <ol class="points">
-<li><h3>Finds your games</h3><p>Steam, Epic and GOG are found by themselves; add any other folder. Each game says where it stands.</p></li>
-<li><h3>Installs with a way back</h3><p>The plan is shown before anything is written. Every replaced file is backed up first, and <b>Restore game</b> puts everything back.</p></li>
-<li><h3>Keeps everything current</h3><p><b>Update all</b> updates the mod, the NVIDIA DLLs and the Streamline plugins in every game. The Hub updates itself too.</p></li>
+<li><h3>Find the right game</h3><p>The global search opens games directly. When the executable is uncertain, the game page offers candidates and remembers your choice. You can return to automatic selection.</p></li>
+<li><h3>More useful diagnostics</h3><p>Health reports the FG provider and whether a provider was accepted by an exact profile, admitted heuristically without qualification, or refused. The diagnostic archive includes the mod’s text logs, settings and a game-folder listing. Review it before sharing; the Hub does not upload it.</p></li>
+<li><h3>Install and restore together</h3><p>With RTX Encore 1.2.0-beta.1, choose XeSS reconstruction or XeFG frame generation where the mod supports them. The Hub installs and verifies the Intel files and their license with the mod; they are backed up and restored in the same operation. Installed files do not establish that an engine is active.</p></li>
 </ol>
 </div>
 <div class="more">
 <div><h3>The right NVIDIA files</h3><p>DLSS, frame generation and Streamline, the latest the mod admits, accepted only with a valid NVIDIA signature.</p></div>
-<div><h3>Neural Rendering&#x27;s DLL</h3><p><code>nvngx_dlssnr.dll</code> 310.8.0, or 310.9.16 per game, downloaded and verified.</p></div>
+<div><h3>Neural Rendering&#x27;s DLL</h3><p><code>nvngx_dlssnr.dll</code> 310.9.16, downloaded and verified.</p></div>
 <div><h3>Every setting explained</h3><p>A form for <code>rtx-encore.jsonc</code>, greyed where a setting has no effect on your card.</p></div>
 <div><h3>Launch and verify</h3><p>Watches the game's first minute and says what happened, with a diagnostic ready for a report.</p></div>
 <div><h3>Community profiles</h3><p>Settings shared per game, ranked for your machine. Experimental, lightly tested.</p></div>
@@ -115,7 +118,7 @@
 <li><span>Under <strong>Health</strong>, <strong>Launch and verify</strong> checks the first minute. When a new RTX Encore is out, <strong>Update all</strong>.</span></li>
 </ol>
 <div class="notes">
-<div class="note "><strong>Version 1.1.</strong> The installer is not code-signed yet: Windows may show a SmartScreen warning the first time, and each release gives the SHA-256 of its installer.</div>
+<div class="note "><strong>Windows x64.</strong> The installer is not code-signed yet: Windows may show a SmartScreen warning the first time, and each release gives the SHA-256 of its installer.</div>
 <div class="note warn"><strong>Anti-cheat.</strong> Installing a mod in a game an anti-cheat protects can block its startup or put your account at risk. The Hub says so and writes nothing there without your word on the risk.</div>
 </div>
 </div></section>
@@ -133,7 +136,7 @@
 
 <div class="wrap cta">
 <h2>Ready to try it?</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download RTX Encore Hub</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">View published downloads</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
 </div>
 </main>
 
