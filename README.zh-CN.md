@@ -26,13 +26,13 @@
 > [!NOTE]
 > **Windows x64。** 请打开[发布页面](https://github.com/SilyNoMeta/rtx-encore-hub/releases)并下载 `RTX-Encore-Hub-Setup-<version>.exe`，或无需安装的 `RTX-Encore-Hub-Portable-<version>.zip`。安装程序尚未进行代码签名，因此首次运行时 Windows 可能显示 SmartScreen 警告；每个发布版本都会给出安装程序的 SHA-256。Hub 与 RTX Encore 模组分别发布。
 
-## 1.2.0-beta.1
+## 1.2.0
 
 **XeSS / XeFG：高度实验性。** 这部分集成的开发过程非常艰难，也相当折腾 :) 请预期可能出现错误、崩溃、画面伪影，以及不同游戏和图形 API 之间的行为差异。欢迎报告问题：在 RTX Encore Hub 中打开游戏的 **健康检查** 页面，选择 **生成诊断包**，检查并移除个人信息后，将诊断压缩包附加到 [RTX Encore issue](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose)。请注明选择的引擎、图形 API 和请求的倍率。Hub 不会自动上传该压缩包。
 
-这是预发布版本。若要在 Hub 中接收测试版更新，请在 **更新** 页面选择 **候选版** 通道；稳定版通道仍使用稳定发布版本。
-
-- **Intel 引擎及依赖** — 搭配 RTX Encore 1.2.0-beta.1，可在模组支持的场景中选择 XeSS 重建或 XeFG 帧生成。Hub 会随模组安装并验证 Intel 文件及许可证，在同一操作中备份和还原它们。文件已安装不能证明引擎已激活。
+- **游戏库** — 收藏、紧凑的卡片操作和从卡片启动、可恢复游戏库的可选托盘模式，以及可筛选游戏库的标题栏搜索。
+- **搭配 RTX Encore 1.2.0** — NVIDIA 621.01 驱动上的 Smooth Motion；Force Smooth Motion 已移除（始终解除 Vulkan 排除）；DLSS 预设和重建引擎可在游戏运行中生效。
+- **Intel 引擎及依赖** — 搭配 RTX Encore 1.2，可在模组支持的场景中选择 XeSS 重建或 XeFG 帧生成。Hub 会随模组安装并验证 Intel 文件及许可证，在同一操作中备份和还原它们。文件已安装不能证明引擎已激活。
 - **逐轮调整 Neural Rendering** — 四轮处理中的每一轮都可以调整强度、局部色调、局部结构、皮肤结构和角色遮罩，也可以继承全局设置。强度设为零仍会运行该轮处理，不会消除其计算开销。
 - **HDR 输入与曝光** — 共用设置 `srHdr` 和 `srAutoExposure` 跟随所选重建引擎，默认跟随游戏，需要重启生效。HDR 输入不会开启显示器 HDR，也不会将 SDR 转换为 HDR。
 - **找到正确的游戏** — 全局搜索可直接打开游戏页面。当可执行文件不确定时，游戏页面会提供候选项并记住您的选择，也可以恢复自动选择。
@@ -40,7 +40,7 @@
 
 新的 Intel、共用输入、逐轮 NR 和提供程序策略设置需要已识别的模组 1.2.0-beta.1 或更高版本。旧模组保留其支持的控制项。XeFG 路径仍属实验性，取决于模组、图形 API、游戏和运行库。更高倍率有使用条件；请求的倍率不能证明实际显示的帧数。
 
-[测试版说明](docs/notes/1.2.0-beta.1.zh-CN.md)
+[版本说明](docs/notes/1.2.0.zh-CN.md) · [1.2.0-beta.1 说明](docs/notes/1.2.0-beta.1.zh-CN.md)
 
 ![Hub 的游戏库，包含封面、每个安装的状态和更新横幅](screenshots/library.zh.png)
 

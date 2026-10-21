@@ -26,13 +26,13 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 > [!NOTE]
 > **Windows x64.** Ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`, ou `RTX-Encore-Hub-Portable-<version>.zip`, qui n'installe rien. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.
 
-## 1.2.0-beta.1
+## 1.2.0
 
 **XeSS / XeFG : TRÈS EXPÉRIMENTAL.** Cette intégration a été particulièrement pénible à mettre au point :) Attendez-vous à des bugs, crashs, artefacts et différences entre jeux et API graphiques. N’hésitez pas à remonter les problèmes : dans RTX Encore Hub, ouvrez la page **Santé** du jeu, choisissez **Préparer un diagnostic**, relisez l’archive pour retirer les informations personnelles, puis joignez-la à une [issue RTX Encore](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose). Indiquez les moteurs choisis, l’API graphique et le multiplicateur demandé. Le Hub ne téléverse pas l’archive à votre place.
 
-Il s’agit d’une préversion. Pour recevoir les mises à jour bêta dans le Hub, choisissez **Candidat** dans **Mises à jour** ; le canal Stable conserve les versions stables.
-
-- **Moteurs Intel et dépendances** — Avec RTX Encore 1.2.0-beta.1, choisissez la reconstruction XeSS ou la génération d’images XeFG là où le mod les prend en charge. Le Hub installe et vérifie les fichiers Intel et leur licence avec le mod ; ils sont sauvegardés et restaurés dans la même opération. Leur présence ne prouve pas qu’un moteur est actif.
+- **Bibliothèque** — Favoris, actions compactes et lancement depuis la carte, mode zone de notification facultatif qui reprend la bibliothèque, et recherche de la barre de titre qui filtre la bibliothèque.
+- **Avec RTX Encore 1.2.0** — Smooth Motion avec le pilote NVIDIA 621.01 ; Force Smooth Motion disparaît (les exclusions Vulkan sont toujours levées) ; les presets DLSS et le moteur de reconstruction s'appliquent en cours de jeu.
+- **Moteurs Intel et dépendances** — Avec RTX Encore 1.2, choisissez la reconstruction XeSS ou la génération d’images XeFG là où le mod les prend en charge. Le Hub installe et vérifie les fichiers Intel et leur licence avec le mod ; ils sont sauvegardés et restaurés dans la même opération. Leur présence ne prouve pas qu’un moteur est actif.
 - **Neural Rendering, passe par passe** — Pour chacune des quatre passes possibles, réglez l’intensité, le ton local, la structure locale, la structure de peau et le masque de personnage, ou suivez le réglage global. Une intensité à zéro laisse la passe tourner et ne supprime pas son coût.
 - **Entrée HDR et exposition** — Les réglages communs `srHdr` et `srAutoExposure` suivent le moteur de reconstruction choisi. Ils suivent le jeu par défaut et demandent un redémarrage. L’entrée HDR n’active pas le HDR de l’écran et ne convertit pas une image SDR en HDR.
 - **Retrouver le bon jeu** — La recherche globale ouvre directement les jeux. Lorsque l’exécutable est incertain, la fiche propose des candidats et retient votre choix. Vous pouvez revenir à la sélection automatique.
@@ -40,7 +40,7 @@ Il s’agit d’une préversion. Pour recevoir les mises à jour bêta dans le H
 
 Les nouveaux réglages Intel, d’entrée commune, de NR par passe et de politique des fournisseurs demandent un mod identifié 1.2.0-beta.1 ou ultérieur. Les anciens mods gardent leurs contrôles compatibles. Les routes XeFG sont expérimentales et dépendent du mod, de l’API graphique, du jeu et du runtime. Les multiplicateurs élevés sont conditionnels ; un multiplicateur demandé ne prouve pas les images affichées.
 
-[Notes de la bêta](docs/notes/1.2.0-beta.1.fr.md)
+[Notes de version](docs/notes/1.2.0.fr.md) · [Notes de la 1.2.0-beta.1](docs/notes/1.2.0-beta.1.fr.md)
 
 ![La bibliothèque du Hub, avec les jaquettes, l'état de chaque installation et le bandeau des mises à jour](screenshots/library.fr.png)
 

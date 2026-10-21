@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ALLOWED = {
     ".github/FUNDING.yml",
     "docs/notes/1.2.0-beta.1.md", "docs/notes/1.2.0-beta.1.fr.md", "docs/notes/1.2.0-beta.1.zh-CN.md",
+    "docs/notes/1.2.0.md", "docs/notes/1.2.0.fr.md", "docs/notes/1.2.0.zh-CN.md",
     ".gitattributes", ".gitignore", "README.md", "README.fr.md", "README.zh-CN.md",
     ".github/ISSUE_TEMPLATE/bug-report.yml",
     ".github/ISSUE_TEMPLATE/feature-request.yml",
