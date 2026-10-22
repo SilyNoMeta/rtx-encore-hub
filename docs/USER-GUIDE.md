@@ -6,13 +6,13 @@
 
 RTX Encore Hub installs [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) in your games, keeps the mod and the NVIDIA DLLs up to date, checks that a game starts well with it, and can always go back. The interface follows the language of Windows: French, English or Simplified Chinese; other languages use English. This guide uses the English labels of the application.
 
-## Using the 1.2 beta
+## Using 1.2.1
 
 **XeSS / XeFG: VERY EXPERIMENTAL.** Getting this integration working was a particularly difficult and frustrating part of development :) Expect bugs, crashes, visual artifacts and differences between games and graphics APIs. Please report problems: in RTX Encore Hub, open the game’s **Health** page, choose **Prepare a diagnostic**, review the archive for personal information, then attach it to an [RTX Encore issue](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose). Include your engine choices, graphics API and requested multiplier. The Hub does not upload the archive for you.
 
-This is a pre-release. To receive beta updates in the Hub, select **Candidate** on the **Updates** page; the Stable channel stays on stable releases.
+Stable 1.2.1 is available on the Stable update channel. Candidate also includes pre-releases.
 
-New Intel, common-input, per-pass NR and provider-policy settings require an identified mod 1.2.0-beta.1 or later. Older mods keep their supported controls. XeFG routes are experimental and limited by the mod, graphics API, game and runtime. Higher multipliers are conditional; a requested multiplier is not proof of displayed frames.
+Intel, common-input and per-pass NR settings require mod 1.2.0-beta.1 or later. Mod 1.2.1 no longer uses the NVIDIA provider-policy setting, so the Hub hides it; older mods retain their supported controls. XeFG remains experimental and depends on the mod, graphics API, game and runtime. A requested multiplier does not prove displayed frames.
 
 ### Intel engines, with their dependencies
 
@@ -30,11 +30,11 @@ The common `srHdr` and `srAutoExposure` controls follow the chosen reconstructio
 
 Leave both controls on `game` unless the game’s input format is known. Incorrect HDR input can degrade the image. Auto exposure may help exposure-related ghosting, but is not a general fix; some DLSS models impose it. XeSS auto exposure has a GPU cost and is not recommended for LDR. XeSS Vulkan with LDR and manual exposure remains unsupported. Ray Reconstruction and frame generation are unchanged.
 
-Provider policy is local to the game: `exact` accepts reviewed NVIDIA providers; `heuristic`, the mod’s default, also allows guarded compatibility with other signed providers. A heuristic admission remains unqualified and is identified in Health. Restart after changing this policy; it is excluded from community profiles.
+Provider-policy controls apply only to older mods that use them and stay local to the game. RTX Encore 1.2.1 ignores an old `providerPatchPolicy` entry. NVIDIA runtime compatibility no longer needs a fixed version list; Intel runtime checks remain unchanged. These policy controls do not travel in community profiles.
 
 With XeFG, changing the FPS limit requires a game restart. Variable pacing for higher XeFG multipliers is experimental. An FPS cap does not establish the cadence of source frames.
 
-[Release notes](notes/1.2.0.md) · [1.2.0-beta.1 notes](notes/1.2.0-beta.1.md)
+[Release notes](notes/1.2.1.md) · [1.2.0-beta.1 notes](notes/1.2.0-beta.1.md)
 
 ## Install the Hub
 

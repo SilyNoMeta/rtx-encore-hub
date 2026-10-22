@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 # Run this copy from a prepared public checkout (copied as scripts/audit_public.py).
 ALLOWED = {
     ".github/FUNDING.yml",
+    "docs/notes/1.2.1.md", "docs/notes/1.2.1.fr.md", "docs/notes/1.2.1.zh-CN.md",
     "docs/notes/1.2.0-beta.1.md", "docs/notes/1.2.0-beta.1.fr.md", "docs/notes/1.2.0-beta.1.zh-CN.md",
     "docs/notes/1.2.0.md", "docs/notes/1.2.0.fr.md", "docs/notes/1.2.0.zh-CN.md",
     ".gitattributes", ".gitignore", "README.md", "README.fr.md", "README.zh-CN.md",

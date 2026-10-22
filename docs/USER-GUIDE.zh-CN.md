@@ -6,13 +6,13 @@
 
 RTX Encore Hub 把 [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) 安装到您的游戏中，让模组和 NVIDIA DLL 保持最新，检查游戏装上模组后能否正常启动，并且随时可以还原。界面跟随 Windows 的语言：法语、英语或简体中文；其他语言使用英语。本指南使用应用的中文标签。
 
-## 使用 1.2 测试版
+## 使用 1.2.1
 
 **XeSS / XeFG：高度实验性。** 这部分集成的开发过程非常艰难，也相当折腾 :) 请预期可能出现错误、崩溃、画面伪影，以及不同游戏和图形 API 之间的行为差异。欢迎报告问题：在 RTX Encore Hub 中打开游戏的 **健康检查** 页面，选择 **生成诊断包**，检查并移除个人信息后，将诊断压缩包附加到 [RTX Encore issue](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose)。请注明选择的引擎、图形 API 和请求的倍率。Hub 不会自动上传该压缩包。
 
-这是预发布版本。若要在 Hub 中接收测试版更新，请在 **更新** 页面选择 **候选版** 通道；稳定版通道仍使用稳定发布版本。
+稳定版 1.2.1 可通过 Stable 更新通道获取；Candidate 通道还包含预发布版本。
 
-新的 Intel、共用输入、逐轮 NR 和提供程序策略设置需要已识别的模组 1.2.0-beta.1 或更高版本。旧模组保留其支持的控制项。XeFG 路径仍属实验性，取决于模组、图形 API、游戏和运行库。更高倍率有使用条件；请求的倍率不能证明实际显示的帧数。
+Intel、共用输入和逐轮 NR 设置需要模组 1.2.0-beta.1 或更高版本。模组 1.2.1 不再使用 NVIDIA 提供程序策略设置，Hub 会隐藏该选项；旧模组保留兼容的控制项。XeFG 仍属实验性，取决于模组、图形 API、游戏和运行库。请求的倍率不能证明实际显示的帧数。
 
 ### Intel 引擎及依赖
 
@@ -30,11 +30,11 @@ RTX Encore Hub 把 [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) 安装
 
 不了解游戏输入格式时，请将两项设置保留为 `game`。错误的 HDR 输入设置会损害画质。自动曝光可能改善与曝光有关的拖影，但并非通用修复；某些 DLSS 模型会强制启用。XeSS 自动曝光有 GPU 开销，不推荐用于 LDR。XeSS Vulkan 的 LDR 输入与手动曝光组合仍不受支持。Ray Reconstruction 和帧生成保持不变。
 
-提供程序策略仅适用于本地游戏：`exact` 仅接受已审查的 NVIDIA 提供程序；模组默认的 `heuristic` 还允许与其他签名提供程序进行受限兼容。启发式准入仍未经认证，并会在健康页面标明。修改后需重启；此设置不参与社区配置分享。
+提供程序策略仅适用于仍使用该选项的旧模组，并且保留在本地游戏设置中。RTX Encore 1.2.1 忽略旧的 `providerPatchPolicy` 设置。NVIDIA 兼容性不再要求预设版本列表；Intel 运行库检查保持不变。这些策略控制项不会在社区配置中共享。
 
 使用 XeFG 时，修改 FPS 上限需要重启游戏。较高 XeFG 倍率的可变帧间隔属于实验性功能。FPS 上限不能证明源帧节奏。
 
-[版本说明](notes/1.2.0.zh-CN.md) · [1.2.0-beta.1 说明](notes/1.2.0-beta.1.zh-CN.md)
+[版本说明](notes/1.2.1.zh-CN.md) · [1.2.0-beta.1 说明](notes/1.2.0-beta.1.zh-CN.md)
 
 ## 安装 Hub
 
