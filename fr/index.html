@@ -30,7 +30,7 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.2 · Hub 1.2</span>
+<span class="badge">RTX Encore 1.2.1 · Hub 1.2.1</span>
 <h1>La génération d'images et le Neural Rendering sur <em>votre</em> RTX&nbsp;20, 30 ou 40.</h1>
 <p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> est un mod gratuit qui apporte la génération d'images DLSS jusqu'à X6, le Neural Rendering et un DLSS plus rapide aux GeForce RTX 20, 30 et 40. <strong>RTX Encore Hub</strong> l'installe dans vos jeux, le tient à jour, et peut toujours remettre un jeu comme il était.</p>
 <p class="sub">XeSS / XeFG : TRÈS EXPÉRIMENTAL. Cette intégration a été particulièrement pénible à mettre au point :) Attendez-vous à des bugs, crashs, artefacts et différences entre jeux et API graphiques. N’hésitez pas à remonter les problèmes : dans RTX Encore Hub, ouvrez la page Santé du jeu, choisissez Préparer un diagnostic, relisez l’archive pour retirer les informations personnelles, puis joignez-la à une issue RTX Encore. Indiquez les moteurs choisis, l’API graphique et le multiplicateur demandé. Le Hub ne téléverse pas l’archive à votre place. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Signaler un problème</a>.</p>
@@ -72,11 +72,11 @@
 </div>
 </div>
 <div class="news">
-<h2>1.2.0</h2>
-<p class="sub">Les nouveaux réglages Intel, d’entrée commune, de NR par passe et de politique des fournisseurs demandent un mod identifié 1.2.0-beta.1 ou ultérieur. Les anciens mods gardent leurs contrôles compatibles. Les routes XeFG sont expérimentales et dépendent du mod, de l’API graphique, du jeu et du runtime. Les multiplicateurs élevés sont conditionnels ; un multiplicateur demandé ne prouve pas les images affichées.</p>
-<div class="card"><h3>Moteurs Intel et dépendances</h3><p>Avec RTX Encore 1.2, choisissez la reconstruction XeSS ou la génération d’images XeFG là où le mod les prend en charge. Le Hub installe et vérifie les fichiers Intel et leur licence avec le mod ; ils sont sauvegardés et restaurés dans la même opération. Leur présence ne prouve pas qu’un moteur est actif.</p></div>
-<div class="card"><h3>Neural Rendering, passe par passe</h3><p>Pour chacune des quatre passes possibles, réglez l’intensité, le ton local, la structure locale, la structure de peau et le masque de personnage, ou suivez le réglage global. Une intensité à zéro laisse la passe tourner et ne supprime pas son coût.</p></div>
-<div class="card"><h3>Entrée HDR et exposition</h3><p>Les réglages communs srHdr et srAutoExposure suivent le moteur de reconstruction choisi. Ils suivent le jeu par défaut et demandent un redémarrage. L’entrée HDR n’active pas le HDR de l’écran et ne convertit pas une image SDR en HDR.</p></div>
+<h2>1.2.1</h2>
+<p class="sub">Les réglages Intel, d’entrée commune et de NR par passe demandent le mod 1.2.0-beta.1 ou ultérieur. Le mod 1.2.1 n’utilise plus la politique des fournisseurs NVIDIA : le Hub la masque ; les anciens mods conservent leurs contrôles compatibles. XeFG reste expérimental et dépend du mod, de l’API graphique, du jeu et du runtime. Un multiplicateur demandé ne prouve pas les images affichées.</p>
+<div class="card"><h3>Des menus qui fonctionnent ensemble</h3><p>Meilleure compatibilité avec ERSS-FG dans Elden Ring, OptiScaler dans Quarantine Zone et ReShade dans HumanitZ.</p></div>
+<div class="card"><h3>Changer la reconstruction en jouant</h3><p>Dans No Man’s Sky, passez de DLSS à XeSS sans redémarrer, avec des runtimes Intel compatibles installés avant le lancement.</p></div>
+<div class="card"><h3>Compatibilité NVIDIA élargie</h3><p>Les runtimes NVIDIA ne demandent plus de liste de versions prédéfinie. Les fonctions disponibles dépendent du runtime et du jeu ; les contrôles Intel restent inchangés.</p></div>
 </div>
 </div></section>
 
@@ -86,9 +86,9 @@
 <div class="hub">
 <figure><div class="shot"><img src="../assets/library.fr.jpg" alt="La bibliothèque du Hub, avec l&#x27;état de chaque installation et le bandeau des mises à jour" width="1440" height="900" loading="lazy"></div><figcaption>Capture de l&#x27;application réelle, sur une bibliothèque de démonstration faite de dossiers de jeux factices.</figcaption></figure>
 <ol class="points">
-<li><h3>Retrouver le bon jeu</h3><p>La recherche globale ouvre directement les jeux. Lorsque l’exécutable est incertain, la fiche propose des candidats et retient votre choix. Vous pouvez revenir à la sélection automatique.</p></li>
-<li><h3>Diagnostics plus utiles</h3><p>Santé indique le fournisseur de génération d’images et son admission : profil exact, heuristique non qualifiée ou refus. L’archive de diagnostic comprend les logs texte du mod, ses réglages et la liste du dossier du jeu. Relisez-la avant de la partager ; le Hub ne l’envoie pas.</p></li>
-<li><h3>Installer et restaurer ensemble</h3><p>Avec RTX Encore 1.2, choisissez la reconstruction XeSS ou la génération d’images XeFG là où le mod les prend en charge. Le Hub installe et vérifie les fichiers Intel et leur licence avec le mod ; ils sont sauvegardés et restaurés dans la même opération. Leur présence ne prouve pas qu’un moteur est actif.</p></li>
+<li><h3>Bibliothèque plus rapide au démarrage</h3><p>Les jeux en cache apparaissent immédiatement pendant la vérification en arrière-plan.</p></li>
+<li><h3>RTX Encore 1.2.1</h3><p>Meilleure compatibilité des menus, bascule DLSS/XeSS à chaud dans No Man’s Sky et compatibilité élargie des runtimes NVIDIA.</p></li>
+<li><h3>Contrôles adaptés</h3><p>L’ancienne politique des fournisseurs NVIDIA est masquée pour le mod 1.2.1 ; les anciens mods gardent leurs contrôles.</p></li>
 </ol>
 </div>
 <div class="more">

@@ -30,7 +30,7 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.2 · Hub 1.2</span>
+<span class="badge">RTX Encore 1.2.1 · Hub 1.2.1</span>
 <h1>在<em>您的</em> RTX&nbsp;20、30 或 40 上启用帧生成与 Neural Rendering。</h1>
 <p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> 是一个免费模组，为 GeForce RTX 20、30 和 40 带来最高 X6 的 DLSS 帧生成、Neural Rendering 和更快的 DLSS。<strong>RTX Encore Hub</strong> 会把它安装到您的游戏中，保持最新，并且随时可以把游戏恢复原状。</p>
 <p class="sub">XeSS / XeFG：高度实验性。 这部分集成的开发过程非常艰难，也相当折腾 :) 请预期可能出现错误、崩溃、画面伪影，以及不同游戏和图形 API 之间的行为差异。欢迎报告问题：在 RTX Encore Hub 中打开游戏的 健康检查 页面，选择 生成诊断包，检查并移除个人信息后，将诊断压缩包附加到 RTX Encore issue。请注明选择的引擎、图形 API 和请求的倍率。Hub 不会自动上传该压缩包。 <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">报告问题</a>.</p>
@@ -72,11 +72,11 @@
 </div>
 </div>
 <div class="news">
-<h2>1.2.0</h2>
-<p class="sub">新的 Intel、共用输入、逐轮 NR 和提供程序策略设置需要已识别的模组 1.2.0-beta.1 或更高版本。旧模组保留其支持的控制项。XeFG 路径仍属实验性，取决于模组、图形 API、游戏和运行库。更高倍率有使用条件；请求的倍率不能证明实际显示的帧数。</p>
-<div class="card"><h3>Intel 引擎及依赖</h3><p>搭配 RTX Encore 1.2，可在模组支持的场景中选择 XeSS 重建或 XeFG 帧生成。Hub 会随模组安装并验证 Intel 文件及许可证，在同一操作中备份和还原它们。文件已安装不能证明引擎已激活。</p></div>
-<div class="card"><h3>逐轮调整 Neural Rendering</h3><p>四轮处理中的每一轮都可以调整强度、局部色调、局部结构、皮肤结构和角色遮罩，也可以继承全局设置。强度设为零仍会运行该轮处理，不会消除其计算开销。</p></div>
-<div class="card"><h3>HDR 输入与曝光</h3><p>共用设置 srHdr 和 srAutoExposure 跟随所选重建引擎，默认跟随游戏，需要重启生效。HDR 输入不会开启显示器 HDR，也不会将 SDR 转换为 HDR。</p></div>
+<h2>1.2.1</h2>
+<p class="sub">Intel、共用输入和逐轮 NR 设置需要模组 1.2.0-beta.1 或更高版本。模组 1.2.1 不再使用 NVIDIA 提供程序策略设置，Hub 会隐藏该选项；旧模组保留兼容的控制项。XeFG 仍属实验性，取决于模组、图形 API、游戏和运行库。请求的倍率不能证明实际显示的帧数。</p>
+<div class="card"><h3>菜单兼容性改善</h3><p>改善 Elden Ring 与 ERSS-FG、Quarantine Zone 与 OptiScaler、HumanitZ 与 ReShade 的兼容性。</p></div>
+<div class="card"><h3>游戏中切换重建引擎</h3><p>启动前安装兼容的 Intel 运行库后，No Man’s Sky 可在游戏中切换 DLSS 与 XeSS，无需重启。</p></div>
+<div class="card"><h3>扩展 NVIDIA 运行库兼容性</h3><p>NVIDIA 运行库不再需要预设版本列表。可用功能仍取决于运行库和游戏；Intel 检查保持不变。</p></div>
 </div>
 </div></section>
 
@@ -86,9 +86,9 @@
 <div class="hub">
 <figure><div class="shot"><img src="../assets/library.zh.jpg" alt="Hub 的游戏库，包含每个安装的状态和更新横幅" width="1440" height="900" loading="lazy"></div><figcaption>真实应用截图，使用由替身游戏文件夹组成的演示游戏库。</figcaption></figure>
 <ol class="points">
-<li><h3>找到正确的游戏</h3><p>全局搜索可直接打开游戏页面。当可执行文件不确定时，游戏页面会提供候选项并记住您的选择，也可以恢复自动选择。</p></li>
-<li><h3>更有用的诊断</h3><p>健康页面报告帧生成提供程序，以及精确配置准入、未经认证的启发式准入或拒绝。诊断压缩包包含模组文本日志、设置和游戏目录文件列表。分享前请检查内容；Hub 不会自动上传。</p></li>
-<li><h3>统一安装和还原</h3><p>搭配 RTX Encore 1.2，可在模组支持的场景中选择 XeSS 重建或 XeFG 帧生成。Hub 会随模组安装并验证 Intel 文件及许可证，在同一操作中备份和还原它们。文件已安装不能证明引擎已激活。</p></li>
+<li><h3>更快的游戏库启动</h3><p>后台验证期间立即显示缓存的游戏。</p></li>
+<li><h3>RTX Encore 1.2.1</h3><p>改善菜单兼容性，支持 No Man’s Sky 中实时切换 DLSS/XeSS，并扩展 NVIDIA 运行库兼容性。</p></li>
+<li><h3>匹配版本的设置</h3><p>模组 1.2.1 隐藏已停用的 NVIDIA 提供程序策略选项；旧模组保留原有控制项。</p></li>
 </ol>
 </div>
 <div class="more">
