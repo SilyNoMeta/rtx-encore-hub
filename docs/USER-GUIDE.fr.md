@@ -6,13 +6,13 @@
 
 RTX Encore Hub installe [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) dans vos jeux, tient à jour le mod et les DLL NVIDIA, vérifie qu'un jeu démarre bien avec, et sait toujours revenir en arrière. L'interface suit la langue de Windows : français, anglais ou chinois simplifié ; les autres langues utilisent l'anglais. Ce guide reprend les libellés français de l'application.
 
-## Utiliser la bêta 1.2
+## Utiliser la 1.2.1
 
 **XeSS / XeFG : TRÈS EXPÉRIMENTAL.** Cette intégration a été particulièrement pénible à mettre au point :) Attendez-vous à des bugs, crashs, artefacts et différences entre jeux et API graphiques. N’hésitez pas à remonter les problèmes : dans RTX Encore Hub, ouvrez la page **Santé** du jeu, choisissez **Préparer un diagnostic**, relisez l’archive pour retirer les informations personnelles, puis joignez-la à une [issue RTX Encore](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose). Indiquez les moteurs choisis, l’API graphique et le multiplicateur demandé. Le Hub ne téléverse pas l’archive à votre place.
 
-Il s’agit d’une préversion. Pour recevoir les mises à jour bêta dans le Hub, choisissez **Candidat** dans **Mises à jour** ; le canal Stable conserve les versions stables.
+La version stable 1.2.1 est disponible sur le canal Stable. Le canal Candidat inclut aussi les préversions.
 
-Les nouveaux réglages Intel, d’entrée commune, de NR par passe et de politique des fournisseurs demandent un mod identifié 1.2.0-beta.1 ou ultérieur. Les anciens mods gardent leurs contrôles compatibles. Les routes XeFG sont expérimentales et dépendent du mod, de l’API graphique, du jeu et du runtime. Les multiplicateurs élevés sont conditionnels ; un multiplicateur demandé ne prouve pas les images affichées.
+Les réglages Intel, d’entrée commune et de NR par passe demandent le mod 1.2.0-beta.1 ou ultérieur. Le mod 1.2.1 n’utilise plus la politique des fournisseurs NVIDIA : le Hub la masque ; les anciens mods conservent leurs contrôles compatibles. XeFG reste expérimental et dépend du mod, de l’API graphique, du jeu et du runtime. Un multiplicateur demandé ne prouve pas les images affichées.
 
 ### Moteurs Intel et dépendances
 
@@ -30,11 +30,11 @@ Les réglages communs `srHdr` et `srAutoExposure` suivent le moteur de reconstru
 
 Laissez les deux réglages sur `game` si le format d’entrée du jeu est inconnu. Une entrée HDR incorrecte peut dégrader l’image. L’exposition automatique peut aider le ghosting lié à l’exposition, sans être une correction générale ; certains modèles DLSS l’imposent. Celle de XeSS a un coût GPU et est déconseillée en LDR. XeSS Vulkan avec entrée LDR et exposition manuelle reste non pris en charge. Ray Reconstruction et la génération d’images restent inchangés.
 
-La politique des fournisseurs reste locale au jeu : `exact` accepte les fournisseurs NVIDIA examinés ; `heuristic`, le défaut du mod, autorise aussi une compatibilité encadrée avec d’autres fournisseurs signés. Cette admission reste non qualifiée et est signalée dans Santé. Redémarrez après un changement ; ce réglage est exclu des profils communautaires.
+La politique des fournisseurs reste locale et ne concerne que les anciens mods qui l’utilisent. RTX Encore 1.2.1 ignore une ancienne entrée `providerPatchPolicy`. La compatibilité NVIDIA ne demande plus de liste de versions prédéfinie ; les contrôles Intel restent inchangés. Ces contrôles de politique ne sont pas partagés dans les profils communautaires.
 
 Avec XeFG, changer la limite FPS demande un redémarrage du jeu. L’espacement variable des images aux multiplicateurs XeFG élevés est expérimental. Une limite FPS ne prouve pas la cadence des images source.
 
-[Notes de version](notes/1.2.0.fr.md) · [Notes de la 1.2.0-beta.1](notes/1.2.0-beta.1.fr.md)
+[Notes de version](notes/1.2.1.fr.md) · [Notes de la 1.2.0-beta.1](notes/1.2.0-beta.1.fr.md)
 
 ## Installer le Hub
 
