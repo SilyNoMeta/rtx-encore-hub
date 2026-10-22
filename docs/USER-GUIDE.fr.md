@@ -16,13 +16,13 @@ Les nouveaux réglages Intel, d’entrée commune, de NR par passe et de politiq
 
 ### Moteurs Intel et dépendances
 
-Avec RTX Encore 1.2.0-beta.1, choisissez la reconstruction XeSS ou la génération d’images XeFG là où le mod les prend en charge. Le Hub installe et vérifie les fichiers Intel et leur licence avec le mod ; ils sont sauvegardés et restaurés dans la même opération. Leur présence ne prouve pas qu’un moteur est actif.
+Avec RTX Encore 1.2, choisissez la reconstruction XeSS ou la génération d’images XeFG là où le mod les prend en charge. Le Hub installe et vérifie les fichiers Intel et leur licence avec le mod ; ils sont sauvegardés et restaurés dans la même opération. Leur présence ne prouve pas qu’un moteur est actif.
 
 ### Neural Rendering, passe par passe
 
 Pour chacune des quatre passes possibles, réglez l’intensité, le ton local, la structure locale, la structure de peau et le masque de personnage, ou suivez le réglage global. Une intensité à zéro laisse la passe tourner et ne supprime pas son coût.
 
-Avec RTX Encore 1.2.0-beta.1, NR peut aussi fonctionner après Ray Reconstruction dans les jeux Direct3D 12 compatibles qui fournissent une profondeur linéaire. Direct3D 11 et Vulkan ne prennent toujours pas en charge ce cas. Un essai local dans 007 First Light en path tracing confirme que NR fonctionne ; la qualité d’image et le coût n’ont pas été mesurés. Le crash intermittent au démarrage reste non résolu.
+Depuis RTX Encore 1.2.0-beta.1, NR peut aussi fonctionner après Ray Reconstruction dans les jeux Direct3D 12 compatibles qui fournissent une profondeur linéaire. Direct3D 11 et Vulkan ne prennent toujours pas en charge ce cas. Un essai local dans 007 First Light en path tracing confirme que NR fonctionne ; la qualité d’image et le coût n’ont pas été mesurés. Le crash intermittent au démarrage reste non résolu.
 
 ### Entrée HDR et exposition
 
@@ -34,7 +34,7 @@ La politique des fournisseurs reste locale au jeu : `exact` accepte les fourniss
 
 Avec XeFG, changer la limite FPS demande un redémarrage du jeu. L’espacement variable des images aux multiplicateurs XeFG élevés est expérimental. Une limite FPS ne prouve pas la cadence des images source.
 
-[Notes de la bêta](notes/1.2.0-beta.1.fr.md)
+[Notes de version](notes/1.2.0.fr.md) · [Notes de la 1.2.0-beta.1](notes/1.2.0-beta.1.fr.md)
 
 ## Installer le Hub
 
@@ -44,7 +44,7 @@ L'installateur n'est pas signé : Windows peut afficher un avertissement SmartSc
 
 Le Hub cherche ses propres mises à jour à son démarrage, puis une fois par jour. **Mises à jour** montre la nouvelle version et ses notes ; **Mettre à jour et relancer** télécharge l'installateur, vérifie son empreinte, l'exécute et relance le Hub. Vous pouvez remettre à plus tard, ou ignorer une version. Une mise à jour attend la fin d'une installation en cours dans un jeu. Vos réglages et vos sauvegardes ne sont jamais touchés par une mise à jour ni par une désinstallation.
 
-**Version portable.** `RTX-Encore-Hub-Portable-<version>.zip` n'installe rien : décompressez-la dans un dossier où vous pouvez écrire (pas sous Program Files) et lancez `rtx-encore-hub.exe`. Le fichier `portable.txt` à côté fait garder au Hub tout ce qu'il écrit dans le dossier `data` voisin, sauvegardes comprises : gardez ce dossier. La version portable ne se met pas à jour elle-même : **Télécharger la version portable**, dans **Mises à jour**, ouvre la page de la publication ; fermez le Hub, puis remplacez `rtx-encore-hub.exe` et `encorehub-elevated.exe` par ceux de la nouvelle archive.
+**Version portable.** `RTX-Encore-Hub-Portable-<version>.zip` n'installe rien : décompressez-la dans un dossier où vous pouvez écrire (pas sous Program Files) et lancez `rtx-encore-hub.exe`. Le fichier `portable.txt` à côté fait garder au Hub son état dans le dossier `data` voisin : gardez ce dossier. Les fichiers d’origine des jeux sont conservés dans leur sous-dossier `rtx-encore-backups`. La version portable ne se met pas à jour elle-même : **Télécharger la version portable**, dans **Mises à jour**, ouvre la page de la publication ; fermez le Hub, puis remplacez `rtx-encore-hub.exe` et `encorehub-elevated.exe` par ceux de la nouvelle archive.
 
 ## Retrouver vos jeux
 
@@ -81,7 +81,7 @@ Choisissez une tuile.
 Le bouton principal de la fiche ouvre un assistant en trois étapes.
 
 1. **Inspection** : ce que le jeu contient, ce que votre machine permet.
-2. **Ce qui va être écrit** : la liste exacte, avec ce qui est là maintenant et ce qui y sera. Rien n'est encore écrit. Chaque fichier remplacé est sauvegardé d'abord, hors du dossier du jeu.
+2. **Ce qui va être écrit** : la liste exacte, avec ce qui est là maintenant et ce qui y sera. Rien n'est encore écrit. Chaque fichier d’origine est conservé d’abord dans le sous-dossier `rtx-encore-backups` du jeu.
 3. **Vérification au lancement**, si vous laissez la case cochée.
 
 Une installation est tout ou rien : si une écriture échoue, tout est remis en place. Si le Hub est arrêté en plein milieu (coupure, plantage), il annule l'installation interrompue à son prochain démarrage, avant toute autre chose, et vous le dit.
@@ -141,7 +141,9 @@ Il n'y a pas de compte. Une clé est créée sur votre machine et y reste ; vous
 
 ## Données, réseau et vie privée
 
-Le Hub garde ses réglages, ses téléchargements, ses jaquettes et les sauvegardes de chaque jeu dans `%LOCALAPPDATA%\EncoreHub` (dans `data` à côté de la version portable). Ce dossier est votre retour arrière : ne le supprimez pas tant que des jeux portent une installation du Hub.
+Le Hub garde ses réglages, téléchargements, jaquettes, manifestes et historique des opérations dans `%LOCALAPPDATA%\EncoreHub` (dans `data` à côté de la version portable). Les fichiers d’origine sont conservés dans le sous-dossier `rtx-encore-backups` de chaque jeu. Gardez les deux emplacements tant que des jeux portent une installation du Hub : la restauration nécessite le manifeste et les fichiers d’origine. Les anciennes sauvegardes dans l’état du Hub restent lisibles et migrent dans le jeu après la prochaine installation ou mise à jour réussie.
+
+Le cache du mod conserve uniquement les ZIP originaux des versions actuellement proposées sur les canaux stable et candidate. Les anciennes versions et les anciens dossiers extraits sont retirés après vérification en ligne de la liste des publications. Un ancien cache extrait peut donc nécessiter un nouveau téléchargement unique. Les sources d’installation sont extraites temporairement ; le stockage des runtimes ne change pas.
 
 Le Hub contacte, sans compte et sans rien envoyer de vous :
 

@@ -16,13 +16,13 @@ New Intel, common-input, per-pass NR and provider-policy settings require an ide
 
 ### Intel engines, with their dependencies
 
-With RTX Encore 1.2.0-beta.1, choose XeSS reconstruction or XeFG frame generation where the mod supports them. The Hub installs and verifies the Intel files and their license with the mod; they are backed up and restored in the same operation. Installed files do not establish that an engine is active.
+With RTX Encore 1.2, choose XeSS reconstruction or XeFG frame generation where the mod supports them. The Hub installs and verifies the Intel files and their license with the mod; they are backed up and restored in the same operation. Installed files do not establish that an engine is active.
 
 ### Neural Rendering, pass by pass
 
 For each of the four possible passes, adjust intensity, local tone, local structure, skin structure and the character mask, or inherit the global setting. Setting intensity to zero still runs the pass and does not remove its cost.
 
-With RTX Encore 1.2.0-beta.1, NR can also run after Ray Reconstruction in compatible Direct3D 12 games that provide linear depth. Direct3D 11 and Vulkan still do not support this linear-depth case. Local testing in 007 First Light with path tracing confirmed that NR runs; image quality and cost have not been measured. The intermittent startup crash remains unresolved.
+Since RTX Encore 1.2.0-beta.1, NR can also run after Ray Reconstruction in compatible Direct3D 12 games that provide linear depth. Direct3D 11 and Vulkan still do not support this linear-depth case. Local testing in 007 First Light with path tracing confirmed that NR runs; image quality and cost have not been measured. The intermittent startup crash remains unresolved.
 
 ### HDR input and exposure
 
@@ -34,7 +34,7 @@ Provider policy is local to the game: `exact` accepts reviewed NVIDIA providers;
 
 With XeFG, changing the FPS limit requires a game restart. Variable pacing for higher XeFG multipliers is experimental. An FPS cap does not establish the cadence of source frames.
 
-[Beta notes](notes/1.2.0-beta.1.md)
+[Release notes](notes/1.2.0.md) · [1.2.0-beta.1 notes](notes/1.2.0-beta.1.md)
 
 ## Install the Hub
 
@@ -44,7 +44,7 @@ The installer is not signed: Windows may show a SmartScreen warning the first ti
 
 The Hub looks for its own updates when it starts, then once a day. **Updates** shows the new version and its notes; **Update and restart** downloads the installer, verifies its digest, runs it and starts the Hub again. You can choose **Later**, or **Ignore this version**. An update waits for an install going on in a game to end. Your settings and your backups are never touched by an update or an uninstall.
 
-**Portable version.** `RTX-Encore-Hub-Portable-<version>.zip` installs nothing: extract it into a folder you can write to (not under Program Files) and start `rtx-encore-hub.exe`. The file `portable.txt` beside it makes the Hub keep everything in the `data` folder next to it, your backups included: keep that folder. The portable version does not update itself: **Download the portable version**, in **Updates**, opens the release page; close the Hub, then replace `rtx-encore-hub.exe` and `encorehub-elevated.exe` with the new archive's.
+**Portable version.** `RTX-Encore-Hub-Portable-<version>.zip` installs nothing: extract it into a folder you can write to (not under Program Files) and start `rtx-encore-hub.exe`. The file `portable.txt` beside it makes the Hub keep its state in the `data` folder next to it: keep that folder. Original game files are kept in each game’s `rtx-encore-backups` subfolder. The portable version does not update itself: **Download the portable version**, in **Updates**, opens the release page; close the Hub, then replace `rtx-encore-hub.exe` and `encorehub-elevated.exe` with the new archive's.
 
 ## Find your games
 
@@ -81,7 +81,7 @@ Choose a tile.
 The main button of the page opens an assistant in three steps.
 
 1. **Inspection**: what the game holds, what your machine allows.
-2. **What will be written**: the exact list, with what is there now and what will be. Nothing is written yet. Each file that is replaced is backed up first, outside the game folder.
+2. **What will be written**: the exact list, with what is there now and what will be. Nothing is written yet. Each original file is saved first in the game’s `rtx-encore-backups` subfolder.
 3. **Verification at launch**, if you leave the box checked.
 
 An install is all or nothing: if a write fails, everything is put back. If the Hub is stopped in the middle (power cut, crash), it undoes the interrupted install the next time it starts, before anything else, and tells you.
@@ -141,7 +141,9 @@ There is no account. A key is made on your machine and stays there; you choose a
 
 ## Data, network and privacy
 
-The Hub keeps its settings, its downloads, its covers and the backups of each game in `%LOCALAPPDATA%\EncoreHub` (in `data` beside the portable version). That folder is your way back: do not delete it while games hold an install of the Hub.
+The Hub keeps its settings, downloads, covers, manifests and operation history in `%LOCALAPPDATA%\EncoreHub` (in `data` beside the portable version). Original files are kept in the `rtx-encore-backups` subfolder of each game. Keep both locations while games hold a Hub installation: restoring needs the manifest and the original files. Existing backups in the Hub’s state remain readable and move to the game after the next successful installation or update.
+
+The mod cache keeps only the original ZIPs of the versions currently offered on the stable and candidate channels. Older versions and the former extracted cache folders are removed after the release list is checked online. An old extracted cache may therefore need to be downloaded once again. Installation sources are extracted temporarily; runtime storage is unchanged.
 
 The Hub contacts, without an account and without sending anything of yours:
 

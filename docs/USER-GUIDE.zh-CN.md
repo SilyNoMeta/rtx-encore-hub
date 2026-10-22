@@ -16,13 +16,13 @@ RTX Encore Hub 把 [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) 安装
 
 ### Intel 引擎及依赖
 
-搭配 RTX Encore 1.2.0-beta.1，可在模组支持的场景中选择 XeSS 重建或 XeFG 帧生成。Hub 会随模组安装并验证 Intel 文件及许可证，在同一操作中备份和还原它们。文件已安装不能证明引擎已激活。
+搭配 RTX Encore 1.2，可在模组支持的场景中选择 XeSS 重建或 XeFG 帧生成。Hub 会随模组安装并验证 Intel 文件及许可证，在同一操作中备份和还原它们。文件已安装不能证明引擎已激活。
 
 ### 逐轮调整 Neural Rendering
 
 四轮处理中的每一轮都可以调整强度、局部色调、局部结构、皮肤结构和角色遮罩，也可以继承全局设置。强度设为零仍会运行该轮处理，不会消除其计算开销。
 
-使用 RTX Encore 1.2.0-beta.1 时，NR 还可在提供兼容线性深度输入的 Direct3D 12 游戏中于 Ray Reconstruction 之后运行。Direct3D 11 和 Vulkan 仍不支持此情况。007 First Light 路径追踪的本地测试确认 NR 可以运行；尚未测量画质和开销。偶发启动崩溃仍未解决。
+自 RTX Encore 1.2.0-beta.1 起，NR 还可在提供兼容线性深度输入的 Direct3D 12 游戏中于 Ray Reconstruction 之后运行。Direct3D 11 和 Vulkan 仍不支持此情况。007 First Light 路径追踪的本地测试确认 NR 可以运行；尚未测量画质和开销。偶发启动崩溃仍未解决。
 
 ### HDR 输入与曝光
 
@@ -34,7 +34,7 @@ RTX Encore Hub 把 [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) 安装
 
 使用 XeFG 时，修改 FPS 上限需要重启游戏。较高 XeFG 倍率的可变帧间隔属于实验性功能。FPS 上限不能证明源帧节奏。
 
-[测试版说明](notes/1.2.0-beta.1.zh-CN.md)
+[版本说明](notes/1.2.0.zh-CN.md) · [1.2.0-beta.1 说明](notes/1.2.0-beta.1.zh-CN.md)
 
 ## 安装 Hub
 
@@ -44,7 +44,7 @@ RTX Encore Hub 把 [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) 安装
 
 Hub 在启动时检查自身更新，之后每天一次。**更新**页面显示新版本及其说明；**更新并重新启动**会下载安装程序、校验其摘要、运行它并重新启动 Hub。您可以选择**稍后**，或**忽略此版本**。如果某个游戏正在安装，更新会等它结束。更新和卸载都不会动您的设置和备份。
 
-**便携版。** `RTX-Encore-Hub-Portable-<版本>.zip` 无需安装：将其解压到您有写入权限的文件夹（不要放在 Program Files 下），然后运行 `rtx-encore-hub.exe`。旁边的 `portable.txt` 文件让 Hub 把写入的一切（包括备份）都保存在相邻的 `data` 文件夹中：请保留这个文件夹。便携版不会自行更新：**更新**页面中的**下载便携版**会打开发布页面；关闭 Hub，然后用新压缩包中的 `rtx-encore-hub.exe` 和 `encorehub-elevated.exe` 替换现有文件。
+**便携版。** `RTX-Encore-Hub-Portable-<版本>.zip` 无需安装：将其解压到您有写入权限的文件夹（不要放在 Program Files 下），然后运行 `rtx-encore-hub.exe`。旁边的 `portable.txt` 文件让 Hub 将自身状态保存在相邻的 `data` 文件夹中：请保留这个文件夹。游戏的原始文件保存在各游戏内的 `rtx-encore-backups` 子文件夹中。便携版不会自行更新：**更新**页面中的**下载便携版**会打开发布页面；关闭 Hub，然后用新压缩包中的 `rtx-encore-hub.exe` 和 `encorehub-elevated.exe` 替换现有文件。
 
 ## 找到您的游戏
 
@@ -81,7 +81,7 @@ Hub 在启动时检查自身更新，之后每天一次。**更新**页面显示
 页面的主按钮会打开一个三步向导。
 
 1. **检查**：游戏包含什么，您的机器允许什么。
-2. **将要写入的内容**：确切的清单，包括现在是什么、之后是什么。此时还没有写入任何东西。每个被替换的文件都会先备份到游戏文件夹之外。
+2. **将要写入的内容**：确切的清单，包括现在是什么、之后是什么。此时还没有写入任何东西。每个原始文件都会先保存到游戏内的 `rtx-encore-backups` 子文件夹。
 3. **启动时验证**（如果您保留勾选）。
 
 安装要么全部完成，要么完全不做：如果某次写入失败，一切都会恢复原状。如果 Hub 在中途被终止（断电、崩溃），它会在下次启动时、在做任何其他事情之前撤销被中断的安装，并告诉您。
@@ -143,7 +143,9 @@ Hub 在启动时检查自身更新，之后每天一次。**更新**页面显示
 
 ## 数据、网络与隐私
 
-Hub 把设置、下载内容、封面以及每个游戏的备份保存在 `%LOCALAPPDATA%\EncoreHub`（便携版则保存在旁边的 `data` 中）。这个文件夹就是您的还原途径：只要还有游戏带有 Hub 的安装，就不要删除它。
+Hub 把设置、下载内容、封面、清单和操作历史保存在 `%LOCALAPPDATA%\EncoreHub`（便携版则保存在旁边的 `data` 中）。原始文件保存在各游戏内的 `rtx-encore-backups` 子文件夹中。只要游戏仍保留 Hub 安装，就请保留这两个位置：还原需要清单和原始文件。Hub 状态中的旧备份仍可读取，并会在下一次成功安装或更新后迁移到游戏文件夹。
+
+模组缓存只保留 stable 和 candidate 通道当前提供版本的原始 ZIP。在线确认发布列表后，将删除旧版本和旧的解压缓存文件夹。因此，旧解压缓存可能需要重新下载一次。安装源文件仅临时解压；运行库的存储方式不变。
 
 Hub 会联系以下站点，无需账号，也不发送任何属于您的信息：
 
