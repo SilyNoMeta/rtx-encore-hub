@@ -26,9 +26,13 @@
 > [!NOTE]
 > **Windows x64。** 请打开[发布页面](https://github.com/SilyNoMeta/rtx-encore-hub/releases)并下载 `RTX-Encore-Hub-Setup-<version>.exe`，或无需安装的 `RTX-Encore-Hub-Portable-<version>.zip`。安装程序尚未进行代码签名，因此首次运行时 Windows 可能显示 SmartScreen 警告；每个发布版本都会给出安装程序的 SHA-256。Hub 与 RTX Encore 模组分别发布。
 
-## 1.2.1
+## 1.2.2
 
 **XeSS / XeFG：高度实验性。** 这部分集成的开发过程非常艰难，也相当折腾 :) 请预期可能出现错误、崩溃、画面伪影，以及不同游戏和图形 API 之间的行为差异。欢迎报告问题：在 RTX Encore Hub 中打开游戏的 **健康检查** 页面，选择 **生成诊断包**，检查并移除个人信息后，将诊断压缩包附加到 [RTX Encore issue](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose)。请注明选择的引擎、图形 API 和请求的倍率。Hub 不会自动上传该压缩包。
+
+- **可导出的 Hub 日志** — 即使无法打开游戏页面，也可从设置或出错页面导出诊断日志。
+- **压缩原始文件备份** — 经过校验的 ZIP 备份减少磁盘占用；旧备份仍可还原。
+- **记住选择** — 游戏页面会保留上次选择，滚动时仍可使用返回和应用按钮。
 
 - **更快的游戏库启动** — 后台验证期间立即显示缓存的游戏。
 - **RTX Encore 1.2.1** — 改善菜单兼容性，支持 No Man’s Sky 中实时切换 DLSS/XeSS，并扩展 NVIDIA 运行库兼容性。
@@ -44,7 +48,7 @@
 
 Intel、共用输入和逐轮 NR 设置需要模组 1.2.0-beta.1 或更高版本。模组 1.2.1 不再使用 NVIDIA 提供程序策略设置，Hub 会隐藏该选项；旧模组保留兼容的控制项。XeFG 仍属实验性，取决于模组、图形 API、游戏和运行库。请求的倍率不能证明实际显示的帧数。
 
-[版本说明](docs/notes/1.2.1.zh-CN.md) · [1.2.0-beta.1 说明](docs/notes/1.2.0-beta.1.zh-CN.md)
+[版本说明](docs/notes/1.2.2.zh-CN.md) · [1.2.0-beta.1 说明](docs/notes/1.2.0-beta.1.zh-CN.md)
 
 ![Hub 的游戏库，包含封面、每个安装的状态和更新横幅](screenshots/library.zh.png)
 

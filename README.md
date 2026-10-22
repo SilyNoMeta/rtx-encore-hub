@@ -26,9 +26,13 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 > [!NOTE]
 > **Windows x64.** Open the [releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) and download `RTX-Encore-Hub-Setup-<version>.exe`, or `RTX-Encore-Hub-Portable-<version>.zip`, which installs nothing. The installer is not code-signed yet, so Windows may show a SmartScreen warning the first time; each release gives the SHA-256 of its installer. The Hub and the RTX Encore mod have separate releases.
 
-## 1.2.1
+## 1.2.2
 
 **XeSS / XeFG: VERY EXPERIMENTAL.** Getting this integration working was a particularly difficult and frustrating part of development :) Expect bugs, crashes, visual artifacts and differences between games and graphics APIs. Please report problems: in RTX Encore Hub, open the game’s **Health** page, choose **Prepare a diagnostic**, review the archive for personal information, then attach it to an [RTX Encore issue](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose). Include your engine choices, graphics API and requested multiplier. The Hub does not upload the archive for you.
+
+- **Exportable Hub logs** — Recover diagnostic logs from Settings or a failed game page, even when games cannot be opened.
+- **Compressed originals** — Verified ZIP backups reduce storage use; existing backups remain restorable.
+- **Remembered choices** — Game-page selections persist, and Back/Apply stay available while scrolling.
 
 - **Faster library startup** — Cached games appear immediately while verification runs in the background.
 - **RTX Encore 1.2.1** — Menu compatibility improvements, live DLSS/XeSS switching in No Man’s Sky, and broader NVIDIA runtime compatibility.
@@ -44,7 +48,7 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 
 Intel, common-input and per-pass NR settings require mod 1.2.0-beta.1 or later. Mod 1.2.1 no longer uses the NVIDIA provider-policy setting, so the Hub hides it; older mods retain their supported controls. XeFG remains experimental and depends on the mod, graphics API, game and runtime. A requested multiplier does not prove displayed frames.
 
-[Release notes](docs/notes/1.2.1.md) · [1.2.0-beta.1 notes](docs/notes/1.2.0-beta.1.md)
+[Release notes](docs/notes/1.2.2.md) · [1.2.0-beta.1 notes](docs/notes/1.2.0-beta.1.md)
 
 ![The Hub's game library, with cover art, the state of each install and the update banner](screenshots/library.png)
 

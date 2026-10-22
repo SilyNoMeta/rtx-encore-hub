@@ -117,6 +117,8 @@ Si une mise à jour ou une réparation du jeu a remplacé des fichiers de l'inst
 
 ## Régler le mod
 
+La fiche du jeu mémorise vos derniers choix de preset, multiplicateur et options sur cet appareil. Ils restent des propositions jusqu’à leur application ; leur disponibilité est vérifiée selon les composants actuels du jeu. Retour et Appliquer restent accessibles pendant le défilement de la fiche et de tous les réglages.
+
 **Tous les réglages de ce jeu** édite `rtx-encore.jsonc` par un formulaire qui reprend les sections du fichier. Chaque réglage porte son explication, sa valeur par défaut et, s'il y a lieu, « redémarrage nécessaire ». Un réglage sans effet sur votre carte est grisé, avec la raison. Les presets DLSS suivent les DLL du jeu : le formulaire ne propose que ceux que la DLL installée prend, et dit pourquoi les autres manquent ; le preset C de génération d'images, par exemple, n'existe que dans DLSS-G 310.9.16. Les commentaires et les clés que le Hub ne connaît pas sont gardés tels quels.
 
 Un jeu qui se ferme au lancement avec le menu du mod (Star Wars Outlaws) peut s'en passer : activez `disableInGameMenu` dans Compatibilité, et changez les réglages ici. Quand un jeu se ferme dans sa première minute avec le mod chargé, **Lancer et vérifier** propose **Relancer sans le menu en jeu**, qui le fait pour vous.
@@ -141,6 +143,8 @@ Il n'y a pas de compte. Une clé est créée sur votre machine et y reste ; vous
 
 ## Données, réseau et vie privée
 
+Les originaux sont conservés en archives ZIP vérifiées dans `rtx-encore-backups`. Les anciennes sauvegardes non compressées restent restaurables ; la prochaine installation ou mise à jour réussie les convertit avant de retirer les copies non compressées. Gardez une version récente du Hub pour restaurer ces sauvegardes compressées. L’historique des opérations et le stockage des runtimes conservent leur format actuel.
+
 Le Hub garde ses réglages, téléchargements, jaquettes, manifestes et historique des opérations dans `%LOCALAPPDATA%\EncoreHub` (dans `data` à côté de la version portable). Les fichiers d’origine sont conservés dans le sous-dossier `rtx-encore-backups` de chaque jeu. Gardez les deux emplacements tant que des jeux portent une installation du Hub : la restauration nécessite le manifeste et les fichiers d’origine. Les anciennes sauvegardes dans l’état du Hub restent lisibles et migrent dans le jeu après la prochaine installation ou mise à jour réussie.
 
 Le cache du mod conserve uniquement les ZIP originaux des versions actuellement proposées sur les canaux stable et candidate. Les anciennes versions et les anciens dossiers extraits sont retirés après vérification en ligne de la liste des publications. Un ancien cache extrait peut donc nécessiter un nouveau téléchargement unique. Les sources d’installation sont extraites temporairement ; le stockage des runtimes ne change pas.
@@ -162,5 +166,7 @@ Il n'y a aucune télémétrie.
 Tout se fait au clavier. `Ctrl+F` va à la recherche, `F5` relit les dossiers, `Alt+Gauche` revient en arrière. Chaque état se dit par un mot, pas seulement par une couleur.
 
 ## Un problème ?
+
+Si les fiches des jeux ne s’ouvrent pas, utilisez **Paramètres → Diagnostic du Hub → Exporter les journaux du Hub**, ou le bouton d’export sur la fiche en erreur. L’Explorateur affiche le ZIP. Les journaux restent locaux, avec rotation automatique (trois fichiers d’environ 2 Mio), et comprennent la version du Hub, les commandes en échec et les données de jeu illisibles. Ils se trouvent aussi dans `%LOCALAPPDATA%\EncoreHub\logs`, ou `data\logs` à côté du Hub portable. Relisez l’archive avant de la partager : des noms de jeux et chemins d’installation peuvent y figurer. Aucun envoi automatique.
 
 Ouvrez un [ticket](https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose) avec la version du Hub, le jeu, le lanceur, la carte, le pilote et les étapes qui reproduisent le problème. Joignez le diagnostic préparé par la page Santé après l'avoir relu.

@@ -117,6 +117,8 @@ If an update or a repair of the game replaced files of the install, the page say
 
 ## Tune the mod
 
+The game page remembers your last preset, multiplier and option selections on this device. They remain proposals until you apply them; unavailable choices are checked again against the game's current components. Back and Apply stay accessible while you scroll through the game page or all settings.
+
 **All the settings of this game** edits `rtx-encore.jsonc` through a form that follows the sections of the file. Each setting carries its explanation, its default value and, where it applies, "restart needed". A setting without effect on your card is greyed, with the reason. The DLSS presets follow the game's DLLs: the form only offers those the installed DLL takes, and says why the others are missing; frame generation preset C, for instance, only exists in DLSS-G 310.9.16. Comments and keys the Hub does not know are kept as they are.
 
 A game that closes at launch with the mod's in-game menu (Star Wars Outlaws) can do without it: turn on `disableInGameMenu` under Compatibility, and change the settings here. When a game closes in its first minute with the mod loaded, **Launch and verify** offers **Launch again without the in-game menu**, which does it for you.
@@ -141,6 +143,8 @@ There is no account. A key is made on your machine and stays there; you choose a
 
 ## Data, network and privacy
 
+Original backups are stored as verified ZIP archives inside `rtx-encore-backups`. Old uncompressed backups remain restorable; the next successful installation or update converts them before removing the uncompressed copies. Keep a current Hub version to restore these compressed backups. Operation history and runtime storage retain their existing formats.
+
 The Hub keeps its settings, downloads, covers, manifests and operation history in `%LOCALAPPDATA%\EncoreHub` (in `data` beside the portable version). Original files are kept in the `rtx-encore-backups` subfolder of each game. Keep both locations while games hold a Hub installation: restoring needs the manifest and the original files. Existing backups in the Hub’s state remain readable and move to the game after the next successful installation or update.
 
 The mod cache keeps only the original ZIPs of the versions currently offered on the stable and candidate channels. Older versions and the former extracted cache folders are removed after the release list is checked online. An old extracted cache may therefore need to be downloaded once again. Installation sources are extracted temporarily; runtime storage is unchanged.
@@ -162,5 +166,7 @@ There is no telemetry.
 Everything can be done with the keyboard. `Ctrl+F` goes to the search, `F5` reads the folders again, `Alt+Left` goes back. Every state is said by a word, not by a colour alone.
 
 ## A problem?
+
+If game pages cannot open, use **Settings → Hub diagnostics → Export Hub logs** or the export button on the failed game page. The ZIP is shown in Explorer. Logs are local, rotate automatically (three files of about 2 MiB each), and include the Hub version, command failures and unreadable game data. You can also find them in `%LOCALAPPDATA%\EncoreHub\logs`, or `data\logs` beside the portable Hub. Review the archive before sharing it: game names and installation paths may be present. Nothing is uploaded automatically.
 
 Open an [issue](https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose) with the Hub's version, the game, the launcher, the card, the driver and the steps that reproduce the problem. Attach the diagnostic prepared by the Health page once you have read it.

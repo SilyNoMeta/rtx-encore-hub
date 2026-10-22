@@ -26,9 +26,13 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 > [!NOTE]
 > **Windows x64.** Ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`, ou `RTX-Encore-Hub-Portable-<version>.zip`, qui n'installe rien. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.
 
-## 1.2.1
+## 1.2.2
 
 **XeSS / XeFG : TRÈS EXPÉRIMENTAL.** Cette intégration a été particulièrement pénible à mettre au point :) Attendez-vous à des bugs, crashs, artefacts et différences entre jeux et API graphiques. N’hésitez pas à remonter les problèmes : dans RTX Encore Hub, ouvrez la page **Santé** du jeu, choisissez **Préparer un diagnostic**, relisez l’archive pour retirer les informations personnelles, puis joignez-la à une [issue RTX Encore](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose). Indiquez les moteurs choisis, l’API graphique et le multiplicateur demandé. Le Hub ne téléverse pas l’archive à votre place.
+
+- **Journaux du Hub exportables** — Récupérez les journaux depuis les Paramètres ou une fiche en erreur, même quand les jeux ne s’ouvrent pas.
+- **Originaux compressés** — Les sauvegardes ZIP vérifiées réduisent le stockage ; les anciennes sauvegardes restent restaurables.
+- **Choix mémorisés** — Les sélections de la fiche sont conservées, et Retour/Appliquer restent accessibles pendant le défilement.
 
 - **Bibliothèque plus rapide au démarrage** — Les jeux en cache apparaissent immédiatement pendant la vérification en arrière-plan.
 - **RTX Encore 1.2.1** — Meilleure compatibilité des menus, bascule DLSS/XeSS à chaud dans No Man’s Sky et compatibilité élargie des runtimes NVIDIA.
@@ -44,7 +48,7 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 
 Les réglages Intel, d’entrée commune et de NR par passe demandent le mod 1.2.0-beta.1 ou ultérieur. Le mod 1.2.1 n’utilise plus la politique des fournisseurs NVIDIA : le Hub la masque ; les anciens mods conservent leurs contrôles compatibles. XeFG reste expérimental et dépend du mod, de l’API graphique, du jeu et du runtime. Un multiplicateur demandé ne prouve pas les images affichées.
 
-[Notes de version](docs/notes/1.2.1.fr.md) · [Notes de la 1.2.0-beta.1](docs/notes/1.2.0-beta.1.fr.md)
+[Notes de version](docs/notes/1.2.2.fr.md) · [Notes de la 1.2.0-beta.1](docs/notes/1.2.0-beta.1.fr.md)
 
 ![La bibliothèque du Hub, avec les jaquettes, l'état de chaque installation et le bandeau des mises à jour](screenshots/library.fr.png)
 
