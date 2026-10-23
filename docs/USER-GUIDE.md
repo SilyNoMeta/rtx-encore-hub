@@ -42,9 +42,9 @@ Download `RTX-Encore-Hub-Setup-<version>.exe` from the releases page and run it.
 
 The installer is not signed: Windows may show a SmartScreen warning the first time. Each release gives the SHA-256 of its installer; compare it if you want to be sure of the file.
 
-The Hub looks for its own updates when it starts, then once a day. **Updates** shows the new version and its notes; **Update and restart** downloads the installer, verifies its digest, runs it and starts the Hub again. You can choose **Later**, or **Ignore this version**. An update waits for an install going on in a game to end. Your settings and your backups are never touched by an update or an uninstall.
+The Hub looks for its own updates when it starts, then once a day. **Updates** shows the new version and its notes; **Update and restart** downloads the installer, verifies its digest, runs it and starts the Hub again. You can choose **Later**, or **Ignore this version**. An update waits for an install going on in a game to end. Updating or uninstalling the installed program preserves your settings and restoration data.
 
-**Portable version.** `RTX-Encore-Hub-Portable-<version>.zip` installs nothing: extract it into a folder you can write to (not under Program Files) and start `rtx-encore-hub.exe`. The file `portable.txt` beside it makes the Hub keep its state in the `data` folder next to it: keep that folder. Original game files are kept in each game’s `rtx-encore-backups` subfolder. The portable version does not update itself: **Download the portable version**, in **Updates**, opens the release page; close the Hub, then replace `rtx-encore-hub.exe` and `encorehub-elevated.exe` with the new archive's.
+**Portable version.** `RTX-Encore-Hub-Portable-<version>.zip` installs nothing: extract it into a folder you can write to (not under Program Files) and start `rtx-encore-hub.exe`. The file `portable.txt` beside it makes the Hub keep its state in the `data` folder next to it: keep that folder. Original game files and history backups are shared in that data folder; keep it when moving or updating the portable Hub. The portable version does not update itself: **Download the portable version**, in **Updates**, opens the release page; close the Hub, then replace `rtx-encore-hub.exe` and `encorehub-elevated.exe` with the new archive's.
 
 ## Find your games
 
@@ -81,7 +81,7 @@ Choose a tile.
 The main button of the page opens an assistant in three steps.
 
 1. **Inspection**: what the game holds, what your machine allows.
-2. **What will be written**: the exact list, with what is there now and what will be. Nothing is written yet. Each original file is saved first in the game’s `rtx-encore-backups` subfolder.
+2. **What will be written**: the exact list, with what is there now and what will be. Nothing is written yet. Each original file is saved first in the Hub data folder.
 3. **Verification at launch**, if you leave the box checked.
 
 An install is all or nothing: if a write fails, everything is put back. If the Hub is stopped in the middle (power cut, crash), it undoes the interrupted install the next time it starts, before anything else, and tells you.
@@ -143,9 +143,11 @@ There is no account. A key is made on your machine and stays there; you choose a
 
 ## Data, network and privacy
 
-Original backups are stored as verified ZIP archives inside `rtx-encore-backups`. Old uncompressed backups remain restorable; the next successful installation or update converts them before removing the uncompressed copies. Keep a current Hub version to restore these compressed backups. Operation history and runtime storage retain their existing formats.
+Original files and operation history use shared verified ZIP backups in the Hub data folder. Only identical bytes with the same full SHA-256 share a copy; different files with the same version number remain separate. A copy is collected only when no game, retained operation or recovery needs it. The eight-operation history limit is unchanged; the runtime download store is separate.
 
-The Hub keeps its settings, downloads, covers, manifests and operation history in `%LOCALAPPDATA%\EncoreHub` (in `data` beside the portable version). Original files are kept in the `rtx-encore-backups` subfolder of each game. Keep both locations while games hold a Hub installation: restoring needs the manifest and the original files. Existing backups in the Hub’s state remain readable and move to the game after the next successful installation or update.
+On the first Hub startup after upgrading from 1.0.x, 1.1.x or 1.2.x, backup optimization runs automatically, including saved games no longer in the library. Originals and history remain restorable, with settings unchanged. Verified copies in the old Hub folders and games’ `rtx-encore-backups` folders are removed only after conversion is committed. Unknown or altered files are kept. You can stop between games; an interruption, unavailable game or locked file is retried at the next start. For pending permission failures, use **Retry with administrator rights** in the library; Windows asks before a bounded helper runs.
+
+Keep the complete `%LOCALAPPDATA%\EncoreHub` folder, or `data` beside the portable Hub, while any game needs restoration. It now holds original files shared by multiple games, as well as settings and history. Keep Hub 1.2.4 or newer to restore migrated states; older Hubs refuse their new references. Uninstalling the installed program preserves these data, but deleting them loses the corresponding restoration copies.
 
 The mod cache keeps only the original ZIPs of the versions currently offered on the stable and candidate channels. Older versions and the former extracted cache folders are removed after the release list is checked online. An old extracted cache may therefore need to be downloaded once again. Installation sources are extracted temporarily; runtime storage is unchanged.
 
@@ -175,7 +177,7 @@ Open an [issue](https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose) 
 
 On a game managed by the Hub, choose **Reinstall cleanly**. Review the proposed mod version and files, then apply the plan. It recreates the mod and its managed runtimes, including missing or damaged files, and preserves the current settings exactly. Exact runtime sources must be available; unknown files in the private runtime folder refuse cleanup. No recursive folder deletion is used.
 
-The game is not launched automatically by default. **Health → Backups of this game** lets you go back before the reinstall, within the history of the last eight operations. Keep both the Hub data and the game's backups. This repair does not guarantee a fix for GTA V Enhanced crashes; preserving settings also preserves any setting that may cause a problem.
+The game is not launched automatically by default. **Health → Backups of this game** lets you go back before the reinstall, within the history of the last eight operations. Keep the complete Hub data folder. This repair does not guarantee a fix for GTA V Enhanced crashes; preserving settings also preserves any setting that may cause a problem.
 
 
 ## Sharpening after reconstruction

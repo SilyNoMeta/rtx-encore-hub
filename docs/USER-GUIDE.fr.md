@@ -42,9 +42,9 @@ Téléchargez `RTX-Encore-Hub-Setup-<version>.exe` depuis la page des publicatio
 
 L'installateur n'est pas signé : Windows peut afficher un avertissement SmartScreen au premier lancement. Chaque publication donne le SHA-256 de son installateur ; comparez-le si vous voulez être sûr du fichier.
 
-Le Hub cherche ses propres mises à jour à son démarrage, puis une fois par jour. **Mises à jour** montre la nouvelle version et ses notes ; **Mettre à jour et relancer** télécharge l'installateur, vérifie son empreinte, l'exécute et relance le Hub. Vous pouvez remettre à plus tard, ou ignorer une version. Une mise à jour attend la fin d'une installation en cours dans un jeu. Vos réglages et vos sauvegardes ne sont jamais touchés par une mise à jour ni par une désinstallation.
+Le Hub cherche ses propres mises à jour à son démarrage, puis une fois par jour. **Mises à jour** montre la nouvelle version et ses notes ; **Mettre à jour et relancer** télécharge l'installateur, vérifie son empreinte, l'exécute et relance le Hub. Vous pouvez remettre à plus tard, ou ignorer une version. Une mise à jour attend la fin d'une installation en cours dans un jeu. La mise à jour ou désinstallation du programme installé conserve vos réglages et données de restauration.
 
-**Version portable.** `RTX-Encore-Hub-Portable-<version>.zip` n'installe rien : décompressez-la dans un dossier où vous pouvez écrire (pas sous Program Files) et lancez `rtx-encore-hub.exe`. Le fichier `portable.txt` à côté fait garder au Hub son état dans le dossier `data` voisin : gardez ce dossier. Les fichiers d’origine des jeux sont conservés dans leur sous-dossier `rtx-encore-backups`. La version portable ne se met pas à jour elle-même : **Télécharger la version portable**, dans **Mises à jour**, ouvre la page de la publication ; fermez le Hub, puis remplacez `rtx-encore-hub.exe` et `encorehub-elevated.exe` par ceux de la nouvelle archive.
+**Version portable.** `RTX-Encore-Hub-Portable-<version>.zip` n'installe rien : décompressez-la dans un dossier où vous pouvez écrire (pas sous Program Files) et lancez `rtx-encore-hub.exe`. Le fichier `portable.txt` à côté fait garder au Hub son état dans le dossier `data` voisin : gardez ce dossier. Les sauvegardes des originaux et de l’historique sont partagées dans ce dossier de données : gardez-le lors d’un déplacement ou d’une mise à jour du Hub portable. La version portable ne se met pas à jour elle-même : **Télécharger la version portable**, dans **Mises à jour**, ouvre la page de la publication ; fermez le Hub, puis remplacez `rtx-encore-hub.exe` et `encorehub-elevated.exe` par ceux de la nouvelle archive.
 
 ## Retrouver vos jeux
 
@@ -81,7 +81,7 @@ Choisissez une tuile.
 Le bouton principal de la fiche ouvre un assistant en trois étapes.
 
 1. **Inspection** : ce que le jeu contient, ce que votre machine permet.
-2. **Ce qui va être écrit** : la liste exacte, avec ce qui est là maintenant et ce qui y sera. Rien n'est encore écrit. Chaque fichier d’origine est conservé d’abord dans le sous-dossier `rtx-encore-backups` du jeu.
+2. **Ce qui va être écrit** : la liste exacte, avec ce qui est là maintenant et ce qui y sera. Rien n'est encore écrit. Chaque fichier d’origine est conservé d’abord dans les données du Hub.
 3. **Vérification au lancement**, si vous laissez la case cochée.
 
 Une installation est tout ou rien : si une écriture échoue, tout est remis en place. Si le Hub est arrêté en plein milieu (coupure, plantage), il annule l'installation interrompue à son prochain démarrage, avant toute autre chose, et vous le dit.
@@ -143,9 +143,11 @@ Il n'y a pas de compte. Une clé est créée sur votre machine et y reste ; vous
 
 ## Données, réseau et vie privée
 
-Les originaux sont conservés en archives ZIP vérifiées dans `rtx-encore-backups`. Les anciennes sauvegardes non compressées restent restaurables ; la prochaine installation ou mise à jour réussie les convertit avant de retirer les copies non compressées. Gardez une version récente du Hub pour restaurer ces sauvegardes compressées. L’historique des opérations et le stockage des runtimes conservent leur format actuel.
+Les originaux et l’historique des opérations utilisent des ZIP partagés vérifiés dans les données du Hub. Seuls des octets identiques avec le même SHA-256 complet partagent une copie ; deux fichiers de même version mais de contenus différents restent distincts. Une copie n’est collectée que si aucun jeu, opération conservée ou retour après interruption n’en a besoin. La limite des huit opérations d’historique ne change pas ; le stockage des runtimes téléchargés reste séparé.
 
-Le Hub garde ses réglages, téléchargements, jaquettes, manifestes et historique des opérations dans `%LOCALAPPDATA%\EncoreHub` (dans `data` à côté de la version portable). Les fichiers d’origine sont conservés dans le sous-dossier `rtx-encore-backups` de chaque jeu. Gardez les deux emplacements tant que des jeux portent une installation du Hub : la restauration nécessite le manifeste et les fichiers d’origine. Les anciennes sauvegardes dans l’état du Hub restent lisibles et migrent dans le jeu après la prochaine installation ou mise à jour réussie.
+Au premier démarrage après une mise à jour depuis les 1.0.x, 1.1.x ou 1.2.x, le Hub optimise automatiquement les sauvegardes, y compris celles des jeux absents de la bibliothèque. Les originaux et l’historique restent restaurables, sans modifier les réglages. Les copies vérifiées des anciens dossiers du Hub et des dossiers `rtx-encore-backups` des jeux ne sont retirées qu’après validation de la conversion. Les fichiers inconnus ou altérés sont conservés. Vous pouvez arrêter entre deux jeux ; une interruption, un jeu indisponible ou un fichier verrouillé sera réessayé au prochain démarrage. Pour un nettoyage bloqué par les droits, utilisez **Réessayer avec les droits administrateur** dans la bibliothèque ; Windows demande votre accord avant le helper limité à ce jeu.
+
+Gardez le dossier complet `%LOCALAPPDATA%\EncoreHub`, ou `data` à côté du Hub portable, tant qu’un jeu doit pouvoir être restauré. Il contient désormais des originaux partagés entre plusieurs jeux, en plus des réglages et de l’historique. Gardez Hub 1.2.4 ou ultérieur pour restaurer les états migrés ; les anciens Hub refusent leurs nouvelles références. Désinstaller le programme installé conserve ces données ; les supprimer fait perdre les copies de restauration correspondantes.
 
 Le cache du mod conserve uniquement les ZIP originaux des versions actuellement proposées sur les canaux stable et candidate. Les anciennes versions et les anciens dossiers extraits sont retirés après vérification en ligne de la liste des publications. Un ancien cache extrait peut donc nécessiter un nouveau téléchargement unique. Les sources d’installation sont extraites temporairement ; le stockage des runtimes ne change pas.
 
@@ -175,7 +177,7 @@ Ouvrez un [ticket](https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choos
 
 Sur un jeu suivi par le Hub, choisissez **Réinstaller proprement**. Relisez la version du mod proposée et les fichiers, puis appliquez le plan. Il recrée le mod et ses runtimes gérés, y compris les fichiers manquants ou endommagés, en conservant les réglages actuels à l’identique. Les sources exactes des runtimes doivent être disponibles ; des fichiers inconnus dans le dossier privé de runtimes font refuser le nettoyage. Aucune suppression récursive du dossier.
 
-Le lancement automatique du jeu est décoché par défaut. **Santé → Sauvegardes de ce jeu** permet de revenir avant la réinstallation, dans l’historique des huit dernières opérations. Conservez les données du Hub et les sauvegardes du jeu. Cette réparation ne garantit pas la résolution des crashs GTA V Enhanced ; conserver les réglages conserve aussi un éventuel réglage problématique.
+Le lancement automatique du jeu est décoché par défaut. **Santé → Sauvegardes de ce jeu** permet de revenir avant la réinstallation, dans l’historique des huit dernières opérations. Conservez le dossier complet des données du Hub. Cette réparation ne garantit pas la résolution des crashs GTA V Enhanced ; conserver les réglages conserve aussi un éventuel réglage problématique.
 
 
 ## Netteté après reconstruction
