@@ -6,13 +6,13 @@
 
 RTX Encore Hub installs [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) in your games, keeps the mod and the NVIDIA DLLs up to date, checks that a game starts well with it, and can always go back. The interface follows the language of Windows: French, English or Simplified Chinese; other languages use English. This guide uses the English labels of the application.
 
-## Using 1.2.1
+## Using 1.2.2
 
 **XeSS / XeFG: VERY EXPERIMENTAL.** Getting this integration working was a particularly difficult and frustrating part of development :) Expect bugs, crashes, visual artifacts and differences between games and graphics APIs. Please report problems: in RTX Encore Hub, open the game’s **Health** page, choose **Prepare a diagnostic**, review the archive for personal information, then attach it to an [RTX Encore issue](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose). Include your engine choices, graphics API and requested multiplier. The Hub does not upload the archive for you.
 
-Stable 1.2.1 is available on the Stable update channel. Candidate also includes pre-releases.
+Stable 1.2.2 is available on the Stable update channel. Candidate also includes pre-releases.
 
-Intel, common-input and per-pass NR settings require mod 1.2.0-beta.1 or later. Mod 1.2.1 no longer uses the NVIDIA provider-policy setting, so the Hub hides it; older mods retain their supported controls. XeFG remains experimental and depends on the mod, graphics API, game and runtime. A requested multiplier does not prove displayed frames.
+Intel, common-input and per-pass NR settings require mod 1.2.0-beta.1 or later. Mod 1.2.2 no longer uses the NVIDIA provider-policy setting, so the Hub hides it; older mods retain their supported controls. XeFG remains experimental and depends on the mod, graphics API, game and runtime. A requested multiplier does not prove displayed frames.
 
 ### Intel engines, with their dependencies
 
@@ -30,11 +30,11 @@ The common `srHdr` and `srAutoExposure` controls follow the chosen reconstructio
 
 Leave both controls on `game` unless the game’s input format is known. Incorrect HDR input can degrade the image. Auto exposure may help exposure-related ghosting, but is not a general fix; some DLSS models impose it. XeSS auto exposure has a GPU cost and is not recommended for LDR. XeSS Vulkan with LDR and manual exposure remains unsupported. Ray Reconstruction and frame generation are unchanged.
 
-Provider-policy controls apply only to older mods that use them and stay local to the game. RTX Encore 1.2.1 ignores an old `providerPatchPolicy` entry. NVIDIA runtime compatibility no longer needs a fixed version list; Intel runtime checks remain unchanged. These policy controls do not travel in community profiles.
+Provider-policy controls apply only to older mods that use them and stay local to the game. RTX Encore 1.2.2 ignores an old `providerPatchPolicy` entry. NVIDIA runtime compatibility no longer needs a fixed version list; Intel runtime checks remain unchanged. These policy controls do not travel in community profiles.
 
 With XeFG, changing the FPS limit requires a game restart. Variable pacing for higher XeFG multipliers is experimental. An FPS cap does not establish the cadence of source frames.
 
-[Release notes](notes/1.2.1.md) · [1.2.0-beta.1 notes](notes/1.2.0-beta.1.md)
+[Release notes](notes/1.2.2.md) · [1.2.0-beta.1 notes](notes/1.2.0-beta.1.md)
 
 ## Install the Hub
 
@@ -170,3 +170,10 @@ Everything can be done with the keyboard. `Ctrl+F` goes to the search, `F5` read
 If game pages cannot open, use **Settings → Hub diagnostics → Export Hub logs** or the export button on the failed game page. The ZIP is shown in Explorer. Logs are local, rotate automatically (three files of about 2 MiB each), and include the Hub version, command failures and unreadable game data. You can also find them in `%LOCALAPPDATA%\EncoreHub\logs`, or `data\logs` beside the portable Hub. Review the archive before sharing it: game names and installation paths may be present. Nothing is uploaded automatically.
 
 Open an [issue](https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose) with the Hub's version, the game, the launcher, the card, the driver and the steps that reproduce the problem. Attach the diagnostic prepared by the Health page once you have read it.
+
+## Sharpening after reconstruction (in development)
+
+The game settings include **Sharpening after reconstruction**. Off is the default. Game uses the game's supplied sharpness value; it has no effect if the game sends none. Custom applies a strength from 0 to 100%, default 30%, while playing. This visual preference can be included in shared profiles. It applies to DLSS, DLAA, Ray Reconstruction and replacement XeSS, after Neural Rendering when enabled. It adds to any sharpening the game performs later; high strengths can create halos and amplify noise. Some graphics paths remain unsupported. Vulkan and real-game appearance have not yet been validated. Use a build that includes this feature; older mod builds ignore these keys.
+
+
+**Coming in a later Hub release:** sharpening controls for RTX Encore 1.2.2. Off / Game / Custom, 0–100%, default 30%, with the preference included in shared profiles. These controls are on the development branch and are **not included in the published Hub 1.2.2 installer**. The mod’s own menu already provides them.
