@@ -26,7 +26,7 @@
 > [!NOTE]
 > **Windows x64。** 请打开[发布页面](https://github.com/SilyNoMeta/rtx-encore-hub/releases)并下载 `RTX-Encore-Hub-Setup-<version>.exe`，或无需安装的 `RTX-Encore-Hub-Portable-<version>.zip`。安装程序尚未进行代码签名，因此首次运行时 Windows 可能显示 SmartScreen 警告；每个发布版本都会给出安装程序的 SHA-256。Hub 与 RTX Encore 模组分别发布。
 
-## Hub 1.2.2 — 简化操作，明确还原路径
+## Hub 1.2.3 — 干净重装与锐化控制
 
 从统一游戏库安装和更新 RTX Encore，管理配套运行库与游戏。Hub 与模组分别发布。
 
@@ -38,11 +38,11 @@
 - **逐轮 NR 与 HDR 输入** — 分别设置最多四轮 NR，或继承全局风格。共用 HDR 输入与曝光设置跟随所选重建引擎，不会启用显示器 HDR。
 - **诊断与共享配置** — 查看健康页面、生成诊断并分享兼容的逐游戏画面偏好。共享配置仍为实验性功能。
 
-**后续 Hub 版本将提供：** RTX Encore 1.2.2 的锐化控制项。Off / Game / Custom，强度 0–100%，默认 30%，偏好可包含在共享配置中。这些控制项已进入开发分支，**不包含在已发布的 Hub 1.2.2 安装包中**。模组自身菜单现已提供。
+**Hub 1.2.3 新增：** 在受管理的游戏中使用**干净重装**，重新创建安装并保留设置，可从健康页面恢复。Hub 现已提供 **Off / Game / Custom 锐化控制**，强度 0–100%，Custom 默认 30%，偏好可包含在共享配置中。重装并非已确认解决 GTA V Enhanced 崩溃的方案。
 
 **Intel XeSS / XeFG 仍高度实验性。** 兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。
 
-[Hub 1.2.2](docs/notes/1.2.2.zh-CN.md) · [RTX Encore 1.2.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.2.2)
+[Hub 1.2.3](docs/notes/1.2.3.zh-CN.md) · [RTX Encore 1.2.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.2.2)
 
 ![Hub 的游戏库，包含封面、每个安装的状态和更新横幅](screenshots/library.zh.png)
 

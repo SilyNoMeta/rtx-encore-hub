@@ -171,9 +171,15 @@ Si les fiches des jeux ne s’ouvrent pas, utilisez **Paramètres → Diagnostic
 
 Ouvrez un [ticket](https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose) avec la version du Hub, le jeu, le lanceur, la carte, le pilote et les étapes qui reproduisent le problème. Joignez le diagnostic préparé par la page Santé après l'avoir relu.
 
-## Netteté après reconstruction (en préparation)
+## Réinstaller proprement
+
+Sur un jeu suivi par le Hub, choisissez **Réinstaller proprement**. Relisez la version du mod proposée et les fichiers, puis appliquez le plan. Il recrée le mod et ses runtimes gérés, y compris les fichiers manquants ou endommagés, en conservant les réglages actuels à l’identique. Les sources exactes des runtimes doivent être disponibles ; des fichiers inconnus dans le dossier privé de runtimes font refuser le nettoyage. Aucune suppression récursive du dossier.
+
+Le lancement automatique du jeu est décoché par défaut. **Santé → Sauvegardes de ce jeu** permet de revenir avant la réinstallation, dans l’historique des huit dernières opérations. Conservez les données du Hub et les sauvegardes du jeu. Cette réparation ne garantit pas la résolution des crashs GTA V Enhanced ; conserver les réglages conserve aussi un éventuel réglage problématique.
+
+
+## Netteté après reconstruction
+
+**Disponible dans le Hub 1.2.3**, avec RTX Encore 1.2.2 ou un mod compatible plus récent.
 
 Les réglages du jeu proposent **Netteté après reconstruction**. Off est le défaut. Game utilise la valeur envoyée par le jeu ; sans valeur, il ne fait rien. Custom applique à chaud une force de 0 à 100 %, 30 % par défaut. Cette préférence visuelle peut faire partie des profils partagés. Elle concerne DLSS, DLAA, Ray Reconstruction et le remplacement XeSS, après Neural Rendering s'il est actif. Elle se cumule avec la netteté ajoutée ensuite par le jeu ; trop forte, elle crée des halos et accentue le bruit. Certains chemins graphiques restent exclus. Vulkan et le rendu en jeu ne sont pas encore validés. Utilisez un build contenant la fonction ; les anciens builds du mod ignorent ces clés.
-
-
-**Dans une prochaine version du Hub :** commandes de netteté pour RTX Encore 1.2.2. Off / Game / Custom, de 0 à 100 %, défaut 30 %, avec la préférence dans les profils partagés. Ces commandes sont sur la branche de développement et **ne figurent pas dans l’installateur Hub 1.2.2 publié**. Le menu du mod les propose déjà.
