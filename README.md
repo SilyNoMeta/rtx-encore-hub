@@ -26,7 +26,7 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 > [!NOTE]
 > **Windows x64.** Open the [releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) and download `RTX-Encore-Hub-Setup-<version>.exe`, or `RTX-Encore-Hub-Portable-<version>.zip`, which installs nothing. The installer is not code-signed yet, so Windows may show a SmartScreen warning the first time; each release gives the SHA-256 of its installer. The Hub and the RTX Encore mod have separate releases.
 
-## Hub 1.2.2 — less busywork, a clearer way back
+## Hub 1.2.3 — clean reinstalls and sharpening controls
 
 Install and update RTX Encore, keep its runtimes matched, and manage your games from one library. The Hub and the mod have separate releases.
 
@@ -38,11 +38,11 @@ Install and update RTX Encore, keep its runtimes matched, and manage your games 
 - **NR pass by pass and HDR inputs** — Adjust each of up to four NR passes, or inherit the global style. Common HDR-input and exposure settings follow the chosen reconstruction engine; they do not enable display HDR.
 - **Diagnostics and shared profiles** — Review the Health page, prepare a diagnostic and share compatible per-game visual preferences. Shared profiles remain experimental.
 
-**Coming in a later Hub release:** sharpening controls for RTX Encore 1.2.2. Off / Game / Custom, 0–100%, default 30%, with the preference included in shared profiles. These controls are on the development branch and are **not included in the published Hub 1.2.2 installer**. The mod’s own menu already provides them.
+**New in Hub 1.2.3:** use **Reinstall cleanly** on a managed game to recreate its installation while preserving settings and a way back from Health. The Hub now includes **Off / Game / Custom sharpening controls**, 0–100%, Custom starting at 30%, with the preference available in shared profiles. Reinstallation is not a confirmed fix for GTA V Enhanced crashes.
 
 **Intel XeSS / XeFG remain very experimental.** Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering.
 
-[Hub 1.2.2](docs/notes/1.2.2.md) · [RTX Encore 1.2.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.2.2)
+[Hub 1.2.3](docs/notes/1.2.3.md) · [RTX Encore 1.2.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.2.2)
 
 ![The Hub's game library, with cover art, the state of each install and the update banner](screenshots/library.png)
 

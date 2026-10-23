@@ -171,9 +171,15 @@ If game pages cannot open, use **Settings → Hub diagnostics → Export Hub log
 
 Open an [issue](https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose) with the Hub's version, the game, the launcher, the card, the driver and the steps that reproduce the problem. Attach the diagnostic prepared by the Health page once you have read it.
 
-## Sharpening after reconstruction (in development)
+## Reinstall cleanly
+
+On a game managed by the Hub, choose **Reinstall cleanly**. Review the proposed mod version and files, then apply the plan. It recreates the mod and its managed runtimes, including missing or damaged files, and preserves the current settings exactly. Exact runtime sources must be available; unknown files in the private runtime folder refuse cleanup. No recursive folder deletion is used.
+
+The game is not launched automatically by default. **Health → Backups of this game** lets you go back before the reinstall, within the history of the last eight operations. Keep both the Hub data and the game's backups. This repair does not guarantee a fix for GTA V Enhanced crashes; preserving settings also preserves any setting that may cause a problem.
+
+
+## Sharpening after reconstruction
+
+**Available in Hub 1.2.3**, with RTX Encore 1.2.2 or a newer compatible mod.
 
 The game settings include **Sharpening after reconstruction**. Off is the default. Game uses the game's supplied sharpness value; it has no effect if the game sends none. Custom applies a strength from 0 to 100%, default 30%, while playing. This visual preference can be included in shared profiles. It applies to DLSS, DLAA, Ray Reconstruction and replacement XeSS, after Neural Rendering when enabled. It adds to any sharpening the game performs later; high strengths can create halos and amplify noise. Some graphics paths remain unsupported. Vulkan and real-game appearance have not yet been validated. Use a build that includes this feature; older mod builds ignore these keys.
-
-
-**Coming in a later Hub release:** sharpening controls for RTX Encore 1.2.2. Off / Game / Custom, 0–100%, default 30%, with the preference included in shared profiles. These controls are on the development branch and are **not included in the published Hub 1.2.2 installer**. The mod’s own menu already provides them.

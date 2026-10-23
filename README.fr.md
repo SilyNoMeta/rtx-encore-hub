@@ -26,7 +26,7 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 > [!NOTE]
 > **Windows x64.** Ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`, ou `RTX-Encore-Hub-Portable-<version>.zip`, qui n'installe rien. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.
 
-## Hub 1.2.2 — moins de manipulations, un retour arrière clair
+## Hub 1.2.3 — réinstallation propre et commandes de netteté
 
 Installez et mettez à jour RTX Encore, gardez ses runtimes cohérents et gérez vos jeux depuis une bibliothèque unique. Le Hub et le mod ont des publications distinctes.
 
@@ -38,11 +38,11 @@ Installez et mettez à jour RTX Encore, gardez ses runtimes cohérents et gérez
 - **NR par passe et entrées HDR** — Réglez chacune des quatre passes NR possibles ou héritez du style global. Les réglages communs d’entrée HDR et d’exposition suivent le moteur de reconstruction choisi ; ils n’activent pas le HDR de l’écran.
 - **Diagnostics et profils partagés** — Consultez la page Santé, préparez un diagnostic et partagez des préférences visuelles compatibles par jeu. Les profils partagés restent expérimentaux.
 
-**Dans une prochaine version du Hub :** commandes de netteté pour RTX Encore 1.2.2. Off / Game / Custom, de 0 à 100 %, défaut 30 %, avec la préférence dans les profils partagés. Ces commandes sont sur la branche de développement et **ne figurent pas dans l’installateur Hub 1.2.2 publié**. Le menu du mod les propose déjà.
+**Nouveau dans le Hub 1.2.3 :** utilisez **Réinstaller proprement** sur un jeu suivi pour recréer son installation en conservant les réglages et un retour arrière depuis Santé. Le Hub propose désormais **Off / Game / Custom pour la netteté**, de 0 à 100 %, Custom démarrant à 30 %, avec la préférence dans les profils partagés. La réinstallation ne constitue pas un correctif confirmé des crashs GTA V Enhanced.
 
 **Intel XeSS / XeFG restent très expérimentaux.** Leur compatibilité dépend du mod, du jeu, de l’API graphique et des runtimes. Signalez les problèmes avec une archive de diagnostic relue ; la présence des fichiers ou un multiplicateur demandé ne prouvent pas le rendu effectif.
 
-[Hub 1.2.2](docs/notes/1.2.2.fr.md) · [RTX Encore 1.2.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.2.2)
+[Hub 1.2.3](docs/notes/1.2.3.fr.md) · [RTX Encore 1.2.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.2.2)
 
 ![La bibliothèque du Hub, avec les jaquettes, l'état de chaque installation et le bandeau des mises à jour](screenshots/library.fr.png)
 
