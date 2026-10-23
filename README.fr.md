@@ -26,23 +26,23 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 > [!NOTE]
 > **Windows x64.** Ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`, ou `RTX-Encore-Hub-Portable-<version>.zip`, qui n'installe rien. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.
 
-## Hub 1.2.3 — réinstallation propre et commandes de netteté
+## Hub 1.2.4 — sauvegardes partagées et migration automatique
 
 Installez et mettez à jour RTX Encore, gardez ses runtimes cohérents et gérez vos jeux depuis une bibliothèque unique. Le Hub et le mod ont des publications distinctes.
 
 - **Journaux du Hub exportables** — Exportez l’activité récente et les erreurs depuis les Réglages ou une fiche en erreur, même si les fiches des jeux ne s’ouvrent pas. Relisez l’archive avant de la partager.
-- **Sauvegardes plus petites, restauration conservée** — Les fichiers originaux sont conservés dans des ZIP vérifiés. Les anciennes sauvegardes non compressées restent restaurables et sont converties après une installation ou mise à jour réussie ; utilisez Hub 1.2.2 ou ultérieur pour restaurer les sauvegardes compressées.
+- **Sauvegardes partagées, restauration conservée** — Les octets identiques des originaux et de l’historique ne sont conservés qu’une fois entre les jeux. La migration automatique conserve les réglages et nettoie les anciennes copies vérifiées. Restaurer un état migré nécessite Hub 1.2.4 ou ultérieur.
 - **Choix mémorisés** — La fiche jeu conserve les choix de preset, multiplicateur et options. Retour et Appliquer restent accessibles pendant le défilement ; les changements demandent toujours confirmation.
 - **Une bibliothèque plus rapide** — Les jeux en cache apparaissent avant la vérification en arrière-plan. Favoris, actions sur les cartes, recherche, mode barre des tâches et choix d’exécutable mémorisé facilitent l’accès aux jeux.
 - **Moteurs Intel et runtimes associés** — Choisissez la reconstruction XeSS ou la génération d’images XeFG expérimentales là où le mod les prend en charge. Le Hub installe, vérifie, sauvegarde et restaure leurs fichiers ; leur présence ne prouve pas qu’un moteur fonctionne.
 - **NR par passe et entrées HDR** — Réglez chacune des quatre passes NR possibles ou héritez du style global. Les réglages communs d’entrée HDR et d’exposition suivent le moteur de reconstruction choisi ; ils n’activent pas le HDR de l’écran.
 - **Diagnostics et profils partagés** — Consultez la page Santé, préparez un diagnostic et partagez des préférences visuelles compatibles par jeu. Les profils partagés restent expérimentaux.
 
-**Nouveau dans le Hub 1.2.3 :** utilisez **Réinstaller proprement** sur un jeu suivi pour recréer son installation en conservant les réglages et un retour arrière depuis Santé. Le Hub propose désormais **Off / Game / Custom pour la netteté**, de 0 à 100 %, Custom démarrant à 30 %, avec la préférence dans les profils partagés. La réinstallation ne constitue pas un correctif confirmé des crashs GTA V Enhanced.
+**Nouveau dans le Hub 1.2.4 :** les fichiers originaux et instantanés d’historique identiques sont compressés une seule fois dans les données du Hub, partagés entre jeux selon leur SHA-256 complet. Au démarrage, le Hub migre les sauvegardes des 1.0.x, 1.1.x et 1.2.x, puis retire seulement les anciennes copies vérifiées. Vous pouvez arrêter entre deux jeux ; les dossiers indisponibles ou verrouillés seront réessayés.
 
 **Intel XeSS / XeFG restent très expérimentaux.** Leur compatibilité dépend du mod, du jeu, de l’API graphique et des runtimes. Signalez les problèmes avec une archive de diagnostic relue ; la présence des fichiers ou un multiplicateur demandé ne prouvent pas le rendu effectif.
 
-[Hub 1.2.3](docs/notes/1.2.3.fr.md) · [RTX Encore 1.2.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.2.2)
+[Hub 1.2.4](docs/notes/1.2.4.fr.md) · [RTX Encore 1.2.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.2.2)
 
 ![La bibliothèque du Hub, avec les jaquettes, l'état de chaque installation et le bandeau des mises à jour](screenshots/library.fr.png)
 
