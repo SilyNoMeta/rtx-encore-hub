@@ -26,25 +26,23 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 > [!NOTE]
 > **Windows x64.** Ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`, ou `RTX-Encore-Hub-Portable-<version>.zip`, qui n'installe rien. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.
 
-## 1.2.1
+## Hub 1.2.2 — moins de manipulations, un retour arrière clair
 
-**XeSS / XeFG : TRÈS EXPÉRIMENTAL.** Cette intégration a été particulièrement pénible à mettre au point :) Attendez-vous à des bugs, crashs, artefacts et différences entre jeux et API graphiques. N’hésitez pas à remonter les problèmes : dans RTX Encore Hub, ouvrez la page **Santé** du jeu, choisissez **Préparer un diagnostic**, relisez l’archive pour retirer les informations personnelles, puis joignez-la à une [issue RTX Encore](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose). Indiquez les moteurs choisis, l’API graphique et le multiplicateur demandé. Le Hub ne téléverse pas l’archive à votre place.
+Installez et mettez à jour RTX Encore, gardez ses runtimes cohérents et gérez vos jeux depuis une bibliothèque unique. Le Hub et le mod ont des publications distinctes.
 
-- **Bibliothèque plus rapide au démarrage** — Les jeux en cache apparaissent immédiatement pendant la vérification en arrière-plan.
-- **RTX Encore 1.2.1** — Meilleure compatibilité des menus, bascule DLSS/XeSS à chaud dans No Man’s Sky et compatibilité élargie des runtimes NVIDIA.
-- **Contrôles adaptés** — L’ancienne politique des fournisseurs NVIDIA est masquée pour le mod 1.2.1 ; les anciens mods gardent leurs contrôles.
+- **Journaux du Hub exportables** — Exportez l’activité récente et les erreurs depuis les Réglages ou une fiche en erreur, même si les fiches des jeux ne s’ouvrent pas. Relisez l’archive avant de la partager.
+- **Sauvegardes plus petites, restauration conservée** — Les fichiers originaux sont conservés dans des ZIP vérifiés. Les anciennes sauvegardes non compressées restent restaurables et sont converties après une installation ou mise à jour réussie ; utilisez Hub 1.2.2 ou ultérieur pour restaurer les sauvegardes compressées.
+- **Choix mémorisés** — La fiche jeu conserve les choix de preset, multiplicateur et options. Retour et Appliquer restent accessibles pendant le défilement ; les changements demandent toujours confirmation.
+- **Une bibliothèque plus rapide** — Les jeux en cache apparaissent avant la vérification en arrière-plan. Favoris, actions sur les cartes, recherche, mode barre des tâches et choix d’exécutable mémorisé facilitent l’accès aux jeux.
+- **Moteurs Intel et runtimes associés** — Choisissez la reconstruction XeSS ou la génération d’images XeFG expérimentales là où le mod les prend en charge. Le Hub installe, vérifie, sauvegarde et restaure leurs fichiers ; leur présence ne prouve pas qu’un moteur fonctionne.
+- **NR par passe et entrées HDR** — Réglez chacune des quatre passes NR possibles ou héritez du style global. Les réglages communs d’entrée HDR et d’exposition suivent le moteur de reconstruction choisi ; ils n’activent pas le HDR de l’écran.
+- **Diagnostics et profils partagés** — Consultez la page Santé, préparez un diagnostic et partagez des préférences visuelles compatibles par jeu. Les profils partagés restent expérimentaux.
 
-- **Bibliothèque** — Favoris, actions compactes et lancement depuis la carte, mode zone de notification facultatif qui reprend la bibliothèque, et recherche de la barre de titre qui filtre la bibliothèque.
-- **Avec RTX Encore 1.2.0** — Smooth Motion avec le pilote NVIDIA 621.01 ; Force Smooth Motion disparaît (les exclusions Vulkan sont toujours levées) ; les presets DLSS et le moteur de reconstruction s'appliquent en cours de jeu.
-- **Moteurs Intel et dépendances** — Avec RTX Encore 1.2, choisissez la reconstruction XeSS ou la génération d’images XeFG là où le mod les prend en charge. Le Hub installe et vérifie les fichiers Intel et leur licence avec le mod ; ils sont sauvegardés et restaurés dans la même opération. Leur présence ne prouve pas qu’un moteur est actif.
-- **Neural Rendering, passe par passe** — Pour chacune des quatre passes possibles, réglez l’intensité, le ton local, la structure locale, la structure de peau et le masque de personnage, ou suivez le réglage global. Une intensité à zéro laisse la passe tourner et ne supprime pas son coût.
-- **Entrée HDR et exposition** — Les réglages communs `srHdr` et `srAutoExposure` suivent le moteur de reconstruction choisi. Ils suivent le jeu par défaut et demandent un redémarrage. L’entrée HDR n’active pas le HDR de l’écran et ne convertit pas une image SDR en HDR.
-- **Retrouver le bon jeu** — La recherche globale ouvre directement les jeux. Lorsque l’exécutable est incertain, la fiche propose des candidats et retient votre choix. Vous pouvez revenir à la sélection automatique.
-- **Diagnostics utiles** — Santé indique le moteur de génération d’images et la compatibilité des runtimes. L’archive comprend les logs texte du mod, ses réglages et la liste du dossier du jeu. Relisez-la avant de la partager ; le Hub ne l’envoie pas.
+**Dans une prochaine version du Hub :** commandes de netteté pour RTX Encore 1.2.2. Off / Game / Custom, de 0 à 100 %, défaut 30 %, avec la préférence dans les profils partagés. Ces commandes sont sur la branche de développement et **ne figurent pas dans l’installateur Hub 1.2.2 publié**. Le menu du mod les propose déjà.
 
-Les réglages Intel, d’entrée commune et de NR par passe demandent le mod 1.2.0-beta.1 ou ultérieur. Le mod 1.2.1 n’utilise plus la politique des fournisseurs NVIDIA : le Hub la masque ; les anciens mods conservent leurs contrôles compatibles. XeFG reste expérimental et dépend du mod, de l’API graphique, du jeu et du runtime. Un multiplicateur demandé ne prouve pas les images affichées.
+**Intel XeSS / XeFG restent très expérimentaux.** Leur compatibilité dépend du mod, du jeu, de l’API graphique et des runtimes. Signalez les problèmes avec une archive de diagnostic relue ; la présence des fichiers ou un multiplicateur demandé ne prouvent pas le rendu effectif.
 
-[Notes de version](docs/notes/1.2.1.fr.md) · [Notes de la 1.2.0-beta.1](docs/notes/1.2.0-beta.1.fr.md)
+[Hub 1.2.2](docs/notes/1.2.2.fr.md) · [RTX Encore 1.2.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.2.2)
 
 ![La bibliothèque du Hub, avec les jaquettes, l'état de chaque installation et le bandeau des mises à jour](screenshots/library.fr.png)
 

@@ -26,25 +26,23 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 > [!NOTE]
 > **Windows x64.** Open the [releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) and download `RTX-Encore-Hub-Setup-<version>.exe`, or `RTX-Encore-Hub-Portable-<version>.zip`, which installs nothing. The installer is not code-signed yet, so Windows may show a SmartScreen warning the first time; each release gives the SHA-256 of its installer. The Hub and the RTX Encore mod have separate releases.
 
-## 1.2.1
+## Hub 1.2.2 — less busywork, a clearer way back
 
-**XeSS / XeFG: VERY EXPERIMENTAL.** Getting this integration working was a particularly difficult and frustrating part of development :) Expect bugs, crashes, visual artifacts and differences between games and graphics APIs. Please report problems: in RTX Encore Hub, open the game’s **Health** page, choose **Prepare a diagnostic**, review the archive for personal information, then attach it to an [RTX Encore issue](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose). Include your engine choices, graphics API and requested multiplier. The Hub does not upload the archive for you.
+Install and update RTX Encore, keep its runtimes matched, and manage your games from one library. The Hub and the mod have separate releases.
 
-- **Faster library startup** — Cached games appear immediately while verification runs in the background.
-- **RTX Encore 1.2.1** — Menu compatibility improvements, live DLSS/XeSS switching in No Man’s Sky, and broader NVIDIA runtime compatibility.
-- **Appropriate controls** — The obsolete NVIDIA provider-policy option is hidden for mod 1.2.1; older mods retain their controls.
+- **Export Hub logs** — Export recent Hub activity and errors from Settings or a failed game page, even when game pages cannot open. Review the archive before sharing.
+- **Smaller backups, reliable restoration** — Original files are kept in verified ZIP backups. Older uncompressed backups remain restorable and convert after a successful install or update; use Hub 1.2.2 or newer to restore compressed backups.
+- **Remembered choices** — The game page remembers preset, multiplier and option selections. Back and Apply remain accessible while scrolling; changes still need confirmation.
+- **A faster library** — Cached games appear first while verification runs in the background. Favorites, card actions, search, tray mode and remembered executable choices keep games within reach.
+- **Intel engines and their runtimes** — Choose experimental XeSS reconstruction or XeFG frame generation where the mod supports them. The Hub installs, verifies, backs up and restores their files; installed files do not establish that an engine is active.
+- **NR pass by pass and HDR inputs** — Adjust each of up to four NR passes, or inherit the global style. Common HDR-input and exposure settings follow the chosen reconstruction engine; they do not enable display HDR.
+- **Diagnostics and shared profiles** — Review the Health page, prepare a diagnostic and share compatible per-game visual preferences. Shared profiles remain experimental.
 
-- **Library** — Favorites, compact card actions and launch from the card, an optional tray mode that resumes the library, and the title-bar search filtering the library.
-- **With RTX Encore 1.2.0** — Smooth Motion on NVIDIA driver 621.01; Force Smooth Motion is gone (Vulkan exclusions are always lifted); DLSS presets and the reconstruction engine apply while the game runs.
-- **Intel engines, with their dependencies** — With RTX Encore 1.2, choose XeSS reconstruction or XeFG frame generation where the mod supports them. The Hub installs and verifies the Intel files and their license with the mod; they are backed up and restored in the same operation. Installed files do not establish that an engine is active.
-- **Neural Rendering, pass by pass** — For each of the four possible passes, adjust intensity, local tone, local structure, skin structure and the character mask, or inherit the global setting. Setting intensity to zero still runs the pass and does not remove its cost.
-- **HDR input and exposure** — The common `srHdr` and `srAutoExposure` controls follow the chosen reconstruction engine. Both default to the game and require a restart. HDR input does not enable HDR on the display or convert SDR to HDR.
-- **Find the right game** — The global search opens games directly. When the executable is uncertain, the game page offers candidates and remembers your choice. You can return to automatic selection.
-- **Useful diagnostics** — Health reports the frame-generation provider and runtime compatibility. The diagnostic archive includes the mod’s text logs, settings and a game-folder listing. Review it before sharing; the Hub does not upload it.
+**Coming in a later Hub release:** sharpening controls for RTX Encore 1.2.2. Off / Game / Custom, 0–100%, default 30%, with the preference included in shared profiles. These controls are on the development branch and are **not included in the published Hub 1.2.2 installer**. The mod’s own menu already provides them.
 
-Intel, common-input and per-pass NR settings require mod 1.2.0-beta.1 or later. Mod 1.2.1 no longer uses the NVIDIA provider-policy setting, so the Hub hides it; older mods retain their supported controls. XeFG remains experimental and depends on the mod, graphics API, game and runtime. A requested multiplier does not prove displayed frames.
+**Intel XeSS / XeFG remain very experimental.** Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering.
 
-[Release notes](docs/notes/1.2.1.md) · [1.2.0-beta.1 notes](docs/notes/1.2.0-beta.1.md)
+[Hub 1.2.2](docs/notes/1.2.2.md) · [RTX Encore 1.2.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.2.2)
 
 ![The Hub's game library, with cover art, the state of each install and the update banner](screenshots/library.png)
 

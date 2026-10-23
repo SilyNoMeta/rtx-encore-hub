@@ -6,13 +6,13 @@
 
 RTX Encore Hub installe [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) dans vos jeux, tient à jour le mod et les DLL NVIDIA, vérifie qu'un jeu démarre bien avec, et sait toujours revenir en arrière. L'interface suit la langue de Windows : français, anglais ou chinois simplifié ; les autres langues utilisent l'anglais. Ce guide reprend les libellés français de l'application.
 
-## Utiliser la 1.2.1
+## Utiliser la 1.2.2
 
 **XeSS / XeFG : TRÈS EXPÉRIMENTAL.** Cette intégration a été particulièrement pénible à mettre au point :) Attendez-vous à des bugs, crashs, artefacts et différences entre jeux et API graphiques. N’hésitez pas à remonter les problèmes : dans RTX Encore Hub, ouvrez la page **Santé** du jeu, choisissez **Préparer un diagnostic**, relisez l’archive pour retirer les informations personnelles, puis joignez-la à une [issue RTX Encore](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose). Indiquez les moteurs choisis, l’API graphique et le multiplicateur demandé. Le Hub ne téléverse pas l’archive à votre place.
 
-La version stable 1.2.1 est disponible sur le canal Stable. Le canal Candidat inclut aussi les préversions.
+La version stable 1.2.2 est disponible sur le canal Stable. Le canal Candidat inclut aussi les préversions.
 
-Les réglages Intel, d’entrée commune et de NR par passe demandent le mod 1.2.0-beta.1 ou ultérieur. Le mod 1.2.1 n’utilise plus la politique des fournisseurs NVIDIA : le Hub la masque ; les anciens mods conservent leurs contrôles compatibles. XeFG reste expérimental et dépend du mod, de l’API graphique, du jeu et du runtime. Un multiplicateur demandé ne prouve pas les images affichées.
+Les réglages Intel, d’entrée commune et de NR par passe demandent le mod 1.2.0-beta.1 ou ultérieur. Le mod 1.2.2 n’utilise plus la politique des fournisseurs NVIDIA : le Hub la masque ; les anciens mods conservent leurs contrôles compatibles. XeFG reste expérimental et dépend du mod, de l’API graphique, du jeu et du runtime. Un multiplicateur demandé ne prouve pas les images affichées.
 
 ### Moteurs Intel et dépendances
 
@@ -30,11 +30,11 @@ Les réglages communs `srHdr` et `srAutoExposure` suivent le moteur de reconstru
 
 Laissez les deux réglages sur `game` si le format d’entrée du jeu est inconnu. Une entrée HDR incorrecte peut dégrader l’image. L’exposition automatique peut aider le ghosting lié à l’exposition, sans être une correction générale ; certains modèles DLSS l’imposent. Celle de XeSS a un coût GPU et est déconseillée en LDR. XeSS Vulkan avec entrée LDR et exposition manuelle reste non pris en charge. Ray Reconstruction et la génération d’images restent inchangés.
 
-La politique des fournisseurs reste locale et ne concerne que les anciens mods qui l’utilisent. RTX Encore 1.2.1 ignore une ancienne entrée `providerPatchPolicy`. La compatibilité NVIDIA ne demande plus de liste de versions prédéfinie ; les contrôles Intel restent inchangés. Ces contrôles de politique ne sont pas partagés dans les profils communautaires.
+La politique des fournisseurs reste locale et ne concerne que les anciens mods qui l’utilisent. RTX Encore 1.2.2 ignore une ancienne entrée `providerPatchPolicy`. La compatibilité NVIDIA ne demande plus de liste de versions prédéfinie ; les contrôles Intel restent inchangés. Ces contrôles de politique ne sont pas partagés dans les profils communautaires.
 
 Avec XeFG, changer la limite FPS demande un redémarrage du jeu. L’espacement variable des images aux multiplicateurs XeFG élevés est expérimental. Une limite FPS ne prouve pas la cadence des images source.
 
-[Notes de version](notes/1.2.1.fr.md) · [Notes de la 1.2.0-beta.1](notes/1.2.0-beta.1.fr.md)
+[Notes de version](notes/1.2.2.fr.md) · [Notes de la 1.2.0-beta.1](notes/1.2.0-beta.1.fr.md)
 
 ## Installer le Hub
 
@@ -117,6 +117,8 @@ Si une mise à jour ou une réparation du jeu a remplacé des fichiers de l'inst
 
 ## Régler le mod
 
+La fiche du jeu mémorise vos derniers choix de preset, multiplicateur et options sur cet appareil. Ils restent des propositions jusqu’à leur application ; leur disponibilité est vérifiée selon les composants actuels du jeu. Retour et Appliquer restent accessibles pendant le défilement de la fiche et de tous les réglages.
+
 **Tous les réglages de ce jeu** édite `rtx-encore.jsonc` par un formulaire qui reprend les sections du fichier. Chaque réglage porte son explication, sa valeur par défaut et, s'il y a lieu, « redémarrage nécessaire ». Un réglage sans effet sur votre carte est grisé, avec la raison. Les presets DLSS suivent les DLL du jeu : le formulaire ne propose que ceux que la DLL installée prend, et dit pourquoi les autres manquent ; le preset C de génération d'images, par exemple, n'existe que dans DLSS-G 310.9.16. Les commentaires et les clés que le Hub ne connaît pas sont gardés tels quels.
 
 Un jeu qui se ferme au lancement avec le menu du mod (Star Wars Outlaws) peut s'en passer : activez `disableInGameMenu` dans Compatibilité, et changez les réglages ici. Quand un jeu se ferme dans sa première minute avec le mod chargé, **Lancer et vérifier** propose **Relancer sans le menu en jeu**, qui le fait pour vous.
@@ -141,6 +143,8 @@ Il n'y a pas de compte. Une clé est créée sur votre machine et y reste ; vous
 
 ## Données, réseau et vie privée
 
+Les originaux sont conservés en archives ZIP vérifiées dans `rtx-encore-backups`. Les anciennes sauvegardes non compressées restent restaurables ; la prochaine installation ou mise à jour réussie les convertit avant de retirer les copies non compressées. Gardez une version récente du Hub pour restaurer ces sauvegardes compressées. L’historique des opérations et le stockage des runtimes conservent leur format actuel.
+
 Le Hub garde ses réglages, téléchargements, jaquettes, manifestes et historique des opérations dans `%LOCALAPPDATA%\EncoreHub` (dans `data` à côté de la version portable). Les fichiers d’origine sont conservés dans le sous-dossier `rtx-encore-backups` de chaque jeu. Gardez les deux emplacements tant que des jeux portent une installation du Hub : la restauration nécessite le manifeste et les fichiers d’origine. Les anciennes sauvegardes dans l’état du Hub restent lisibles et migrent dans le jeu après la prochaine installation ou mise à jour réussie.
 
 Le cache du mod conserve uniquement les ZIP originaux des versions actuellement proposées sur les canaux stable et candidate. Les anciennes versions et les anciens dossiers extraits sont retirés après vérification en ligne de la liste des publications. Un ancien cache extrait peut donc nécessiter un nouveau téléchargement unique. Les sources d’installation sont extraites temporairement ; le stockage des runtimes ne change pas.
@@ -163,4 +167,13 @@ Tout se fait au clavier. `Ctrl+F` va à la recherche, `F5` relit les dossiers, `
 
 ## Un problème ?
 
+Si les fiches des jeux ne s’ouvrent pas, utilisez **Paramètres → Diagnostic du Hub → Exporter les journaux du Hub**, ou le bouton d’export sur la fiche en erreur. L’Explorateur affiche le ZIP. Les journaux restent locaux, avec rotation automatique (trois fichiers d’environ 2 Mio), et comprennent la version du Hub, les commandes en échec et les données de jeu illisibles. Ils se trouvent aussi dans `%LOCALAPPDATA%\EncoreHub\logs`, ou `data\logs` à côté du Hub portable. Relisez l’archive avant de la partager : des noms de jeux et chemins d’installation peuvent y figurer. Aucun envoi automatique.
+
 Ouvrez un [ticket](https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose) avec la version du Hub, le jeu, le lanceur, la carte, le pilote et les étapes qui reproduisent le problème. Joignez le diagnostic préparé par la page Santé après l'avoir relu.
+
+## Netteté après reconstruction (en préparation)
+
+Les réglages du jeu proposent **Netteté après reconstruction**. Off est le défaut. Game utilise la valeur envoyée par le jeu ; sans valeur, il ne fait rien. Custom applique à chaud une force de 0 à 100 %, 30 % par défaut. Cette préférence visuelle peut faire partie des profils partagés. Elle concerne DLSS, DLAA, Ray Reconstruction et le remplacement XeSS, après Neural Rendering s'il est actif. Elle se cumule avec la netteté ajoutée ensuite par le jeu ; trop forte, elle crée des halos et accentue le bruit. Certains chemins graphiques restent exclus. Vulkan et le rendu en jeu ne sont pas encore validés. Utilisez un build contenant la fonction ; les anciens builds du mod ignorent ces clés.
+
+
+**Dans une prochaine version du Hub :** commandes de netteté pour RTX Encore 1.2.2. Off / Game / Custom, de 0 à 100 %, défaut 30 %, avec la préférence dans les profils partagés. Ces commandes sont sur la branche de développement et **ne figurent pas dans l’installateur Hub 1.2.2 publié**. Le menu du mod les propose déjà.
