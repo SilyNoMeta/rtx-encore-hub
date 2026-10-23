@@ -30,23 +30,23 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.2.2 · Hub 1.2.4</span>
+<span class="badge">RTX Encore 1.3.0 · Hub 1.3.0</span>
 <h1>Frame generation and Neural Rendering on <em>your</em> RTX&nbsp;20, 30 and 40.</h1>
-<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> brings DLSS frame generation up to X6, Neural Rendering and faster DLSS to RTX 20, 30 and 40. Version 1.2 adds experimental Intel engines, live reconstruction choices, NR settings per pass and live sharpening. <strong>RTX Encore Hub</strong> installs the mod and its runtimes, keeps games up to date and restores their original files.</p>
-<p class="sub">Intel XeSS / XeFG remain very experimental. Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Report an issue</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download Hub 1.2.4</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/latest">Download RTX Encore 1.2.2</a></div>
+<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> brings DLSS frame generation up to X6, Neural Rendering and faster DLSS to RTX 20, 30 and 40. Version 1.3 adds experimental foveated Neural Rendering and Smooth Motion on RTX 20, on top of the experimental Intel engines, live reconstruction choices, NR settings per pass and live sharpening of 1.2. <strong>RTX Encore Hub</strong> installs the mod and its runtimes, keeps games up to date and restores their original files.</p>
+<p class="sub">Foveated NR, Smooth Motion on RTX 20 and Intel XeSS / XeFG are experimental. Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Report an issue</a>.</p>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download Hub 1.3.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/latest">Download RTX Encore 1.3.0</a></div>
 <p class="under">Windows 10 and 11, x64 · English, French and Simplified Chinese · installs without administrator rights</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>What is new in RTX Encore 1.2</h2>
-<p class="sub">Mod 1.2.2 and Hub 1.2.4 are published separately. Sharpening controls are available in both. The Hub inspects files and runtime status; it does not certify image quality or displayed frames.</p>
-<div class="news-grid"><div class="card"><h3>Live sharpening after reconstruction</h3><p>Mod 1.2.2 provides Off / Game / Custom sharpening for DLSS, DLAA, Ray Reconstruction and replacement XeSS. Off by default; Custom starts at 30%. Hub 1.2.3 now includes these controls and shared profile preferences.</p></div>
-<div class="card"><h3>Choose DLSS or Intel engines</h3><p>Choose DLSS or experimental XeSS reconstruction, and DLSS-G or experimental XeFG frame generation with XeLL. Install compatible runtimes through the Hub; routes depend on game inputs and graphics API.</p></div>
-<div class="card"><h3>Change reconstruction while playing</h3><p>Change DLSS SR/RR presets or supported reconstruction engines live. In Vulkan games, install compatible Intel runtimes before launch; changing frame-generation engines still requires a restart.</p></div>
-<div class="card"><h3>Neural Rendering, pass by pass</h3><p>Up to four NR passes, each with its own intensity and style or inherited settings. Common HDR-input and exposure controls follow the selected reconstruction engine; they do not turn on display HDR.</p></div>
-<div class="card"><h3>Smooth Motion and compatibility fixes</h3><p>Smooth Motion supports driver 621.01 on RTX 30. Mod 1.2.2 fixes startup in SurrounDead, the Vulkan menu case in Baldur’s Gate 3 with OptiScaler F5, and a DLSS-G compatibility case with OptiScaler F5.</p></div>
-<div class="card"><h3>Image settings with clear limits</h3><p>Sharpening adds to later game processing; high strengths can create halos and amplify noise. Its Vulkan operation, real-game appearance and performance remain unvalidated. Intel engines remain experimental.</p></div>
+<h2>What is new in RTX Encore 1.3</h2>
+<p class="sub">Mod 1.3.0 and Hub 1.3.0 are published separately; the Hub offers the new settings with mod 1.3.0. The Hub inspects files and runtime status; it does not certify image quality or displayed frames.</p>
+<div class="news-grid"><div class="card"><h3>Foveated Neural Rendering</h3><p>Experimental and off by default: NR runs at full strength in the middle of the image and lighter towards the edges, for more FPS with a softer NR effect near the edges. Presets Light, Balanced and Strong; Strong gave +27% average FPS in Cyberpunk 2077 on an RTX 3070 Ti Laptop.</p></div>
+<div class="card"><h3>Smooth Motion on RTX 20</h3><p>With NVIDIA 621.01 and DirectX 12, enable Smooth Motion and RTX Encore selects the card automatically. Choose V1 (test 1, default) or V2 (test 2) in the Hub or the in-game menu, then restart the game. Performance depends on the card and game.</p></div>
+<div class="card"><h3>Neural Rendering follows motion</h3><p>In games whose motion vectors are at output resolution (Unreal Engine 5, Black Myth: Wukong), Neural Rendering now follows all of the motion; it used to see only part of it.</p></div>
+<div class="card"><h3>Baldur’s Gate 3 in Vulkan</h3><p>With bg3fgvk, Baldur’s Gate 3 in Vulkan no longer crashes at startup, and Neural Rendering works there. RTX Encore now sits beneath an injector that hooked the Vulkan loader before it.</p></div>
+<div class="card"><h3>One menu, one NR engine</h3><p>The optional Cyber Engine Tweaks panel is removed: use the built-in menu (Insert) or the Hub. The experimental OpenNR engine is removed too; NVIDIA Neural Rendering remains, and older OpenNR configurations upgrade with NR off.</p></div>
+<div class="card"><h3>Experimental, with clear limits</h3><p>Foveated NR softens the NR effect near the edges. The RTX 20 Smooth Motion reports concern experimental builds, not the final DLL. Sharpening, per-pass NR and the experimental Intel engines from 1.2 remain available.</p></div>
 </div>
 </div></section>
 
@@ -89,11 +89,11 @@
 <div class="hub">
 <figure><div class="shot"><img src="assets/library.jpg" alt="The Hub&#x27;s game library, with the state of each install and the update banner" width="1440" height="900" loading="lazy"></div><figcaption>Real application capture, on a demonstration library of stand-in game folders.</figcaption></figure>
 <ol class="points">
-<li><h3>Shared backups and automatic migration</h3><p>Identical original files and history snapshots are compressed once in the Hub data, shared across games by their full SHA-256. At startup, the Hub migrates backups from 1.0.x, 1.1.x and 1.2.x, then removes only verified old copies. You can stop between games; unavailable or locked folders are retried later.</p></li>
-<li><h3>Reinstall cleanly</h3><p>Hub 1.2.3 recreates a managed installation, preserves your settings and keeps a way back from Health. Unknown files or unavailable exact sources refuse the repair. This is not a confirmed fix for GTA V Enhanced crashes.</p></li>
+<li><h3>Settings for RTX Encore 1.3.0</h3><p>A game’s settings offer Foveated NR, with Light, Balanced, Strong or custom values, and Smooth Motion V1 or V2 on a detected RTX 20 card. Both require RTX Encore 1.3.0 and can travel in community profiles.</p></li>
+<li><h3>Storage usage</h3><p>Settings show the space taken by the application, backups, downloaded runtimes, RTX Encore archives, covers and logs, plus older backups still in game folders. A partial scan says so.</p></li>
+<li><h3>Shared backups and automatic migration</h3><p>Identical original files and history snapshots are compressed once in the Hub data, shared across games by their full SHA-256. A backup folder the Hub did not create is left untouched, and maintenance no longer repeats the same warning about it.</p></li>
+<li><h3>Reinstall cleanly</h3><p>The Hub recreates a managed installation, preserves your settings and keeps a way back from Health. Unknown files or unavailable exact sources refuse the repair. This is not a confirmed fix for GTA V Enhanced crashes.</p></li>
 <li><h3>Export Hub logs</h3><p>Export recent Hub activity and errors from Settings or a failed game page, even when game pages cannot open. Review the archive before sharing.</p></li>
-<li><h3>Remembered choices</h3><p>The game page remembers preset, multiplier and option selections. Back and Apply remain accessible while scrolling; changes still need confirmation.</p></li>
-<li><h3>A faster library</h3><p>Cached games appear first while verification runs in the background. Favorites, card actions, search, tray mode and remembered executable choices keep games within reach.</p></li>
 </ol>
 </div>
 <div class="more">
@@ -141,7 +141,7 @@
 
 <div class="wrap cta">
 <h2>Ready to try it?</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download Hub 1.2.4</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download Hub 1.3.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
 </div>
 </main>
 

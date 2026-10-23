@@ -30,23 +30,23 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.2.2 · Hub 1.2.4</span>
+<span class="badge">RTX Encore 1.3.0 · Hub 1.3.0</span>
 <h1>在<em>您的</em> RTX&nbsp;20、30 或 40 上启用帧生成与 Neural Rendering。</h1>
-<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> 为 RTX 20、30、40 带来最高 X6 的 DLSS 帧生成、Neural Rendering 和更快的 DLSS。1.2 系列新增实验性 Intel 引擎、实时重建选择、逐轮 NR 设置及实时锐化。<strong>RTX Encore Hub</strong> 安装模组及运行库、更新游戏并还原原始文件。</p>
-<p class="sub">Intel XeSS / XeFG 仍高度实验性。 兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。 <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">报告问题</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Hub 1.2.4</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/latest">下载 RTX Encore 1.2.2</a></div>
+<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> 为 RTX 20、30、40 带来最高 X6 的 DLSS 帧生成、Neural Rendering 和更快的 DLSS。1.3 新增实验性中央优先 Neural Rendering 和 RTX 20 的 Smooth Motion，并保留 1.2 的实验性 Intel 引擎、实时重建选择、逐轮 NR 设置及实时锐化。<strong>RTX Encore Hub</strong> 安装模组及运行库、更新游戏并还原原始文件。</p>
+<p class="sub">中央优先 NR、RTX 20 的 Smooth Motion 以及 Intel XeSS / XeFG 均为实验性功能。兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。 <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">报告问题</a>.</p>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Hub 1.3.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/latest">下载 RTX Encore 1.3.0</a></div>
 <p class="under">Windows 10 和 11，x64 · 英语、法语和简体中文 · 安装无需管理员权限</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>RTX Encore 1.2 新功能</h2>
-<p class="sub">模组 1.2.2 与 Hub 1.2.4 分别发布，均提供锐化控制。Hub 检查文件及运行库状态，不认证画质或实际显示帧数。</p>
-<div class="news-grid"><div class="card"><h3>重建后实时锐化</h3><p>模组 1.2.2 为 DLSS、DLAA、光线重建和替代 XeSS 提供 Off / Game / Custom。默认关闭，Custom 默认 30%。Hub 1.2.3 现已提供这些控制项及共享配置偏好。</p></div>
-<div class="card"><h3>选择 DLSS 或 Intel 引擎</h3><p>选择 DLSS 或实验性 XeSS 重建、DLSS-G 或搭配 XeLL 的实验性 XeFG 帧生成。通过 Hub 安装兼容运行库；支持情况取决于游戏输入和图形 API。</p></div>
-<div class="card"><h3>游戏中切换重建</h3><p>实时切换 DLSS SR/RR 预设及兼容的重建引擎。Vulkan 游戏需在启动前安装兼容 Intel 运行库；修改帧生成引擎仍需重启。</p></div>
-<div class="card"><h3>逐轮 Neural Rendering</h3><p>最多四轮 NR，每轮可单独设置强度和风格或继承全局设置。HDR 输入与曝光控制跟随重建引擎，不会启用显示器 HDR。</p></div>
-<div class="card"><h3>Smooth Motion 与兼容性修复</h3><p>RTX 30 的 Smooth Motion 支持 621.01 驱动。模组 1.2.2 修复 SurrounDead 启动、Baldur’s Gate 3 与 OptiScaler F5 的特定 Vulkan 菜单问题，以及 OptiScaler F5 的特定 DLSS-G 兼容性问题。</p></div>
-<div class="card"><h3>清楚说明画面设置的限制</h3><p>锐化会与游戏后续处理叠加；高强度可能产生光晕并放大噪点。其 Vulkan 运行、实际游戏画质和性能仍待验证。Intel 引擎仍为实验性功能。</p></div>
+<h2>RTX Encore 1.3 新功能</h2>
+<p class="sub">模组 1.3.0 与 Hub 1.3.0 分别发布；Hub 配合模组 1.3.0 提供新设置。Hub 检查文件及运行库状态，不认证画质或实际显示帧数。</p>
+<div class="news-grid"><div class="card"><h3>中央优先 Neural Rendering</h3><p>实验性，默认关闭：NR 在图像中央以全强度运行，越靠近边缘越轻，以更柔和的边缘 NR 效果换取更高 FPS。预设 Light、Balanced 和 Strong；在 RTX 3070 Ti Laptop 上，Strong 在 Cyberpunk 2077 中带来平均 FPS 提升 27%。</p></div>
+<div class="card"><h3>RTX 20 的 Smooth Motion</h3><p>在 NVIDIA 621.01 驱动和 DirectX 12 下启用 Smooth Motion，RTX Encore 会自动选择显卡。在 Hub 或游戏内菜单中选择 V1（测试版 1，默认）或 V2（测试版 2），然后重启游戏。性能取决于显卡和游戏。</p></div>
+<div class="card"><h3>Neural Rendering 正确跟随运动</h3><p>在运动矢量为输出分辨率的游戏中（Unreal Engine 5、Black Myth: Wukong），Neural Rendering 现在能跟随全部运动；此前它只能看到部分运动。</p></div>
+<div class="card"><h3>Vulkan 模式下的《博德之门 3》</h3><p>搭配 bg3fgvk 时，Vulkan 模式下的《博德之门 3》不再在启动时崩溃，Neural Rendering 也可在其中运行。RTX Encore 现在会位于先于它挂钩 Vulkan 加载器的注入器之下。</p></div>
+<div class="card"><h3>一个菜单，一个 NR 引擎</h3><p>移除可选的 Cyber Engine Tweaks 面板：请使用内置菜单（Insert）或 Hub。实验性 OpenNR 引擎也已移除；NVIDIA Neural Rendering 仍可使用，旧 OpenNR 配置升级时会关闭 NR。</p></div>
+<div class="card"><h3>实验性功能及其限制</h3><p>中央优先 NR 会让边缘附近的 NR 效果更柔和。RTX 20 Smooth Motion 的反馈针对实验测试版，并非最终 DLL。1.2 的锐化、逐轮 NR 和实验性 Intel 引擎仍可使用。</p></div>
 </div>
 </div></section>
 
@@ -89,11 +89,11 @@
 <div class="hub">
 <figure><div class="shot"><img src="../assets/library.zh.jpg" alt="Hub 的游戏库，包含每个安装的状态和更新横幅" width="1440" height="900" loading="lazy"></div><figcaption>真实应用截图，使用由替身游戏文件夹组成的演示游戏库。</figcaption></figure>
 <ol class="points">
-<li><h3>共享备份与自动迁移</h3><p>内容相同的原始文件和历史快照仅在 Hub 数据中压缩保存一次，按完整 SHA-256 在游戏间共享。启动时自动迁移 1.0.x、1.1.x 和 1.2.x 的备份，仅清理已验证的旧副本。可在游戏之间停止；无法访问或被锁定的目录将稍后重试。</p></li>
-<li><h3>干净重装</h3><p>Hub 1.2.3 重新创建受管理的安装，保留设置，并可从健康页面恢复。未知文件或缺少精确来源会使修复被拒绝。这并非已确认解决 GTA V Enhanced 崩溃的方案。</p></li>
+<li><h3>RTX Encore 1.3.0 的设置</h3><p>游戏设置提供中央优先 NR（Light、Balanced、Strong 或 custom 数值），并在检测到 RTX 20 显卡时提供 Smooth Motion V1 或 V2。两者都需要 RTX Encore 1.3.0，并可随社区配置分享。</p></li>
+<li><h3>存储空间</h3><p>设置中显示应用程序、备份、已下载运行库、RTX Encore 压缩包、封面和日志所占空间，以及仍在游戏目录中的旧备份。部分扫描会明确提示。</p></li>
+<li><h3>共享备份与自动迁移</h3><p>内容相同的原始文件和历史快照仅在 Hub 数据中压缩保存一次，按完整 SHA-256 在游戏间共享。并非 Hub 创建的备份文件夹会保持不变，维护也不再就此重复同一警告。</p></li>
+<li><h3>干净重装</h3><p>Hub 重新创建受管理的安装，保留设置，并可从健康页面恢复。未知文件或缺少精确来源会使修复被拒绝。这并非已确认解决 GTA V Enhanced 崩溃的方案。</p></li>
 <li><h3>Hub 日志导出</h3><p>即使无法打开游戏页面，也能从设置或出错页面导出近期 Hub 活动和错误。分享前请检查压缩包。</p></li>
-<li><h3>记住选择</h3><p>游戏页面会记住预设、倍率和选项。滚动时仍可使用返回和应用；修改仍需确认。</p></li>
-<li><h3>更快的游戏库</h3><p>先显示缓存游戏，再在后台验证。收藏、卡片操作、搜索、托盘模式和记住的可执行文件选择让游戏更易访问。</p></li>
 </ol>
 </div>
 <div class="more">
@@ -141,7 +141,7 @@
 
 <div class="wrap cta">
 <h2>准备好试试了吗？</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Hub 1.2.4</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Hub 1.3.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
 </div>
 </main>
 
