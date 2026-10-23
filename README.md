@@ -26,10 +26,11 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 > [!NOTE]
 > **Windows x64.** Open the [releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) and download `RTX-Encore-Hub-Setup-<version>.exe`, or `RTX-Encore-Hub-Portable-<version>.zip`, which installs nothing. The installer is not code-signed yet, so Windows may show a SmartScreen warning the first time; each release gives the SHA-256 of its installer. The Hub and the RTX Encore mod have separate releases.
 
-## Hub 1.2.4 — shared backups and automatic migration
+## Hub 1.3.0: settings for RTX Encore 1.3.0
 
 Install and update RTX Encore, keep its runtimes matched, and manage your games from one library. The Hub and the mod have separate releases.
 
+- **Settings for RTX Encore 1.3.0.** Turn on the mod's experimental Foveated NR and pick a preset, or choose Smooth Motion V1 or V2 on an RTX 20 card. Both require RTX Encore 1.3.0. **Settings → Storage usage** shows the space the Hub takes.
 - **Export Hub logs** — Export recent Hub activity and errors from Settings or a failed game page, even when game pages cannot open. Review the archive before sharing.
 - **Shared backups, reliable restoration** — Identical bytes are stored once for originals and history across games. Migration runs automatically, keeps your settings, and cleans verified old copies. Restoring migrated states requires Hub 1.2.4 or newer.
 - **Remembered choices** — The game page remembers preset, multiplier and option selections. Back and Apply remain accessible while scrolling; changes still need confirmation.
@@ -38,11 +39,11 @@ Install and update RTX Encore, keep its runtimes matched, and manage your games 
 - **NR pass by pass and HDR inputs** — Adjust each of up to four NR passes, or inherit the global style. Common HDR-input and exposure settings follow the chosen reconstruction engine; they do not enable display HDR.
 - **Diagnostics and shared profiles** — Review the Health page, prepare a diagnostic and share compatible per-game visual preferences. Shared profiles remain experimental.
 
-**New in Hub 1.2.4:** identical original files and history snapshots are compressed once in the Hub data, shared across games by their full SHA-256. At startup, the Hub migrates backups from 1.0.x, 1.1.x and 1.2.x, then removes only verified old copies. You can stop between games; unavailable or locked folders are retried later.
+**New in Hub 1.3.0:** settings for RTX Encore 1.3.0 (Foveated NR, Smooth Motion V1 or V2 on RTX 20), storage usage in Settings, and backup maintenance that no longer repeats the same warning for a backup folder the Hub did not create. OpenNR and the Cyber Engine Tweaks panel left with RTX Encore 1.3.0, and so did their settings in the Hub.
 
 **Intel XeSS / XeFG remain very experimental.** Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering.
 
-[Hub 1.2.4](docs/notes/1.2.4.md) · [RTX Encore 1.2.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.2.2)
+[Hub 1.3.0](docs/notes/1.3.0.md) · [RTX Encore 1.3.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.3.0)
 
 ![The Hub's game library, with cover art, the state of each install and the update banner](screenshots/library.png)
 

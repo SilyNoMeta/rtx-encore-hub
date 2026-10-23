@@ -26,10 +26,11 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 > [!NOTE]
 > **Windows x64.** Ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`, ou `RTX-Encore-Hub-Portable-<version>.zip`, qui n'installe rien. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.
 
-## Hub 1.2.4 — sauvegardes partagées et migration automatique
+## Hub 1.3.0 : réglages de RTX Encore 1.3.0
 
 Installez et mettez à jour RTX Encore, gardez ses runtimes cohérents et gérez vos jeux depuis une bibliothèque unique. Le Hub et le mod ont des publications distinctes.
 
+- **Réglages de RTX Encore 1.3.0.** Activez le NR fovéal expérimental du mod et choisissez un préréglage, ou choisissez Smooth Motion V1 ou V2 sur une carte RTX 20. Les deux nécessitent RTX Encore 1.3.0. **Paramètres → Espace utilisé** montre la place prise par le Hub.
 - **Journaux du Hub exportables** — Exportez l’activité récente et les erreurs depuis les Réglages ou une fiche en erreur, même si les fiches des jeux ne s’ouvrent pas. Relisez l’archive avant de la partager.
 - **Sauvegardes partagées, restauration conservée** — Les octets identiques des originaux et de l’historique ne sont conservés qu’une fois entre les jeux. La migration automatique conserve les réglages et nettoie les anciennes copies vérifiées. Restaurer un état migré nécessite Hub 1.2.4 ou ultérieur.
 - **Choix mémorisés** — La fiche jeu conserve les choix de preset, multiplicateur et options. Retour et Appliquer restent accessibles pendant le défilement ; les changements demandent toujours confirmation.
@@ -38,11 +39,11 @@ Installez et mettez à jour RTX Encore, gardez ses runtimes cohérents et gérez
 - **NR par passe et entrées HDR** — Réglez chacune des quatre passes NR possibles ou héritez du style global. Les réglages communs d’entrée HDR et d’exposition suivent le moteur de reconstruction choisi ; ils n’activent pas le HDR de l’écran.
 - **Diagnostics et profils partagés** — Consultez la page Santé, préparez un diagnostic et partagez des préférences visuelles compatibles par jeu. Les profils partagés restent expérimentaux.
 
-**Nouveau dans le Hub 1.2.4 :** les fichiers originaux et instantanés d’historique identiques sont compressés une seule fois dans les données du Hub, partagés entre jeux selon leur SHA-256 complet. Au démarrage, le Hub migre les sauvegardes des 1.0.x, 1.1.x et 1.2.x, puis retire seulement les anciennes copies vérifiées. Vous pouvez arrêter entre deux jeux ; les dossiers indisponibles ou verrouillés seront réessayés.
+**Nouveau dans le Hub 1.3.0 :** les réglages de RTX Encore 1.3.0 (NR fovéal, Smooth Motion V1 ou V2 sur RTX 20), l’espace utilisé dans les Paramètres, et une maintenance des sauvegardes qui ne répète plus le même avertissement pour un dossier de sauvegarde que le Hub n’a pas créé. OpenNR et le panneau Cyber Engine Tweaks sont partis avec RTX Encore 1.3.0, et leurs réglages avec eux dans le Hub.
 
 **Intel XeSS / XeFG restent très expérimentaux.** Leur compatibilité dépend du mod, du jeu, de l’API graphique et des runtimes. Signalez les problèmes avec une archive de diagnostic relue ; la présence des fichiers ou un multiplicateur demandé ne prouvent pas le rendu effectif.
 
-[Hub 1.2.4](docs/notes/1.2.4.fr.md) · [RTX Encore 1.2.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.2.2)
+[Hub 1.3.0](docs/notes/1.3.0.fr.md) · [RTX Encore 1.3.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.3.0)
 
 ![La bibliothèque du Hub, avec les jaquettes, l'état de chaque installation et le bandeau des mises à jour](screenshots/library.fr.png)
 

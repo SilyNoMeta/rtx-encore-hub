@@ -26,10 +26,11 @@
 > [!NOTE]
 > **Windows x64。** 请打开[发布页面](https://github.com/SilyNoMeta/rtx-encore-hub/releases)并下载 `RTX-Encore-Hub-Setup-<version>.exe`，或无需安装的 `RTX-Encore-Hub-Portable-<version>.zip`。安装程序尚未进行代码签名，因此首次运行时 Windows 可能显示 SmartScreen 警告；每个发布版本都会给出安装程序的 SHA-256。Hub 与 RTX Encore 模组分别发布。
 
-## Hub 1.2.4 — 共享备份与自动迁移
+## Hub 1.3.0：RTX Encore 1.3.0 的设置
 
 从统一游戏库安装和更新 RTX Encore，管理配套运行库与游戏。Hub 与模组分别发布。
 
+- **RTX Encore 1.3.0 的设置。** 开启模组的实验性中央优先 NR 并选择预设，或在 RTX 20 显卡上选择 Smooth Motion V1 或 V2。两者都需要 RTX Encore 1.3.0。**设置 → 存储空间** 显示 Hub 所占空间。
 - **Hub 日志导出** — 即使无法打开游戏页面，也能从设置或出错页面导出近期 Hub 活动和错误。分享前请检查压缩包。
 - **共享备份，保留还原能力** — 多个游戏的原始文件和历史记录中，相同字节仅保存一次。自动迁移保留设置并清理已验证的旧副本。还原迁移后的状态需要 Hub 1.2.4 或更高版本。
 - **记住选择** — 游戏页面会记住预设、倍率和选项。滚动时仍可使用返回和应用；修改仍需确认。
@@ -38,11 +39,11 @@
 - **逐轮 NR 与 HDR 输入** — 分别设置最多四轮 NR，或继承全局风格。共用 HDR 输入与曝光设置跟随所选重建引擎，不会启用显示器 HDR。
 - **诊断与共享配置** — 查看健康页面、生成诊断并分享兼容的逐游戏画面偏好。共享配置仍为实验性功能。
 
-**Hub 1.2.4 新增：** 内容相同的原始文件和历史快照仅在 Hub 数据中压缩保存一次，按完整 SHA-256 在游戏间共享。启动时自动迁移 1.0.x、1.1.x 和 1.2.x 的备份，仅清理已验证的旧副本。可在游戏之间停止；无法访问或被锁定的目录将稍后重试。
+**Hub 1.3.0 新增：** RTX Encore 1.3.0 的设置（中央优先 NR、RTX 20 的 Smooth Motion V1 或 V2）、设置中的存储空间，以及备份维护不再因并非 Hub 创建的备份文件夹而重复同一警告。OpenNR 和 Cyber Engine Tweaks 面板随 RTX Encore 1.3.0 移除，Hub 中的相关设置也一并移除。
 
 **Intel XeSS / XeFG 仍高度实验性。** 兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。
 
-[Hub 1.2.4](docs/notes/1.2.4.zh-CN.md) · [RTX Encore 1.2.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.2.2)
+[Hub 1.3.0](docs/notes/1.3.0.zh-CN.md) · [RTX Encore 1.3.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.3.0)
 
 ![Hub 的游戏库，包含封面、每个安装的状态和更新横幅](screenshots/library.zh.png)
 

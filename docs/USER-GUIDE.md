@@ -147,7 +147,7 @@ Original files and operation history use shared verified ZIP backups in the Hub 
 
 On the first Hub startup after upgrading from 1.0.x, 1.1.x or 1.2.x, backup optimization runs automatically, including saved games no longer in the library. Originals and history remain restorable, with settings unchanged. Verified copies in the old Hub folders and games’ `rtx-encore-backups` folders are removed only after conversion is committed. Unknown or altered files are kept. You can stop between games; an interruption, unavailable game or locked file is retried at the next start. For pending permission failures, use **Retry with administrator rights** in the library; Windows asks before a bounded helper runs.
 
-Keep the complete `%LOCALAPPDATA%\EncoreHub` folder, or `data` beside the portable Hub, while any game needs restoration. It now holds original files shared by multiple games, as well as settings and history. Keep Hub 1.2.4 or newer to restore migrated states; older Hubs refuse their new references. Uninstalling the installed program preserves these data, but deleting them loses the corresponding restoration copies.
+Keep the complete `%LOCALAPPDATA%\EncoreHub` folder, or `data` beside the portable Hub, while any game needs restoration. It now holds original files shared by multiple games, as well as settings and history. Keep Hub 1.2.4 or newer to restore migrated states; older Hubs refuse their new references. **Settings → Storage usage** shows the space taken by the application, backups, downloaded runtimes, RTX Encore archives, covers, logs and other Hub data, plus older backups still in game folders; a partial scan says so, and its total is then a minimum. Uninstalling the installed program preserves these data, but deleting them loses the corresponding restoration copies.
 
 The mod cache keeps only the original ZIPs of the versions currently offered on the stable and candidate channels. Older versions and the former extracted cache folders are removed after the release list is checked online. An old extracted cache may therefore need to be downloaded once again. Installation sources are extracted temporarily; runtime storage is unchanged.
 
@@ -185,3 +185,13 @@ The game is not launched automatically by default. **Health → Backups of this 
 **Available in Hub 1.2.3**, with RTX Encore 1.2.2 or a newer compatible mod.
 
 The game settings include **Sharpening after reconstruction**. Off is the default. Game uses the game's supplied sharpness value; it has no effect if the game sends none. Custom applies a strength from 0 to 100%, default 30%, while playing. This visual preference can be included in shared profiles. It applies to DLSS, DLAA, Ray Reconstruction and replacement XeSS, after Neural Rendering when enabled. It adds to any sharpening the game performs later; high strengths can create halos and amplify noise. Some graphics paths remain unsupported. Vulkan and real-game appearance have not yet been validated. Use a build that includes this feature; older mod builds ignore these keys.
+
+## Settings for RTX Encore 1.3.0
+
+**Available in Hub 1.3.0**, with RTX Encore 1.3.0 or a newer compatible mod.
+
+**Foveated NR** (experimental, off by default) runs Neural Rendering at full strength in the middle of the image and lighter towards the edges: more FPS, with a softer NR effect near the edges. Choose a preset: light keeps most of the image at full strength, balanced is the default, strong saves the most. Custom uses four values: the width and height of the full-strength centre, the length of the transition, and the NR detail kept at the edges. These settings can be shared in profiles.
+
+**Smooth Motion on RTX 20** needs driver 621.01 and a DirectX 12 game. On a detected RTX 20 card, choose **V1 (test 1)**, the default, or **V2 (test 2)**, compare both in the same scene, and restart the game after each change. The choice is hidden on other cards and does not turn Smooth Motion on.
+
+RTX Encore 1.3.0 removed OpenNR and the Cyber Engine Tweaks panel, so the Hub no longer shows their settings. NVIDIA Neural Rendering stays available.
