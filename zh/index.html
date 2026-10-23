@@ -30,13 +30,25 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.2.1 · Hub 1.2.1</span>
+<span class="badge">RTX Encore 1.2.2 · Hub 1.2.2</span>
 <h1>在<em>您的</em> RTX&nbsp;20、30 或 40 上启用帧生成与 Neural Rendering。</h1>
-<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> 是一个免费模组，为 GeForce RTX 20、30 和 40 带来最高 X6 的 DLSS 帧生成、Neural Rendering 和更快的 DLSS。<strong>RTX Encore Hub</strong> 会把它安装到您的游戏中，保持最新，并且随时可以把游戏恢复原状。</p>
-<p class="sub">XeSS / XeFG：高度实验性。 这部分集成的开发过程非常艰难，也相当折腾 :) 请预期可能出现错误、崩溃、画面伪影，以及不同游戏和图形 API 之间的行为差异。欢迎报告问题：在 RTX Encore Hub 中打开游戏的 健康检查 页面，选择 生成诊断包，检查并移除个人信息后，将诊断压缩包附加到 RTX Encore issue。请注明选择的引擎、图形 API 和请求的倍率。Hub 不会自动上传该压缩包。 <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">报告问题</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">查看已发布的下载</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">GitHub 上的 RTX Encore</a></div>
+<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> 为 RTX 20、30、40 带来最高 X6 的 DLSS 帧生成、Neural Rendering 和更快的 DLSS。1.2 系列新增实验性 Intel 引擎、实时重建选择、逐轮 NR 设置及实时锐化。<strong>RTX Encore Hub</strong> 安装模组及运行库、更新游戏并还原原始文件。</p>
+<p class="sub">Intel XeSS / XeFG 仍高度实验性。 兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。 <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">报告问题</a>.</p>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Hub 1.2.2</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/latest">下载 RTX Encore 1.2.2</a></div>
 <p class="under">Windows 10 和 11，x64 · 英语、法语和简体中文 · 安装无需管理员权限</p>
 </div>
+
+<section class="news" id="features"><div class="wrap">
+<h2>RTX Encore 1.2 新功能</h2>
+<p class="sub">模组 1.2.2 与 Hub 1.2.2 分别发布。模组菜单现已提供锐化，Hub 中的控制项将在后续版本提供。Hub 检查文件及运行库状态，不认证画质或实际显示帧数。</p>
+<div class="news-grid"><div class="card"><h3>重建后实时锐化</h3><p>模组 1.2.2 为 DLSS、DLAA、光线重建和替代 XeSS 新增 Off / Game / Custom。默认关闭，Custom 默认 30%。现在可使用模组菜单；Hub 控制项将在后续版本提供。</p></div>
+<div class="card"><h3>选择 DLSS 或 Intel 引擎</h3><p>选择 DLSS 或实验性 XeSS 重建、DLSS-G 或搭配 XeLL 的实验性 XeFG 帧生成。通过 Hub 安装兼容运行库；支持情况取决于游戏输入和图形 API。</p></div>
+<div class="card"><h3>游戏中切换重建</h3><p>实时切换 DLSS SR/RR 预设及兼容的重建引擎。Vulkan 游戏需在启动前安装兼容 Intel 运行库；修改帧生成引擎仍需重启。</p></div>
+<div class="card"><h3>逐轮 Neural Rendering</h3><p>最多四轮 NR，每轮可单独设置强度和风格或继承全局设置。HDR 输入与曝光控制跟随重建引擎，不会启用显示器 HDR。</p></div>
+<div class="card"><h3>Smooth Motion 与兼容性修复</h3><p>RTX 30 的 Smooth Motion 支持 621.01 驱动。模组 1.2.2 修复 SurrounDead 启动、Baldur’s Gate 3 与 OptiScaler F5 的特定 Vulkan 菜单问题，以及 OptiScaler F5 的特定 DLSS-G 兼容性问题。</p></div>
+<div class="card"><h3>清楚说明画面设置的限制</h3><p>锐化会与游戏后续处理叠加；高强度可能产生光晕并放大噪点。其 Vulkan 运行、实际游戏画质和性能仍待验证。Intel 引擎仍为实验性功能。</p></div>
+</div>
+</div></section>
 
 <section class="band" id="perf"><div class="wrap">
 <div class="stats">
@@ -58,8 +70,7 @@
 </div>
 </div></section>
 
-<section><div class="wrap split">
-<div>
+<section><div class="wrap">
 <h2>GPU 时间都去哪了</h2>
 <p class="sub">RTX Encore 为每个处理阶段节省的 GPU 时间比例，在 RTX 3070 Ti Laptop 上测得。</p>
 <div class="chart" role="img" aria-label="各项优化节省的 GPU 时间条形图，单位为百分比。">
@@ -70,14 +81,6 @@
 <div class="c-row" title="Fast SR，预设 M, 测试台: −18 %"><div class="c-label"><span class="c-name">Fast SR，预设 M</span><span class="c-where">测试台</span></div><div class="c-track"><span class="c-bar" style="width:30.0%"></span><span class="c-value">−18 %</span></div></div>
 <div class="c-row" title="Fast SR，预设 L, 测试台: −15 %"><div class="c-label"><span class="c-name">Fast SR，预设 L</span><span class="c-where">测试台</span></div><div class="c-track"><span class="c-bar" style="width:25.0%"></span><span class="c-value">−15 %</span></div></div>
 </div>
-</div>
-<div class="news">
-<h2>1.2.1</h2>
-<p class="sub">Intel、共用输入和逐轮 NR 设置需要模组 1.2.0-beta.1 或更高版本。模组 1.2.1 不再使用 NVIDIA 提供程序策略设置，Hub 会隐藏该选项；旧模组保留兼容的控制项。XeFG 仍属实验性，取决于模组、图形 API、游戏和运行库。请求的倍率不能证明实际显示的帧数。</p>
-<div class="card"><h3>菜单兼容性改善</h3><p>改善 Elden Ring 与 ERSS-FG、Quarantine Zone 与 OptiScaler、HumanitZ 与 ReShade 的兼容性。</p></div>
-<div class="card"><h3>游戏中切换重建引擎</h3><p>启动前安装兼容的 Intel 运行库后，No Man’s Sky 可在游戏中切换 DLSS 与 XeSS，无需重启。</p></div>
-<div class="card"><h3>扩展 NVIDIA 运行库兼容性</h3><p>NVIDIA 运行库不再需要预设版本列表。可用功能仍取决于运行库和游戏；Intel 检查保持不变。</p></div>
-</div>
 </div></section>
 
 <section class="band" id="hub"><div class="wrap">
@@ -86,9 +89,10 @@
 <div class="hub">
 <figure><div class="shot"><img src="../assets/library.zh.jpg" alt="Hub 的游戏库，包含每个安装的状态和更新横幅" width="1440" height="900" loading="lazy"></div><figcaption>真实应用截图，使用由替身游戏文件夹组成的演示游戏库。</figcaption></figure>
 <ol class="points">
-<li><h3>更快的游戏库启动</h3><p>后台验证期间立即显示缓存的游戏。</p></li>
-<li><h3>RTX Encore 1.2.1</h3><p>改善菜单兼容性，支持 No Man’s Sky 中实时切换 DLSS/XeSS，并扩展 NVIDIA 运行库兼容性。</p></li>
-<li><h3>匹配版本的设置</h3><p>模组 1.2.1 隐藏已停用的 NVIDIA 提供程序策略选项；旧模组保留原有控制项。</p></li>
+<li><h3>Hub 日志导出</h3><p>即使无法打开游戏页面，也能从设置或出错页面导出近期 Hub 活动和错误。分享前请检查压缩包。</p></li>
+<li><h3>更小的备份，保留还原能力</h3><p>原始文件保存在经验证的 ZIP 备份中。旧的未压缩备份仍可还原，并在成功安装或更新后转换；还原压缩备份需使用 Hub 1.2.2 或更高版本。</p></li>
+<li><h3>记住选择</h3><p>游戏页面会记住预设、倍率和选项。滚动时仍可使用返回和应用；修改仍需确认。</p></li>
+<li><h3>更快的游戏库</h3><p>先显示缓存游戏，再在后台验证。收藏、卡片操作、搜索、托盘模式和记住的可执行文件选择让游戏更易访问。</p></li>
 </ol>
 </div>
 <div class="more">
@@ -136,7 +140,7 @@
 
 <div class="wrap cta">
 <h2>准备好试试了吗？</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">查看已发布的下载</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Hub 1.2.2</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
 </div>
 </main>
 

@@ -30,13 +30,25 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.2.1 · Hub 1.2.1</span>
+<span class="badge">RTX Encore 1.2.2 · Hub 1.2.2</span>
 <h1>Frame generation and Neural Rendering on <em>your</em> RTX&nbsp;20, 30 and 40.</h1>
-<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> is a free mod that brings DLSS frame generation up to X6, Neural Rendering and a faster DLSS to GeForce RTX 20, 30 and 40. <strong>RTX Encore Hub</strong> installs it in your games, keeps it up to date, and can always put a game back as it was.</p>
-<p class="sub">XeSS / XeFG: VERY EXPERIMENTAL. Getting this integration working was a particularly difficult and frustrating part of development :) Expect bugs, crashes, visual artifacts and differences between games and graphics APIs. Please report problems: in RTX Encore Hub, open the game’s Health page, choose Prepare a diagnostic, review the archive for personal information, then attach it to an RTX Encore issue. Include your engine choices, graphics API and requested multiplier. The Hub does not upload the archive for you. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Report an issue</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">View published downloads</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore on GitHub</a></div>
+<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> brings DLSS frame generation up to X6, Neural Rendering and faster DLSS to RTX 20, 30 and 40. Version 1.2 adds experimental Intel engines, live reconstruction choices, NR settings per pass and live sharpening. <strong>RTX Encore Hub</strong> installs the mod and its runtimes, keeps games up to date and restores their original files.</p>
+<p class="sub">Intel XeSS / XeFG remain very experimental. Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Report an issue</a>.</p>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download Hub 1.2.2</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/latest">Download RTX Encore 1.2.2</a></div>
 <p class="under">Windows 10 and 11, x64 · English, French and Simplified Chinese · installs without administrator rights</p>
 </div>
+
+<section class="news" id="features"><div class="wrap">
+<h2>What is new in RTX Encore 1.2</h2>
+<p class="sub">Mod 1.2.2 and Hub 1.2.2 are published separately. Sharpening is available in the mod’s menu; its Hub controls are for a later release. The Hub inspects files and runtime status; it does not certify image quality or displayed frames.</p>
+<div class="news-grid"><div class="card"><h3>Live sharpening after reconstruction</h3><p>Mod 1.2.2 adds Off / Game / Custom for DLSS, DLAA, Ray Reconstruction and replacement XeSS. Off by default; Custom defaults to 30%. Use the mod’s menu now; Hub controls are coming in a later release.</p></div>
+<div class="card"><h3>Choose DLSS or Intel engines</h3><p>Choose DLSS or experimental XeSS reconstruction, and DLSS-G or experimental XeFG frame generation with XeLL. Install compatible runtimes through the Hub; routes depend on game inputs and graphics API.</p></div>
+<div class="card"><h3>Change reconstruction while playing</h3><p>Change DLSS SR/RR presets or supported reconstruction engines live. In Vulkan games, install compatible Intel runtimes before launch; changing frame-generation engines still requires a restart.</p></div>
+<div class="card"><h3>Neural Rendering, pass by pass</h3><p>Up to four NR passes, each with its own intensity and style or inherited settings. Common HDR-input and exposure controls follow the selected reconstruction engine; they do not turn on display HDR.</p></div>
+<div class="card"><h3>Smooth Motion and compatibility fixes</h3><p>Smooth Motion supports driver 621.01 on RTX 30. Mod 1.2.2 fixes startup in SurrounDead, the Vulkan menu case in Baldur’s Gate 3 with OptiScaler F5, and a DLSS-G compatibility case with OptiScaler F5.</p></div>
+<div class="card"><h3>Image settings with clear limits</h3><p>Sharpening adds to later game processing; high strengths can create halos and amplify noise. Its Vulkan operation, real-game appearance and performance remain unvalidated. Intel engines remain experimental.</p></div>
+</div>
+</div></section>
 
 <section class="band" id="perf"><div class="wrap">
 <div class="stats">
@@ -58,8 +70,7 @@
 </div>
 </div></section>
 
-<section><div class="wrap split">
-<div>
+<section><div class="wrap">
 <h2>Where the GPU time goes</h2>
 <p class="sub">Share of the GPU time of each pass that RTX Encore saves, measured on an RTX 3070 Ti Laptop.</p>
 <div class="chart" role="img" aria-label="Bar chart of the GPU time saved per optimization, in percent.">
@@ -70,14 +81,6 @@
 <div class="c-row" title="Fast SR, preset M, bench: −18 %"><div class="c-label"><span class="c-name">Fast SR, preset M</span><span class="c-where">bench</span></div><div class="c-track"><span class="c-bar" style="width:30.0%"></span><span class="c-value">−18 %</span></div></div>
 <div class="c-row" title="Fast SR, preset L, bench: −15 %"><div class="c-label"><span class="c-name">Fast SR, preset L</span><span class="c-where">bench</span></div><div class="c-track"><span class="c-bar" style="width:25.0%"></span><span class="c-value">−15 %</span></div></div>
 </div>
-</div>
-<div class="news">
-<h2>1.2.1</h2>
-<p class="sub">Intel, common-input and per-pass NR settings require mod 1.2.0-beta.1 or later. Mod 1.2.1 no longer uses the NVIDIA provider-policy setting, so the Hub hides it; older mods retain their supported controls. XeFG remains experimental and depends on the mod, graphics API, game and runtime. A requested multiplier does not prove displayed frames.</p>
-<div class="card"><h3>Menus that work together</h3><p>Improved compatibility with ERSS-FG in Elden Ring, OptiScaler in Quarantine Zone and ReShade in HumanitZ.</p></div>
-<div class="card"><h3>Change reconstruction while playing</h3><p>In No Man’s Sky, switch between DLSS and XeSS without restarting, with compatible Intel runtimes installed before launch.</p></div>
-<div class="card"><h3>Broader NVIDIA runtime compatibility</h3><p>NVIDIA runtimes no longer need a fixed version list. Available features depend on the runtime and game; Intel checks remain unchanged.</p></div>
-</div>
 </div></section>
 
 <section class="band" id="hub"><div class="wrap">
@@ -86,9 +89,10 @@
 <div class="hub">
 <figure><div class="shot"><img src="assets/library.jpg" alt="The Hub&#x27;s game library, with the state of each install and the update banner" width="1440" height="900" loading="lazy"></div><figcaption>Real application capture, on a demonstration library of stand-in game folders.</figcaption></figure>
 <ol class="points">
-<li><h3>Faster library startup</h3><p>Cached games appear immediately while verification runs in the background.</p></li>
-<li><h3>RTX Encore 1.2.1</h3><p>Menu compatibility improvements, live DLSS/XeSS switching in No Man’s Sky, and broader NVIDIA runtime compatibility.</p></li>
-<li><h3>Appropriate controls</h3><p>The obsolete NVIDIA provider-policy option is hidden for mod 1.2.1; older mods retain their controls.</p></li>
+<li><h3>Export Hub logs</h3><p>Export recent Hub activity and errors from Settings or a failed game page, even when that game cannot open. Review the archive before sharing.</p></li>
+<li><h3>Smaller backups, reliable restoration</h3><p>Original files are kept in verified ZIP backups. Older uncompressed backups remain restorable and convert after a successful install or update; use Hub 1.2.2 or newer to restore compressed backups.</p></li>
+<li><h3>Remembered choices</h3><p>The game page remembers preset, multiplier and option selections. Back and Apply remain accessible while scrolling; changes still need confirmation.</p></li>
+<li><h3>A faster library</h3><p>Cached games appear first while verification runs in the background. Favorites, card actions, search, tray mode and remembered executable choices keep games within reach.</p></li>
 </ol>
 </div>
 <div class="more">
@@ -136,7 +140,7 @@
 
 <div class="wrap cta">
 <h2>Ready to try it?</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">View published downloads</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download Hub 1.2.2</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
 </div>
 </main>
 

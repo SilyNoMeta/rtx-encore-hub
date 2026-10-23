@@ -110,6 +110,8 @@ h3 { letter-spacing: -0.2px; }
 .c-value { color: var(--ink); font: 700 16px var(--display); white-space: nowrap; }
 .c-row:hover .c-bar { background: #d6ff9c; }
 .news h2 { margin-bottom: 20px; }
+.news-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.news-grid .card + .card { margin-top: 0; }
 .card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 20px 22px; }
 .card + .card { margin-top: 14px; }
 .card h3 { margin: 0 0 6px; font-size: 18px; }
@@ -167,6 +169,7 @@ footer .links a { color: var(--ink-2); }
 footer p { margin: 6px 0; max-width: 900px; }
 
 @media (max-width: 920px) {
+  .news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .split, .hub, .support { grid-template-columns: 1fr; gap: 28px; }
   .support { padding: 28px 24px; }
   .more { grid-template-columns: repeat(2, 1fr); }
@@ -174,6 +177,7 @@ footer p { margin: 6px 0; max-width: 900px; }
 }
 
 @media (max-width: 720px) {
+  .news-grid { grid-template-columns: 1fr; }
   .nav nav { display: none; }
   .nav .wrap { gap: 10px; }
   .brand { gap: 8px; font-size: 15px; }
