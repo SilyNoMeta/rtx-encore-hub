@@ -41,7 +41,7 @@ Installez et mettez à jour RTX Encore, gardez ses runtimes cohérents et gérez
 - **NR par passe et entrées HDR** — Réglez chacune des quatre passes NR possibles ou héritez du style global. Les réglages communs d’entrée HDR et d’exposition suivent le moteur de reconstruction choisi ; ils n’activent pas le HDR de l’écran.
 - **Diagnostics et profils partagés** — Consultez la page Santé, préparez un diagnostic et partagez des préférences visuelles compatibles par jeu. Les profils partagés restent expérimentaux.
 
-**Nouveau dans le Hub 1.3.0 :** les réglages de RTX Encore 1.3.0 (NR fovéal, Smooth Motion V1 ou V2 sur RTX 20), l’espace utilisé dans les Paramètres, et une maintenance des sauvegardes qui ne répète plus le même avertissement pour un dossier de sauvegarde que le Hub n’a pas créé. OpenNR et le panneau Cyber Engine Tweaks sont partis avec RTX Encore 1.3.0, et leurs réglages avec eux dans le Hub.
+**Toujours disponible depuis le Hub 1.3.0 :** les réglages de RTX Encore 1.3.0 (NR fovéal, Smooth Motion V1 ou V2 sur RTX 20), l’espace utilisé dans les Paramètres, et une maintenance des sauvegardes qui ne répète plus le même avertissement pour un dossier de sauvegarde que le Hub n’a pas créé. OpenNR et le panneau Cyber Engine Tweaks sont partis avec RTX Encore 1.3.0, et leurs réglages avec eux dans le Hub.
 
 **Intel XeSS / XeFG restent très expérimentaux.** Leur compatibilité dépend du mod, du jeu, de l’API graphique et des runtimes. Signalez les problèmes avec une archive de diagnostic relue ; la présence des fichiers ou un multiplicateur demandé ne prouvent pas le rendu effectif.
 

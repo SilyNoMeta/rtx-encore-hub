@@ -41,7 +41,7 @@
 - **逐轮 NR 与 HDR 输入** — 分别设置最多四轮 NR，或继承全局风格。共用 HDR 输入与曝光设置跟随所选重建引擎，不会启用显示器 HDR。
 - **诊断与共享配置** — 查看健康页面、生成诊断并分享兼容的逐游戏画面偏好。共享配置仍为实验性功能。
 
-**Hub 1.3.0 新增：** RTX Encore 1.3.0 的设置（中央优先 NR、RTX 20 的 Smooth Motion V1 或 V2）、设置中的存储空间，以及备份维护不再因并非 Hub 创建的备份文件夹而重复同一警告。OpenNR 和 Cyber Engine Tweaks 面板随 RTX Encore 1.3.0 移除，Hub 中的相关设置也一并移除。
+**继续保留 Hub 1.3.0 的功能：** RTX Encore 1.3.0 的设置（中央优先 NR、RTX 20 的 Smooth Motion V1 或 V2）、设置中的存储空间，以及备份维护不再因并非 Hub 创建的备份文件夹而重复同一警告。OpenNR 和 Cyber Engine Tweaks 面板随 RTX Encore 1.3.0 移除，Hub 中的相关设置也一并移除。
 
 **Intel XeSS / XeFG 仍高度实验性。** 兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。
 

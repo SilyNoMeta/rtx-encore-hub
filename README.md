@@ -41,7 +41,7 @@ Install and update RTX Encore, keep its runtimes matched, and manage your games 
 - **NR pass by pass and HDR inputs** — Adjust each of up to four NR passes, or inherit the global style. Common HDR-input and exposure settings follow the chosen reconstruction engine; they do not enable display HDR.
 - **Diagnostics and shared profiles** — Review the Health page, prepare a diagnostic and share compatible per-game visual preferences. Shared profiles remain experimental.
 
-**New in Hub 1.3.0:** settings for RTX Encore 1.3.0 (Foveated NR, Smooth Motion V1 or V2 on RTX 20), storage usage in Settings, and backup maintenance that no longer repeats the same warning for a backup folder the Hub did not create. OpenNR and the Cyber Engine Tweaks panel left with RTX Encore 1.3.0, and so did their settings in the Hub.
+**Included from Hub 1.3.0:** settings for RTX Encore 1.3.0 (Foveated NR, Smooth Motion V1 or V2 on RTX 20), storage usage in Settings, and backup maintenance that no longer repeats the same warning for a backup folder the Hub did not create. OpenNR and the Cyber Engine Tweaks panel left with RTX Encore 1.3.0, and so did their settings in the Hub.
 
 **Intel XeSS / XeFG remain very experimental.** Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering.
 
