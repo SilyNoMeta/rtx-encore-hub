@@ -30,23 +30,21 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.3.1 · Hub 1.3.1</span>
+<span class="badge">RTX Encore 1.4.0 · Hub 1.4.0</span>
 <h1>在<em>您的</em> RTX&nbsp;20、30 或 40 上启用帧生成与 Neural Rendering。</h1>
-<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> 为 RTX 20、30、40 带来最高 X6 的 DLSS 帧生成、Neural Rendering 和更快的 DLSS。1.3 新增实验性中央优先 Neural Rendering 和 RTX 20 的 Smooth Motion，并保留 1.2 的实验性 Intel 引擎、实时重建选择、逐轮 NR 设置及实时锐化。<strong>RTX Encore Hub</strong> 安装模组及运行库、更新游戏并还原原始文件。</p>
-<p class="sub">中央优先 NR、RTX 20 的 Smooth Motion 以及 Intel XeSS / XeFG 均为实验性功能。兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。 <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">报告问题</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Hub 1.3.1</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/latest">下载 RTX Encore 1.3.1</a></div>
+<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> 为 RTX 20、30、40 带来最高 X6 的 DLSS 帧生成、Neural Rendering 和更快的 DLSS。1.4 新增实验性 Pre-SR、比较实验室、每轮 NR 模型和三种菜单语言。<strong>RTX Encore Hub</strong> 安装和更新模组及运行库，读取导出的报告，并恢复游戏原始文件。</p>
+<p class="sub">Pre-SR、中央优先 NR、RTX 20 的 Smooth Motion 及 Intel XeSS / XeFG 仍为实验性功能。兼容性取决于游戏、API 和运行库。缺失计数不等于零；全局内存变化不能证明 Pre-SR 带来的节省。 <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">报告问题</a>.</p>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Hub 1.4.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/latest">下载 RTX Encore 1.4.0</a></div>
 <p class="under">Windows 10 和 11，x64 · 英语、法语和简体中文 · 安装无需管理员权限</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>RTX Encore 1.3.1 修复与 1.3 系列功能</h2>
-<p class="sub">模组 1.3.1 与 Hub 1.3.1 分别发布。Alan Wake 2 和 WRC 的 FG 菜单状态已在测试版本中确认，最终 1.3.1 二进制文件尚未在游戏中复测。Hub 使用模拟游戏进行自动化测试，不认证画质或实际显示帧数。</p>
-<div class="news-grid"><div class="card"><h3>Alan Wake 2 与 Neural Rendering</h3><p>修复游戏曝光输入导致 NR 无法启动的问题，并改善菜单打开时的鼠标处理。在图形 API 支持时，可使用更多浮点曝光格式。</p></div>
-<div class="card"><h3>更多 RTX 世代的 Vulkan NR</h3><p>在 RTX 30 之外启用 RTX 20、RTX 40 和 RTX 50 路径。新增世代仍属实验性，本版本在这些实体显卡上的验证仍待完成。</p></div>
-<div class="card"><h3>WRC Generations</h3><p>支持游戏原版 Streamline 1.3.3 集成，并修复 FG 菜单始终显示 Waiting 的问题。菜单表示已启用的模式，不测量实际显示倍率。</p></div>
-<div class="card"><h3>Vulkan 兼容性</h3><p>跟进 Baldur’s Gate 3 / bg3fgvk 报告，改善与其他图形模组的兼容性。仍不支持与 OptiScaler 组合使用。</p></div>
-<div class="card"><h3>中央优先 Neural Rendering</h3><p>实验性，默认关闭：NR 在图像中央以全强度运行，越靠近边缘越轻，以更柔和的边缘 NR 效果换取更高 FPS。预设 Light、Balanced 和 Strong；在 RTX 3070 Ti Laptop 上，Strong 在 Cyberpunk 2077 中带来平均 FPS 提升 27%。</p></div>
-<div class="card"><h3>RTX 20 的 Smooth Motion</h3><p>在 NVIDIA 621.01 驱动和 DirectX 12 下启用 Smooth Motion，RTX Encore 会自动选择显卡。在 Hub 或游戏内菜单中选择 V1（测试版 1，默认）或 V2（测试版 2），然后重启游戏。性能取决于显卡和游戏。</p></div>
+<h2>RTX Encore 1.4.0 更新</h2>
+<p class="sub">模组 1.4.0 和 Hub 1.4.0 分别发布。新的 Pre-SR 路径、多轮变更、比较工具及 DLSS-G 控制经过本地编译和 CPU 测试。本版本的 GPU、游戏内画质、性能和物理延迟仍未验证。连续截图不能证明时间稳定性。Hub 测试使用模拟游戏目录。</p>
+<div class="news-grid"><div class="card"><h3>实验性 Pre-SR Neural Rendering</h3><p>在普通 DLSS Super Resolution 之前应用 NR，支持一至四轮及各轮独立模型和外观。Post-SR 仍为默认模式。Pre-SR 需要渲染尺寸的均匀输入；不支持 RR、DLAA、中央优先处理、带填充的尺寸和带抖动的运动输入。</p></div>
+<div class="card"><h3>图像与性能实验室</h3><p>分别采集 Post-SR 和 Pre-SR 数据，通过缩放或 A/B 滑动检查截图，并导出测量和本地图像查看器。缺失计数保持不可用。若 SR/FG 条件及视口关联尚未确认，观测仍可读取，但不会报告相对提升。</p></div>
+<div class="card"><h3>DLSS-G 模式和目标控制</h3><p>固定、动态和游戏模式现在遵循 Encore 的选择，包括动态目标。目标并非实际显示 FPS 的严格上限；新控制仍待游戏内验证。</p></div>
+<div class="card"><h3>三种菜单语言</h3><p>可按游戏选择英语、法语或简体中文。关于选项卡显示构建版本、项目链接、GitHub Sponsors、Ko-fi，以及对公开赞助者的致谢，包括 @mennogreg。</p></div>
 </div>
 </div></section>
 
@@ -89,11 +87,9 @@
 <div class="hub">
 <figure><div class="shot"><img src="../assets/library.zh.jpg" alt="Hub 的游戏库，包含每个安装的状态和更新横幅" width="1440" height="900" loading="lazy"></div><figcaption>真实应用截图，使用由替身游戏文件夹组成的演示游戏库。</figcaption></figure>
 <ol class="points">
-<li><h3>Hub 1.3.1 更安全的运行库更新</h3><p>保留兼容的整套 Streamline 组件；在兼容性尚未确认时保留现有 NVIDIA 文件，包括 WRC Generations 等旧版集成。全局和可选设置遵循相同保护规则。</p></li>
-<li><h3>存储空间</h3><p>设置中显示应用程序、备份、已下载运行库、RTX Encore 压缩包、封面和日志所占空间，以及仍在游戏目录中的旧备份。部分扫描会明确提示。</p></li>
-<li><h3>共享备份与自动迁移</h3><p>内容相同的原始文件和历史快照仅在 Hub 数据中压缩保存一次，按完整 SHA-256 在游戏间共享。并非 Hub 创建的备份文件夹会保持不变，维护也不再就此重复同一警告。</p></li>
-<li><h3>干净重装</h3><p>Hub 重新创建受管理的安装，保留设置，并可从健康页面恢复。未知文件或缺少精确来源会使修复被拒绝。这并非已确认解决 GTA V Enhanced 崩溃的方案。</p></li>
-<li><h3>Hub 日志导出</h3><p>即使无法打开游戏页面，也能从设置或出错页面导出近期 Hub 活动和错误。分享前请检查压缩包。</p></li>
+<li><h3>Pre-SR 设置</h3><p>Hub 1.4.0 提供 Pre-SR 配方和每轮独立 NR 模型。原生功能需要模组 1.4.0；保存设置并不证明实际渲染已采用。</p></li>
+<li><h3>读取比较报告</h3><p>导入已导出的 NR 比较 JSON 报告，查看耗时及各自独立的内存计数。旧报告和未确认报告仍可读取，但不宣称可比较。</p></li>
+<li><h3>受保护的更新和恢复</h3><p>现有整套运行库保护、经验证的共享备份、恢复及 Hub 日志导出继续可用。</p></li>
 </ol>
 </div>
 <div class="more">
@@ -141,7 +137,7 @@
 
 <div class="wrap cta">
 <h2>准备好试试了吗？</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Hub 1.3.1</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Hub 1.4.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
 </div>
 </main>
 

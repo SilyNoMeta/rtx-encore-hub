@@ -30,23 +30,21 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.3.1 · Hub 1.3.1</span>
+<span class="badge">RTX Encore 1.4.0 · Hub 1.4.0</span>
 <h1>Frame generation and Neural Rendering on <em>your</em> RTX&nbsp;20, 30 and 40.</h1>
-<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> brings DLSS frame generation up to X6, Neural Rendering and faster DLSS to RTX 20, 30 and 40. Version 1.3 adds experimental foveated Neural Rendering and Smooth Motion on RTX 20, on top of the experimental Intel engines, live reconstruction choices, NR settings per pass and live sharpening of 1.2. <strong>RTX Encore Hub</strong> installs the mod and its runtimes, keeps games up to date and restores their original files.</p>
-<p class="sub">Foveated NR, Smooth Motion on RTX 20 and Intel XeSS / XeFG are experimental. Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Report an issue</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download Hub 1.3.1</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/latest">Download RTX Encore 1.3.1</a></div>
+<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> brings DLSS frame generation up to X6, Neural Rendering and faster DLSS to RTX 20, 30 and 40. Version 1.4 adds experimental Pre-SR, a comparison lab, independent NR pass models and a menu in three languages. <strong>RTX Encore Hub</strong> installs and updates the mod and its runtimes, reads exported comparison reports and restores original game files.</p>
+<p class="sub">Pre-SR, foveated NR, Smooth Motion on RTX 20 and Intel XeSS / XeFG remain experimental. Compatibility depends on the game, graphics API and runtimes. Missing counters are not zero; global memory changes do not establish savings caused by Pre-SR. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Report an issue</a>.</p>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download Hub 1.4.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/latest">Download RTX Encore 1.4.0</a></div>
 <p class="under">Windows 10 and 11, x64 · English, French and Simplified Chinese · installs without administrator rights</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>RTX Encore 1.3.1 fixes and 1.3 features</h2>
-<p class="sub">Mod 1.3.1 and Hub 1.3.1 are published separately. Alan Wake 2 and WRC’s FG menu status were confirmed on test builds; the final 1.3.1 binaries have not been retested in game. The Hub has automated tests with fake games. It does not certify image quality or displayed frames.</p>
-<div class="news-grid"><div class="card"><h3>Alan Wake 2 and Neural Rendering</h3><p>Fixes NR startup with the game’s exposure input and improves mouse handling while the menu is open. Additional floating-point exposure formats are supported where the graphics API permits them.</p></div>
-<div class="card"><h3>Vulkan NR on more RTX generations</h3><p>RTX 20, RTX 40 and RTX 50 paths are enabled alongside RTX 30. These additional generations remain experimental; physical-card validation with this release is still pending.</p></div>
-<div class="card"><h3>WRC Generations</h3><p>Supports the game’s original Streamline 1.3.3 integration and fixes the FG menu staying on Waiting. The menu reports the enabled mode; it does not measure the displayed multiplier.</p></div>
-<div class="card"><h3>Vulkan compatibility</h3><p>Improves compatibility with other graphics mods, following the Baldur’s Gate 3 / bg3fgvk reports. Combinations with OptiScaler remain unsupported.</p></div>
-<div class="card"><h3>Foveated Neural Rendering</h3><p>Experimental and off by default: NR runs at full strength in the middle of the image and lighter towards the edges, for more FPS with a softer NR effect near the edges. Presets Light, Balanced and Strong; Strong gave +27% average FPS in Cyberpunk 2077 on an RTX 3070 Ti Laptop.</p></div>
-<div class="card"><h3>Smooth Motion on RTX 20</h3><p>With NVIDIA 621.01 and DirectX 12, enable Smooth Motion and RTX Encore selects the card automatically. Choose V1 (test 1, default) or V2 (test 2) in the Hub or the in-game menu, then restart the game. Performance depends on the card and game.</p></div>
+<h2>New in RTX Encore 1.4.0</h2>
+<p class="sub">Mod 1.4.0 and Hub 1.4.0 are separate releases. The new Pre-SR routes, multipass changes, comparison instrumentation and DLSS-G controls have local build and CPU-test evidence. GPU, in-game image quality, performance and physical latency remain unvalidated for this release. Sequential captures cannot establish temporal stability. Hub tests use fake game folders.</p>
+<div class="news-grid"><div class="card"><h3>Experimental Pre-SR Neural Rendering</h3><p>Run NR before ordinary DLSS Super Resolution, with one to four passes and independent model profiles and appearance. Post-SR remains the default. Pre-SR needs uniform render-size inputs; RR, DLAA, foveation, padding-aware sizing and jittered motion inputs are unavailable.</p></div>
+<div class="card"><h3>Image and performance lab</h3><p>Collect separate Post-SR and Pre-SR series, inspect captures with zoom or an A/B wipe, and export measurements and a local pixel viewer. Unavailable counters remain unavailable. Without qualified SR/FG conditions and viewport association, individual observations remain readable but no relative gain is reported.</p></div>
+<div class="card"><h3>DLSS-G mode and target controls</h3><p>Fixed, Dynamic and Game modes now honor Encore’s choice, including its dynamic target. A target is not a strict displayed-FPS cap; new controls still need in-game validation.</p></div>
+<div class="card"><h3>A menu in three languages</h3><p>Choose English, French or Simplified Chinese per game. The About tab shows the build version, project links, GitHub Sponsors, Ko-fi and thanks to public sponsors, including @mennogreg.</p></div>
 </div>
 </div></section>
 
@@ -89,11 +87,9 @@
 <div class="hub">
 <figure><div class="shot"><img src="assets/library.jpg" alt="The Hub&#x27;s game library, with the state of each install and the update banner" width="1440" height="900" loading="lazy"></div><figcaption>Real application capture, on a demonstration library of stand-in game folders.</figcaption></figure>
 <ol class="points">
-<li><h3>Safer runtime updates in Hub 1.3.1</h3><p>Keeps compatible Streamline components together and preserves existing NVIDIA files when compatibility is unproven, including older integrations such as WRC Generations. Global and optional choices follow the same safeguards.</p></li>
-<li><h3>Storage usage</h3><p>Settings show the space taken by the application, backups, downloaded runtimes, RTX Encore archives, covers and logs, plus older backups still in game folders. A partial scan says so.</p></li>
-<li><h3>Shared backups and automatic migration</h3><p>Identical original files and history snapshots are compressed once in the Hub data, shared across games by their full SHA-256. A backup folder the Hub did not create is left untouched, and maintenance no longer repeats the same warning about it.</p></li>
-<li><h3>Reinstall cleanly</h3><p>The Hub recreates a managed installation, preserves your settings and keeps a way back from Health. Unknown files or unavailable exact sources refuse the repair. This is not a confirmed fix for GTA V Enhanced crashes.</p></li>
-<li><h3>Export Hub logs</h3><p>Export recent Hub activity and errors from Settings or a failed game page, even when game pages cannot open. Review the archive before sharing.</p></li>
+<li><h3>Pre-SR settings</h3><p>Hub 1.4.0 provides Pre-SR recipes and independent NR model profiles per pass. Native features require mod 1.4.0; saving settings does not establish effective rendering.</p></li>
+<li><h3>Read comparison reports</h3><p>Import an exported NR comparison JSON report. Review timing and separate memory counters; older or unqualified reports remain readable without a claim of comparability.</p></li>
+<li><h3>Safer updates and restoration</h3><p>Existing matched-runtime protections, shared verified backups, restoration and exportable Hub logs remain available.</p></li>
 </ol>
 </div>
 <div class="more">
@@ -141,7 +137,7 @@
 
 <div class="wrap cta">
 <h2>Ready to try it?</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download Hub 1.3.1</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">Download Hub 1.4.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
 </div>
 </main>
 
