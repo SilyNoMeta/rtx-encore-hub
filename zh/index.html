@@ -30,21 +30,23 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.4.0 · Hub 1.4.0</span>
+<span class="badge">RTX Encore 1.4.3 · Hub 1.4.1</span>
 <h1>在<em>您的</em> RTX&nbsp;20、30 或 40 上启用帧生成与 Neural Rendering。</h1>
-<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> 为 RTX 20、30、40 带来最高 X6 的 DLSS 帧生成、Neural Rendering 和更快的 DLSS。1.4 新增实验性 Pre-SR、比较实验室、每轮 NR 模型和三种菜单语言。<strong>RTX Encore Hub</strong> 安装和更新模组及运行库，读取导出的报告，并恢复游戏原始文件。</p>
-<p class="sub">Pre-SR、中央优先 NR、RTX 20 的 Smooth Motion 及 Intel XeSS / XeFG 仍为实验性功能。兼容性取决于游戏、API 和运行库。缺失计数不等于零；全局内存变化不能证明 Pre-SR 带来的节省。 <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">报告问题</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Hub 1.4.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/latest">下载 RTX Encore 1.4.0</a></div>
+<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> 为 RTX 20、30、40 带来最高 X6 的 DLSS 帧生成、Neural Rendering 和更快的 DLSS。1.4 新增实验性 Pre-SR、每轮模型选择及截图比较实验室。<strong>RTX Encore Hub</strong> 安装模组及运行库、更新游戏并恢复原始文件。</p>
+<p class="sub">Intel XeSS / XeFG、Pre-SR、中央优先 NR 和 RTX 20 Smooth Motion 仍属实验性，兼容性取决于游戏、图形 API 及运行库。 <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">报告问题</a>.</p>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.4.1">下载 Hub 1.4.1</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.3">下载 RTX Encore 1.4.3</a></div>
 <p class="under">Windows 10 和 11，x64 · 英语、法语和简体中文 · 安装无需管理员权限</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>RTX Encore 1.4.0 更新</h2>
-<p class="sub">模组 1.4.0 和 Hub 1.4.0 分别发布。新的 Pre-SR 路径、多轮变更、比较工具及 DLSS-G 控制经过本地编译和 CPU 测试。本版本的 GPU、游戏内画质、性能和物理延迟仍未验证。连续截图不能证明时间稳定性。Hub 测试使用模拟游戏目录。</p>
-<div class="news-grid"><div class="card"><h3>实验性 Pre-SR Neural Rendering</h3><p>在普通 DLSS Super Resolution 之前应用 NR，支持一至四轮及各轮独立模型和外观。Post-SR 仍为默认模式。Pre-SR 需要渲染尺寸的均匀输入；不支持 RR、DLAA、中央优先处理、带填充的尺寸和带抖动的运动输入。</p></div>
-<div class="card"><h3>图像与性能实验室</h3><p>分别采集 Post-SR 和 Pre-SR 数据，通过缩放或 A/B 滑动检查截图，并导出测量和本地图像查看器。缺失计数保持不可用。若 SR/FG 条件及视口关联尚未确认，观测仍可读取，但不会报告相对提升。</p></div>
-<div class="card"><h3>DLSS-G 模式和目标控制</h3><p>固定、动态和游戏模式现在遵循 Encore 的选择，包括动态目标。目标并非实际显示 FPS 的严格上限；新控制仍待游戏内验证。</p></div>
-<div class="card"><h3>三种菜单语言</h3><p>可按游戏选择英语、法语或简体中文。关于选项卡显示构建版本、项目链接、GitHub Sponsors、Ko-fi，以及对公开赞助者的致谢，包括 @mennogreg。</p></div>
+<h2>RTX Encore 1.4.3 与 Hub 1.4.1</h2>
+<p class="sub">模组 1.4.3 与 Hub 1.4.1 分别发布。修复安装、XeFG、菜单及 NR 已在绝区零测试版本中检查。最终文件尚无单独的游戏内验证。输入转换测试不验证 NVIDIA NR 的画质或性能。</p>
+<div class="news-grid"><div class="card"><h3>绝区零</h3><p>修复 XeFG 与原有 Streamline 文件的兼容性，并改进内置菜单及 Neural Rendering 的启动。请保留游戏原有文件。</p></div>
+<div class="card"><h3>Intel 原生位置安装</h3><p>Hub 1.4.1 在游戏已使用的位置更新兼容 Intel 组件，保留事务备份，并为绝区零选择合适的默认代理。</p></div>
+<div class="card"><h3>更多 NR 输入格式</h3><p>支持 R16 浮点深度，包括心灵杀手 2 报告的格式，并根据图形 API 支持更多归一化运动及浮点输入格式。</p></div>
+<div class="card"><h3>实验性重建前 NR</h3><p>可选择 Pre-SR 或默认 Post-SR，每轮使用独立模型。Pre-SR 有输入限制，尚无游戏内画质或性能验证。</p></div>
+<div class="card"><h3>图像与性能实验室</h3><p>可适配面板、使用真实 1x、缩放和平移检查截图，然后导出报告至 Hub。相对比较需要符合条件的匹配观测，缺失测量保持不可用。</p></div>
+<div class="card"><h3>稳定性与设置</h3><p>1.4 系列改进图形错误处理、分辨率变化及设置，新增菜单语言并修正 DLSS-G 控件。验证限制详见版本说明。</p></div>
 </div>
 </div></section>
 
@@ -87,9 +89,10 @@
 <div class="hub">
 <figure><div class="shot"><img src="../assets/library.zh.jpg" alt="Hub 的游戏库，包含每个安装的状态和更新横幅" width="1440" height="900" loading="lazy"></div><figcaption>真实应用截图，使用由替身游戏文件夹组成的演示游戏库。</figcaption></figure>
 <ol class="points">
-<li><h3>Pre-SR 设置</h3><p>Hub 1.4.0 提供 Pre-SR 配方和每轮独立 NR 模型。原生功能需要模组 1.4.0；保存设置并不证明实际渲染已采用。</p></li>
-<li><h3>读取比较报告</h3><p>导入已导出的 NR 比较 JSON 报告，查看耗时及各自独立的内存计数。旧报告和未确认报告仍可读取，但不宣称可比较。</p></li>
-<li><h3>受保护的更新和恢复</h3><p>现有整套运行库保护、经验证的共享备份、恢复及 Hub 日志导出继续可用。</p></li>
+<li><h3>Intel 安装与修复</h3><p>Hub 1.4.1 在游戏原生位置更新兼容组件，并保留事务备份及明确的代理选择。</p></li>
+<li><h3>Pre-SR 设置</h3><p>选择 Pre-SR 配方及每轮 NR 模型。原生功能需要模组 1.4.0 或更高版本；保存设置不证明实际渲染生效。</p></li>
+<li><h3>读取比较报告</h3><p>导入导出的 NR 比较 JSON，查看耗时和独立内存计数器。旧版或未确认条件的报告仍可读取，但不声明可比性。</p></li>
+<li><h3>更新与恢复</h3><p>继续提供运行库兼容保护、共享验证备份、恢复及 Hub 日志导出。</p></li>
 </ol>
 </div>
 <div class="more">
@@ -137,7 +140,7 @@
 
 <div class="wrap cta">
 <h2>准备好试试了吗？</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases">下载 Hub 1.4.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.4.1">下载 Hub 1.4.1</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
 </div>
 </main>
 
