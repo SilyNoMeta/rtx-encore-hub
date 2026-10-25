@@ -26,9 +26,9 @@
 > [!NOTE]
 > **Windows x64。** 请打开[发布页面](https://github.com/SilyNoMeta/rtx-encore-hub/releases)并下载 `RTX-Encore-Hub-Setup-<version>.exe`，或无需安装的 `RTX-Encore-Hub-Portable-<version>.zip`。安装程序尚未进行代码签名，因此首次运行时 Windows 可能显示 SmartScreen 警告；每个发布版本都会给出安装程序的 SHA-256。Hub 与 RTX Encore 模组分别发布。
 
-## Hub 1.4.0：Pre-SR 设置与比较报告
+## Hub 1.4.1：Intel 安装与绝区零修复
 
-**1.4.0 更新：** 实验性 NR Pre-SR 设置、每轮模型配置和已导出的图像/性能报告读取功能。原生功能需要 RTX Encore 1.4.0，GPU 及游戏内验证仍待完成。[版本说明](docs/notes/1.4.0.zh-CN.md)。
+**1.4.1 更新：**在游戏原生位置安装 Intel 运行库，并修正绝区零的默认代理。[版本说明](docs/notes/1.4.1.zh-CN.md)。
 
 从统一游戏库安装和更新 RTX Encore，管理配套运行库与游戏。Hub 与模组分别发布。
 
@@ -45,7 +45,7 @@
 
 **Intel XeSS / XeFG 仍高度实验性。** 兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。
 
-[Hub 1.4.0](docs/notes/1.4.0.zh-CN.md) · [RTX Encore 1.4.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.0)
+[Hub 1.4.1](docs/notes/1.4.1.zh-CN.md) · [RTX Encore 1.4.3](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.3)
 
 ![Hub 的游戏库，包含封面、每个安装的状态和更新横幅](screenshots/library.zh.png)
 
