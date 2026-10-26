@@ -13,6 +13,7 @@
 
 [![最新版本](https://img.shields.io/github/v/release/SilyNoMeta/rtx-encore-hub?include_prereleases&style=for-the-badge&label=Latest&color=76b900)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 [![下载量](https://img.shields.io/github/downloads/SilyNoMeta/rtx-encore-hub/total?style=for-the-badge&color=2f81f7)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/SilyNoMeta)
 
 [![Windows 10 和 11，x64](https://img.shields.io/badge/平台-Windows_10_%C2%B7_11_x64-8ab4f8?style=flat-square&labelColor=171c22)](#快速开始)
 [![英语、法语和中文界面](https://img.shields.io/badge/界面-EN_%C2%B7_FR_%C2%B7_ZH-c4b5fd?style=flat-square&labelColor=171c22)](#快速开始)
@@ -20,6 +21,8 @@
 [![下载适用于 Windows x64 的最新版本](assets/download.zh-CN.svg)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 
 [网站](https://encore.nometa.fr/zh/) · [用户指南](docs/USER-GUIDE.zh-CN.md) · [所有版本](https://github.com/SilyNoMeta/rtx-encore-hub/releases) · [报告问题](https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose) · **[English](README.md)** · **[Français](README.fr.md)**
+
+<sub>免费，利用业余时间开发。如果它对您有帮助，欢迎<a href="https://github.com/sponsors/SilyNoMeta">在 GitHub Sponsors 上支持本项目</a> ❤</sub>
 
 </div>
 

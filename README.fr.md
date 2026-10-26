@@ -13,6 +13,7 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 
 [![Dernière version](https://img.shields.io/github/v/release/SilyNoMeta/rtx-encore-hub?include_prereleases&style=for-the-badge&label=Version&color=76b900)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 [![Téléchargements](https://img.shields.io/github/downloads/SilyNoMeta/rtx-encore-hub/total?style=for-the-badge&label=T%C3%A9l%C3%A9chargements&color=2f81f7)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/SilyNoMeta)
 
 [![Windows 10 et 11, x64](https://img.shields.io/badge/plateforme-Windows_10_%C2%B7_11_x64-8ab4f8?style=flat-square&labelColor=171c22)](#bien-démarrer)
 [![Interface anglais, français et chinois](https://img.shields.io/badge/interface-EN_%C2%B7_FR_%C2%B7_ZH-c4b5fd?style=flat-square&labelColor=171c22)](#bien-démarrer)
@@ -20,6 +21,8 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 [![Télécharger la dernière version pour Windows x64](assets/download.fr.svg)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 
 [Site](https://encore.nometa.fr/fr/) · [Guide d'utilisation](docs/USER-GUIDE.fr.md) · [Toutes les versions](https://github.com/SilyNoMeta/rtx-encore-hub/releases) · [Signaler un problème](https://github.com/SilyNoMeta/rtx-encore-hub/issues/new/choose) · **[English](README.md)** · **[简体中文](README.zh-CN.md)**
+
+<sub>Gratuit, développé sur du temps personnel. S'il vous est utile, vous pouvez <a href="https://github.com/sponsors/SilyNoMeta">soutenir le projet sur GitHub Sponsors</a> ❤</sub>
 
 </div>
 
