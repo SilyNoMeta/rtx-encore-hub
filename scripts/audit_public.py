@@ -14,6 +14,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 # Run this copy from a prepared public checkout (copied as scripts/audit_public.py).
 ALLOWED = {
+    "docs/notes/1.4.2.md", "docs/notes/1.4.2.fr.md", "docs/notes/1.4.2.zh-CN.md",
     "docs/notes/1.4.1.md", "docs/notes/1.4.1.fr.md", "docs/notes/1.4.1.zh-CN.md",
     "docs/notes/1.4.0.md", "docs/notes/1.4.0.fr.md", "docs/notes/1.4.0.zh-CN.md",
     "docs/notes/1.3.1.md", "docs/notes/1.3.1.fr.md", "docs/notes/1.3.1.zh-CN.md",

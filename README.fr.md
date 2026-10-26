@@ -29,9 +29,9 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 > [!NOTE]
 > **Windows x64.** Ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`, ou `RTX-Encore-Hub-Portable-<version>.zip`, qui n'installe rien. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.
 
-## Hub 1.4.1 : installation Intel et correctifs ZZZ
+## Hub 1.4.2 : détection des jeux et destinations d’installation
 
-**Nouveau en 1.4.1 :** installation des composants Intel aux emplacements natifs et proxy par défaut corrigé pour Zenless Zone Zero. [Notes de version](docs/notes/1.4.1.fr.md).
+**Nouveau en 1.4.2 :** détection corrigée de Where Winds Meet et confirmation des destinations d’installation incertaines. [Notes de version](docs/notes/1.4.2.fr.md).
 
 Installez et mettez à jour RTX Encore, gardez ses runtimes cohérents et gérez vos jeux depuis une bibliothèque unique. Le Hub et le mod ont des publications distinctes.
 
@@ -48,7 +48,7 @@ Installez et mettez à jour RTX Encore, gardez ses runtimes cohérents et gérez
 
 **Intel XeSS / XeFG restent très expérimentaux.** Leur compatibilité dépend du mod, du jeu, de l’API graphique et des runtimes. Signalez les problèmes avec une archive de diagnostic relue ; la présence des fichiers ou un multiplicateur demandé ne prouvent pas le rendu effectif.
 
-[Hub 1.4.1](docs/notes/1.4.1.fr.md) · [RTX Encore 1.4.3](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.3)
+[Hub 1.4.2](docs/notes/1.4.2.fr.md) · [RTX Encore 1.4.4](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.4)
 
 ![La bibliothèque du Hub, avec les jaquettes, l'état de chaque installation et le bandeau des mises à jour](screenshots/library.fr.png)
 

@@ -29,9 +29,9 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 > [!NOTE]
 > **Windows x64.** Open the [releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) and download `RTX-Encore-Hub-Setup-<version>.exe`, or `RTX-Encore-Hub-Portable-<version>.zip`, which installs nothing. The installer is not code-signed yet, so Windows may show a SmartScreen warning the first time; each release gives the SHA-256 of its installer. The Hub and the RTX Encore mod have separate releases.
 
-## Hub 1.4.1: Intel installation and ZZZ fixes
+## Hub 1.4.2: game detection and installation destinations
 
-**New in 1.4.1:** safer Intel runtime installation at native game locations and a corrected default proxy for Zenless Zone Zero. [Release notes](docs/notes/1.4.1.md).
+**New in 1.4.2:** correct game detection for Where Winds Meet and explicit confirmation of uncertain installation destinations. [Release notes](docs/notes/1.4.2.md).
 
 Install and update RTX Encore, keep its runtimes matched, and manage your games from one library. The Hub and the mod have separate releases.
 
@@ -48,7 +48,7 @@ Install and update RTX Encore, keep its runtimes matched, and manage your games 
 
 **Intel XeSS / XeFG remain very experimental.** Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering.
 
-[Hub 1.4.1](docs/notes/1.4.1.md) · [RTX Encore 1.4.3](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.3)
+[Hub 1.4.2](docs/notes/1.4.2.md) · [RTX Encore 1.4.4](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.4)
 
 ![The Hub's game library, with cover art, the state of each install and the update banner](screenshots/library.png)
 
