@@ -197,3 +197,6 @@ Le **NR fovéal** (expérimental, désactivé par défaut) fait travailler le Ne
 **Smooth Motion sur RTX 20** demande le pilote 621.01 et un jeu DirectX 12. Sur une carte RTX 20 détectée, choisissez **V1 (test 1)**, le défaut, ou **V2 (test 2)**, comparez les deux dans la même scène et relancez le jeu après chaque changement. Le choix est masqué sur les autres cartes et n'active pas Smooth Motion.
 
 RTX Encore 1.3.0 a retiré OpenNR et le panneau Cyber Engine Tweaks : le Hub n'affiche plus leurs réglages. Le Neural Rendering NVIDIA reste disponible.
+
+
+**Smooth Motion natif sur RTX 40/50** exige RTX Encore 1.4.5 ou ultérieur et un pilote pris en charge. Activez les réglages Smooth Motion, choisissez l’API réelle du jeu et redémarrez. La détection statique n’est pas une preuve du renderer actif. Le compteur FPS 2x du mod est une estimation, pas un comptage des images interpolées.

@@ -198,3 +198,6 @@ Hub 将默认选择的 NVIDIA 下载保存在自身数据目录中，并复用�
 **RTX 20 的 Smooth Motion** 需要 621.01 驱动和 DirectX 12 游戏。在检测到的 RTX 20 显卡上，选择 **V1（测试版 1）**（默认）或 **V2（测试版 2）**，在同一场景比较两者，每次更改后重启游戏。其他显卡不显示此选项，且该选项不会开启 Smooth Motion。
 
 RTX Encore 1.3.0 已移除 OpenNR 和 Cyber Engine Tweaks 面板，Hub 不再显示相关设置。NVIDIA Neural Rendering 仍可使用。
+
+
+**RTX 40/50 原生 Smooth Motion** 需要 RTX Encore 1.4.5 或更高版本及受支持驱动。启用 Smooth Motion 设置，选择实际图形 API 并重启。静态检测建议不证明当前实际渲染 API。模组的 2x FPS 计数是估算，不统计插值帧。

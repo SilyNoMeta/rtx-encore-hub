@@ -29,9 +29,9 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 > [!NOTE]
 > **Windows x64.** Open the [releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) and download `RTX-Encore-Hub-Setup-<version>.exe`, or `RTX-Encore-Hub-Portable-<version>.zip`, which installs nothing. The installer is not code-signed yet, so Windows may show a SmartScreen warning the first time; each release gives the SHA-256 of its installer. The Hub and the RTX Encore mod have separate releases.
 
-## Hub 1.4.3: downloads, storage and saved game data
+## Hub 1.4.4: native Smooth Motion and corrective changes
 
-**New in 1.4.3:** interrupted-download recovery, compressed runtime caches, Windows game-data encoding compatibility and large-installation fixes. [Release notes](docs/notes/1.4.3.md).
+**New in 1.4.4:** native Smooth Motion controls on RTX 40/50 with mod 1.4.5, improved graphics API detection, shared backup recovery, downloads and diagnostics. [Release notes](docs/notes/1.4.4.md).
 
 Install and update RTX Encore, keep its runtimes matched, and manage your games from one library. The Hub and the mod have separate releases.
 
@@ -48,7 +48,7 @@ Install and update RTX Encore, keep its runtimes matched, and manage your games 
 
 **Intel XeSS / XeFG remain very experimental.** Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering.
 
-[Hub 1.4.3](docs/notes/1.4.3.md) · [RTX Encore 1.4.4](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.4)
+[Hub 1.4.4](docs/notes/1.4.4.md) · [RTX Encore 1.4.5](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.5)
 
 ![The Hub's game library, with cover art, the state of each install and the update banner](screenshots/library.png)
 

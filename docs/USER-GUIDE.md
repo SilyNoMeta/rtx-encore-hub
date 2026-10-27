@@ -197,3 +197,6 @@ The game settings include **Sharpening after reconstruction**. Off is the defaul
 **Smooth Motion on RTX 20** needs driver 621.01 and a DirectX 12 game. On a detected RTX 20 card, choose **V1 (test 1)**, the default, or **V2 (test 2)**, compare both in the same scene, and restart the game after each change. The choice is hidden on other cards and does not turn Smooth Motion on.
 
 RTX Encore 1.3.0 removed OpenNR and the Cyber Engine Tweaks panel, so the Hub no longer shows their settings. NVIDIA Neural Rendering stays available.
+
+
+**Native Smooth Motion on RTX 40/50** requires RTX Encore 1.4.5 or newer and a supported driver. Use the Smooth Motion settings, choose the game’s actual graphics API and restart. API detection is a static recommendation, not proof of the active renderer. The mod’s 2x FPS counter is an estimate; it does not count interpolated frames.
