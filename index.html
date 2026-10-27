@@ -30,23 +30,23 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.4.4 · Hub 1.4.3</span>
+<span class="badge">RTX Encore 1.4.5 · Hub 1.4.4</span>
 <h1>Frame generation and Neural Rendering on <em>your</em> RTX&nbsp;20, 30 and 40.</h1>
 <p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> brings DLSS frame generation up to X6, Neural Rendering and faster DLSS to RTX 20, 30 and 40. Version 1.4 adds experimental Pre-SR, per-pass model choices and a capture comparison lab. <strong>RTX Encore Hub</strong> installs the mod and its runtimes, keeps games up to date and restores their original files.</p>
 <p class="sub">Intel XeSS / XeFG, Pre-SR, foveated NR and Smooth Motion on RTX 20 remain experimental. Compatibility depends on the game, graphics API and runtimes. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Report an issue</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.4.3">Download Hub 1.4.3</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.4">Download RTX Encore 1.4.4</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.4.4">Download Hub 1.4.4</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.5">Download RTX Encore 1.4.5</a></div>
 <p class="under">Windows 10 and 11, x64 · English, French and Simplified Chinese · installs without administrator rights</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>Hub 1.4.3: downloads, storage and game data</h2>
-<p class="sub">Local automated tests cover download interruptions, compression, encoded saved data and restoration. Real VPN switching and the reporters’ exact cases remain unconfirmed with the final Hub binaries. RTX Encore 1.4.4 remains a separate mod release.</p>
-<div class="news-grid"><div class="card"><h3>Recover interrupted downloads</h3><p>Installation downloads reconnect after network or proxy interruptions. Existing bytes are reused when integrity checks allow it; retries are bounded and cancellable. Partial downloads do not survive closing the Hub.</p></div>
-<div class="card"><h3>Smaller runtime cache</h3><p>Compatible NTFS volumes use transparent Windows compression for NVIDIA, Intel and Streamline DLLs. Existing cached versions remain available; unsupported files keep their ordinary form.</p></div>
-<div class="card"><h3>Read Windows game data</h3><p>Accepts supported UTF-8 and UTF-16 game-data encodings without rewriting the originals. Invalid files stay protected and receive clearer diagnostics.</p></div>
-<div class="card"><h3>Large game folders</h3><p>Intel runtime discovery no longer stops on very large or deeply nested game folders. Linked directories remain excluded.</p></div>
-<div class="card"><h3>Avatar: Frontiers of Pandora</h3><p>Fixes colored NR grain in very dark HDR scenes. The NR effect is reduced in the darkest shadows to preserve the original image.</p></div>
-<div class="card"><h3>Where Winds Meet: Neural Rendering</h3><p>NR starts with the game’s original older shader compiler. Keep the original game files; renaming or replacing the compiler is not required.</p></div>
+<h2>RTX Encore 1.4.5 and Hub 1.4.4</h2>
+<p class="sub">The menu and native Smooth Motion preparation were checked in Men of War II on an RTX 4090/621.01 test build. This does not measure interpolation, image quality or latency. RTX 50 hardware, native Vulkan and final binaries have no corresponding in-game qualification. Backup, download and settings checks use local automated tests.</p>
+<div class="news-grid"><div class="card"><h3>Native Smooth Motion on RTX 40/50</h3><p>Use the existing switch with mod 1.4.5 and a supported driver. Choose the game’s actual graphics API and restart.</p></div>
+<div class="card"><h3>A simple 2x estimate</h3><p>The Smooth Motion FPS counter is an estimate, not a measurement of displayed or interpolated frames.</p></div>
+<div class="card"><h3>DirectX 11 menu</h3><p>Fixes the integrated menu not appearing in some DirectX 11 games, including Men of War II.</p></div>
+<div class="card"><h3>Live presets and HUD recovery</h3><p>Improves graphics resource handling, temporary HUD allocation failures and pending controls. Some DirectX 12 setups require a restart after four live preset replacements.</p></div>
+<div class="card"><h3>Shared backups and plans</h3><p>Hub 1.4.4 improves recovery and migration, preserves missing-original recovery information and requires uncertain executable choices to be confirmed before game writes.</p></div>
+<div class="card"><h3>Downloads, cache and diagnostics</h3><p>Checks completed and resumed downloads, coordinates readers with compression, reports incomplete Intel scans and redacts more absolute paths in exported logs.</p></div>
 </div>
 </div></section>
 
@@ -89,9 +89,9 @@
 <div class="hub">
 <figure><div class="shot"><img src="assets/library.jpg" alt="The Hub&#x27;s game library, with the state of each install and the update banner" width="1440" height="900" loading="lazy"></div><figcaption>Real application capture, on a demonstration library of stand-in game folders.</figcaption></figure>
 <ol class="points">
-<li><h3>Recover interrupted downloads</h3><p>Installation downloads reconnect after network or proxy interruptions. Existing bytes are reused when integrity checks allow it; retries are bounded and cancellable. Partial downloads do not survive closing the Hub.</p></li>
-<li><h3>Smaller runtime cache</h3><p>Compatible NTFS volumes use transparent Windows compression for NVIDIA, Intel and Streamline DLLs. Existing cached versions remain available; unsupported files keep their ordinary form.</p></li>
-<li><h3>Read Windows game data</h3><p>Accepts supported UTF-8 and UTF-16 game-data encodings without rewriting the originals. Invalid files stay protected and receive clearer diagnostics.</p></li>
+<li><h3>Native Smooth Motion on RTX 40/50</h3><p>Use the existing switch with mod 1.4.5 and a supported driver. Choose the game’s actual graphics API and restart.</p></li>
+<li><h3>Shared backups and plans</h3><p>Hub 1.4.4 improves recovery and migration, preserves missing-original recovery information and requires uncertain executable choices to be confirmed before game writes.</p></li>
+<li><h3>Downloads, cache and diagnostics</h3><p>Checks completed and resumed downloads, coordinates readers with compression, reports incomplete Intel scans and redacts more absolute paths in exported logs.</p></li>
 <li><h3>Safer updates and restoration</h3><p>Matched-runtime protections, shared verified backups, restoration and exportable Hub logs remain available.</p></li>
 </ol>
 </div>
@@ -140,7 +140,7 @@
 
 <div class="wrap cta">
 <h2>Ready to try it?</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.4.3">Download Hub 1.4.3</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.4.4">Download Hub 1.4.4</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
 </div>
 </main>
 
