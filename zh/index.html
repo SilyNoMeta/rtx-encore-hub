@@ -30,23 +30,23 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.4.5 · Hub 1.4.4</span>
+<span class="badge">RTX Encore 1.4.6 · Hub 1.4.6</span>
 <h1>在<em>您的</em> RTX&nbsp;20、30 或 40 上启用帧生成与 Neural Rendering。</h1>
 <p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> 为 RTX 20、30、40 带来最高 X6 的 DLSS 帧生成、Neural Rendering 和更快的 DLSS。1.4 新增实验性 Pre-SR、每轮模型选择及截图比较实验室。<strong>RTX Encore Hub</strong> 安装模组及运行库、更新游戏并恢复原始文件。</p>
 <p class="sub">Intel XeSS / XeFG、Pre-SR、中央优先 NR 和 RTX 20 Smooth Motion 仍属实验性，兼容性取决于游戏、图形 API 及运行库。 <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">报告问题</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.4.4">下载 Hub 1.4.4</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.5">下载 RTX Encore 1.4.5</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.4.6">下载 Hub 1.4.6</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.6">下载 RTX Encore 1.4.6</a></div>
 <p class="under">Windows 10 和 11，x64 · 英语、法语和简体中文 · 安装无需管理员权限</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>RTX Encore 1.4.5 与 Hub 1.4.4</h2>
+<h2>RTX Encore 1.4.6 与 Hub 1.4.6</h2>
 <p class="sub">维护者已使用 RTX 4090/621.01 测试版本在战争之人 II 中检查菜单及原生 Smooth Motion 准备。这不测量插值、画质或延迟。RTX 50 实体硬件、原生 Vulkan 及最终文件尚无对应游戏内验证。备份、下载及设置已有本地自动化测试。</p>
-<div class="news-grid"><div class="card"><h3>RTX 40/50 原生 Smooth Motion</h3><p>使用模组 1.4.5、受支持驱动和现有开关。选择游戏实际图形 API 并重启。</p></div>
-<div class="card"><h3>简单的 2x 估算</h3><p>Smooth Motion FPS 计数是估算，不是实际显示或插值帧测量。</p></div>
-<div class="card"><h3>DirectX 11 菜单</h3><p>修复部分 DirectX 11 游戏中内置菜单不显示的问题，包括战争之人 II。</p></div>
-<div class="card"><h3>实时预设与 HUD 恢复</h3><p>改进资源处理、暂时失败的 HUD 分配及待处理控制。部分 DirectX 12 配置在四次实时预设替换后需要重启。</p></div>
-<div class="card"><h3>共享备份与计划</h3><p>Hub 1.4.4 改进恢复及迁移，在原件缺失时保留恢复信息，并在写入前要求确认不确定的程序。</p></div>
-<div class="card"><h3>下载、缓存与诊断</h3><p>检查下载及恢复，协调缓存读取与压缩，报告不完整的 Intel 扫描，并隐藏导出日志中更多绝对路径。</p></div>
+<div class="news-grid"><div class="card"><h3>深层目录中的 Intel 安装</h3><p>Hub 1.4.6 修复 inZOI 等游戏深层内容目录中的安装、修复与重新安装。原生 Intel 文件仍会备份并可还原。</p></div>
+<div class="card"><h3>DLSS-FG 引擎选择</h3><p>配合模组 1.4.6，可为兼容的原生 Intel FG 游戏选择 NVIDIA DLSS-FG。选择“游戏”保留原生引擎；切换 FG 引擎后请重启。</p></div>
+<div class="card"><h3>Reflex 控制</h3><p>配合模组 1.4.6，选择“游戏”、On 或 On+Boost，并显示渲染帧延迟。不保证改善延迟。</p></div>
+<div class="card"><h3>社区配置</h3><p>共享模板包含 FG、Reflex 和延迟显示选项。现有配置仍兼容。</p></div>
+<div class="card"><h3>RTX 40/50 原生 Smooth Motion</h3><p>需要受支持驱动、游戏实际图形 API 和重启。2× FPS 数值仍为估算。</p></div>
+<div class="card"><h3>经过校验的安装与恢复</h3><p>完整性校验、原生文件备份及还原保护仍为必要条件。Intel XeSS / XeFG 仍属实验功能。</p></div>
 </div>
 </div></section>
 
@@ -89,10 +89,10 @@
 <div class="hub">
 <figure><div class="shot"><img src="../assets/library.zh.jpg" alt="Hub 的游戏库，包含每个安装的状态和更新横幅" width="1440" height="900" loading="lazy"></div><figcaption>真实应用截图，使用由替身游戏文件夹组成的演示游戏库。</figcaption></figure>
 <ol class="points">
-<li><h3>RTX 40/50 原生 Smooth Motion</h3><p>使用模组 1.4.5、受支持驱动和现有开关。选择游戏实际图形 API 并重启。</p></li>
-<li><h3>共享备份与计划</h3><p>Hub 1.4.4 改进恢复及迁移，在原件缺失时保留恢复信息，并在写入前要求确认不确定的程序。</p></li>
-<li><h3>下载、缓存与诊断</h3><p>检查下载及恢复，协调缓存读取与压缩，报告不完整的 Intel 扫描，并隐藏导出日志中更多绝对路径。</p></li>
-<li><h3>更新与恢复</h3><p>继续提供运行库兼容保护、共享验证备份、恢复及 Hub 日志导出。</p></li>
+<li><h3>深层目录中的 Intel 安装</h3><p>Hub 1.4.6 修复 inZOI 等游戏深层内容目录中的安装、修复与重新安装。原生 Intel 文件仍会备份并可还原。</p></li>
+<li><h3>DLSS-FG 引擎选择</h3><p>配合模组 1.4.6，可为兼容的原生 Intel FG 游戏选择 NVIDIA DLSS-FG。选择“游戏”保留原生引擎；切换 FG 引擎后请重启。</p></li>
+<li><h3>Reflex 控制</h3><p>配合模组 1.4.6，选择“游戏”、On 或 On+Boost，并显示渲染帧延迟。不保证改善延迟。</p></li>
+<li><h3>社区配置</h3><p>共享模板包含 FG、Reflex 和延迟显示选项。现有配置仍兼容。</p></li>
 </ol>
 </div>
 <div class="more">
@@ -140,7 +140,7 @@
 
 <div class="wrap cta">
 <h2>准备好试试了吗？</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.4.4">下载 Hub 1.4.4</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.4.6">下载 Hub 1.4.6</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
 </div>
 </main>
 
