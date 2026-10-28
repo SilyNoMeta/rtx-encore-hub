@@ -29,9 +29,9 @@
 > [!NOTE]
 > **Windows x64。** 请打开[发布页面](https://github.com/SilyNoMeta/rtx-encore-hub/releases)并下载 `RTX-Encore-Hub-Setup-<version>.exe`，或无需安装的 `RTX-Encore-Hub-Portable-<version>.zip`。安装程序尚未进行代码签名，因此首次运行时 Windows 可能显示 SmartScreen 警告；每个发布版本都会给出安装程序的 SHA-256。Hub 与 RTX Encore 模组分别发布。
 
-## Hub 1.4.5：FG 与 Reflex 设置
+## Hub 1.4.6：深层目录中的 Intel 安装
 
-**Hub 1.4.5：**DLSS-FG 引擎选择、Reflex 控件及同步的社区配置模板。[版本说明](docs/notes/1.4.5.zh-CN.md)。
+**Hub 1.4.6：**修复深层游戏目录中的 Intel 安装、修复和重新安装。[版本说明](docs/notes/1.4.6.zh-CN.md)。
 
 从统一游戏库安装和更新 RTX Encore，管理配套运行库与游戏。Hub 与模组分别发布。
 
@@ -48,7 +48,7 @@
 
 **Intel XeSS / XeFG 仍高度实验性。** 兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。
 
-[Hub 1.4.5](docs/notes/1.4.5.zh-CN.md) · [RTX Encore 1.4.6](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.6)
+[Hub 1.4.6](docs/notes/1.4.6.zh-CN.md) · [RTX Encore 1.4.6](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.6)
 
 ![Hub 的游戏库，包含封面、每个安装的状态和更新横幅](screenshots/library.zh.png)
 
