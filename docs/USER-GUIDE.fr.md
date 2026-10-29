@@ -104,7 +104,9 @@ Cette vérification dit qu'un jeu démarre et que le mod s'y charge. Elle ne jug
 
 **Sauvegardes de ce jeu**, sur la page Santé, liste chaque opération du Hub, datée. Vous pouvez revenir à l'état d'avant une opération, ou d'avant toute intervention du Hub (**Restaurer le jeu**).
 
-Un fichier que le jeu, son lanceur ou un autre outil a changé depuis n'est jamais écrasé : il est laissé tel quel et signalé. Le fichier de réglages `rtx-encore.jsonc` est le vôtre : s'il a changé depuis, le Hub vous demande avant de le remettre.
+Un fichier que le jeu, son lanceur ou un autre outil a changé depuis n'est jamais écrasé : il est laissé tel quel et signalé. Restaurer le jeu avant toute intervention du Hub conserve un `rtx-encore.jsonc` modifié ; revenir avant une opération précise demande confirmation avant de remplacer les réglages modifiés.
+
+La désinstallation retire les fichiers du mod et des runtimes suivis par le Hub et remet les originaux éventuels. Les dossiers privés `rtx-encore-runtimes/intel` et `rtx-encore-runtimes` sont supprimés s'ils sont vides. Les journaux dans `rtx-encore-logs` et les réglages modifiés sont conservés ; leur présence ne signifie pas que le mod est encore installé. Vous pouvez supprimer vous-même ces journaux et réglages si vous n'en avez plus besoin. Les dossiers de runtimes contenant d'autres fichiers sont conservés.
 
 Une copie du mod posée à la main est reconnue, mais le Hub n'a de sauvegarde d'origine que pour ce qu'il a lui-même écrit.
 

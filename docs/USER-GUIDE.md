@@ -104,7 +104,9 @@ This verification says a game starts and the mod loads in it. It judges neither 
 
 **Backups of this game**, on the Health page, lists every operation of the Hub, dated. You can go back to the state of before one operation, or of before anything the Hub did (**Restore game**).
 
-A file the game, its launcher or another tool changed since is never overwritten: it is left as it is and reported. The settings file `rtx-encore.jsonc` is yours: if it changed since, the Hub asks before putting it back.
+A file the game, its launcher or another tool changed since is never overwritten: it is left as it is and reported. Restoring the game to before any Hub intervention keeps a modified `rtx-encore.jsonc`; restoring before a specific operation asks before replacing modified settings.
+
+Uninstalling removes the tracked mod and runtime files and restores any originals. Empty private `rtx-encore-runtimes/intel` and `rtx-encore-runtimes` folders are removed. Session logs in `rtx-encore-logs` and modified settings are kept; their presence does not mean the mod is still installed. You can delete these logs and settings yourself if you no longer need them. Runtime folders containing other files are kept.
 
 A copy of the mod put there by hand is recognized, but the Hub only has an original backup for what it wrote itself.
 
