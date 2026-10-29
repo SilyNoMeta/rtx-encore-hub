@@ -6,6 +6,15 @@
 
 RTX Encore Hub installs [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) in your games, keeps the mod and the NVIDIA DLLs up to date, checks that a game starts well with it, and can always go back. The interface follows the language of Windows: French, English or Simplified Chinese; other languages use English. This guide uses the English labels of the application.
 
+## XeSS and XeFG Tensor Cores (1.5.0)
+
+With **RTX Encore 1.5.0 or later**, choose the XeSS reconstruction engine to use **XeSS Tensor Cores**, or the XeFG engine to use **XeFG Tensor Cores**. The switches are independent, experimental and off by default. Initial qualification is **RTX 4090, NVIDIA 621.01, DirectX 12 and the Intel runtimes supplied by Hub**. Other configurations are not implied to be supported.
+
+Both switches apply live: XeSS at its next execution, XeFG as command recordings renew. Qualified fixed XeFG factors X2–X6 can also change live within initialized capacity. Close the game when installing the new mod; changing the FG engine still needs a restart. Refused preparation retains the standard Intel path; a Tensor execution fault needs a restart. Community profiles preserve both choices, but importing them does not qualify a different GPU or driver.
+
+Earlier TW3 XeSS measurements found about 30.7% less XeSS GPU time and 2.8–3.2% more rendered-source FPS in one scene; later final-pass changes have deterministic replay validation rather than a new in-game comparison. No general XeFG FPS or latency gain is established. [Full conditions and measurements](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/INTEL-ENGINES.md).
+
+
 ## Using 1.2.2
 
 **XeSS / XeFG: VERY EXPERIMENTAL.** Getting this integration working was a particularly difficult and frustrating part of development :) Expect bugs, crashes, visual artifacts and differences between games and graphics APIs. Please report problems: in RTX Encore Hub, open the game’s **Health** page, choose **Prepare a diagnostic**, review the archive for personal information, then attach it to an [RTX Encore issue](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose). Include your engine choices, graphics API and requested multiplier. The Hub does not upload the archive for you.

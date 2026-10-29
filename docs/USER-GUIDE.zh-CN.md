@@ -6,6 +6,15 @@
 
 RTX Encore Hub 把 [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) 安装到您的游戏中，让模组和 NVIDIA DLL 保持最新，检查游戏装上模组后能否正常启动，并且随时可以还原。界面跟随 Windows 的语言：法语、英语或简体中文；其他语言使用英语。本指南使用应用的中文标签。
 
+## XeSS 与 XeFG Tensor Core（1.5.0）
+
+配合 **RTX Encore 1.5.0 或更新版本**，为 **XeSS Tensor Core** 选择 XeSS 重建，为 **XeFG Tensor Core** 选择 XeFG 引擎。两个开关相互独立、属实验性质且默认关闭。初始验证范围为 **RTX 4090、NVIDIA 621.01、DirectX 12 和 Hub 提供的 Intel 运行库**，不代表其他配置也支持。
+
+两开关均可即时生效：XeSS 在下次执行时，XeFG 在命令重新记录时。支持的固定 XeFG X2–X6 也可在初始化容量内即时切换。安装新模组前请关闭游戏；切换 FG 引擎仍需重启。准备未通过时保留标准 Intel 路径；Tensor 执行故障后须重启。社区配置保留两个选项，但导入不会使其他显卡或驱动获得支持。
+
+较早巫师 3 场景测量显示 XeSS GPU 时间约减少 30.7%，渲染源帧 FPS 约提高 2.8–3.2%；后续最终重建更改仅有确定性重放验证，没有新的游戏内对比。尚未证明 XeFG 的普遍 FPS 或延迟收益。[完整条件与测量](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/INTEL-ENGINES.zh-CN.md)。
+
+
 ## 使用 1.2.2
 
 **XeSS / XeFG：高度实验性。** 这部分集成的开发过程非常艰难，也相当折腾 :) 请预期可能出现错误、崩溃、画面伪影，以及不同游戏和图形 API 之间的行为差异。欢迎报告问题：在 RTX Encore Hub 中打开游戏的 **健康检查** 页面，选择 **生成诊断包**，检查并移除个人信息后，将诊断压缩包附加到 [RTX Encore issue](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose)。请注明选择的引擎、图形 API 和请求的倍率。Hub 不会自动上传该压缩包。

@@ -6,6 +6,15 @@
 
 RTX Encore Hub installe [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) dans vos jeux, tient à jour le mod et les DLL NVIDIA, vérifie qu'un jeu démarre bien avec, et sait toujours revenir en arrière. L'interface suit la langue de Windows : français, anglais ou chinois simplifié ; les autres langues utilisent l'anglais. Ce guide reprend les libellés français de l'application.
 
+## XeSS et XeFG Tensor Cores (1.5.0)
+
+Avec **RTX Encore 1.5.0 ou ultérieur**, choisissez le moteur de reconstruction XeSS pour **XeSS Tensor Cores**, ou le moteur XeFG pour **XeFG Tensor Cores**. Les interrupteurs sont indépendants, expérimentaux et désactivés par défaut. Qualification initiale : **RTX 4090, NVIDIA 621.01, DirectX 12 et runtimes Intel fournis par le Hub**. Cela ne qualifie pas les autres configurations.
+
+Les deux commandes s’appliquent à chaud : XeSS au prochain calcul, XeFG au renouvellement des commandes. Les facteurs XeFG fixes X2–X6 qualifiés se changent aussi à chaud dans la capacité initialisée. Fermez le jeu pour installer le nouveau mod ; changer de moteur FG demande toujours un redémarrage. Une préparation refusée conserve le chemin Intel classique ; une erreur d’exécution Tensor exige un redémarrage. Les profils communautaires conservent les deux choix, mais leur importation ne qualifie pas une autre carte ou un autre pilote.
+
+Des mesures XeSS TW3 antérieures indiquent environ −30,7 % de temps GPU XeSS et +2,8 à +3,2 % de FPS source rendus dans une scène ; les changements finaux ultérieurs sont validés par replays déterministes, sans nouvelle comparaison en jeu. Aucun gain général de FPS ou de latence XeFG n’est établi. [Conditions et mesures complètes](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/INTEL-ENGINES.fr.md).
+
+
 ## Utiliser la 1.2.2
 
 **XeSS / XeFG : TRÈS EXPÉRIMENTAL.** Cette intégration a été particulièrement pénible à mettre au point :) Attendez-vous à des bugs, crashs, artefacts et différences entre jeux et API graphiques. N’hésitez pas à remonter les problèmes : dans RTX Encore Hub, ouvrez la page **Santé** du jeu, choisissez **Préparer un diagnostic**, relisez l’archive pour retirer les informations personnelles, puis joignez-la à une [issue RTX Encore](https://github.com/SilyNoMeta/rtx-encore/issues/new/choose). Indiquez les moteurs choisis, l’API graphique et le multiplicateur demandé. Le Hub ne téléverse pas l’archive à votre place.
