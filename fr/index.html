@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RTX Encore Hub : génération d’images et Neural Rendering sur RTX 20, 30 et 40</title>
-<meta name="description" content="RTX Encore apporte la génération d&#x27;images DLSS jusqu&#x27;à X6, le Neural Rendering et un DLSS plus rapide aux GeForce RTX 20, 30 et 40. RTX Encore Hub l&#x27;installe dans vos jeux, le tient à jour et peut toujours remettre un jeu comme il était.">
+<title>RTX Encore 1.5.0 : XeSS et XeFG sur les Tensor Cores NVIDIA</title>
+<meta name="description" content="RTX Encore 1.5.0 : XeSS et XeFG sur les Tensor Cores NVIDIA">
 <link rel="canonical" href="https://encore.nometa.fr/fr/">
 <link rel="alternate" hreflang="en" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="fr" href="https://encore.nometa.fr/fr/">
@@ -12,8 +12,8 @@
 <link rel="icon" type="image/png" href="../assets/logo.png">
 <link rel="preload" href="../assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
-<meta property="og:title" content="RTX Encore Hub : génération d’images et Neural Rendering sur RTX 20, 30 et 40">
-<meta property="og:description" content="RTX Encore apporte la génération d&#x27;images DLSS jusqu&#x27;à X6, le Neural Rendering et un DLSS plus rapide aux GeForce RTX 20, 30 et 40. RTX Encore Hub l&#x27;installe dans vos jeux, le tient à jour et peut toujours remettre un jeu comme il était.">
+<meta property="og:title" content="RTX Encore 1.5.0 : XeSS et XeFG sur les Tensor Cores NVIDIA">
+<meta property="og:description" content="RTX Encore 1.5.0 : XeSS et XeFG sur les Tensor Cores NVIDIA">
 <meta property="og:url" content="https://encore.nometa.fr/fr/">
 <meta property="og:image" content="https://encore.nometa.fr/assets/library.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -30,33 +30,33 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.4.7 · Hub 1.4.7</span>
-<h1>La génération d'images et le Neural Rendering sur <em>votre</em> RTX&nbsp;20, 30 ou 40.</h1>
-<p class="lead"><a href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore</a> apporte la génération d’images DLSS jusqu’à X6, le Neural Rendering et un DLSS plus rapide aux RTX 20, 30 et 40. La version 1.4 ajoute Pre-SR expérimental, les modèles par passe et un laboratoire de comparaison des captures. <strong>RTX Encore Hub</strong> installe le mod et ses runtimes, tient les jeux à jour et restaure leurs fichiers originaux.</p>
+<span class="badge">RTX Encore 1.5.0 · Hub 1.5.0</span>
+<h1>XeSS et XeFG.<br>Place aux <em>Tensor Cores</em> NVIDIA.</h1>
+<p class="lead">RTX Encore 1.5.0 ajoute deux options Tensor expérimentales indépendantes : reconstruction XeSS et génération d’images XeFG. <strong>Activez-les à chaud depuis le Hub 1.5.0 ou le menu en jeu.</strong> Désactivées par défaut ; qualification initiale RTX 4090, NVIDIA 621.01, DirectX 12 et runtimes Intel fournis par le Hub.</p>
 <p class="sub">Intel XeSS / XeFG, Pre-SR, le NR fovéal et Smooth Motion sur RTX 20 restent expérimentaux. La compatibilité dépend du jeu, de l’API graphique et des runtimes. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Signaler un problème</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.4.7">Télécharger Hub 1.4.7</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.4.7">Télécharger RTX Encore 1.4.7</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.5.0">Télécharger Hub 1.5.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.0">Télécharger RTX Encore 1.5.0</a></div>
 <p class="under">Windows 10 et 11, x64 · français, anglais et chinois simplifié · s&#x27;installe sans droits d&#x27;administrateur</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>RTX Encore 1.4.7 et Hub 1.4.7</h2>
+<h2>RTX Encore 1.5.0 et Hub 1.5.0</h2>
 <p class="sub">Le menu et la préparation Smooth Motion native ont été vérifiés dans Men of War II sur RTX 4090/621.01 avec un build de test. Cela ne mesure ni interpolation, ni qualité, ni latence. Les RTX 50 physiques, Vulkan natif et les binaires finaux n’ont pas de qualification correspondante en jeu. Sauvegardes, téléchargements et réglages disposent de tests automatisés locaux.</p>
-<div class="news-grid"><div class="card"><h3>Correctif NR de The Witcher 3</h3><p>Le mod 1.4.7 corrige le scintillement persistant des ombres NR après voyage rapide. Le mainteneur a validé un build de test face à la 1.4.6 d’origine ; les binaires finaux n’ont pas de retest distinct en jeu.</p></div>
-<div class="card"><h3>Désinstallation Hub plus propre</h3><p>Le Hub 1.4.7 retire les dossiers privés Intel vides après restauration. Réglages, journaux, originaux restaurés et fichiers étrangers restent protégés.</p></div>
-<div class="card"><h3>Installation Intel dans les dossiers profonds</h3><p>Le Hub 1.4.6 corrige installation, réparation et réinstallation dans les contenus très imbriqués, comme ceux d’inZOI. Les fichiers Intel natifs restent sauvegardés et restaurables.</p></div>
-<div class="card"><h3>Choix du moteur DLSS-FG</h3><p>Avec le mod 1.4.6, choisissez NVIDIA DLSS-FG pour les jeux à FG Intel natif compatibles. Jeu conserve le moteur natif ; redémarrez après un changement de moteur FG.</p></div>
-<div class="card"><h3>Commandes Reflex</h3><p>Avec le mod 1.4.6, choisissez Jeu, On ou On+Boost et l’affichage de latence des images rendues. Aucun gain de latence n’est garanti.</p></div>
-<div class="card"><h3>Profils communautaires</h3><p>Les modèles partagés incluent FG, Reflex et l’affichage de latence. Les profils existants restent compatibles.</p></div>
+<div class="news-grid"><div class="card"><h3>XeSS Tensor Cores</h3><p>Une option indépendante à chaud pour XeSS Super Resolution, avec reconstruction finale optimisée et prise en charge de l’exposition automatique.</p></div>
+<div class="card"><h3>XeFG Tensor Cores</h3><p>Une option indépendante à chaud pour XeFG, avec facteurs fixes X2–X6 dans la capacité initialisée. Changer de moteur FG demande toujours un redémarrage.</p></div>
+<div class="card"><h3>Deux interrupteurs, votre choix</h3><p>Utilisez l’une ou les deux options. Elles restent expérimentales et désactivées par défaut ; le Hub exige le mod 1.5.0.</p></div>
+<div class="card"><h3>Mesure XeSS</h3><p>Test TW3 antérieur : environ −30,7 % de temps GPU XeSS et +2,8 à +3,2 % de FPS source rendus dans une scène. Ce n’est pas +31 % de FPS globaux.</p></div>
+<div class="card"><h3>Configuration initiale qualifiée</h3><p>RTX 4090, pilote 621.01, DirectX 12 et runtimes Intel compatibles fournis par le Hub. Cela ne qualifie pas les autres cartes et API.</p></div>
+<div class="card"><h3>Profils et reprise des mises à jour</h3><p>Les profils communautaires conservent les deux options. Le Hub réessaie les erreurs réseau temporaires, avec tentatives limitées et vérification de signature obligatoire.</p></div>
 </div>
 </div></section>
 
 <section class="band" id="perf"><div class="wrap">
 <div class="stats">
-<div class="stat"><span class="figure">73,8 → 94,9</span><span class="unit">FPS</span><span class="context">Benchmark de Black Myth: Wukong, Neural Rendering en mode Ultra-fast, génération d&#x27;images X3</span></div>
-<div class="stat"><span class="figure">−43 %</span><span class="unit">de temps Neural Rendering</span><span class="context">NR 310.9.16, preset B contre preset A, en 1080p</span></div>
-<div class="stat"><span class="figure">−25 %</span><span class="unit">de temps d&#x27;upscaling</span><span class="context">Fast super resolution avec le preset M, dans Black Myth: Wukong</span></div>
+<div class="stat"><span class="figure">−30,7 %</span><span class="unit">temps GPU XeSS</span><span class="context">Test TW3 antérieur : 1,243 → 0,861 ms, RTX 4090 / 621.01, sortie 4K.</span></div>
+<div class="stat"><span class="figure">+2,8 à +3,2 %</span><span class="unit">FPS source rendus</span><span class="context">Même scène mesurée ; ni images générées ni mesure indépendante des FPS affichés.</span></div>
+<div class="stat"><span class="figure">X2–X6</span><span class="unit">facteurs fixes XeFG à chaud</span><span class="context">Dans la capacité initialisée du chemin qualifié. Expérimental ; aucun gain général de FPS établi.</span></div>
 </div>
-<p class="stats-note">Mesuré sur un RTX 3070 Ti Laptop, souvent avec un seul passage par configuration. Votre gain dépendra de votre carte et du jeu.</p>
+<p class="stats-note">Mesures XeSS sur un build antérieur dans une scène TW3. Les changements finaux ultérieurs sont validés par replays déterministes, sans nouvelle comparaison en jeu. Les binaires finaux 1.5.0 n’ont pas de retest distinct en jeu ; aucun gain général de FPS ou de latence XeFG n’est établi.</p>
 </div></section>
 
 <section id="nr"><div class="wrap">
@@ -89,11 +89,8 @@
 <div class="hub">
 <figure><div class="shot"><img src="../assets/library.fr.jpg" alt="La bibliothèque du Hub, avec l&#x27;état de chaque installation et le bandeau des mises à jour" width="1440" height="900" loading="lazy"></div><figcaption>Capture de l&#x27;application réelle, sur une bibliothèque de démonstration faite de dossiers de jeux factices.</figcaption></figure>
 <ol class="points">
-<li><h3>Désinstallation Hub plus propre</h3><p>Le Hub 1.4.7 retire les dossiers privés Intel vides après restauration. Réglages, journaux, originaux restaurés et fichiers étrangers restent protégés.</p></li>
-<li><h3>Installation Intel dans les dossiers profonds</h3><p>Le Hub 1.4.6 corrige installation, réparation et réinstallation dans les contenus très imbriqués, comme ceux d’inZOI. Les fichiers Intel natifs restent sauvegardés et restaurables.</p></li>
-<li><h3>Choix du moteur DLSS-FG</h3><p>Avec le mod 1.4.6, choisissez NVIDIA DLSS-FG pour les jeux à FG Intel natif compatibles. Jeu conserve le moteur natif ; redémarrez après un changement de moteur FG.</p></li>
-<li><h3>Commandes Reflex</h3><p>Avec le mod 1.4.6, choisissez Jeu, On ou On+Boost et l’affichage de latence des images rendues. Aucun gain de latence n’est garanti.</p></li>
-<li><h3>Profils communautaires</h3><p>Les modèles partagés incluent FG, Reflex et l’affichage de latence. Les profils existants restent compatibles.</p></li>
+<li><h3>Deux interrupteurs, votre choix</h3><p>Utilisez l’une ou les deux options. Elles restent expérimentales et désactivées par défaut ; le Hub exige le mod 1.5.0.</p></li>
+<li><h3>Profils et reprise des mises à jour</h3><p>Les profils communautaires conservent les deux options. Le Hub réessaie les erreurs réseau temporaires, avec tentatives limitées et vérification de signature obligatoire.</p></li>
 </ol>
 </div>
 <div class="more">
@@ -141,7 +138,7 @@
 
 <div class="wrap cta">
 <h2>Prêt à l&#x27;essayer ?</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.4.7">Télécharger Hub 1.4.7</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, le mod</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.5.0">Télécharger Hub 1.5.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, le mod</a></div>
 </div>
 </main>
 
