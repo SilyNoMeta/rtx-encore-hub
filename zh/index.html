@@ -30,21 +30,21 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.5.0 · Hub 1.5.0</span>
+<span class="badge">RTX Encore 1.5.0 · Hub 1.5.1</span>
 <h1>XeSS 与 XeFG。<br>现在使用 NVIDIA <em>Tensor Core</em>。</h1>
-<p class="lead">RTX Encore 1.5.0 新增两个独立实验 Tensor 选项：XeSS 重建与 XeFG 帧生成。<strong>可从 Hub 1.5.0 或游戏菜单即时切换。</strong>默认关闭；初始验证范围为 RTX 4090、NVIDIA 621.01、DirectX 12 及 Hub 提供的 Intel 运行库。</p>
+<p class="lead">RTX Encore 1.5.0 新增两个独立实验 Tensor 选项：XeSS 重建与 XeFG 帧生成。<strong>可从 Hub 1.5.1 或游戏菜单即时切换。</strong>默认关闭；初始验证范围为 RTX 4090、NVIDIA 621.01、DirectX 12 及 Hub 提供的 Intel 运行库。</p>
 <p class="sub">Intel XeSS / XeFG、Pre-SR、中央优先 NR 和 RTX 20 Smooth Motion 仍属实验性，兼容性取决于游戏、图形 API 及运行库。 <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">报告问题</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.5.0">下载 Hub 1.5.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.0">下载 RTX Encore 1.5.0</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.5.1">下载 Hub 1.5.1</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.0">下载 RTX Encore 1.5.0</a></div>
 <p class="under">Windows 10 和 11，x64 · 英语、法语和简体中文 · 安装无需管理员权限</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>RTX Encore 1.5.0 与 Hub 1.5.0</h2>
+<h2>RTX Encore 1.5.0 与 Hub 1.5.1</h2>
 <p class="sub">维护者已使用 RTX 4090/621.01 测试版本在战争之人 II 中检查菜单及原生 Smooth Motion 准备。这不测量插值、画质或延迟。RTX 50 实体硬件、原生 Vulkan 及最终文件尚无对应游戏内验证。备份、下载及设置已有本地自动化测试。</p>
 <div class="news-grid"><div class="card"><h3>XeSS Tensor Core</h3><p>为 XeSS Super Resolution 提供独立即时开关，包含最终重建优化与自动曝光支持。</p></div>
 <div class="card"><h3>XeFG Tensor Core</h3><p>为 XeFG 提供独立即时开关，在初始化容量内使用固定 X2–X6。切换 FG 引擎仍需重启。</p></div>
-<div class="card"><h3>两个开关，自由选择</h3><p>可启用其中一个或两个。均属实验功能且默认关闭；Hub 要求模组 1.5.0。</p></div>
-<div class="card"><h3>XeSS 测量</h3><p>较早巫师 3 场景：XeSS GPU 时间约减少 30.7%，渲染源帧 FPS 约提高 2.8–3.2%。并非整体 FPS 提高 31%。</p></div>
+<div class="card"><h3>Hub 1.5.1：降低空闲活动</h3><p>移除可能使 Hub 打开时持续占用 GPU 的循环视觉动画。</p></div>
+<div class="card"><h3>更清晰的安装与验证</h3><p>改善社区加载提示、安装操作与已安装 Intel 文件的完整验证。</p></div>
 <div class="card"><h3>初始验证配置</h3><p>RTX 4090、621.01 驱动、DirectX 12 和 Hub 提供的兼容 Intel 运行库。不代表其他显卡或 API 也支持。</p></div>
 <div class="card"><h3>配置与更新恢复</h3><p>社区配置保留两个选项。Hub 对临时更新网络错误有限重试，仍强制验证签名。</p></div>
 </div>
@@ -89,6 +89,8 @@
 <div class="hub">
 <figure><div class="shot"><img src="../assets/library.zh.jpg" alt="Hub 的游戏库，包含每个安装的状态和更新横幅" width="1440" height="900" loading="lazy"></div><figcaption>真实应用截图，使用由替身游戏文件夹组成的演示游戏库。</figcaption></figure>
 <ol class="points">
+<li><h3>Hub 1.5.1：降低空闲活动</h3><p>移除可能使 Hub 打开时持续占用 GPU 的循环视觉动画。</p></li>
+<li><h3>更清晰的安装与验证</h3><p>改善社区加载提示、安装操作与已安装 Intel 文件的完整验证。</p></li>
 <li><h3>两个开关，自由选择</h3><p>可启用其中一个或两个。均属实验功能且默认关闭；Hub 要求模组 1.5.0。</p></li>
 <li><h3>配置与更新恢复</h3><p>社区配置保留两个选项。Hub 对临时更新网络错误有限重试，仍强制验证签名。</p></li>
 </ol>
@@ -138,7 +140,7 @@
 
 <div class="wrap cta">
 <h2>准备好试试了吗？</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.5.0">下载 Hub 1.5.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.5.1">下载 Hub 1.5.1</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
 </div>
 </main>
 
