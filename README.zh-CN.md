@@ -29,7 +29,9 @@
 > [!NOTE]
 > **Windows x64。** 请打开[发布页面](https://github.com/SilyNoMeta/rtx-encore-hub/releases)并下载 `RTX-Encore-Hub-Setup-<version>.exe`，或无需安装的 `RTX-Encore-Hub-Portable-<version>.zip`。安装程序尚未进行代码签名，因此首次运行时 Windows 可能显示 SmartScreen 警告；每个发布版本都会给出安装程序的 SHA-256。Hub 与 RTX Encore 模组分别发布。
 
-## Hub 1.5.0：XeSS 与 XeFG Tensor Core
+## Hub 1.5.1：空闲 GPU 与易用性修复
+
+**Hub 1.5.1：**降低空闲 GPU 活动，改善社区加载与安装入口，并完整验证 Intel 文件。[版本说明](docs/notes/1.5.1.zh-CN.md)。
 
 **Hub 1.5.0：**为模组 1.5.0 或更新版本提供两个独立即时控制项：**XeSS Tensor Core** 和 **XeFG Tensor Core**。初始验证：**RTX 4090、NVIDIA 621.01、DirectX 12**。均属实验功能，默认关闭。[版本说明](docs/notes/1.5.0.zh-CN.md)。
 
@@ -48,7 +50,7 @@
 
 **Intel XeSS / XeFG 仍高度实验性。** 兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。
 
-[Hub 1.5.0](docs/notes/1.5.0.zh-CN.md) · [RTX Encore 1.5.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.0)
+[Hub 1.5.1](docs/notes/1.5.1.zh-CN.md) · [RTX Encore 1.5.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.0)
 
 ![Hub 的游戏库，包含封面、每个安装的状态和更新横幅](screenshots/library.zh.png)
 
