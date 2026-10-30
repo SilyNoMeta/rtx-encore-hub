@@ -24,6 +24,8 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 
 <sub>Free, made on personal time. If it is useful to you, you can <a href="https://github.com/sponsors/SilyNoMeta">support the project on GitHub Sponsors</a> ❤</sub>
 
+<p>❤️ Thank you to <a href="https://github.com/mennogreg">@mennogreg</a> and <a href="https://github.com/Scarhead666">@Scarhead666</a> for supporting the development of RTX Encore.</p>
+
 </div>
 
 > [!NOTE]

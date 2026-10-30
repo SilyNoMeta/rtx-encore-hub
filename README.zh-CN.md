@@ -24,6 +24,8 @@
 
 <sub>免费，利用业余时间开发。如果它对您有帮助，欢迎<a href="https://github.com/sponsors/SilyNoMeta">在 GitHub Sponsors 上支持本项目</a> ❤</sub>
 
+<p>❤️ 感谢 <a href="https://github.com/mennogreg">@mennogreg</a> 和 <a href="https://github.com/Scarhead666">@Scarhead666</a> 对 RTX Encore 开发的支持。</p>
+
 </div>
 
 > [!NOTE]
