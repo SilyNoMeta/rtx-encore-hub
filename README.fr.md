@@ -54,7 +54,7 @@ Installez et mettez à jour RTX Encore, gardez ses runtimes cohérents et gérez
 
 **Intel XeSS / XeFG restent très expérimentaux.** Leur compatibilité dépend du mod, du jeu, de l’API graphique et des runtimes. Signalez les problèmes avec une archive de diagnostic relue ; la présence des fichiers ou un multiplicateur demandé ne prouvent pas le rendu effectif.
 
-[Hub 1.5.2](docs/notes/1.5.2.fr.md) · [RTX Encore 1.5.1](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.1)
+[Hub 1.5.2](docs/notes/1.5.2.fr.md) · [RTX Encore 1.5.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.2)
 
 ![La bibliothèque du Hub, avec les jaquettes, l'état de chaque installation et le bandeau des mises à jour](screenshots/library.fr.png)
 

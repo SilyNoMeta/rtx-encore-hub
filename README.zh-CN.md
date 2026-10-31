@@ -54,7 +54,7 @@ Mod 1.5.1 及更高版本在 RTX 20 上始终使用 Smooth Motion V2；下文提
 
 **Intel XeSS / XeFG 仍高度实验性。** 兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。
 
-[Hub 1.5.2](docs/notes/1.5.2.zh-CN.md) · [RTX Encore 1.5.1](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.1)
+[Hub 1.5.2](docs/notes/1.5.2.zh-CN.md) · [RTX Encore 1.5.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.2)
 
 ![Hub 的游戏库，包含封面、每个安装的状态和更新横幅](screenshots/library.zh.png)
 

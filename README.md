@@ -54,7 +54,7 @@ Install and update RTX Encore, keep its runtimes matched, and manage your games 
 
 **Intel XeSS / XeFG remain very experimental.** Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering.
 
-[Hub 1.5.2](docs/notes/1.5.2.md) · [RTX Encore 1.5.1](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.1)
+[Hub 1.5.2](docs/notes/1.5.2.md) · [RTX Encore 1.5.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.2)
 
 ![The Hub's game library, with cover art, the state of each install and the update banner](screenshots/library.png)
 
