@@ -205,7 +205,7 @@ The game settings include **Sharpening after reconstruction**. Off is the defaul
 
 **Foveated NR** (experimental, off by default) runs Neural Rendering at full strength in the middle of the image and lighter towards the edges: more FPS, with a softer NR effect near the edges. Choose a preset: light keeps most of the image at full strength, balanced is the default, strong saves the most. Custom uses four values: the width and height of the full-strength centre, the length of the transition, and the NR detail kept at the edges. These settings can be shared in profiles.
 
-**Smooth Motion on RTX 20** needs driver 621.01 and a DirectX 12 game. On a detected RTX 20 card, choose **V1 (test 1)**, the default, or **V2 (test 2)**, compare both in the same scene, and restart the game after each change. The choice is hidden on other cards and does not turn Smooth Motion on.
+**Smooth Motion on RTX 20** needs driver 621.01 and a DirectX 12 game. On a detected RTX 20 card, RTX Encore 1.3.0 to 1.5.0 let you choose **V1 (test 1)**, the default, or **V2 (test 2)**: compare both in the same scene and restart the game after each change. From RTX Encore 1.5.1, RTX 20 always uses V2 and the Hub no longer shows the choice. The choice is hidden on other cards and does not turn Smooth Motion on.
 
 RTX Encore 1.3.0 removed OpenNR and the Cyber Engine Tweaks panel, so the Hub no longer shows their settings. NVIDIA Neural Rendering stays available.
 

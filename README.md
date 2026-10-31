@@ -31,9 +31,11 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 > [!NOTE]
 > **Windows x64.** Open the [releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) and download `RTX-Encore-Hub-Setup-<version>.exe`, or `RTX-Encore-Hub-Portable-<version>.zip`, which installs nothing. The installer is not code-signed yet, so Windows may show a SmartScreen warning the first time; each release gives the SHA-256 of its installer. The Hub and the RTX Encore mod have separate releases.
 
-## Hub 1.5.1: idle GPU and usability fixes
+## Hub 1.5.2
 
-**Hub 1.5.1:** lower idle GPU activity, clearer community loading, visible installation actions and complete Intel verification. [Release notes](docs/notes/1.5.1.md).
+**Hub 1.5.2:** more responsive updates and compatibility with mod 1.5.1’s RTX 20 Smooth Motion V2. [Release notes](docs/notes/1.5.2.md).
+
+With mod 1.5.1 or later, RTX 20 Smooth Motion always uses V2; the historical V1/V2 choices mentioned below apply only to mods 1.3.0–1.5.0.
 
 **Hub 1.5.0:** independent live controls for **XeSS Tensor Cores** and **XeFG Tensor Cores**, with mod 1.5.0 or later. Initial qualification: **RTX 4090, NVIDIA 621.01 and DirectX 12**. Both are experimental and off by default. [Release notes](docs/notes/1.5.0.md).
 
@@ -52,7 +54,7 @@ Install and update RTX Encore, keep its runtimes matched, and manage your games 
 
 **Intel XeSS / XeFG remain very experimental.** Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering.
 
-[Hub 1.5.1](docs/notes/1.5.1.md) · [RTX Encore 1.5.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.0)
+[Hub 1.5.2](docs/notes/1.5.2.md) · [RTX Encore 1.5.1](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.1)
 
 ![The Hub's game library, with cover art, the state of each install and the update banner](screenshots/library.png)
 

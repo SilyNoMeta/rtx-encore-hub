@@ -206,7 +206,7 @@ Hub 将默认选择的 NVIDIA 下载保存在自身数据目录中，并复用�
 
 **中央优先 NR**（实验性，默认关闭）在图像中央以全强度运行 Neural Rendering，越靠近边缘越轻：FPS 更高，边缘附近的 NR 效果更柔和。选择预设：light 让大部分图像保持全强度，balanced 为默认，strong 收益最大。custom 使用四个数值：全强度中央区域的宽度和高度、过渡长度，以及边缘保留的 NR 细节。这些设置可包含在共享配置中。
 
-**RTX 20 的 Smooth Motion** 需要 621.01 驱动和 DirectX 12 游戏。在检测到的 RTX 20 显卡上，选择 **V1（测试版 1）**（默认）或 **V2（测试版 2）**，在同一场景比较两者，每次更改后重启游戏。其他显卡不显示此选项，且该选项不会开启 Smooth Motion。
+**RTX 20 的 Smooth Motion** 需要 621.01 驱动和 DirectX 12 游戏。在检测到的 RTX 20 显卡上，RTX Encore 1.3.0 至 1.5.0 可选择 **V1（测试版 1）**（默认）或 **V2（测试版 2）**：在同一场景比较两者，每次更改后重启游戏。从 RTX Encore 1.5.1 起，RTX 20 始终使用 V2，Hub 不再显示此选项。其他显卡不显示此选项，且该选项不会开启 Smooth Motion。
 
 RTX Encore 1.3.0 已移除 OpenNR 和 Cyber Engine Tweaks 面板，Hub 不再显示相关设置。NVIDIA Neural Rendering 仍可使用。
 

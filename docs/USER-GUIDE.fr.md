@@ -205,7 +205,7 @@ Les réglages du jeu proposent **Netteté après reconstruction**. Off est le d�
 
 Le **NR fovéal** (expérimental, désactivé par défaut) fait travailler le Neural Rendering à pleine force au centre de l'image et plus légèrement vers les bords : plus de FPS, avec un effet NR plus doux près des bords. Choisissez un préréglage : light garde presque toute l'image à pleine force, balanced est le défaut, strong gagne le plus. Custom utilise quatre valeurs : la largeur et la hauteur du centre à pleine force, la longueur de la transition et le détail NR conservé sur les bords. Ces réglages peuvent faire partie des profils partagés.
 
-**Smooth Motion sur RTX 20** demande le pilote 621.01 et un jeu DirectX 12. Sur une carte RTX 20 détectée, choisissez **V1 (test 1)**, le défaut, ou **V2 (test 2)**, comparez les deux dans la même scène et relancez le jeu après chaque changement. Le choix est masqué sur les autres cartes et n'active pas Smooth Motion.
+**Smooth Motion sur RTX 20** demande le pilote 621.01 et un jeu DirectX 12. Sur une carte RTX 20 détectée, RTX Encore 1.3.0 à 1.5.0 permet de choisir **V1 (test 1)**, le défaut, ou **V2 (test 2)** : comparez les deux dans la même scène et relancez le jeu après chaque changement. À partir de RTX Encore 1.5.1, les RTX 20 utilisent toujours V2 et le Hub n'affiche plus ce choix. Le choix est masqué sur les autres cartes et n'active pas Smooth Motion.
 
 RTX Encore 1.3.0 a retiré OpenNR et le panneau Cyber Engine Tweaks : le Hub n'affiche plus leurs réglages. Le Neural Rendering NVIDIA reste disponible.
 

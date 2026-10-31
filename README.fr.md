@@ -31,9 +31,11 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 > [!NOTE]
 > **Windows x64.** Ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`, ou `RTX-Encore-Hub-Portable-<version>.zip`, qui n'installe rien. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.
 
-## Hub 1.5.1 : correctifs GPU au repos et utilisation
+## Hub 1.5.2
 
-**Hub 1.5.1 :** réduit l’activité GPU au repos, clarifie le chargement communautaire, rend l’installation visible et complète la vérification Intel. [Notes de version](docs/notes/1.5.1.fr.md).
+**Hub 1.5.2 :** mises à jour plus réactives et compatibilité avec Smooth Motion V2 sur RTX 20 du mod 1.5.1. [Notes de version](docs/notes/1.5.2.fr.md).
+
+Avec le mod 1.5.1 ou suivant, Smooth Motion sur RTX 20 utilise toujours V2 ; les choix historiques V1/V2 mentionnés ci-dessous concernent uniquement les mods 1.3.0 à 1.5.0.
 
 **Hub 1.5.0 :** commandes indépendantes à chaud pour **XeSS Tensor Cores** et **XeFG Tensor Cores**, avec le mod 1.5.0 ou ultérieur. Qualification initiale : **RTX 4090, NVIDIA 621.01 et DirectX 12**. Options expérimentales et désactivées par défaut. [Notes de version](docs/notes/1.5.0.fr.md).
 
@@ -52,7 +54,7 @@ Installez et mettez à jour RTX Encore, gardez ses runtimes cohérents et gérez
 
 **Intel XeSS / XeFG restent très expérimentaux.** Leur compatibilité dépend du mod, du jeu, de l’API graphique et des runtimes. Signalez les problèmes avec une archive de diagnostic relue ; la présence des fichiers ou un multiplicateur demandé ne prouvent pas le rendu effectif.
 
-[Hub 1.5.1](docs/notes/1.5.1.fr.md) · [RTX Encore 1.5.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.0)
+[Hub 1.5.2](docs/notes/1.5.2.fr.md) · [RTX Encore 1.5.1](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.1)
 
 ![La bibliothèque du Hub, avec les jaquettes, l'état de chaque installation et le bandeau des mises à jour](screenshots/library.fr.png)
 
