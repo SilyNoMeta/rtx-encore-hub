@@ -8,7 +8,7 @@ RTX Encore Hub installe [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) d
 
 ## XeSS et XeFG Tensor Cores (1.5.0)
 
-Avec **RTX Encore 1.5.0 ou ultérieur**, choisissez le moteur de reconstruction XeSS pour **XeSS Tensor Cores**, ou le moteur XeFG pour **XeFG Tensor Cores**. Les interrupteurs sont indépendants, expérimentaux et désactivés par défaut. Qualification initiale : **RTX 4090, NVIDIA 621.01, DirectX 12 et runtimes Intel fournis par le Hub**. Cela ne qualifie pas les autres configurations.
+Avec **RTX Encore 1.5.0 ou ultérieur**, choisissez le moteur de reconstruction XeSS pour **XeSS Tensor Cores**, ou le moteur XeFG pour **XeFG Tensor Cores**. Les interrupteurs sont indépendants, expérimentaux et désactivés par défaut. Qualification initiale : **RTX 4090, NVIDIA 621.01, DirectX 12 et runtimes Intel fournis par le Hub**. À partir de RTX Encore 1.5.3, toutes les RTX 30, RTX 40 et RTX 50 sont admises, avec NVIDIA 621.01 ou le hotfix 621.12, sans validation en jeu à ce jour ; le Hub grise les interrupteurs sur RTX 20. Cela ne qualifie pas les autres configurations.
 
 Les deux commandes s’appliquent à chaud : XeSS au prochain calcul, XeFG au renouvellement des commandes. Les facteurs XeFG fixes X2–X6 qualifiés se changent aussi à chaud dans la capacité initialisée. Fermez le jeu pour installer le nouveau mod ; changer de moteur FG demande toujours un redémarrage. Une préparation refusée conserve le chemin Intel classique ; une erreur d’exécution Tensor exige un redémarrage. Les profils communautaires conservent les deux choix, mais leur importation ne qualifie pas une autre carte ou un autre pilote.
 

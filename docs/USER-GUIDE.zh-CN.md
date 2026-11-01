@@ -8,7 +8,7 @@ RTX Encore Hub 把 [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) 安装
 
 ## XeSS 与 XeFG Tensor Core（1.5.0）
 
-配合 **RTX Encore 1.5.0 或更新版本**，为 **XeSS Tensor Core** 选择 XeSS 重建，为 **XeFG Tensor Core** 选择 XeFG 引擎。两个开关相互独立、属实验性质且默认关闭。初始验证范围为 **RTX 4090、NVIDIA 621.01、DirectX 12 和 Hub 提供的 Intel 运行库**，不代表其他配置也支持。
+配合 **RTX Encore 1.5.0 或更新版本**，为 **XeSS Tensor Core** 选择 XeSS 重建，为 **XeFG Tensor Core** 选择 XeFG 引擎。两个开关相互独立、属实验性质且默认关闭。初始验证范围为 **RTX 4090、NVIDIA 621.01、DirectX 12 和 Hub 提供的 Intel 运行库**。从 RTX Encore 1.5.3 起，所有 RTX 30、RTX 40 和 RTX 50 显卡在 NVIDIA 621.01 或 621.12 热修复驱动下均可准入，尚未经游戏内验证；Hub 在 RTX 20 上将开关显示为灰色。不代表其他配置也支持。
 
 两开关均可即时生效：XeSS 在下次执行时，XeFG 在命令重新记录时。支持的固定 XeFG X2–X6 也可在初始化容量内即时切换。安装新模组前请关闭游戏；切换 FG 引擎仍需重启。准备未通过时保留标准 Intel 路径；Tensor 执行故障后须重启。社区配置保留两个选项，但导入不会使其他显卡或驱动获得支持。
 
