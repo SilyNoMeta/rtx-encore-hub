@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RTX Encore 1.6.0 : génération d’images réécrite, identique à NVIDIA</title>
-<meta name="description" content="RTX Encore 1.6.0 : génération d’images réécrite, identique à NVIDIA">
+<title>RTX Encore 1.6.0 : génération d’images poussée encore plus loin, identique à NVIDIA</title>
+<meta name="description" content="RTX Encore 1.6.0 : génération d’images poussée encore plus loin, identique à NVIDIA">
 <link rel="canonical" href="https://encore.nometa.fr/fr/">
 <link rel="alternate" hreflang="en" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="fr" href="https://encore.nometa.fr/fr/">
@@ -12,8 +12,8 @@
 <link rel="icon" type="image/png" href="../assets/logo.png">
 <link rel="preload" href="../assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
-<meta property="og:title" content="RTX Encore 1.6.0 : génération d’images réécrite, identique à NVIDIA">
-<meta property="og:description" content="RTX Encore 1.6.0 : génération d’images réécrite, identique à NVIDIA">
+<meta property="og:title" content="RTX Encore 1.6.0 : génération d’images poussée encore plus loin, identique à NVIDIA">
+<meta property="og:description" content="RTX Encore 1.6.0 : génération d’images poussée encore plus loin, identique à NVIDIA">
 <meta property="og:url" content="https://encore.nometa.fr/fr/">
 <meta property="og:image" content="https://encore.nometa.fr/assets/library.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -31,8 +31,8 @@
 <main>
 <div class="wrap hero">
 <span class="badge">RTX Encore 1.6.0 · Hub 1.6.0</span>
-<h1>Génération d’images.<br>Réécrite, <em>pixel pour pixel</em>.</h1>
-<p class="lead">RTX Encore 1.6.0 écrit lui-même toute l’accélération de la génération d’images : les images générées restent identiques à celles de NVIDIA, et elle est plus rapide sur RTX 40 et RTX 30. <strong>Le Hub 1.6.0 ajoute la recherche Ctrl+F et un nettoyage optionnel à la restauration d’un jeu.</strong> Les commandes Tensor XeSS et XeFG restent expérimentales.</p>
+<h1>Génération d’images.<br>Poussée encore plus loin, <em>pixel pour pixel</em>.</h1>
+<p class="lead">RTX Encore 1.6.0 pousse l’accélération de la génération d’images encore plus loin : chaque image générée coûte encore moins sur RTX 40 et RTX 30, et reste identique à celle de NVIDIA. <strong>Le Hub 1.6.0 ajoute la recherche Ctrl+F et un nettoyage optionnel à la restauration d’un jeu.</strong> Les commandes Tensor XeSS et XeFG restent expérimentales.</p>
 <p class="sub">Intel XeSS / XeFG, Pre-SR, le NR fovéal et Smooth Motion sur RTX 20 restent expérimentaux. La compatibilité dépend du jeu, de l’API graphique et des runtimes. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Signaler un problème</a>.</p>
 <div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.6.0">Télécharger Hub 1.6.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.6.0">Télécharger RTX Encore 1.6.0</a></div>
 <p class="under">Windows 10 et 11, x64 · français, anglais et chinois simplifié · s&#x27;installe sans droits d&#x27;administrateur</p>
@@ -41,7 +41,7 @@
 <section class="news" id="features"><div class="wrap">
 <h2>RTX Encore 1.6.0 et Hub 1.6.0</h2>
 <p class="sub">Les temps de génération d’images viennent du banc NGX sur RTX 4090 avec DLSS-G 310.9.16. Le gain sur l’image entière n’a pas été mesuré en jeu sur RTX 30 ni sur RTX 20, et les binaires finaux 1.6.0 n’ont pas de retest distinct en jeu. Starfield avec le HDR de Luma 2.0 donne des images générées en relief : problème connu venant de la sortie HDR de Luma, pas de cette version.</p>
-<div class="news-grid"><div class="card"><h3>Génération d’images réécrite</h3><p>Le mod 1.6.0 écrit lui-même toute l’accélération de la génération d’images ; les images générées restent identiques à celles de NVIDIA, pixel pour pixel. RTX 4090, DLSS-G 310.9.16 : 1080p X2 0,538 → 0,512 ms par image générée (−34,4 % face aux optimisations désactivées).</p></div>
+<div class="news-grid"><div class="card"><h3>Génération d’images poussée encore plus loin</h3><p>Le mod 1.6.0 pousse l’accélération de la génération d’images encore plus loin : chaque image générée coûte encore moins sur RTX 40 et RTX 30, et reste identique à celle de NVIDIA, pixel pour pixel. RTX 4090, DLSS-G 310.9.16 : 1080p X2 0,538 → 0,512 ms par image générée (−34,4 % face aux optimisations désactivées).</p></div>
 <div class="card"><h3>Plantage ReShade corrigé</h3><p>Avec des add-ons ReShade 6.8 comme Luma, le Neural Rendering pouvait finir sur une corruption de tas. Il réutilise désormais ses descriptor heaps ; 35 minutes de Starfield avec ces mods, sans plantage (issue 98).</p></div>
 <div class="card"><h3>Curseur du menu en Raw Input</h3><p>Dans Starfield et les autres jeux qui lisent la souris directement, le curseur du menu suit désormais la souris au lieu de rester au milieu de l’écran.</p></div>
 <div class="card"><h3>Trouver un jeu avec Ctrl+F</h3><p>Depuis n’importe quelle page du Hub 1.6.0, <code>Ctrl+F</code> sélectionne la recherche de jeux de la barre de titre.</p></div>

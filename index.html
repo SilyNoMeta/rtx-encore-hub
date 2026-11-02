@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RTX Encore 1.6.0: frame generation rewritten, identical to NVIDIA</title>
-<meta name="description" content="RTX Encore 1.6.0: frame generation rewritten, identical to NVIDIA">
+<title>RTX Encore 1.6.0: frame generation pushed even further, identical to NVIDIA</title>
+<meta name="description" content="RTX Encore 1.6.0: frame generation pushed even further, identical to NVIDIA">
 <link rel="canonical" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="en" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="fr" href="https://encore.nometa.fr/fr/">
@@ -12,8 +12,8 @@
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preload" href="assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
-<meta property="og:title" content="RTX Encore 1.6.0: frame generation rewritten, identical to NVIDIA">
-<meta property="og:description" content="RTX Encore 1.6.0: frame generation rewritten, identical to NVIDIA">
+<meta property="og:title" content="RTX Encore 1.6.0: frame generation pushed even further, identical to NVIDIA">
+<meta property="og:description" content="RTX Encore 1.6.0: frame generation pushed even further, identical to NVIDIA">
 <meta property="og:url" content="https://encore.nometa.fr/">
 <meta property="og:image" content="https://encore.nometa.fr/assets/library.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -31,8 +31,8 @@
 <main>
 <div class="wrap hero">
 <span class="badge">RTX Encore 1.6.0 · Hub 1.6.0</span>
-<h1>Frame generation.<br>Rewritten, <em>pixel for pixel</em>.</h1>
-<p class="lead">RTX Encore 1.6.0 writes its whole frame-generation acceleration itself: generated frames stay identical to NVIDIA’s, and it is faster on RTX 40 and RTX 30. <strong>Hub 1.6.0 adds Ctrl+F search and an optional clean-up when restoring a game.</strong> XeSS and XeFG Tensor controls remain experimental.</p>
+<h1>Frame generation.<br>Pushed even further, <em>pixel for pixel</em>.</h1>
+<p class="lead">RTX Encore 1.6.0 pushes frame-generation acceleration even further: each generated frame costs less again on RTX 40 and RTX 30, and stays identical to NVIDIA’s. <strong>Hub 1.6.0 adds Ctrl+F search and an optional clean-up when restoring a game.</strong> XeSS and XeFG Tensor controls remain experimental.</p>
 <p class="sub">Intel XeSS / XeFG, Pre-SR, foveated NR and Smooth Motion on RTX 20 remain experimental. Compatibility depends on the game, graphics API and runtimes. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Report an issue</a>.</p>
 <div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.6.0">Download Hub 1.6.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.6.0">Download RTX Encore 1.6.0</a></div>
 <p class="under">Windows 10 and 11, x64 · English, French and Simplified Chinese · installs without administrator rights</p>
@@ -41,7 +41,7 @@
 <section class="news" id="features"><div class="wrap">
 <h2>RTX Encore 1.6.0 and Hub 1.6.0</h2>
 <p class="sub">Frame-generation times come from the NGX bench on an RTX 4090 with DLSS-G 310.9.16. The whole-frame gain has not been measured in-game on RTX 30 nor on RTX 20, and final 1.6.0 binaries have no separate in-game retest. Starfield with Luma 2.0 HDR shows embossed generated frames: a known issue from Luma’s HDR output, not this release.</p>
-<div class="news-grid"><div class="card"><h3>Frame generation, rewritten</h3><p>Mod 1.6.0 writes its whole frame-generation acceleration itself; generated frames stay identical to NVIDIA’s, pixel for pixel. RTX 4090, DLSS-G 310.9.16: 1080p X2 0.538 → 0.512 ms per generated frame (−34.4 % against optimizations off).</p></div>
+<div class="news-grid"><div class="card"><h3>Frame generation, pushed even further</h3><p>Mod 1.6.0 pushes frame-generation acceleration even further: each generated frame costs less again on RTX 40 and RTX 30, and stays identical to NVIDIA’s, pixel for pixel. RTX 4090, DLSS-G 310.9.16: 1080p X2 0.538 → 0.512 ms per generated frame (−34.4 % against optimizations off).</p></div>
 <div class="card"><h3>ReShade crash fixed</h3><p>With ReShade 6.8 add-ons such as Luma, Neural Rendering could end in a heap corruption. It now reuses its descriptor heaps; 35 minutes of Starfield with that mod set, without a crash (issue 98).</p></div>
 <div class="card"><h3>Menu cursor in Raw Input games</h3><p>In Starfield and other games that read the mouse directly, the menu cursor now follows the mouse instead of staying in the middle of the screen.</p></div>
 <div class="card"><h3>Find a game with Ctrl+F</h3><p>From any page of Hub 1.6.0, <code>Ctrl+F</code> selects the game search in the title bar.</p></div>
