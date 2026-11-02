@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RTX Encore 1.5.3: XeSS and XeFG on NVIDIA Tensor Cores</title>
-<meta name="description" content="RTX Encore 1.5.3: XeSS and XeFG on NVIDIA Tensor Cores">
+<title>RTX Encore 1.6.0: frame generation rewritten, identical to NVIDIA</title>
+<meta name="description" content="RTX Encore 1.6.0: frame generation rewritten, identical to NVIDIA">
 <link rel="canonical" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="en" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="fr" href="https://encore.nometa.fr/fr/">
@@ -12,8 +12,8 @@
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preload" href="assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
-<meta property="og:title" content="RTX Encore 1.5.3: XeSS and XeFG on NVIDIA Tensor Cores">
-<meta property="og:description" content="RTX Encore 1.5.3: XeSS and XeFG on NVIDIA Tensor Cores">
+<meta property="og:title" content="RTX Encore 1.6.0: frame generation rewritten, identical to NVIDIA">
+<meta property="og:description" content="RTX Encore 1.6.0: frame generation rewritten, identical to NVIDIA">
 <meta property="og:url" content="https://encore.nometa.fr/">
 <meta property="og:image" content="https://encore.nometa.fr/assets/library.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -30,22 +30,23 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.5.3 · Hub 1.5.3</span>
-<h1>XeSS and XeFG.<br>Now on NVIDIA <em>Tensor Cores</em>.</h1>
-<p class="lead">Independent experimental NVIDIA Tensor controls for XeSS and XeFG, now admitted on RTX 30, 40 and 50 with mod 1.5.3, D3D12 and NVIDIA 621.01 or the 621.12 hotfix. <strong>Hub 1.5.3 also adds the V-Sync choice and RR preset F.</strong> The broader hardware and hotfix admission has no new in-game qualification.</p>
+<span class="badge">RTX Encore 1.6.0 · Hub 1.6.0</span>
+<h1>Frame generation.<br>Rewritten, <em>pixel for pixel</em>.</h1>
+<p class="lead">RTX Encore 1.6.0 writes its whole frame-generation acceleration itself: generated frames stay identical to NVIDIA’s, and it is faster on RTX 40 and RTX 30. <strong>Hub 1.6.0 adds Ctrl+F search and an optional clean-up when restoring a game.</strong> XeSS and XeFG Tensor controls remain experimental.</p>
 <p class="sub">Intel XeSS / XeFG, Pre-SR, foveated NR and Smooth Motion on RTX 20 remain experimental. Compatibility depends on the game, graphics API and runtimes. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Report an issue</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.5.3">Download Hub 1.5.3</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.3">Download RTX Encore 1.5.3</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.6.0">Download Hub 1.6.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.6.0">Download RTX Encore 1.6.0</a></div>
 <p class="under">Windows 10 and 11, x64 · English, French and Simplified Chinese · installs without administrator rights</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>RTX Encore 1.5.3 and Hub 1.5.3</h2>
-<p class="sub">Independent experimental NVIDIA Tensor controls for XeSS and XeFG, now admitted on RTX 30, 40 and 50 with mod 1.5.3, D3D12 and NVIDIA 621.01 or the 621.12 hotfix. Hub 1.5.3 also adds the V-Sync choice and RR preset F. The broader hardware and hotfix admission has no new in-game qualification.</p>
-<div class="news-grid"><div class="card"><h3>XeSS and XeFG Tensor Cores on RTX 30/40/50</h3><p>Independent, default-off experimental controls. Mod 1.5.3 admits NVIDIA 621.01 and 621.12; only the earlier RTX 4090 / 621.01 setup has in-game qualification.</p></div>
-<div class="card"><h3>V-Sync and RR preset F in Hub</h3><p>Hub 1.5.3 exposes V-Sync Game / Off / On and RR preset F. V-Sync requires compatible DirectX games, excludes XeSS-FG and can add latency.</p></div>
-<div class="card"><h3>XeFG installation compatibility</h3><p>Improves compatibility with ReShade/RenoDX device proxies and qualified Intel runtimes installed beside the game.</p></div>
-<div class="card"><h3>MSFS 2024 menu</h3><p>Fixes menu attachment in compatible Streamline configurations. Reporter confirmation remains pending.</p></div>
-<div class="card"><h3>Update favorites only</h3><p>Hub 1.5.3 can limit bulk updates to starred games while keeping the library’s overall update status.</p></div>
+<h2>RTX Encore 1.6.0 and Hub 1.6.0</h2>
+<p class="sub">Frame-generation times come from the NGX bench on an RTX 4090 with DLSS-G 310.9.16. The whole-frame gain has not been measured in-game on RTX 30 nor on RTX 20, and final 1.6.0 binaries have no separate in-game retest. Starfield with Luma 2.0 HDR shows embossed generated frames: a known issue from Luma’s HDR output, not this release.</p>
+<div class="news-grid"><div class="card"><h3>Frame generation, rewritten</h3><p>Mod 1.6.0 writes its whole frame-generation acceleration itself; generated frames stay identical to NVIDIA’s, pixel for pixel. RTX 4090, DLSS-G 310.9.16: 1080p X2 0.538 → 0.512 ms per generated frame (−34.4 % against optimizations off).</p></div>
+<div class="card"><h3>ReShade crash fixed</h3><p>With ReShade 6.8 add-ons such as Luma, Neural Rendering could end in a heap corruption. It now reuses its descriptor heaps; 35 minutes of Starfield with that mod set, without a crash (issue 98).</p></div>
+<div class="card"><h3>Menu cursor in Raw Input games</h3><p>In Starfield and other games that read the mouse directly, the menu cursor now follows the mouse instead of staying in the middle of the screen.</p></div>
+<div class="card"><h3>Find a game with Ctrl+F</h3><p>From any page of Hub 1.6.0, <code>Ctrl+F</code> selects the game search in the title bar.</p></div>
+<div class="card"><h3>Restore game can also clean up</h3><p>An unticked box also deletes the mod’s settings and logs, and its private runtime folder when it holds only the Hub’s files. Thanks to the reporter of issue 8.</p></div>
+<div class="card"><h3>XeSS and XeFG Tensor Cores on RTX 30/40/50</h3><p>Independent, default-off experimental controls. Mod 1.5.3 admits NVIDIA 621.01 and 621.12; only the earlier RTX 4090 / 621.01 setup has in-game qualification.</p></div>
 </div>
 </div></section>
 
@@ -88,6 +89,8 @@
 <div class="hub">
 <figure><div class="shot"><img src="assets/library.jpg" alt="The Hub&#x27;s game library, with the state of each install and the update banner" width="1440" height="900" loading="lazy"></div><figcaption>Real application capture, on a demonstration library of stand-in game folders.</figcaption></figure>
 <ol class="points">
+<li><h3>Find a game with Ctrl+F</h3><p>From any page of Hub 1.6.0, <code>Ctrl+F</code> selects the game search in the title bar.</p></li>
+<li><h3>Restore game can also clean up</h3><p>An unticked box also deletes the mod’s settings and logs, and its private runtime folder when it holds only the Hub’s files. Thanks to the reporter of issue 8.</p></li>
 <li><h3>Update favorites only</h3><p>Hub 1.5.3 can limit bulk updates to starred games while keeping the library’s overall update status.</p></li>
 <li><h3>XeSS and XeFG Tensor Cores on RTX 30/40/50</h3><p>Independent, default-off experimental controls. Mod 1.5.3 admits NVIDIA 621.01 and 621.12; only the earlier RTX 4090 / 621.01 setup has in-game qualification.</p></li>
 <li><h3>V-Sync and RR preset F in Hub</h3><p>Hub 1.5.3 exposes V-Sync Game / Off / On and RR preset F. V-Sync requires compatible DirectX games, excludes XeSS-FG and can add latency.</p></li>
@@ -138,7 +141,7 @@
 
 <div class="wrap cta">
 <h2>Ready to try it?</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.5.3">Download Hub 1.5.3</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.6.0">Download Hub 1.6.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
 </div>
 </main>
 

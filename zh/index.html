@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RTX Encore 1.5.3：NVIDIA Tensor Core 上的 XeSS 与 XeFG</title>
-<meta name="description" content="RTX Encore 1.5.3：NVIDIA Tensor Core 上的 XeSS 与 XeFG">
+<title>RTX Encore 1.6.0：重写的帧生成，与 NVIDIA 一致</title>
+<meta name="description" content="RTX Encore 1.6.0：重写的帧生成，与 NVIDIA 一致">
 <link rel="canonical" href="https://encore.nometa.fr/zh/">
 <link rel="alternate" hreflang="en" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="fr" href="https://encore.nometa.fr/fr/">
@@ -12,8 +12,8 @@
 <link rel="icon" type="image/png" href="../assets/logo.png">
 <link rel="preload" href="../assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
-<meta property="og:title" content="RTX Encore 1.5.3：NVIDIA Tensor Core 上的 XeSS 与 XeFG">
-<meta property="og:description" content="RTX Encore 1.5.3：NVIDIA Tensor Core 上的 XeSS 与 XeFG">
+<meta property="og:title" content="RTX Encore 1.6.0：重写的帧生成，与 NVIDIA 一致">
+<meta property="og:description" content="RTX Encore 1.6.0：重写的帧生成，与 NVIDIA 一致">
 <meta property="og:url" content="https://encore.nometa.fr/zh/">
 <meta property="og:image" content="https://encore.nometa.fr/assets/library.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -30,22 +30,23 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.5.3 · Hub 1.5.3</span>
-<h1>XeSS 与 XeFG。<br>现在使用 NVIDIA <em>Tensor Core</em>。</h1>
-<p class="lead">独立实验性 NVIDIA Tensor XeSS 与 XeFG 控制，现在通过 mod 1.5.3、D3D12 和 NVIDIA 621.01 或 621.12 热修复准入 RTX 30、40、50。<strong>Hub 1.5.3 也提供 V-Sync 选择及 RR 预设 F。</strong>新增硬件和驱动准入没有新的游戏内验证。</p>
+<span class="badge">RTX Encore 1.6.0 · Hub 1.6.0</span>
+<h1>帧生成。<br>重写，<em>逐像素一致</em>。</h1>
+<p class="lead">RTX Encore 1.6.0 完全自行编写帧生成加速：生成的帧与 NVIDIA 的输出一致，并在 RTX 40 和 RTX 30 上更快。<strong>Hub 1.6.0 新增 Ctrl+F 搜索，并可在还原游戏时选择清理。</strong>XeSS 与 XeFG Tensor 控制仍属实验性。</p>
 <p class="sub">Intel XeSS / XeFG、Pre-SR、中央优先 NR 和 RTX 20 Smooth Motion 仍属实验性，兼容性取决于游戏、图形 API 及运行库。 <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">报告问题</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.5.3">下载 Hub 1.5.3</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.3">下载 RTX Encore 1.5.3</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.6.0">下载 Hub 1.6.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.6.0">下载 RTX Encore 1.6.0</a></div>
 <p class="under">Windows 10 和 11，x64 · 英语、法语和简体中文 · 安装无需管理员权限</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>RTX Encore 1.5.3 与 Hub 1.5.3</h2>
-<p class="sub">独立实验性 NVIDIA Tensor XeSS 与 XeFG 控制，现在通过 mod 1.5.3、D3D12 和 NVIDIA 621.01 或 621.12 热修复准入 RTX 30、40、50。Hub 1.5.3 也提供 V-Sync 选择及 RR 预设 F。新增硬件和驱动准入没有新的游戏内验证。</p>
-<div class="news-grid"><div class="card"><h3>RTX 30/40/50 上的 XeSS 与 XeFG Tensor Core</h3><p>独立、默认关闭的实验选项。Mod 1.5.3 准入 NVIDIA 621.01 和 621.12；游戏内验证仍仅覆盖较早 RTX 4090 / 621.01 配置。</p></div>
-<div class="card"><h3>Hub 的 V-Sync 与 RR 预设 F</h3><p>Hub 1.5.3 提供 V-Sync 游戏 / 关闭 / 开启 和 RR 预设 F。V-Sync 需要兼容 DirectX 游戏，不适用于 XeSS-FG，且可能增加延迟。</p></div>
-<div class="card"><h3>XeFG 安装兼容性</h3><p>改善 ReShade/RenoDX 代理及游戏旁已安装合格 Intel 运行库的兼容性。</p></div>
-<div class="card"><h3>MSFS 2024 菜单</h3><p>修复兼容 Streamline 配置中的菜单附加，仍待报告者确认。</p></div>
-<div class="card"><h3>仅更新收藏游戏</h3><p>Hub 1.5.3 可将批量更新限制为收藏游戏，同时保留资料库整体更新状态。</p></div>
+<h2>RTX Encore 1.6.0 与 Hub 1.6.0</h2>
+<p class="sub">帧生成时间来自 RTX 4090、DLSS-G 310.9.16 上的 NGX 基准。RTX 30 和 RTX 20 的整帧收益尚未在游戏中实测，最终 1.6.0 二进制文件未单独进行游戏内复测。星空搭配 Luma 2.0 HDR 时生成帧呈浮雕效果：这是 Luma HDR 输出的已知问题，并非本版本引入。</p>
+<div class="news-grid"><div class="card"><h3>重写的帧生成</h3><p>模组 1.6.0 完全自行编写帧生成加速，生成的帧与 NVIDIA 的输出逐像素一致。RTX 4090、DLSS-G 310.9.16：1080p X2 每帧生成帧 0.538 → 0.512 ms（相比关闭优化 −34.4 %）。</p></div>
+<div class="card"><h3>修复 ReShade 崩溃</h3><p>加载 Luma 等 ReShade 6.8 插件时，Neural Rendering 可能导致堆损坏。现在复用描述符堆；使用该模组组合游玩星空 35 分钟未崩溃（issue 98）。</p></div>
+<div class="card"><h3>Raw Input 游戏中的菜单光标</h3><p>在星空及其他直接读取鼠标的游戏中，菜单光标现在会跟随鼠标，不再停在屏幕中央。</p></div>
+<div class="card"><h3>用 Ctrl+F 查找游戏</h3><p>在 Hub 1.6.0 的任何页面按 <code>Ctrl+F</code> 都会选中标题栏的游戏搜索。</p></div>
+<div class="card"><h3>还原游戏可同时清理</h3><p>默认不勾选的选项还会删除模组的设置和日志，以及仅含 Hub 文件的私有运行库目录。感谢 issue 8 的报告者。</p></div>
+<div class="card"><h3>RTX 30/40/50 上的 XeSS 与 XeFG Tensor Core</h3><p>独立、默认关闭的实验选项。Mod 1.5.3 准入 NVIDIA 621.01 和 621.12；游戏内验证仍仅覆盖较早 RTX 4090 / 621.01 配置。</p></div>
 </div>
 </div></section>
 
@@ -88,6 +89,8 @@
 <div class="hub">
 <figure><div class="shot"><img src="../assets/library.zh.jpg" alt="Hub 的游戏库，包含每个安装的状态和更新横幅" width="1440" height="900" loading="lazy"></div><figcaption>真实应用截图，使用由替身游戏文件夹组成的演示游戏库。</figcaption></figure>
 <ol class="points">
+<li><h3>用 Ctrl+F 查找游戏</h3><p>在 Hub 1.6.0 的任何页面按 <code>Ctrl+F</code> 都会选中标题栏的游戏搜索。</p></li>
+<li><h3>还原游戏可同时清理</h3><p>默认不勾选的选项还会删除模组的设置和日志，以及仅含 Hub 文件的私有运行库目录。感谢 issue 8 的报告者。</p></li>
 <li><h3>仅更新收藏游戏</h3><p>Hub 1.5.3 可将批量更新限制为收藏游戏，同时保留资料库整体更新状态。</p></li>
 <li><h3>RTX 30/40/50 上的 XeSS 与 XeFG Tensor Core</h3><p>独立、默认关闭的实验选项。Mod 1.5.3 准入 NVIDIA 621.01 和 621.12；游戏内验证仍仅覆盖较早 RTX 4090 / 621.01 配置。</p></li>
 <li><h3>Hub 的 V-Sync 与 RR 预设 F</h3><p>Hub 1.5.3 提供 V-Sync 游戏 / 关闭 / 开启 和 RR 预设 F。V-Sync 需要兼容 DirectX 游戏，不适用于 XeSS-FG，且可能增加延迟。</p></li>
@@ -138,7 +141,7 @@
 
 <div class="wrap cta">
 <h2>准备好试试了吗？</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.5.3">下载 Hub 1.5.3</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.6.0">下载 Hub 1.6.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
 </div>
 </main>
 
