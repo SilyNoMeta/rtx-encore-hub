@@ -31,7 +31,9 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 > [!NOTE]
 > **Windows x64.** Open the [releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) and download `RTX-Encore-Hub-Setup-<version>.exe`, or `RTX-Encore-Hub-Portable-<version>.zip`, which installs nothing. The installer is not code-signed yet, so Windows may show a SmartScreen warning the first time; each release gives the SHA-256 of its installer. The Hub and the RTX Encore mod have separate releases.
 
-## Hub 1.5.3
+## Hub 1.6.0
+
+**Hub 1.6.0:** `Ctrl+F` goes to the game search, Restore game can also delete the mod's settings and logs, and mod 1.6.0 is supported. [Release notes](docs/notes/1.6.0.md).
 
 **Hub 1.5.3:** Tensor controls for RTX 30/40/50, V-Sync Game / Off / On and RR preset F. [Release notes](docs/notes/1.5.3.md).
 
@@ -54,7 +56,7 @@ Install and update RTX Encore, keep its runtimes matched, and manage your games 
 
 **Intel XeSS / XeFG remain very experimental.** Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering.
 
-[Hub 1.5.3](docs/notes/1.5.3.md) · [RTX Encore 1.5.3](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.5.3)
+[Hub 1.6.0](docs/notes/1.6.0.md) · [RTX Encore 1.6.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.6.0)
 
 ![The Hub's game library, with cover art, the state of each install and the update banner](screenshots/library.png)
 

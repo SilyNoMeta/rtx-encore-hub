@@ -64,7 +64,7 @@ The Hub looks for its own updates when it starts, then once a day. **Updates** s
 
 The mod goes beside the program that draws the game: behind a launcher (The Witcher 3 on GOG starts `REDprelauncher.exe`), the Hub takes the game the launcher starts; behind RTX Remix, the mod goes beside `NvRemixBridge.exe`, in the game's `.trex` folder.
 
-A tile says the state of the game by a glyph and a word: not installed, installed, to update, changed by the game, failing. The search (`Ctrl+F`) ignores accents and punctuation; a filter limits the list to one graphics API; `F5` reads the folders again. The pane recalls your machine: card, memory, driver, screen.
+A tile says the state of the game by a glyph and a word: not installed, installed, to update, changed by the game, failing. The search in the title bar (`Ctrl+F`, from any page) ignores accents and punctuation; a filter limits the list to one graphics API; `F5` reads the folders again. The pane recalls your machine: card, memory, driver, screen.
 
 When the game page is unsure which executable is the game, review the alternatives it offers. Choose the actual game, then return to automatic selection if needed. The global search in the window’s title bar also finds games in your library.
 
@@ -115,7 +115,9 @@ This verification says a game starts and the mod loads in it. It judges neither 
 
 A file the game, its launcher or another tool changed since is never overwritten: it is left as it is and reported. Restoring the game to before any Hub intervention keeps a modified `rtx-encore.jsonc`; restoring before a specific operation asks before replacing modified settings.
 
-Uninstalling removes the tracked mod and runtime files and restores any originals. Empty private `rtx-encore-runtimes/intel` and `rtx-encore-runtimes` folders are removed. Session logs in `rtx-encore-logs` and modified settings are kept; their presence does not mean the mod is still installed. You can delete these logs and settings yourself if you no longer need them. Runtime folders containing other files are kept.
+**Restore game**, on the game page, has an **Also delete my settings and logs** box, unticked by default. Ticked, the restore also deletes `rtx-encore.jsonc` and the `rtx-encore-logs` folder, beside the mod and beside the executable, and the private `rtx-encore-runtimes` folder when every file left in it is one the Hub added. Anything else is left as it is and reported; the restore itself stays done. From the command line: `restore <game> --clean`.
+
+Uninstalling removes the tracked mod and runtime files and restores any originals. Empty private `rtx-encore-runtimes/intel` and `rtx-encore-runtimes` folders are removed. Session logs in `rtx-encore-logs` and modified settings are kept; their presence does not mean the mod is still installed. You can delete these logs and settings yourself if you no longer need them, or tick the clean-up box of **Restore game**. Runtime folders containing other files are kept.
 
 A copy of the mod put there by hand is recognized, but the Hub only has an original backup for what it wrote itself.
 

@@ -64,7 +64,7 @@ Le Hub cherche ses propres mises à jour à son démarrage, puis une fois par jo
 
 Le mod va à côté du programme qui dessine le jeu : derrière un lanceur (The Witcher 3 de GOG démarre `REDprelauncher.exe`), le Hub prend le jeu que le lanceur démarre ; derrière RTX Remix, le mod va à côté de `NvRemixBridge.exe`, dans le dossier `.trex` du jeu.
 
-Une tuile dit l'état du jeu par un pictogramme et un mot : non installé, installé, à mettre à jour, modifié par le jeu, en échec. La recherche (`Ctrl+F`) ignore les accents et la ponctuation ; un filtre limite la liste à une API graphique ; `F5` relit les dossiers. Le volet rappelle votre machine : carte, mémoire, pilote, écran.
+Une tuile dit l'état du jeu par un pictogramme et un mot : non installé, installé, à mettre à jour, modifié par le jeu, en échec. La recherche de la barre de titre (`Ctrl+F`, depuis n'importe quelle page) ignore les accents et la ponctuation ; un filtre limite la liste à une API graphique ; `F5` relit les dossiers. Le volet rappelle votre machine : carte, mémoire, pilote, écran.
 
 Lorsque la fiche hésite sur l’exécutable du jeu, relisez les programmes proposés et choisissez le jeu lui-même. Vous pouvez ensuite rendre le choix automatique. La recherche globale de la barre de titre retrouve également les jeux de votre bibliothèque.
 
@@ -115,7 +115,9 @@ Cette vérification dit qu'un jeu démarre et que le mod s'y charge. Elle ne jug
 
 Un fichier que le jeu, son lanceur ou un autre outil a changé depuis n'est jamais écrasé : il est laissé tel quel et signalé. Restaurer le jeu avant toute intervention du Hub conserve un `rtx-encore.jsonc` modifié ; revenir avant une opération précise demande confirmation avant de remplacer les réglages modifiés.
 
-La désinstallation retire les fichiers du mod et des runtimes suivis par le Hub et remet les originaux éventuels. Les dossiers privés `rtx-encore-runtimes/intel` et `rtx-encore-runtimes` sont supprimés s'ils sont vides. Les journaux dans `rtx-encore-logs` et les réglages modifiés sont conservés ; leur présence ne signifie pas que le mod est encore installé. Vous pouvez supprimer vous-même ces journaux et réglages si vous n'en avez plus besoin. Les dossiers de runtimes contenant d'autres fichiers sont conservés.
+**Restaurer le jeu**, sur la fiche du jeu, propose la case **Supprimer aussi mes réglages et journaux**, décochée par défaut. Cochée, la restauration supprime aussi `rtx-encore.jsonc` et le dossier `rtx-encore-logs`, à côté du mod et à côté de l'exécutable, ainsi que le dossier privé `rtx-encore-runtimes` si chaque fichier qui y reste a été ajouté par le Hub. Le reste est laissé tel quel et signalé ; la restauration reste faite. En ligne de commande : `restore <jeu> --clean`.
+
+La désinstallation retire les fichiers du mod et des runtimes suivis par le Hub et remet les originaux éventuels. Les dossiers privés `rtx-encore-runtimes/intel` et `rtx-encore-runtimes` sont supprimés s'ils sont vides. Les journaux dans `rtx-encore-logs` et les réglages modifiés sont conservés ; leur présence ne signifie pas que le mod est encore installé. Vous pouvez supprimer vous-même ces journaux et réglages si vous n'en avez plus besoin, ou cocher la case de nettoyage de **Restaurer le jeu**. Les dossiers de runtimes contenant d'autres fichiers sont conservés.
 
 Une copie du mod posée à la main est reconnue, mais le Hub n'a de sauvegarde d'origine que pour ce qu'il a lui-même écrit.
 
