@@ -78,6 +78,28 @@ h2 { font-size: clamp(26px, 3.6vw, 38px); line-height: 1.15; margin: 0 0 10px; l
 h3 { letter-spacing: -0.2px; }
 .sub { color: var(--ink-2); margin: 0 0 32px; max-width: 760px; }
 
+.community {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px 32px;
+  margin-top: 40px;
+  padding: clamp(20px, 4vw, 36px);
+  /* The violet of the logo's farthest echo (#7c4dff); the button keeps Discord's own colour. */
+  border: 1px solid #3d3470;
+  border-inline-start: 4px solid #7c4dff;
+  border-radius: var(--radius);
+  background: linear-gradient(105deg, rgba(124, 77, 255, 0.2), var(--panel) 75%);
+}
+.community > div { flex: 1 1 400px; }
+.community h2 { font-size: clamp(23px, 3.2vw, 32px); }
+.community p { color: var(--ink-2); margin: 0; max-width: 63ch; }
+.button.discord { background: #454fc4; border-color: #8089ff; color: #fff; }
+.button.discord:hover { background: #505bd1; border-color: #b4baff; }
+.button.discord:focus-visible { outline: 2px solid #b4baff; outline-offset: 4px; }
+.button.discord svg { flex: none; }
+
 /* The figures: one strip, three numbers, no boxes. */
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
 .stat { padding: 4px 32px; border-left: 1px solid var(--line); display: flex; flex-direction: column; }

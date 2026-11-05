@@ -3,26 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RTX Encore 1.6.0 : génération d’images poussée encore plus loin, identique à NVIDIA</title>
-<meta name="description" content="RTX Encore 1.6.0 : génération d’images poussée encore plus loin, identique à NVIDIA">
-<link rel="canonical" href="https://encore.nometa.fr/fr/">
-<link rel="alternate" hreflang="en" href="https://encore.nometa.fr/">
-<link rel="alternate" hreflang="fr" href="https://encore.nometa.fr/fr/">
-<link rel="alternate" hreflang="zh-CN" href="https://encore.nometa.fr/zh/">
-<link rel="icon" type="image/png" href="../assets/logo.png">
+<title>RTX Encore 2.0.0 : DLSS, XeSS, Neural Rendering et génération d’images pour les jeux sans DLSS</title>
+<meta name="description" content="RTX Encore 2.0.0 : DLSS, XeSS, Neural Rendering et génération d’images pour les jeux sans DLSS">
+<link rel="canonical" href="https://silynometa.github.io/rtx-encore-hub/fr/">
+<link rel="alternate" hreflang="en" href="https://silynometa.github.io/rtx-encore-hub/">
+<link rel="alternate" hreflang="fr" href="https://silynometa.github.io/rtx-encore-hub/fr/">
+<link rel="alternate" hreflang="zh-CN" href="https://silynometa.github.io/rtx-encore-hub/zh/">
+<link rel="icon" href="../assets/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/logo-64.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preload" href="../assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
-<meta property="og:title" content="RTX Encore 1.6.0 : génération d’images poussée encore plus loin, identique à NVIDIA">
-<meta property="og:description" content="RTX Encore 1.6.0 : génération d’images poussée encore plus loin, identique à NVIDIA">
-<meta property="og:url" content="https://encore.nometa.fr/fr/">
-<meta property="og:image" content="https://encore.nometa.fr/assets/library.jpg">
+<meta property="og:title" content="RTX Encore 2.0.0 : DLSS, XeSS, Neural Rendering et génération d’images pour les jeux sans DLSS">
+<meta property="og:description" content="RTX Encore 2.0.0 : DLSS, XeSS, Neural Rendering et génération d’images pour les jeux sans DLSS">
+<meta property="og:url" content="https://silynometa.github.io/rtx-encore-hub/fr/">
+<meta property="og:image" content="https://silynometa.github.io/rtx-encore-hub/assets/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="RTX Encore Hub">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0a0e13">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <header class="nav"><div class="wrap">
-<a class="brand" href="../fr/"><img src="../assets/logo.png" alt="" width="30" height="30">RTX Encore Hub</a>
+<a class="brand" href="../fr/"><img src="../assets/logo-64.png" alt="" width="30" height="30">RTX Encore Hub</a>
 <nav><a href="#perf">Performances</a><a href="#nr">Neural Rendering</a><a href="#hub">Le Hub</a><a href="#start">Bien démarrer</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub">GitHub</a></nav>
 <a class="nav-support" href="#support"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.2 6.9 13.2C3 9.7.5 7.4.5 4.6.5 2.3 2.3.5 4.6.5c1.3 0 2.6.6 3.4 1.6C8.8 1.1 10.1.5 11.4.5c2.3 0 4.1 1.8 4.1 4.1 0 2.8-2.5 5.1-6.4 8.6L8 14.2Z"/></svg><span>Soutenir le projet</span></a>
 <div class="langs"><a href="../" hreflang="en">English</a><a href="../fr/" hreflang="fr" aria-current="true">Français</a><a href="../zh/" hreflang="zh-CN">简体中文</a></div>
@@ -30,33 +35,41 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.6.0 · Hub 1.6.0</span>
-<h1>Génération d’images.<br>Poussée encore plus loin, <em>pixel pour pixel</em>.</h1>
-<p class="lead">RTX Encore 1.6.0 pousse l’accélération de la génération d’images encore plus loin : chaque image générée coûte encore moins sur RTX 40 et RTX 30, et reste identique à celle de NVIDIA. <strong>Le Hub 1.6.0 ajoute la recherche Ctrl+F et un nettoyage optionnel à la restauration d’un jeu.</strong> Les commandes Tensor XeSS et XeFG restent expérimentales.</p>
+<span class="badge">RTX Encore 2.0.0 · Hub 2.0.0</span>
+<h1>Plus d’images.<br>Plus de jeux.<br><em>RTX Encore.</em></h1>
+<p class="lead">DLSS, XeSS, génération d’images jusqu’à X6 et Neural Rendering — y compris dans les jeux sans DLSS natif. DirectX 11, DirectX 12 et Vulkan. <strong>Installez avec le Hub, choisissez vos moteurs, réglez en jeu.</strong></p>
 <p class="sub">Intel XeSS / XeFG, Pre-SR, le NR fovéal et Smooth Motion sur RTX 20 restent expérimentaux. La compatibilité dépend du jeu, de l’API graphique et des runtimes. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Signaler un problème</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.6.0">Télécharger Hub 1.6.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.6.0">Télécharger RTX Encore 1.6.0</a></div>
-<p class="under">Windows 10 et 11, x64 · français, anglais et chinois simplifié · s&#x27;installe sans droits d&#x27;administrateur</p>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.0.0">Télécharger Hub 2.0.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.0.0">Télécharger RTX Encore 2.0.0</a></div>
+<p class="under">Windows 10 et 11, x64 · douze langues · s&#x27;installe sans droits d&#x27;administrateur</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>RTX Encore 1.6.0 et Hub 1.6.0</h2>
-<p class="sub">Les temps de génération d’images viennent du banc NGX sur RTX 4090 avec DLSS-G 310.9.16. Le gain sur l’image entière n’a pas été mesuré en jeu sur RTX 30 ni sur RTX 20, et les binaires finaux 1.6.0 n’ont pas de retest distinct en jeu. Starfield avec le HDR de Luma 2.0 donne des images générées en relief : problème connu venant de la sortie HDR de Luma, pas de cette version.</p>
-<div class="news-grid"><div class="card"><h3>Génération d’images poussée encore plus loin</h3><p>Le mod 1.6.0 pousse l’accélération de la génération d’images encore plus loin : chaque image générée coûte encore moins sur RTX 40 et RTX 30, et reste identique à celle de NVIDIA, pixel pour pixel. RTX 4090, DLSS-G 310.9.16 : 1080p X2 0,538 → 0,512 ms par image générée (−34,4 % face aux optimisations désactivées).</p></div>
-<div class="card"><h3>Plantage ReShade corrigé</h3><p>Avec des add-ons ReShade 6.8 comme Luma, le Neural Rendering pouvait finir sur une corruption de tas. Il réutilise désormais ses descriptor heaps ; 35 minutes de Starfield avec ces mods, sans plantage (issue 98).</p></div>
-<div class="card"><h3>Curseur du menu en Raw Input</h3><p>Dans Starfield et les autres jeux qui lisent la souris directement, le curseur du menu suit désormais la souris au lieu de rester au milieu de l’écran.</p></div>
-<div class="card"><h3>Trouver un jeu avec Ctrl+F</h3><p>Depuis n’importe quelle page du Hub 1.6.0, <code>Ctrl+F</code> sélectionne la recherche de jeux de la barre de titre.</p></div>
-<div class="card"><h3>Restaurer le jeu peut aussi nettoyer</h3><p>Une case décochée par défaut supprime aussi les réglages et journaux du mod, et son dossier privé de runtimes s’il ne contient que des fichiers du Hub. Merci au rapporteur de l’issue 8.</p></div>
-<div class="card"><h3>XeSS et XeFG Tensor Cores sur RTX 30/40/50</h3><p>Commandes expérimentales indépendantes, désactivées par défaut. Le mod 1.5.3 admet NVIDIA 621.01 et 621.12 ; seule la configuration RTX 4090 / 621.01 antérieure est qualifiée en jeu.</p></div>
+<h2>RTX Encore 2.0.0 et Hub 2.0.0</h2>
+<p class="sub">La compatibilité dépend du jeu, du GPU, de l’API et des runtimes. Sans DLSS natif, le mouvement est estimé et le HUD est traité avec l’image. Les essais du mainteneur incluent Les Sims 4, Skyrim et Elden Ring sur RTX 4090 ; ils ne certifient pas tous les jeux ni GPU. X5/X6 et Neural Rendering restent expérimentaux.</p>
+<div class="news-grid"><div class="card"><h3>Jeux sans DLSS</h3><p>Le mod 2.0.0 apporte DLSS Super Resolution ou DLAA, Intel XeSS, le Neural Rendering et la génération d’images aux jeux qui n’en ont pas, à partir de l’image qu’ils affichent, en DirectX 11, DirectX 12 et Vulkan. Testé dans PEAK, The Sims 4, Skyrim Special Edition et Football Life 2027 sur une RTX 4090.</p></div>
+<div class="card"><h3>La génération d’images là où il n’y en avait pas</h3><p>DLSS Frame Generation X2 à X6 en DirectX 11, DirectX 12 et Vulkan, Intel XeFG jusqu’à X6 en DirectX 12, avec les Tensor Cores NVIDIA quand ils sont disponibles, en Vulkan (HDR10 compris) et en DirectX 11. Changez le multiplicateur en jouant ; le HUD est interpolé avec l’image.</p></div>
+<div class="card"><h3>Le mouvement estimé par RTX Encore</h3><p>L’estimation du mouvement propre au mod tourne sur la carte graphique, et trouve seule le depth buffer du jeu. La méthode shader de vort_Motion et NVIDIA Optical Flow sont les autres choix.</p></div>
+<div class="card"><h3>Choisissez votre configuration</h3><p>À la première installation dans un jeu sans intégration native, choisissez Aucun, Smooth Motion, DLSS-G ou XeFG, puis Aucun, DLSS ou XeSS. Aucun Smooth Motion automatique. Le Hub présente les fichiers nécessaires avant installation.</p></div>
+<div class="card"><h3>Réglez la qualité d’image</h3><p>Ultra (75 %) rejoint les échelles DLSS SR et XeSS natives. La netteté personnalisée se règle en direct de 0 à 100 %. Sans DLSS natif, utilisez une résolution plus basse en mode fenêtré pour agrandir l’image jusqu’à votre écran.</p></div>
+<div class="card"><h3>Gardez des runtimes compatibles</h3><p>Les moteurs absents ne sont pas proposés. Les anciennes versions compatibles fonctionnent toujours, avec un avertissement de mise à jour. Le Hub aide à installer les fichiers recommandés ; le DLSS-G ajouté utilise son ensemble validé.</p></div>
 </div>
 </div></section>
 
+<section class="community wrap" aria-labelledby="community-title">
+<div>
+<h2 id="community-title">Le Discord de RTX Encore est ouvert</h2>
+<p>Vous essayez la 2.0.0 dans un jeu sans DLSS ? Partagez le nom du jeu, votre carte graphique et vos réglages, comparez vos résultats ou demandez de l’aide pour le mod et le Hub.</p>
+</div>
+<a class="button discord" href="https://discord.gg/Zwmq4Xc2Br"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.8 19.8 0 0 0-4.885-1.515c-.21.38-.452.892-.62 1.3a18.2 18.2 0 0 0-5.42 0 14 14 0 0 0-.628-1.3 19.7 19.7 0 0 0-4.888 1.52C.785 8.95-.053 13.41.366 17.808a20 20 0 0 0 5.993 3.03c.484-.654.915-1.35 1.287-2.082a13 13 0 0 1-2.027-.966l.497-.386c3.908 1.82 8.16 1.82 12.022 0l.498.386a13 13 0 0 1-2.03.968c.372.73.802 1.427 1.287 2.08a20 20 0 0 0 5.995-3.03c.492-5.1-.84-9.52-3.571-13.438ZM8.02 15.1c-1.173 0-2.134-1.073-2.134-2.392s.94-2.394 2.134-2.394c1.205 0 2.155 1.083 2.134 2.394 0 1.32-.94 2.392-2.134 2.392Zm7.96 0c-1.173 0-2.134-1.073-2.134-2.392s.94-2.394 2.134-2.394c1.205 0 2.155 1.083 2.134 2.394 0 1.32-.93 2.392-2.134 2.392Z"/></svg>Rejoindre le Discord</a>
+</section>
+
 <section class="band" id="perf"><div class="wrap">
 <div class="stats">
-<div class="stat"><span class="figure">−30,7 %</span><span class="unit">temps GPU XeSS</span><span class="context">Test TW3 antérieur : 1,243 → 0,861 ms, RTX 4090 / 621.01, sortie 4K.</span></div>
-<div class="stat"><span class="figure">+2,8 à +3,2 %</span><span class="unit">FPS source rendus</span><span class="context">Même scène mesurée ; ni images générées ni mesure indépendante des FPS affichés.</span></div>
-<div class="stat"><span class="figure">X2–X6</span><span class="unit">facteurs fixes XeFG à chaud</span><span class="context">Dans la capacité initialisée du chemin qualifié. Expérimental ; aucun gain général de FPS établi.</span></div>
+<div class="stat"><span class="figure">X2–X6</span><span class="unit">DLSS-G et XeFG</span><span class="context">Génération d’images, y compris dans les jeux compatibles sans FG natif, sous DirectX 11, DirectX 12 et Vulkan.</span></div>
+<div class="stat"><span class="figure">−72,5 %</span><span class="unit">erreur de mouvement dans la fumée</span><span class="context">Fond d’une scène synthétique 4K : 2,523 → 0,693 px avec le moteur de mouvement RTX Encore amélioré.</span></div>
+<div class="stat"><span class="figure">0,984 ms</span><span class="unit">estimation du mouvement en 4K</span><span class="context">RTX 4090, 3840×2160, grille de vecteurs 2×2. Référence précédente : 0,985 ms.</span></div>
 </div>
-<p class="stats-note">Mesures XeSS sur un build antérieur dans une scène TW3. Les changements finaux ultérieurs sont validés par replays déterministes, sans nouvelle comparaison en jeu. Les binaires finaux 1.5.0 n’ont pas de retest distinct en jeu ; aucun gain général de FPS ou de latence XeFG n’est établi.</p>
+<p class="stats-note">Benchmarks de mouvement du 5 novembre 2026. Le temps GPU couvre uniquement l’estimation du mouvement ; le résultat sur la fumée concerne une scène synthétique, pas un gain général de FPS. Compatibilité et multiplicateurs dépendent du GPU, de l’API et des runtimes ; X5/X6 restent expérimentaux.</p>
 </div></section>
 
 <section id="nr"><div class="wrap">
@@ -89,6 +102,9 @@
 <div class="hub">
 <figure><div class="shot"><img src="../assets/library.fr.jpg" alt="La bibliothèque du Hub, avec l&#x27;état de chaque installation et le bandeau des mises à jour" width="1440" height="900" loading="lazy"></div><figcaption>Capture de l&#x27;application réelle, sur une bibliothèque de démonstration faite de dossiers de jeux factices.</figcaption></figure>
 <ol class="points">
+<li><h3>Choisissez votre configuration</h3><p>À la première installation dans un jeu sans intégration native, choisissez Aucun, Smooth Motion, DLSS-G ou XeFG, puis Aucun, DLSS ou XeSS. Aucun Smooth Motion automatique. Le Hub présente les fichiers nécessaires avant installation.</p></li>
+<li><h3>Lisser X3 / X4 : Automatique</h3><p>Avec le mod 2.0.0, le mod apprend jeu par jeu si Streamline doit espacer X3 et X4. Le Hub montre ce qu’il a appris ; Mesurer de nouveau recommence.</p></li>
+<li><h3>Votre langue, en jeu aussi</h3><p>Le Hub parle désormais douze langues (merci au rapporteur de l’issue 12), et Langue du menu du mod règle celle du menu en jeu, désormais en onze langues : Comme le Hub par défaut, jamais par-dessus une langue choisie en jeu à l’installation ou à la mise à jour.</p></li>
 <li><h3>Trouver un jeu avec Ctrl+F</h3><p>Depuis n’importe quelle page du Hub 1.6.0, <code>Ctrl+F</code> sélectionne la recherche de jeux de la barre de titre.</p></li>
 <li><h3>Restaurer le jeu peut aussi nettoyer</h3><p>Une case décochée par défaut supprime aussi les réglages et journaux du mod, et son dossier privé de runtimes s’il ne contient que des fichiers du Hub. Merci au rapporteur de l’issue 8.</p></li>
 <li><h3>Mettre à jour les favoris uniquement</h3><p>Le Hub 1.5.3 peut limiter les mises à jour groupées aux jeux favoris tout en gardant le statut global de la bibliothèque.</p></li>
@@ -133,7 +149,7 @@
 <div>
 <h2>Soutenir le projet</h2>
 <p>RTX Encore et RTX Encore Hub sont gratuits et faits sur des soirées libres. Un soutien, mensuel ou ponctuel, aide à les garder gratuits et à les faire avancer.</p>
-<p class="thanks">Merci à nos premiers sponsors : <strong>mennogreg</strong>, et une personne qui préfère rester anonyme.</p>
+<p class="thanks">Merci à nos premiers sponsors : <a href="https://github.com/mennogreg">mennogreg</a>, <a href="https://github.com/Scarhead666">Scarhead666</a>, et une personne qui préfère rester anonyme.</p>
 </div>
 <div class="support-actions"><a class="button sponsor" href="https://github.com/sponsors/SilyNoMeta"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.2 6.9 13.2C3 9.7.5 7.4.5 4.6.5 2.3 2.3.5 4.6.5c1.3 0 2.6.6 3.4 1.6C8.8 1.1 10.1.5 11.4.5c2.3 0 4.1 1.8 4.1 4.1 0 2.8-2.5 5.1-6.4 8.6L8 14.2Z"/></svg>Sponsoriser sur GitHub</a><a class="button kofi" href="https://ko-fi.com/silynometa"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.2 6.9 13.2C3 9.7.5 7.4.5 4.6.5 2.3 2.3.5 4.6.5c1.3 0 2.6.6 3.4 1.6C8.8 1.1 10.1.5 11.4.5c2.3 0 4.1 1.8 4.1 4.1 0 2.8-2.5 5.1-6.4 8.6L8 14.2Z"/></svg>Soutenir sur Ko-fi</a></div>
 </div>
@@ -141,7 +157,7 @@
 
 <div class="wrap cta">
 <h2>Prêt à l&#x27;essayer ?</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.6.0">Télécharger Hub 1.6.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, le mod</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.0.0">Télécharger Hub 2.0.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, le mod</a></div>
 </div>
 </main>
 

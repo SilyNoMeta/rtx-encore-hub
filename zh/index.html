@@ -3,26 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RTX Encore 1.6.0：帧生成更进一步，与 NVIDIA 一致</title>
-<meta name="description" content="RTX Encore 1.6.0：帧生成更进一步，与 NVIDIA 一致">
-<link rel="canonical" href="https://encore.nometa.fr/zh/">
-<link rel="alternate" hreflang="en" href="https://encore.nometa.fr/">
-<link rel="alternate" hreflang="fr" href="https://encore.nometa.fr/fr/">
-<link rel="alternate" hreflang="zh-CN" href="https://encore.nometa.fr/zh/">
-<link rel="icon" type="image/png" href="../assets/logo.png">
+<title>RTX Encore 2.0.0：为没有 DLSS 的游戏带来 DLSS、XeSS、Neural Rendering 和帧生成</title>
+<meta name="description" content="RTX Encore 2.0.0：为没有 DLSS 的游戏带来 DLSS、XeSS、Neural Rendering 和帧生成">
+<link rel="canonical" href="https://silynometa.github.io/rtx-encore-hub/zh/">
+<link rel="alternate" hreflang="en" href="https://silynometa.github.io/rtx-encore-hub/">
+<link rel="alternate" hreflang="fr" href="https://silynometa.github.io/rtx-encore-hub/fr/">
+<link rel="alternate" hreflang="zh-CN" href="https://silynometa.github.io/rtx-encore-hub/zh/">
+<link rel="icon" href="../assets/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/logo-64.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preload" href="../assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
-<meta property="og:title" content="RTX Encore 1.6.0：帧生成更进一步，与 NVIDIA 一致">
-<meta property="og:description" content="RTX Encore 1.6.0：帧生成更进一步，与 NVIDIA 一致">
-<meta property="og:url" content="https://encore.nometa.fr/zh/">
-<meta property="og:image" content="https://encore.nometa.fr/assets/library.jpg">
+<meta property="og:title" content="RTX Encore 2.0.0：为没有 DLSS 的游戏带来 DLSS、XeSS、Neural Rendering 和帧生成">
+<meta property="og:description" content="RTX Encore 2.0.0：为没有 DLSS 的游戏带来 DLSS、XeSS、Neural Rendering 和帧生成">
+<meta property="og:url" content="https://silynometa.github.io/rtx-encore-hub/zh/">
+<meta property="og:image" content="https://silynometa.github.io/rtx-encore-hub/assets/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="RTX Encore Hub">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0a0e13">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <header class="nav"><div class="wrap">
-<a class="brand" href="../zh/"><img src="../assets/logo.png" alt="" width="30" height="30">RTX Encore Hub</a>
+<a class="brand" href="../zh/"><img src="../assets/logo-64.png" alt="" width="30" height="30">RTX Encore Hub</a>
 <nav><a href="#perf">性能</a><a href="#nr">Neural Rendering</a><a href="#hub">Hub</a><a href="#start">快速开始</a><a href="https://github.com/SilyNoMeta/rtx-encore-hub">GitHub</a></nav>
 <a class="nav-support" href="#support"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.2 6.9 13.2C3 9.7.5 7.4.5 4.6.5 2.3 2.3.5 4.6.5c1.3 0 2.6.6 3.4 1.6C8.8 1.1 10.1.5 11.4.5c2.3 0 4.1 1.8 4.1 4.1 0 2.8-2.5 5.1-6.4 8.6L8 14.2Z"/></svg><span>支持本项目</span></a>
 <div class="langs"><a href="../" hreflang="en">English</a><a href="../fr/" hreflang="fr">Français</a><a href="../zh/" hreflang="zh-CN" aria-current="true">简体中文</a></div>
@@ -30,33 +35,41 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 1.6.0 · Hub 1.6.0</span>
-<h1>帧生成。<br>更进一步，<em>逐像素一致</em>。</h1>
-<p class="lead">RTX Encore 1.6.0 将帧生成加速推向更进一步：在 RTX 40 和 RTX 30 上，每一帧生成帧的开销再次降低，且与 NVIDIA 的输出一致。<strong>Hub 1.6.0 新增 Ctrl+F 搜索，并可在还原游戏时选择清理。</strong>XeSS 与 XeFG Tensor 控制仍属实验性。</p>
+<span class="badge">RTX Encore 2.0.0 · Hub 2.0.0</span>
+<h1>更多帧。<br>更多游戏。<br><em>RTX Encore。</em></h1>
+<p class="lead">DLSS、XeSS、最高 X6 帧生成与 Neural Rendering，也适用于没有原生 DLSS 的游戏。支持 DirectX 11、DirectX 12 和 Vulkan。<strong>通过 Hub 安装，选择引擎，在游戏中调整。</strong></p>
 <p class="sub">Intel XeSS / XeFG、Pre-SR、中央优先 NR 和 RTX 20 Smooth Motion 仍属实验性，兼容性取决于游戏、图形 API 及运行库。 <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">报告问题</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.6.0">下载 Hub 1.6.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.6.0">下载 RTX Encore 1.6.0</a></div>
-<p class="under">Windows 10 和 11，x64 · 英语、法语和简体中文 · 安装无需管理员权限</p>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.0.0">下载 Hub 2.0.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.0.0">下载 RTX Encore 2.0.0</a></div>
+<p class="under">Windows 10 和 11，x64 · 十二种语言 · 安装无需管理员权限</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>RTX Encore 1.6.0 与 Hub 1.6.0</h2>
-<p class="sub">帧生成时间来自 RTX 4090、DLSS-G 310.9.16 上的 NGX 基准。RTX 30 和 RTX 20 的整帧收益尚未在游戏中实测，最终 1.6.0 二进制文件未单独进行游戏内复测。星空搭配 Luma 2.0 HDR 时生成帧呈浮雕效果：这是 Luma HDR 输出的已知问题，并非本版本引入。</p>
-<div class="news-grid"><div class="card"><h3>帧生成更进一步</h3><p>模组 1.6.0 将帧生成加速推向更进一步：在 RTX 40 和 RTX 30 上，每一帧生成帧的开销再次降低，且与 NVIDIA 的输出逐像素一致。RTX 4090、DLSS-G 310.9.16：1080p X2 每帧生成帧 0.538 → 0.512 ms（相比关闭优化 −34.4 %）。</p></div>
-<div class="card"><h3>修复 ReShade 崩溃</h3><p>加载 Luma 等 ReShade 6.8 插件时，Neural Rendering 可能导致堆损坏。现在复用描述符堆；使用该模组组合游玩星空 35 分钟未崩溃（issue 98）。</p></div>
-<div class="card"><h3>Raw Input 游戏中的菜单光标</h3><p>在星空及其他直接读取鼠标的游戏中，菜单光标现在会跟随鼠标，不再停在屏幕中央。</p></div>
-<div class="card"><h3>用 Ctrl+F 查找游戏</h3><p>在 Hub 1.6.0 的任何页面按 <code>Ctrl+F</code> 都会选中标题栏的游戏搜索。</p></div>
-<div class="card"><h3>还原游戏可同时清理</h3><p>默认不勾选的选项还会删除模组的设置和日志，以及仅含 Hub 文件的私有运行库目录。感谢 issue 8 的报告者。</p></div>
-<div class="card"><h3>RTX 30/40/50 上的 XeSS 与 XeFG Tensor Core</h3><p>独立、默认关闭的实验选项。Mod 1.5.3 准入 NVIDIA 621.01 和 621.12；游戏内验证仍仅覆盖较早 RTX 4090 / 621.01 配置。</p></div>
+<h2>RTX Encore 2.0.0 与 Hub 2.0.0</h2>
+<p class="sub">兼容性取决于游戏、GPU、API 和运行库。没有原生 DLSS 时会估计运动，并将 HUD 与画面一起处理。维护者在 RTX 4090 上测试过 The Sims 4、Skyrim 和 Elden Ring，但这不代表所有游戏和 GPU 均已验证。X5/X6 和 Neural Rendering 仍为实验功能。</p>
+<div class="news-grid"><div class="card"><h3>没有 DLSS 的游戏</h3><p>模组 2.0.0 基于游戏显示的画面，在 DirectX 11、DirectX 12 和 Vulkan 中为没有 DLSS 的游戏带来 DLSS Super Resolution 或 DLAA、Intel XeSS、Neural Rendering 和帧生成。已在 RTX 4090 上于 PEAK、The Sims 4、Skyrim Special Edition 和 Football Life 2027 中测试。</p></div>
+<div class="card"><h3>在没有帧生成的地方生成帧</h3><p>DLSS 帧生成 X2 至 X6（DirectX 11、DirectX 12 和 Vulkan），Intel XeFG 最高 X6（DirectX 12，可用时使用 NVIDIA Tensor Cores；Vulkan，支持 HDR10；以及 DirectX 11）。倍率可在游玩中更改；HUD 与画面一起插帧。</p></div>
+<div class="card"><h3>由 RTX Encore 估计运动</h3><p>模组自己的运动估计在显卡上运行，并能自行找到游戏的深度缓冲。vort_Motion 的着色器方法和 NVIDIA Optical Flow 是另外的选择。</p></div>
+<div class="card"><h3>选择你的配置</h3><p>首次为没有原生集成的游戏安装时，选择无、Smooth Motion、DLSS-G 或 XeFG，然后选择无、DLSS 或 XeSS。不会自动启用 Smooth Motion。Hub 会在安装前预览所需文件。</p></div>
+<div class="card"><h3>调整画质</h3><p>原生 DLSS SR 和 XeSS 新增 Ultra（75%）渲染比例。自定义锐化可实时调节 0–100%。没有 DLSS 的游戏默认使用原生抗锯齿；要放大到屏幕分辨率，请以较低分辨率在窗口模式启动。</p></div>
+<div class="card"><h3>保持运行库兼容</h3><p>缺少运行库时不提供对应引擎。旧版兼容运行库仍可使用，并显示更新提醒。Hub 帮助安装推荐文件；添加的 DLSS-G 使用指定的兼容文件组合。</p></div>
 </div>
 </div></section>
 
+<section class="community wrap" aria-labelledby="community-title">
+<div>
+<h2 id="community-title">RTX Encore 的 Discord 服务器现已开放</h2>
+<p>正在没有 DLSS 的游戏里试用 2.0.0？欢迎分享游戏名称、显卡和设置，与其他玩家交流测试结果，或就模组和 Hub 寻求帮助。</p>
+</div>
+<a class="button discord" href="https://discord.gg/Zwmq4Xc2Br"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.8 19.8 0 0 0-4.885-1.515c-.21.38-.452.892-.62 1.3a18.2 18.2 0 0 0-5.42 0 14 14 0 0 0-.628-1.3 19.7 19.7 0 0 0-4.888 1.52C.785 8.95-.053 13.41.366 17.808a20 20 0 0 0 5.993 3.03c.484-.654.915-1.35 1.287-2.082a13 13 0 0 1-2.027-.966l.497-.386c3.908 1.82 8.16 1.82 12.022 0l.498.386a13 13 0 0 1-2.03.968c.372.73.802 1.427 1.287 2.08a20 20 0 0 0 5.995-3.03c.492-5.1-.84-9.52-3.571-13.438ZM8.02 15.1c-1.173 0-2.134-1.073-2.134-2.392s.94-2.394 2.134-2.394c1.205 0 2.155 1.083 2.134 2.394 0 1.32-.94 2.392-2.134 2.392Zm7.96 0c-1.173 0-2.134-1.073-2.134-2.392s.94-2.394 2.134-2.394c1.205 0 2.155 1.083 2.134 2.394 0 1.32-.93 2.392-2.134 2.392Z"/></svg>加入 Discord</a>
+</section>
+
 <section class="band" id="perf"><div class="wrap">
 <div class="stats">
-<div class="stat"><span class="figure">−30.7%</span><span class="unit">XeSS GPU 时间</span><span class="context">较早巫师 3 测试：1.243 → 0.861 ms，RTX 4090 / 621.01，4K 输出。</span></div>
-<div class="stat"><span class="figure">+2.8–3.2%</span><span class="unit">渲染源帧 FPS</span><span class="context">同一测量场景；并非生成帧或独立测量的显示 FPS。</span></div>
-<div class="stat"><span class="figure">X2–X6</span><span class="unit">即时固定 XeFG 倍率</span><span class="context">受初始验证路径的初始化容量限制。实验性；尚未证明普遍 FPS 收益。</span></div>
+<div class="stat"><span class="figure">X2–X6</span><span class="unit">DLSS-G 与 XeFG</span><span class="context">在 DirectX 11、DirectX 12 和 Vulkan 中提供帧生成，包括没有原生帧生成的兼容游戏。</span></div>
+<div class="stat"><span class="figure">−72.5%</span><span class="unit">烟雾运动误差</span><span class="context">4K 合成烟雾场景背景：改进后的 RTX Encore 运动估计将误差从 2.523 降至 0.693 像素。</span></div>
+<div class="stat"><span class="figure">0.984 ms</span><span class="unit">4K 运动估计</span><span class="context">RTX 4090，3840×2160，2×2 向量网格。此前参考值为 0.985 ms。</span></div>
 </div>
-<p class="stats-note">XeSS 测量来自较早测试版本的一处巫师 3 场景。后续最终重建更改通过确定性重放验证，没有新的游戏内对比。最终 1.5.0 二进制文件未单独在游戏内复测；尚未证明 XeFG 的普遍 FPS 或延迟收益。</p>
+<p class="stats-note">运动基准测试日期：2026 年 11 月 5 日。GPU 时间仅包含运动估计；烟雾结果来自一处合成场景，并非普遍 FPS 提升。游戏兼容性与可用倍率取决于 GPU、API 和运行库；X5/X6 仍为实验功能。</p>
 </div></section>
 
 <section id="nr"><div class="wrap">
@@ -89,6 +102,9 @@
 <div class="hub">
 <figure><div class="shot"><img src="../assets/library.zh.jpg" alt="Hub 的游戏库，包含每个安装的状态和更新横幅" width="1440" height="900" loading="lazy"></div><figcaption>真实应用截图，使用由替身游戏文件夹组成的演示游戏库。</figcaption></figure>
 <ol class="points">
+<li><h3>选择你的配置</h3><p>首次为没有原生集成的游戏安装时，选择无、Smooth Motion、DLSS-G 或 XeFG，然后选择无、DLSS 或 XeSS。不会自动启用 Smooth Motion。Hub 会在安装前预览所需文件。</p></li>
+<li><h3>平滑 X3 / X4：自动</h3><p>配合模组 2.0.0，模组会为每个游戏学习是否应由 Streamline 安排 X3 和 X4 的节奏。Hub 会显示学到的结果；“重新测量”可从头开始。</p></li>
+<li><h3>你的语言，游戏内也一样</h3><p>Hub 现在支持十二种语言（感谢 issue 12 的报告者），“模组菜单语言”可设置游戏内菜单的语言（现支持十一种）：默认与 Hub 相同，安装或更新时绝不覆盖在游戏中选择的语言。</p></li>
 <li><h3>用 Ctrl+F 查找游戏</h3><p>在 Hub 1.6.0 的任何页面按 <code>Ctrl+F</code> 都会选中标题栏的游戏搜索。</p></li>
 <li><h3>还原游戏可同时清理</h3><p>默认不勾选的选项还会删除模组的设置和日志，以及仅含 Hub 文件的私有运行库目录。感谢 issue 8 的报告者。</p></li>
 <li><h3>仅更新收藏游戏</h3><p>Hub 1.5.3 可将批量更新限制为收藏游戏，同时保留资料库整体更新状态。</p></li>
@@ -133,7 +149,7 @@
 <div>
 <h2>支持本项目</h2>
 <p>RTX Encore 和 RTX Encore Hub 都是免费的，利用业余时间开发。无论是按月还是一次性的赞助，都能帮助它们保持免费并持续前进。</p>
-<p class="thanks">感谢我们的首批赞助者：<strong>mennogreg</strong>，以及一位希望保持匿名的赞助者。</p>
+<p class="thanks">感谢我们的首批赞助者：<a href="https://github.com/mennogreg">mennogreg</a>、<a href="https://github.com/Scarhead666">Scarhead666</a>，以及一位希望保持匿名的赞助者。</p>
 </div>
 <div class="support-actions"><a class="button sponsor" href="https://github.com/sponsors/SilyNoMeta"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.2 6.9 13.2C3 9.7.5 7.4.5 4.6.5 2.3 2.3.5 4.6.5c1.3 0 2.6.6 3.4 1.6C8.8 1.1 10.1.5 11.4.5c2.3 0 4.1 1.8 4.1 4.1 0 2.8-2.5 5.1-6.4 8.6L8 14.2Z"/></svg>在 GitHub 上赞助</a><a class="button kofi" href="https://ko-fi.com/silynometa"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.2 6.9 13.2C3 9.7.5 7.4.5 4.6.5 2.3 2.3.5 4.6.5c1.3 0 2.6.6 3.4 1.6C8.8 1.1 10.1.5 11.4.5c2.3 0 4.1 1.8 4.1 4.1 0 2.8-2.5 5.1-6.4 8.6L8 14.2Z"/></svg>在 Ko-fi 上支持</a></div>
 </div>
@@ -141,7 +157,7 @@
 
 <div class="wrap cta">
 <h2>准备好试试了吗？</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v1.6.0">下载 Hub 1.6.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.0.0">下载 Hub 2.0.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore 模组</a></div>
 </div>
 </main>
 
