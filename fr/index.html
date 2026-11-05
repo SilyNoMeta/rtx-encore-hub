@@ -65,11 +65,11 @@
 
 <section class="band" id="perf"><div class="wrap">
 <div class="stats">
-<div class="stat"><span class="figure">X2–X6</span><span class="unit">DLSS-G et XeFG</span><span class="context">Génération d’images, y compris dans les jeux compatibles sans FG natif, sous DirectX 11, DirectX 12 et Vulkan.</span></div>
-<div class="stat"><span class="figure">−72,5 %</span><span class="unit">erreur de mouvement dans la fumée</span><span class="context">Fond d’une scène synthétique 4K : 2,523 → 0,693 px avec le moteur de mouvement RTX Encore amélioré.</span></div>
-<div class="stat"><span class="figure">0,984 ms</span><span class="unit">estimation du mouvement en 4K</span><span class="context">RTX 4090, 3840×2160, grille de vecteurs 2×2. Référence précédente : 0,985 ms.</span></div>
+<div class="stat"><span class="figure">−34,4 %</span><span class="unit">temps GPU DLSS Frame Generation</span><span class="context">Référence NVIDIA 0,781 → Encore 0,512 ms par image générée. RTX 4090, 1080p X2, DLSS-G 310.9.16.</span></div>
+<div class="stat"><span class="figure">−25 %</span><span class="unit">temps GPU DLSS Super Resolution</span><span class="context">SR rapide, preset M, Black Myth: Wukong sur RTX 3070 Ti Laptop. −22 % dans The Witcher 3.</span></div>
+<div class="stat"><span class="figure">≈−17 %</span><span class="unit">temps GPU Neural Rendering</span><span class="context">Moteur NVIDIA, RTX 30 : précision Fast d’Encore face à Exact. Petites différences d’image.</span></div>
 </div>
-<p class="stats-note">Benchmarks de mouvement du 5 novembre 2026. Le temps GPU couvre uniquement l’estimation du mouvement ; le résultat sur la fumée concerne une scène synthétique, pas un gain général de FPS. Compatibilité et multiplicateurs dépendent du GPU, de l’API et des runtimes ; X5/X6 restent expérimentaux.</p>
+<p class="stats-note">Coûts GPU mesurés, pas des gains de FPS globaux. FG : benchmark isolé, optimisations désactivées puis activées, sortie identique dans les tests de référence. SR : mesures en jeu, image très proche. NR : la précision Fast échange un peu de fidélité contre de la vitesse. Ces mesures antérieures portent sur les optimisations conservées en 2.0.0, sans nouveau benchmark des binaires de release.</p>
 </div></section>
 
 <section id="nr"><div class="wrap">
@@ -84,15 +84,14 @@
 </div></section>
 
 <section><div class="wrap">
-<h2>Où va le temps GPU</h2>
-<p class="sub">Part du temps GPU de chaque passe que RTX Encore économise, mesurée sur un RTX 3070 Ti Laptop.</p>
+<h2>Référence NVIDIA → avec RTX Encore</h2>
+<p class="sub">Même traitement avant et après son optimisation. Pour les mesures en pourcentage, référence NVIDIA = 100 unités de temps GPU ; moins, c’est mieux. GPU et charges différents : ces gains ne s’additionnent pas.</p>
 <div class="chart" role="img" aria-label="Graphique en barres du temps GPU économisé par optimisation, en pourcentage.">
-<div class="c-row" title="NR, mode Ultra-fast, Wukong, 18,7 → 9,8 ms: −48 %"><div class="c-label"><span class="c-name">NR, mode Ultra-fast</span><span class="c-where">Wukong, 18,7 → 9,8 ms</span></div><div class="c-track"><span class="c-bar" style="width:80.0%"></span><span class="c-value">−48 %</span></div></div>
-<div class="c-row" title="NR 310.9.16, preset B, 1080p, 26,7 → 15,1 ms: −43 %"><div class="c-label"><span class="c-name">NR 310.9.16, preset B</span><span class="c-where">1080p, 26,7 → 15,1 ms</span></div><div class="c-track"><span class="c-bar" style="width:71.7%"></span><span class="c-value">−43 %</span></div></div>
-<div class="c-row" title="Fast SR, preset M, Black Myth: Wukong: −25 %"><div class="c-label"><span class="c-name">Fast SR, preset M</span><span class="c-where">Black Myth: Wukong</span></div><div class="c-track"><span class="c-bar" style="width:41.7%"></span><span class="c-value">−25 %</span></div></div>
-<div class="c-row" title="Fast SR, preset M, The Witcher 3: −22 %"><div class="c-label"><span class="c-name">Fast SR, preset M</span><span class="c-where">The Witcher 3</span></div><div class="c-track"><span class="c-bar" style="width:36.7%"></span><span class="c-value">−22 %</span></div></div>
-<div class="c-row" title="Fast SR, preset M, banc: −18 %"><div class="c-label"><span class="c-name">Fast SR, preset M</span><span class="c-where">banc</span></div><div class="c-track"><span class="c-bar" style="width:30.0%"></span><span class="c-value">−18 %</span></div></div>
-<div class="c-row" title="Fast SR, preset L, banc: −15 %"><div class="c-label"><span class="c-name">Fast SR, preset L</span><span class="c-where">banc</span></div><div class="c-track"><span class="c-bar" style="width:25.0%"></span><span class="c-value">−15 %</span></div></div>
+<div class="c-row" title="DLSS-G · 1080p X2 · RTX 4090, Benchmark isolé : 0,781 → 0,512 ms / image générée: −34.4 %"><div class="c-label"><span class="c-name">DLSS-G · 1080p X2 · RTX 4090</span><span class="c-where">Benchmark isolé : 0,781 → 0,512 ms / image générée</span></div><div class="c-track"><span class="c-bar" style="width:80.0%"></span><span class="c-value">−34.4 %</span></div></div>
+<div class="c-row" title="DLSS-G · 4K X2 · RTX 4090, Benchmark isolé : 1,406 → 1,100 ms / image générée: −21.8 %"><div class="c-label"><span class="c-name">DLSS-G · 4K X2 · RTX 4090</span><span class="c-where">Benchmark isolé : 1,406 → 1,100 ms / image générée</span></div><div class="c-track"><span class="c-bar" style="width:50.7%"></span><span class="c-value">−21.8 %</span></div></div>
+<div class="c-row" title="DLSS SR M · Wukong · RTX 3070 Ti Laptop, En jeu : NVIDIA 100 → SR rapide Encore 75: −25 %"><div class="c-label"><span class="c-name">DLSS SR M · Wukong · RTX 3070 Ti Laptop</span><span class="c-where">En jeu : NVIDIA 100 → SR rapide Encore 75</span></div><div class="c-track"><span class="c-bar" style="width:58.1%"></span><span class="c-value">−25 %</span></div></div>
+<div class="c-row" title="DLSS SR M · The Witcher 3 · RTX 3070 Ti Laptop, En jeu : NVIDIA 100 → SR rapide Encore 78: −22 %"><div class="c-label"><span class="c-name">DLSS SR M · The Witcher 3 · RTX 3070 Ti Laptop</span><span class="c-where">En jeu : NVIDIA 100 → SR rapide Encore 78</span></div><div class="c-track"><span class="c-bar" style="width:51.2%"></span><span class="c-value">−22 %</span></div></div>
+<div class="c-row" title="NR · RTX 30 · précision Fast, Coût NR mesuré : Exact 100 → Fast ≈83 ; petites différences d’image: −17 %"><div class="c-label"><span class="c-name">NR · RTX 30 · précision Fast</span><span class="c-where">Coût NR mesuré : Exact 100 → Fast ≈83 ; petites différences d’image</span></div><div class="c-track"><span class="c-bar" style="width:39.5%"></span><span class="c-value">−17 %</span></div></div>
 </div>
 </div></section>
 

@@ -65,11 +65,11 @@
 
 <section class="band" id="perf"><div class="wrap">
 <div class="stats">
-<div class="stat"><span class="figure">X2–X6</span><span class="unit">DLSS-G 与 XeFG</span><span class="context">在 DirectX 11、DirectX 12 和 Vulkan 中提供帧生成，包括没有原生帧生成的兼容游戏。</span></div>
-<div class="stat"><span class="figure">−72.5%</span><span class="unit">烟雾运动误差</span><span class="context">4K 合成烟雾场景背景：改进后的 RTX Encore 运动估计将误差从 2.523 降至 0.693 像素。</span></div>
-<div class="stat"><span class="figure">0.984 ms</span><span class="unit">4K 运动估计</span><span class="context">RTX 4090，3840×2160，2×2 向量网格。此前参考值为 0.985 ms。</span></div>
+<div class="stat"><span class="figure">−34.4%</span><span class="unit">DLSS 帧生成 GPU 时间</span><span class="context">NVIDIA 参考 0.781 → Encore 0.512 ms/生成帧。RTX 4090，1080p X2，DLSS-G 310.9.16。</span></div>
+<div class="stat"><span class="figure">−25%</span><span class="unit">DLSS 超分辨率 GPU 时间</span><span class="context">RTX 3070 Ti Laptop，黑神话：悟空，快速 SR 预设 M。巫师 3 中降低 22%。</span></div>
+<div class="stat"><span class="figure">≈−17%</span><span class="unit">Neural Rendering GPU 时间</span><span class="context">RTX 30 NVIDIA 引擎：Encore Fast 精度与 Exact 对比，画面略有差异。</span></div>
 </div>
-<p class="stats-note">运动基准测试日期：2026 年 11 月 5 日。GPU 时间仅包含运动估计；烟雾结果来自一处合成场景，并非普遍 FPS 提升。游戏兼容性与可用倍率取决于 GPU、API 和运行库；X5/X6 仍为实验功能。</p>
+<p class="stats-note">实测 GPU 处理开销，并非整体 FPS 提升。FG 为关闭与开启优化的独立基准对比，参考测试输出相同。SR 为游戏内测量，画面非常接近。NR Fast 以少量精度换取速度。这些历史测量对应 2.0.0 保留的优化，不是对发布二进制文件的新一轮测试。</p>
 </div></section>
 
 <section id="nr"><div class="wrap">
@@ -84,15 +84,14 @@
 </div></section>
 
 <section><div class="wrap">
-<h2>GPU 时间都去哪了</h2>
-<p class="sub">RTX Encore 为每个处理阶段节省的 GPU 时间比例，在 RTX 3070 Ti Laptop 上测得。</p>
+<h2>NVIDIA 参考 → 使用 RTX Encore</h2>
+<p class="sub">同一功能优化前后对比。只有百分比的测量以 NVIDIA GPU 时间为 100，越低越好。GPU 与工作负载不同，收益不能相加。</p>
 <div class="chart" role="img" aria-label="各项优化节省的 GPU 时间条形图，单位为百分比。">
-<div class="c-row" title="NR，Ultra-fast 模式, Wukong，18.7 → 9.8 ms: −48 %"><div class="c-label"><span class="c-name">NR，Ultra-fast 模式</span><span class="c-where">Wukong，18.7 → 9.8 ms</span></div><div class="c-track"><span class="c-bar" style="width:80.0%"></span><span class="c-value">−48 %</span></div></div>
-<div class="c-row" title="NR 310.9.16，预设 B, 1080p，26.7 → 15.1 ms: −43 %"><div class="c-label"><span class="c-name">NR 310.9.16，预设 B</span><span class="c-where">1080p，26.7 → 15.1 ms</span></div><div class="c-track"><span class="c-bar" style="width:71.7%"></span><span class="c-value">−43 %</span></div></div>
-<div class="c-row" title="Fast SR，预设 M, Black Myth: Wukong: −25 %"><div class="c-label"><span class="c-name">Fast SR，预设 M</span><span class="c-where">Black Myth: Wukong</span></div><div class="c-track"><span class="c-bar" style="width:41.7%"></span><span class="c-value">−25 %</span></div></div>
-<div class="c-row" title="Fast SR，预设 M, The Witcher 3: −22 %"><div class="c-label"><span class="c-name">Fast SR，预设 M</span><span class="c-where">The Witcher 3</span></div><div class="c-track"><span class="c-bar" style="width:36.7%"></span><span class="c-value">−22 %</span></div></div>
-<div class="c-row" title="Fast SR，预设 M, 测试台: −18 %"><div class="c-label"><span class="c-name">Fast SR，预设 M</span><span class="c-where">测试台</span></div><div class="c-track"><span class="c-bar" style="width:30.0%"></span><span class="c-value">−18 %</span></div></div>
-<div class="c-row" title="Fast SR，预设 L, 测试台: −15 %"><div class="c-label"><span class="c-name">Fast SR，预设 L</span><span class="c-where">测试台</span></div><div class="c-track"><span class="c-bar" style="width:25.0%"></span><span class="c-value">−15 %</span></div></div>
+<div class="c-row" title="DLSS-G · 1080p X2 · RTX 4090, 独立基准：0.781 → 0.512 ms/生成帧: −34.4 %"><div class="c-label"><span class="c-name">DLSS-G · 1080p X2 · RTX 4090</span><span class="c-where">独立基准：0.781 → 0.512 ms/生成帧</span></div><div class="c-track"><span class="c-bar" style="width:80.0%"></span><span class="c-value">−34.4 %</span></div></div>
+<div class="c-row" title="DLSS-G · 4K X2 · RTX 4090, 独立基准：1.406 → 1.100 ms/生成帧: −21.8 %"><div class="c-label"><span class="c-name">DLSS-G · 4K X2 · RTX 4090</span><span class="c-where">独立基准：1.406 → 1.100 ms/生成帧</span></div><div class="c-track"><span class="c-bar" style="width:50.7%"></span><span class="c-value">−21.8 %</span></div></div>
+<div class="c-row" title="DLSS SR M · 黑神话：悟空 · RTX 3070 Ti Laptop, 游戏内：NVIDIA 100 → Encore 快速 SR 75: −25 %"><div class="c-label"><span class="c-name">DLSS SR M · 黑神话：悟空 · RTX 3070 Ti Laptop</span><span class="c-where">游戏内：NVIDIA 100 → Encore 快速 SR 75</span></div><div class="c-track"><span class="c-bar" style="width:58.1%"></span><span class="c-value">−25 %</span></div></div>
+<div class="c-row" title="DLSS SR M · 巫师 3 · RTX 3070 Ti Laptop, 游戏内：NVIDIA 100 → Encore 快速 SR 78: −22 %"><div class="c-label"><span class="c-name">DLSS SR M · 巫师 3 · RTX 3070 Ti Laptop</span><span class="c-where">游戏内：NVIDIA 100 → Encore 快速 SR 78</span></div><div class="c-track"><span class="c-bar" style="width:51.2%"></span><span class="c-value">−22 %</span></div></div>
+<div class="c-row" title="NR · RTX 30 · Fast 精度, 实测 NR 开销：Exact 100 → Fast ≈83；画面略有差异: −17 %"><div class="c-label"><span class="c-name">NR · RTX 30 · Fast 精度</span><span class="c-where">实测 NR 开销：Exact 100 → Fast ≈83；画面略有差异</span></div><div class="c-track"><span class="c-bar" style="width:39.5%"></span><span class="c-value">−17 %</span></div></div>
 </div>
 </div></section>
 
