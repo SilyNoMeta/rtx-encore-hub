@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src="assets/logo.png" alt="Logo RTX Encore Hub" width="128" height="128">
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/logo-light.png">
+  <img src="assets/logo.png" alt="Logo RTX Encore Hub" width="128" height="128">
+</picture>
 
 ![RTX Encore Hub — vos jeux, un seul endroit](assets/hero.fr.svg)
 
@@ -14,9 +17,10 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 [![Dernière version](https://img.shields.io/github/v/release/SilyNoMeta/rtx-encore-hub?include_prereleases&style=for-the-badge&label=Version&color=76b900)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 [![Téléchargements](https://img.shields.io/github/downloads/SilyNoMeta/rtx-encore-hub/total?style=for-the-badge&label=T%C3%A9l%C3%A9chargements&color=2f81f7)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/SilyNoMeta)
+[![Rejoindre le Discord](https://img.shields.io/badge/Rejoindre_Discord-454FC4?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Zwmq4Xc2Br)
 
 [![Windows 10 et 11, x64](https://img.shields.io/badge/plateforme-Windows_10_%C2%B7_11_x64-8ab4f8?style=flat-square&labelColor=171c22)](#bien-démarrer)
-[![Interface anglais, français et chinois](https://img.shields.io/badge/interface-EN_%C2%B7_FR_%C2%B7_ZH-c4b5fd?style=flat-square&labelColor=171c22)](#bien-démarrer)
+[![Interface en douze langues](https://img.shields.io/badge/interface-12_langues-c4b5fd?style=flat-square&labelColor=171c22)](#bien-démarrer)
 
 [![Télécharger la dernière version pour Windows x64](assets/download.fr.svg)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 
@@ -28,10 +32,22 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 
 </div>
 
+**Le Discord de RTX Encore est ouvert.** Partagez vos essais de la 2.0.0, comparez vos réglages ou demandez de l’aide pour le mod et le Hub. [Rejoindre le Discord](https://discord.gg/Zwmq4Xc2Br).
+
 > [!NOTE]
 > **Windows x64.** Ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`, ou `RTX-Encore-Hub-Portable-<version>.zip`, qui n'installe rien. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.
 
-## Hub 1.6.0
+
+**Choisir à l’installation.** Lors de la première installation dans un jeu sans DLSS ni génération d’images natifs, le Hub demande séparément **Aucun / Smooth Motion / DLSS-G / XeFG** et **Aucun / DLSS / XeSS**. Aucun choix n’est présélectionné. DLSS démarre à la résolution du jeu (DLAA), sauf si vous choisissez la reconstruction à la résolution de l’écran. Les mises à jour conservent vos réglages ; le plan présente les fichiers et les réglages avant application.
+
+## Hub 2.0.0
+
+> [!TIP]
+> **Jeux sans DLSS.** Avec RTX Encore 2.0.0, un jeu qui n’a pas de DLSS peut quand même avoir le DLSS (DLAA ou agrandissement à la résolution de votre écran), le Neural Rendering et la génération d’images (DLSS Frame Generation ou Intel XeFG, selon le moteur choisi), appliqués à l’image qu’il affiche. Installez ou mettez à jour le mod avec le Hub, et tout ce dont ces fonctions se servent vient avec : les DLL NVIDIA à côté du mod, les runtimes Intel et, là où le jeu n’a ni génération d’images ni Streamline à lui, les six fichiers exacts de DLSS Frame Generation à côté de l’exécutable. Activez chaque fonction dans le menu du mod ou dans **Tous les réglages de ce jeu** ; **Restaurer le jeu** retire ce qui a été ajouté. Expérimental. [Comment ça marche](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/GAMES-WITHOUT-DLSS.fr.md).
+
+**Le Hub 2.0.0 est une version majeure.** Les jeux qui n’ont aucun DLSS reçoivent désormais DLSS, la génération d’images et le Neural Rendering avec RTX Encore 2.0.0, portés par un moteur d’estimation du mouvement que RTX Encore a écrit pour eux, et le Hub installe tout ce dont ils se servent. RTX Encore et le Hub changent aussi d’identité visuelle, avec un nouveau logo, et RTX Encore ouvre son Discord.
+
+**Hub 2.0.0 :** jeux sans DLSS, Lisser X3 / X4 en **Automatique**, une préférence **Langue du menu du mod** (Comme le Hub par défaut ; une langue choisie en jeu est gardée) et douze langues d’interface ([#12](https://github.com/SilyNoMeta/rtx-encore-hub/issues/12)). [Notes de version](docs/notes/2.0.0.fr.md).
 
 **Hub 1.6.0 :** `Ctrl+F` va à la recherche de jeux, Restaurer le jeu peut aussi supprimer les réglages et journaux du mod, et le mod 1.6.0 est pris en charge. [Notes de version](docs/notes/1.6.0.fr.md).
 
@@ -56,7 +72,7 @@ Installez et mettez à jour RTX Encore, gardez ses runtimes cohérents et gérez
 
 **Intel XeSS / XeFG restent très expérimentaux.** Leur compatibilité dépend du mod, du jeu, de l’API graphique et des runtimes. Signalez les problèmes avec une archive de diagnostic relue ; la présence des fichiers ou un multiplicateur demandé ne prouvent pas le rendu effectif.
 
-[Hub 1.6.0](docs/notes/1.6.0.fr.md) · [RTX Encore 1.6.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.6.0)
+[Hub 2.0.0](docs/notes/2.0.0.fr.md) · [RTX Encore 2.0.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.0.0)
 
 ![La bibliothèque du Hub, avec les jaquettes, l'état de chaque installation et le bandeau des mises à jour](screenshots/library.fr.png)
 
@@ -109,7 +125,7 @@ Chaque DLL NVIDIA est montrée avec la version du jeu, la meilleure copie de cet
 4. Dans **Santé**, **Lancer et vérifier** démarre le jeu et vous dit comment s'est passée sa première minute.
 5. Quand un nouveau RTX Encore sort, **Tout mettre à jour** dans la bibliothèque met à jour tous les jeux.
 
-L'interface suit la langue de Windows : **français, anglais ou chinois simplifié** ; les autres langues reçoivent l'anglais.
+L'interface suit la langue de Windows, en **douze langues** : français, anglais, allemand, espagnol, néerlandais, polonais, portugais du Brésil, vietnamien, russe, arabe, japonais et chinois simplifié ; les autres langues reçoivent l'anglais. Changez-la dans **Paramètres → Langue de l'interface**.
 
 Lisez le **[guide d'utilisation](docs/USER-GUIDE.fr.md)** pour les mises à jour, la restauration, l'endroit où le Hub garde ses données et ce qu'il lit sur le réseau.
 

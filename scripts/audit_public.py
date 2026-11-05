@@ -14,6 +14,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 # Run this copy from a prepared public checkout (copied as scripts/audit_public.py).
 ALLOWED = {
+    "docs/notes/2.0.0.md", "docs/notes/2.0.0.fr.md", "docs/notes/2.0.0.zh-CN.md",
     "docs/notes/1.6.0.md", "docs/notes/1.6.0.fr.md", "docs/notes/1.6.0.zh-CN.md",
     "docs/notes/1.5.3.md", "docs/notes/1.5.3.fr.md", "docs/notes/1.5.3.zh-CN.md",
     "docs/notes/1.5.2.md", "docs/notes/1.5.2.fr.md", "docs/notes/1.5.2.zh-CN.md",
@@ -40,7 +41,7 @@ ALLOWED = {
     ".github/ISSUE_TEMPLATE/bug-report.yml",
     ".github/ISSUE_TEMPLATE/feature-request.yml",
     ".github/ISSUE_TEMPLATE/config.yml",
-    "assets/logo.png", "assets/hero.svg", "assets/hero.fr.svg",
+    "assets/logo.png", "assets/logo-light.png", "assets/hero.svg", "assets/hero.fr.svg",
     "assets/download.svg", "assets/download.fr.svg",
     "assets/hero.zh-CN.svg", "assets/download.zh-CN.svg",
     "docs/USER-GUIDE.md", "docs/USER-GUIDE.fr.md",
@@ -53,7 +54,8 @@ ALLOWED = {
     "screenshots/game-inspection.zh.png", "screenshots/nvidia-files.zh.png",
 }
 # The files of the project's page, on its own branch (gh-pages): built from this repository's logo and captures.
-SITE = {".nojekyll", "index.html", "404.html", "fr/index.html", "zh/index.html", "assets/site.css", "assets/logo.png"} | {
+SITE = {".nojekyll", "index.html", "404.html", "fr/index.html", "zh/index.html", "assets/site.css", "assets/logo.png",
+        "assets/favicon.ico", "assets/logo-64.png", "assets/apple-touch-icon.png", "assets/social-card.png"} | {
     f"assets/{name}{language}.jpg" for name in ("library", "game-inspection", "nvidia-files") for language in ("", ".fr", ".zh")
 }
 PRIVATE_REFERENCE = re.compile(

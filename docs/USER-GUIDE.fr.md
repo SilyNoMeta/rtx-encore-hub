@@ -4,7 +4,27 @@
 
 [English](USER-GUIDE.md) · [简体中文](USER-GUIDE.zh-CN.md) · [Retour au projet](../README.fr.md)
 
-RTX Encore Hub installe [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) dans vos jeux, tient à jour le mod et les DLL NVIDIA, vérifie qu'un jeu démarre bien avec, et sait toujours revenir en arrière. L'interface suit la langue de Windows : français, anglais ou chinois simplifié ; les autres langues utilisent l'anglais. Ce guide reprend les libellés français de l'application.
+RTX Encore Hub installe [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) dans vos jeux, tient à jour le mod et les DLL NVIDIA, vérifie qu'un jeu démarre bien avec, et sait toujours revenir en arrière. L'interface suit la langue de Windows, en douze langues : français, anglais, allemand, espagnol, néerlandais, polonais, portugais du Brésil, vietnamien, russe, arabe (de droite à gauche), japonais et chinois simplifié ; les autres langues utilisent l'anglais. **Paramètres → Langue de l'interface** la change. Ce guide reprend les libellés français de l'application.
+
+## Jeux sans DLSS (2.0.0)
+
+Avec **RTX Encore 2.0.0 ou ultérieur**, un jeu qui n’a pas de DLSS peut quand même avoir, sur l’image qu’il affiche : le DLSS (DLAA à la résolution du jeu, ou agrandissement à celle de l’écran), le Neural Rendering et, dans les jeux qui n’ont pas de génération d’images à eux, la génération d’images : NVIDIA DLSS Frame Generation en DirectX 12 et Vulkan, ou Intel XeFG (X2 à X6 en DirectX 12, Vulkan et DirectX 11), selon le moteur de génération d’images choisi dans le menu du mod, avec un multiplicateur que vous pouvez changer en jouant. Tout cela est expérimental et désactivé par défaut ; le HUD est traité avec l’image. La page [Jeux sans DLSS](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/GAMES-WITHOUT-DLSS.fr.md) du mod explique le fonctionnement et les limites.
+
+**Fichiers d’installation.** Le Hub présente le mod, les runtimes requis et les réglages avant toute écriture. Les mises à jour proposent aussi les dépendances manquantes en conservant vos choix de moteurs. Vérifiez le plan et les téléchargements indisponibles avant application. La restauration et l’annulation restent disponibles pour les changements gérés.
+
+**Choisir à l’installation.** Lors de la première installation dans un jeu sans DLSS ni génération d’images natifs, le Hub demande séparément **Aucun / Smooth Motion / DLSS-G / XeFG** et **Aucun / DLSS / XeSS**. Aucun choix n’est présélectionné. DLSS démarre à la résolution du jeu (DLAA), sauf si vous choisissez la reconstruction à la résolution de l’écran. Les mises à jour conservent vos réglages ; le plan présente les fichiers et les réglages avant application.
+
+**Lisser X3 / X4** propose **Automatique**, **Activé** ou **Désactivé** à côté du mod 2.0.0. Automatique, la valeur par défaut du mod, laisse RTX Encore mesurer comment les images générées arrivent au pilote à partir de X3 et apprendre, pour ce jeu, si Streamline doit les espacer lui-même. La page des réglages dit ce qu’il a appris ; **Mesurer de nouveau** l’efface pour que le mod mesure au prochain lancement. Un profil partagé ne porte qu’Activé ou Désactivé.
+
+Dans **Qualité d’image → Reconstruction → Moteur**, choisissez **DLSS** ou **XeSS** pour activer la reconstruction, ou **Aucun** pour la désactiver. Il n’y a plus d’interrupteur d’activation séparé. La sortie par défaut est **Résolution du jeu (DLAA)** : DLSS fonctionne à la résolution native ; XeSS applique son anticrénelage natif. Pour agrandir l’image, lancez le jeu en **Fenêtré**, pas en fenêtré sans bordure, à la résolution d’entrée souhaitée, puis choisissez **Résolution de l’écran** dans Encore. Encore agrandit la sortie et retire les bordures. Par exemple, 2560 × 1440 vers 3840 × 2160 correspond à environ 67 % par dimension.
+
+Dans **Fluidité → Génération d’images → Moteur**, choisissez **DLSS-FG** ou **XeFG**, ou **Aucun** pour désactiver la génération ajoutée. Les deux moteurs prennent en charge DirectX 11, DirectX 12 et Vulkan sur les configurations compatibles. Désactivez Smooth Motion et relancez le jeu lorsque demandé. Le mode **Fixe** permet X2 à X6 ; X5 et X6 restent expérimentaux. **Jeu** désigne l’intégration native du jeu, pas l’activation dans un jeu sans génération d’images.
+
+## Langue du menu du mod (2.0.0)
+
+**Paramètres → Langue du menu du mod** choisit la langue du menu en jeu de RTX Encore (mod 2.0.0 ou ultérieur) : **Comme le Hub**, par défaut, ou l’une des onze langues du menu, chacune écrite dans sa propre langue. Comme le Hub suit la langue de l’interface du Hub ; le menu n’a pas d’arabe et s’affiche alors en anglais.
+
+Une installation ou une mise à jour du mod n’écrit cette langue dans `rtx-encore.jsonc` que si les réglages du jeu n’en nomment encore aucune : une langue choisie dans le menu en jeu est gardée. Changer la préférence dans le Hub l’écrit dans tous les jeux où le Hub a installé le mod, par-dessus le choix fait en jeu ; chaque jeu a sa propre opération, qui peut être annulée, et les jeux protégés par un anti-triche sont laissés de côté. Le menu en jeu peut toujours la changer.
 
 ## XeSS et XeFG Tensor Cores (1.5.0)
 
@@ -169,7 +189,7 @@ Sur NTFS, les DLL NVIDIA, Intel et Streamline téléchargées utilisent la compr
 Le Hub contacte, sans compte et sans rien envoyer de vous :
 
 - GitHub et l’archive officielle XeSS d’Intel, pour les dépendances Intel nécessaires à un mod compatible ;
-- GitHub, pour les publications du mod, celles du Hub, les DLL de NVIDIA et les plugins Streamline ;
+- GitHub, pour les publications du mod, celles du Hub, les DLL de NVIDIA, les plugins Streamline et, pour DLSS Frame Generation dans un jeu sans génération d’images, la publication du SDK Streamline de NVIDIA, lue par morceaux ;
 - `encore-dl.nometa.fr`, pour la DLL de Neural Rendering, une version au choix quand vous la prenez, la liste des sources, et les profils de la communauté quand vous ouvrez sa page ;
 - `encore-community.nometa.fr`, seulement quand vous publiez, retirez, aimez, confirmez ou signalez un profil : ce que vous avez relu, signé par la clé de votre machine. Pour couper la communauté, mettez `"Community": "off"` dans `%LOCALAPPDATA%\EncoreHub\settings.json` ;
 - Steam et Wikipédia, pour les jaquettes qui manquent : le titre du jeu leur est envoyé. **Paramètres → Jaquettes** coupe cette recherche.

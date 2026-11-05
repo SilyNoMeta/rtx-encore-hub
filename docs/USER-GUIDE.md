@@ -4,7 +4,27 @@
 
 [Français](USER-GUIDE.fr.md) · [简体中文](USER-GUIDE.zh-CN.md) · [Back to the project](../README.md)
 
-RTX Encore Hub installs [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) in your games, keeps the mod and the NVIDIA DLLs up to date, checks that a game starts well with it, and can always go back. The interface follows the language of Windows: French, English or Simplified Chinese; other languages use English. This guide uses the English labels of the application.
+RTX Encore Hub installs [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) in your games, keeps the mod and the NVIDIA DLLs up to date, checks that a game starts well with it, and can always go back. The interface follows the language of Windows, in twelve languages: English, French, German, Spanish, Dutch, Polish, Brazilian Portuguese, Vietnamese, Russian, Arabic (right to left), Japanese and Simplified Chinese; other languages use English. **Settings → Interface language** changes it. This guide uses the English labels of the application.
+
+## Games without DLSS (2.0.0)
+
+With **RTX Encore 2.0.0 or later**, a game that ships no DLSS can still get, on the image it displays: DLSS (DLAA at the game's resolution, or upscaling to the screen's), Neural Rendering, and, in games that have no frame generation of their own, frame generation: NVIDIA DLSS Frame Generation on DirectX 11, DirectX 12 and Vulkan, or Intel XeFG (X2 to X6 on DirectX 12, Vulkan and DirectX 11), per the frame generation engine chosen in the mod's menu, with a multiplier you can change while playing. All of it is experimental and off by default; the HUD is processed with the image. The mod's [Games without DLSS](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/GAMES-WITHOUT-DLSS.md) page explains how it works and its limits.
+
+**Installation files.** The Hub previews the mod, required runtimes and settings before writing them. Updates also offer missing dependencies, while preserving your engine choices. Review the plan and any unavailable downloads before applying it. Restore and undo remain available for managed changes.
+
+**Choose during installation.** For a first installation in a game without native DLSS or frame generation, the Hub asks independently for **None / Smooth Motion / DLSS-G / XeFG** and **None / DLSS / XeSS**. Nothing is preselected. DLSS starts at the game’s resolution (DLAA), unless you choose screen-resolution upscaling. Updates preserve your settings; the plan lists the files and settings before applying them.
+
+**Smooth out X3 / X4** offers **Automatic**, **On** or **Off** beside mod 2.0.0. Automatic, the mod's default, lets RTX Encore measure how the generated frames reach the driver from X3 up and learn, for this game, whether Streamline should pace them itself. The settings page says what it learned; **Measure again** clears it so the mod measures at the next start. A shared profile carries only On or Off.
+
+In **Image quality → Upscaling → Engine**, choose **DLSS** or **XeSS** to enable reconstruction, or **None** to leave it off. There is no separate activation switch. **Game resolution (DLAA)** is the default output: DLSS runs at native resolution; XeSS provides native anti-aliasing. For upscaling, launch the game in **Windowed**, not borderless, at the desired input resolution, then choose **Screen resolution** in Encore. Encore enlarges the output to the screen and removes the window borders. For example, 2560 × 1440 to 3840 × 2160 corresponds to about 67% per dimension.
+
+In **Frame rate → Frame generation → Engine**, choose **DLSS-FG** or **XeFG**, or **None** to disable added frame generation. Both engines support DirectX 11, DirectX 12 and Vulkan on compatible configurations. Turn Smooth Motion off and restart when requested. Choose **Fixed** for X2 to X6; X5 and X6 remain experimental. **Game** is for the game’s own integration, not an activation option for a game with no frame generation.
+
+## Mod menu language (2.0.0)
+
+**Settings → Mod menu language** chooses the language of RTX Encore's in-game menu (mod 2.0.0 or later): **Same as Hub**, the default, or one of the menu's eleven languages, each written in its own name. Same as Hub follows the Hub's interface language; the menu has no Arabic and shows English instead.
+
+An install or an update of the mod writes this language in `rtx-encore.jsonc` only when the game's settings name none yet: a language you picked in the in-game menu is kept. Changing the preference in the Hub writes it in every game where the Hub installed the mod, over the in-game choice; each game gets its own operation, which can be undone, and games with an anti-cheat are left aside. The in-game menu can still change it at any time.
 
 ## XeSS and XeFG Tensor Cores (1.5.0)
 
@@ -169,7 +189,7 @@ On NTFS, downloaded NVIDIA, Intel and Streamline runtime DLLs use Windows LZX co
 The Hub contacts, without an account and without sending anything of yours:
 
 - GitHub and Intel’s official XeSS release archive, for the Intel dependencies required by a compatible mod;
-- GitHub, for the releases of the mod, those of the Hub, NVIDIA's DLLs and the Streamline plugins;
+- GitHub, for the releases of the mod, those of the Hub, NVIDIA's DLLs, the Streamline plugins and, for DLSS Frame Generation in a game without frame generation, NVIDIA's Streamline SDK release, read by parts;
 - `encore-dl.nometa.fr`, for Neural Rendering's DLL, a version you chose to take, the list of sources, and the community's profiles when you open its page;
 - `encore-community.nometa.fr`, only when you publish, remove, like, confirm or report a profile: what you read, signed by your machine's key. To turn the community off, put `"Community": "off"` in `%LOCALAPPDATA%\EncoreHub\settings.json`;
 - Steam and Wikipedia, for the covers that are missing: the game's title is sent to them. **Settings → Cover images** turns that search off.

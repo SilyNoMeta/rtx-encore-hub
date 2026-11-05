@@ -4,7 +4,27 @@
 
 [English](USER-GUIDE.md) · [Français](USER-GUIDE.fr.md) · [返回项目](../README.zh-CN.md)
 
-RTX Encore Hub 把 [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) 安装到您的游戏中，让模组和 NVIDIA DLL 保持最新，检查游戏装上模组后能否正常启动，并且随时可以还原。界面跟随 Windows 的语言：法语、英语或简体中文；其他语言使用英语。本指南使用应用的中文标签。
+RTX Encore Hub 把 [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) 安装到您的游戏中，让模组和 NVIDIA DLL 保持最新，检查游戏装上模组后能否正常启动，并且随时可以还原。界面跟随 Windows 的语言，支持十二种语言：英语、法语、德语、西班牙语、荷兰语、波兰语、巴西葡萄牙语、越南语、俄语、阿拉伯语（从右到左）、日语和简体中文；其他语言使用英语。可在**设置 → 界面语言**中更改。本指南使用应用的中文标签。
+
+## 没有 DLSS 的游戏（2.0.0）
+
+配合 **RTX Encore 2.0.0 或更新版本**，本身不带 DLSS 的游戏也能对其显示的画面使用：DLSS（游戏分辨率下的 DLAA，或放大到屏幕分辨率）、神经渲染，以及在没有自带帧生成的游戏中的帧生成：DirectX 12 和 Vulkan 上的 NVIDIA DLSS Frame Generation，或 Intel XeFG（DirectX 12、Vulkan 和 DirectX 11 上 X2 至 X6），取决于模组菜单中选择的帧生成引擎，倍率可在游戏中更改。这些功能均为实验性且默认关闭；HUD 会与画面一起处理。模组的[没有 DLSS 的游戏](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/GAMES-WITHOUT-DLSS.zh-CN.md)页面说明了工作原理和限制。
+
+**安装文件。** Hub 在写入前预览模组、所需运行库和设置。更新也会提供缺失依赖，同时保留你的引擎选择。应用前请检查计划与无法下载的文件。受管理的更改仍可撤销或恢复。
+
+**安装时选择。** 首次为没有原生 DLSS 或帧生成的游戏安装时，Hub 会分别询问 **无 / Smooth Motion / DLSS-G / XeFG** 和 **无 / DLSS / XeSS**，没有预选项。除非选择放大到屏幕分辨率，否则 DLSS 默认以游戏分辨率运行（DLAA）。更新会保留设置；应用前，计划会列出文件与设置更改。
+
+**平滑 X3 / X4** 在模组 2.0.0 旁提供**自动**、**开启**或**关闭**。自动是模组的默认值：RTX Encore 会在 X3 及以上测量生成帧到达驱动的方式，并为该游戏学习是否应由 Streamline 自行安排节奏。设置页面会显示学到的结果；**重新测量**会将其清空，模组将在下次启动时重新测量。共享配置只保存开启或关闭。
+
+在**画质 → 超分辨率 → 引擎**中选择 **DLSS** 或 **XeSS** 即可启用重建，选择**无**即可关闭。不再需要单独的启用开关。默认输出为**游戏分辨率（DLAA）**：DLSS 以原生分辨率运行，XeSS 使用原生抗锯齿。需要放大时，以所需的输入分辨率在**窗口模式**（不是无边框窗口模式）启动游戏，然后在 Encore 中选择**屏幕分辨率**。Encore 会放大输出并移除窗口边框。例如，从 2560 × 1440 放大到 3840 × 2160，宽高比例约为 67%。
+
+在**帧率 → 帧生成 → 引擎**中选择 **DLSS-FG** 或 **XeFG**，选择**无**可关闭添加的帧生成。两种引擎均可在兼容配置上支持 DirectX 11、DirectX 12 和 Vulkan。关闭 Smooth Motion，并按提示重启游戏。**固定**模式提供 X2 至 X6；X5 和 X6 仍为实验性功能。**游戏**代表游戏自身的集成，不是为没有帧生成的游戏启用该功能的选项。
+
+## 模组菜单语言（2.0.0）
+
+**设置 → 模组菜单语言**用于选择 RTX Encore 游戏内菜单的语言（模组 2.0.0 或更新版本）：默认**与 Hub 相同**，也可选择菜单支持的十一种语言之一，每种语言都以其自身名称显示。与 Hub 相同即跟随 Hub 的界面语言；菜单没有阿拉伯语，会改用英语显示。
+
+安装或更新模组时，只有当游戏设置中尚未指定语言时，才会将此语言写入 `rtx-encore.jsonc`：在游戏内菜单中选择的语言会被保留。在 Hub 中更改此偏好会写入 Hub 安装了模组的所有游戏，并覆盖游戏内的选择；每个游戏各有一次可撤销的操作，受反作弊保护的游戏保持不变。游戏内菜单随时都可以再次更改。
 
 ## XeSS 与 XeFG Tensor Core（1.5.0）
 
@@ -170,7 +190,7 @@ Hub 在启动时检查自身更新，之后每天一次。**更新**页面显示
 
 Hub 会联系以下站点，无需账号，也不发送任何属于您的信息：
 
-- GitHub：获取模组的发布版本、Hub 的发布版本、NVIDIA 的 DLL 以及 Streamline 插件；
+- GitHub：获取模组的发布版本、Hub 的发布版本、NVIDIA 的 DLL、Streamline 插件，以及（用于无帧生成游戏中的 DLSS Frame Generation）NVIDIA 发布的 Streamline SDK，按需分段读取；
 - `encore-dl.nometa.fr`：获取 Neural Rendering 的 DLL、您选择改用的可选版本、来源列表，以及您打开社区页面时的社区配置；
 - `encore-community.nometa.fr`：仅在您发布、撤下、点赞、确认或举报配置时联系，发送的是您已阅读的内容，并由本机密钥签名。要关闭社区，请在 `%LOCALAPPDATA%\EncoreHub\settings.json` 中写入 `"Community": "off"`；
 - Steam 和维基百科：查找缺失的封面，游戏标题会发送给它们。**设置 → 封面图片**可以关闭这项查找。

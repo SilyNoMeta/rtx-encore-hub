@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src="assets/logo.png" alt="RTX Encore Hub logo" width="128" height="128">
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/logo-light.png">
+  <img src="assets/logo.png" alt="RTX Encore Hub logo" width="128" height="128">
+</picture>
 
 ![RTX Encore Hub — your games, one place](assets/hero.svg)
 
@@ -14,9 +17,10 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 [![Latest release](https://img.shields.io/github/v/release/SilyNoMeta/rtx-encore-hub?include_prereleases&style=for-the-badge&label=Latest&color=76b900)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 [![Downloads](https://img.shields.io/github/downloads/SilyNoMeta/rtx-encore-hub/total?style=for-the-badge&color=2f81f7)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/SilyNoMeta)
+[![Join the Discord](https://img.shields.io/badge/Join_Discord-454FC4?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Zwmq4Xc2Br)
 
 [![Windows 10 and 11, x64](https://img.shields.io/badge/platform-Windows_10_%C2%B7_11_x64-8ab4f8?style=flat-square&labelColor=171c22)](#getting-started)
-[![English, French and Chinese interface](https://img.shields.io/badge/interface-EN_%C2%B7_FR_%C2%B7_ZH-c4b5fd?style=flat-square&labelColor=171c22)](#getting-started)
+[![Interface in twelve languages](https://img.shields.io/badge/interface-12_languages-c4b5fd?style=flat-square&labelColor=171c22)](#getting-started)
 
 [![Download the latest version for Windows x64](assets/download.svg)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 
@@ -28,10 +32,22 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 
 </div>
 
+**RTX Encore now has a Discord.** Share your 2.0.0 results, compare settings, or get help with the mod and Hub. [Join the Discord](https://discord.gg/Zwmq4Xc2Br).
+
 > [!NOTE]
 > **Windows x64.** Open the [releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) and download `RTX-Encore-Hub-Setup-<version>.exe`, or `RTX-Encore-Hub-Portable-<version>.zip`, which installs nothing. The installer is not code-signed yet, so Windows may show a SmartScreen warning the first time; each release gives the SHA-256 of its installer. The Hub and the RTX Encore mod have separate releases.
 
-## Hub 1.6.0
+
+**Choose during installation.** For a first installation in a game without native DLSS or frame generation, the Hub asks independently for **None / Smooth Motion / DLSS-G / XeFG** and **None / DLSS / XeSS**. Nothing is preselected. DLSS starts at the game’s resolution (DLAA), unless you choose screen-resolution upscaling. Updates preserve your settings; the plan lists the files and settings before applying them.
+
+## Hub 2.0.0
+
+> [!TIP]
+> **Games without DLSS.** With RTX Encore 2.0.0, a game that ships no DLSS can still get DLSS (DLAA or upscaling to your screen's resolution), Neural Rendering and frame generation (DLSS Frame Generation or Intel XeFG, per the engine you choose), applied to the image it displays. Install or update the mod with the Hub and everything these features use comes with it: the NVIDIA DLLs beside the mod, the Intel runtimes and, where the game has no frame generation or Streamline of its own, the six exact DLSS Frame Generation files beside the executable. Turn each feature on in the mod's menu or in **All game settings**; **Restore game** removes what was added. Experimental. [How it works](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/GAMES-WITHOUT-DLSS.md).
+
+**Hub 2.0.0 is a major release.** Games that ship no DLSS at all now get DLSS, frame generation and Neural Rendering with RTX Encore 2.0.0, driven by a motion estimation engine RTX Encore wrote for them, and the Hub installs everything they use. RTX Encore and the Hub also have a new visual identity, with a new logo, and RTX Encore has its own Discord.
+
+**Hub 2.0.0:** games without DLSS, Smooth out X3 / X4 **Automatic**, a **Mod menu language** preference (Same as Hub by default; a language picked in game is kept), and twelve interface languages ([#12](https://github.com/SilyNoMeta/rtx-encore-hub/issues/12)). [Release notes](docs/notes/2.0.0.md).
 
 **Hub 1.6.0:** `Ctrl+F` goes to the game search, Restore game can also delete the mod's settings and logs, and mod 1.6.0 is supported. [Release notes](docs/notes/1.6.0.md).
 
@@ -56,7 +72,7 @@ Install and update RTX Encore, keep its runtimes matched, and manage your games 
 
 **Intel XeSS / XeFG remain very experimental.** Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering.
 
-[Hub 1.6.0](docs/notes/1.6.0.md) · [RTX Encore 1.6.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.6.0)
+[Hub 2.0.0](docs/notes/2.0.0.md) · [RTX Encore 2.0.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.0.0)
 
 ![The Hub's game library, with cover art, the state of each install and the update banner](screenshots/library.png)
 
@@ -109,7 +125,7 @@ Each NVIDIA DLL is shown with the version in the game, the best copy this machin
 4. Under **Health**, **Launch and verify** starts the game and tells you how its first minute went.
 5. When a new RTX Encore is out, **Update all** in the library updates every game.
 
-The interface follows the language of Windows: **English, French or Simplified Chinese**; other languages get English.
+The interface follows the language of Windows, in **twelve languages**: English, French, German, Spanish, Dutch, Polish, Brazilian Portuguese, Vietnamese, Russian, Arabic, Japanese and Simplified Chinese; other languages get English. Change it in **Settings → Interface language**.
 
 Read the **[user guide](docs/USER-GUIDE.md)** for updates, restoration, where the Hub keeps its data and what it reads on the network.
 

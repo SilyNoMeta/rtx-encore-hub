@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src="assets/logo.png" alt="RTX Encore Hub 标志" width="128" height="128">
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/logo-light.png">
+  <img src="assets/logo.png" alt="RTX Encore Hub 标志" width="128" height="128">
+</picture>
 
 ![RTX Encore Hub — 您的游戏，集中一处](assets/hero.zh-CN.svg)
 
@@ -14,9 +17,10 @@
 [![最新版本](https://img.shields.io/github/v/release/SilyNoMeta/rtx-encore-hub?include_prereleases&style=for-the-badge&label=Latest&color=76b900)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 [![下载量](https://img.shields.io/github/downloads/SilyNoMeta/rtx-encore-hub/total?style=for-the-badge&color=2f81f7)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-db61a2?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/SilyNoMeta)
+[![加入 Discord](https://img.shields.io/badge/%E5%8A%A0%E5%85%A5_Discord-454FC4?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Zwmq4Xc2Br)
 
 [![Windows 10 和 11，x64](https://img.shields.io/badge/平台-Windows_10_%C2%B7_11_x64-8ab4f8?style=flat-square&labelColor=171c22)](#快速开始)
-[![英语、法语和中文界面](https://img.shields.io/badge/界面-EN_%C2%B7_FR_%C2%B7_ZH-c4b5fd?style=flat-square&labelColor=171c22)](#快速开始)
+[![十二种界面语言](https://img.shields.io/badge/界面-12_种语言-c4b5fd?style=flat-square&labelColor=171c22)](#快速开始)
 
 [![下载适用于 Windows x64 的最新版本](assets/download.zh-CN.svg)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 
@@ -28,10 +32,22 @@
 
 </div>
 
+**RTX Encore 的 Discord 服务器现已开放。** 欢迎分享 2.0.0 的测试结果、交流设置，或就模组和 Hub 寻求帮助。[加入 Discord](https://discord.gg/Zwmq4Xc2Br)。
+
 > [!NOTE]
 > **Windows x64。** 请打开[发布页面](https://github.com/SilyNoMeta/rtx-encore-hub/releases)并下载 `RTX-Encore-Hub-Setup-<version>.exe`，或无需安装的 `RTX-Encore-Hub-Portable-<version>.zip`。安装程序尚未进行代码签名，因此首次运行时 Windows 可能显示 SmartScreen 警告；每个发布版本都会给出安装程序的 SHA-256。Hub 与 RTX Encore 模组分别发布。
 
-## Hub 1.6.0
+
+**安装时选择。** 首次为没有原生 DLSS 或帧生成的游戏安装时，Hub 会分别询问 **无 / Smooth Motion / DLSS-G / XeFG** 和 **无 / DLSS / XeSS**，没有预选项。除非选择放大到屏幕分辨率，否则 DLSS 默认以游戏分辨率运行（DLAA）。更新会保留设置；应用前，计划会列出文件与设置更改。
+
+## Hub 2.0.0
+
+> [!TIP]
+> **没有 DLSS 的游戏。**配合 RTX Encore 2.0.0，本身不带 DLSS 的游戏也能对其显示的画面使用 DLSS（DLAA 或放大到屏幕分辨率）、神经渲染和帧生成（DLSS Frame Generation 或 Intel XeFG，取决于所选引擎）。用 Hub 安装或更新模组时，这些功能所需的一切都会一并带来：模组旁的 NVIDIA DLL、Intel 运行库；当游戏既没有自己的帧生成也没有自己的 Streamline 时，还有放在可执行文件旁的六个指定版本 DLSS Frame Generation 文件。请在模组菜单或**此游戏的全部设置**中逐项开启；**还原游戏**会移除所添加的内容。实验性功能。[工作原理](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/GAMES-WITHOUT-DLSS.zh-CN.md)。
+
+**Hub 2.0.0 是一个大版本。**配合 RTX Encore 2.0.0，完全没有 DLSS 的游戏现在也能获得 DLSS、帧生成和 Neural Rendering，由 RTX Encore 专为它们编写的运动估计引擎驱动，Hub 会安装它们所需的一切。RTX Encore 和 Hub 还换上了全新的视觉形象和标志，RTX Encore 也开设了自己的 Discord。
+
+**Hub 2.0.0：**支持没有 DLSS 的游戏，平滑 X3 / X4 新增**自动**，新增**模组菜单语言**偏好（默认与 Hub 相同；在游戏中选择的语言会被保留），界面支持十二种语言（[#12](https://github.com/SilyNoMeta/rtx-encore-hub/issues/12)）。[版本说明](docs/notes/2.0.0.zh-CN.md)。
 
 **Hub 1.6.0：**`Ctrl+F` 跳到游戏搜索，还原游戏可同时删除模组的设置和日志，并支持模组 1.6.0。[版本说明](docs/notes/1.6.0.zh-CN.md)。
 
@@ -56,7 +72,7 @@ Mod 1.5.1 及更高版本在 RTX 20 上始终使用 Smooth Motion V2；下文提
 
 **Intel XeSS / XeFG 仍高度实验性。** 兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。
 
-[Hub 1.6.0](docs/notes/1.6.0.zh-CN.md) · [RTX Encore 1.6.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v1.6.0)
+[Hub 2.0.0](docs/notes/2.0.0.zh-CN.md) · [RTX Encore 2.0.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.0.0)
 
 ![Hub 的游戏库，包含封面、每个安装的状态和更新横幅](screenshots/library.zh.png)
 
@@ -109,7 +125,7 @@ Mod 1.5.1 及更高版本在 RTX 20 上始终使用 Smooth Motion V2；下文提
 4. 在**健康检查**中，**启动并验证**会启动游戏，并告诉您它的第一分钟情况如何。
 5. RTX Encore 发布新版本时，游戏库中的**全部更新**会更新所有游戏。
 
-界面跟随 Windows 的语言：**英语、法语或简体中文**；其他语言使用英语。
+界面跟随 Windows 的语言，支持**十二种语言**：英语、法语、德语、西班牙语、荷兰语、波兰语、巴西葡萄牙语、越南语、俄语、阿拉伯语、日语和简体中文；其他语言使用英语。可在**设置 → 界面语言**中更改。
 
 关于更新、还原、Hub 存放数据的位置以及它在网络上读取的内容，请阅读**[用户指南](docs/USER-GUIDE.zh-CN.md)**。
 
