@@ -6,6 +6,12 @@
 
 RTX Encore Hub 把 [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) 安装到您的游戏中，让模组和 NVIDIA DLL 保持最新，检查游戏装上模组后能否正常启动，并且随时可以还原。界面跟随 Windows 的语言，支持十二种语言：英语、法语、德语、西班牙语、荷兰语、波兰语、巴西葡萄牙语、越南语、俄语、阿拉伯语（从右到左）、日语和简体中文；其他语言使用英语。可在**设置 → 界面语言**中更改。本指南使用应用的中文标签。
 
+## 选择安装组件
+
+每次安装和单个游戏更新都会先打开**选择组件**，再显示文件预览。可分别选择模组、每个 NVIDIA DLL（Super Resolution、Ray Reconstruction、Frame Generation 或 Neural Rendering）、一套 Streamline 插件、Intel XeSS / XeFG / XeLL，以及可用的 DLSS-G 依赖文件。每个 DLL 名称旁都会注明用途。未勾选的文件保持原样；明确选择组件后，不会自动添加其他组件。
+
+模组已安装且为最新版本时，游戏页面仍提供**选择组件**。可以补装最初跳过的组件，无需重新安装模组。批量更新会遵循每个游戏保存的选择。初次默认保留当前 Streamline 插件；游戏原有的 interposer 会保留。选择更新不会还原此前已被替换的原始文件；需要还原时请使用游戏备份。
+
 ## 没有 DLSS 的游戏（2.0.0）
 
 配合 **RTX Encore 2.0.0 或更新版本**，本身不带 DLSS 的游戏也能对其显示的画面使用：DLSS（游戏分辨率下的 DLAA，或放大到屏幕分辨率）、神经渲染，以及在没有自带帧生成的游戏中的帧生成：DirectX 12 和 Vulkan 上的 NVIDIA DLSS Frame Generation，或 Intel XeFG（DirectX 12、Vulkan 和 DirectX 11 上 X2 至 X6），取决于模组菜单中选择的帧生成引擎，倍率可在游戏中更改。这些功能均为实验性且默认关闭；HUD 会与画面一起处理。模组的[没有 DLSS 的游戏](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/GAMES-WITHOUT-DLSS.zh-CN.md)页面说明了工作原理和限制。

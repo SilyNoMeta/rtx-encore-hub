@@ -6,6 +6,12 @@
 
 RTX Encore Hub installs [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) in your games, keeps the mod and the NVIDIA DLLs up to date, checks that a game starts well with it, and can always go back. The interface follows the language of Windows, in twelve languages: English, French, German, Spanish, Dutch, Polish, Brazilian Portuguese, Vietnamese, Russian, Arabic (right to left), Japanese and Simplified Chinese; other languages use English. **Settings → Interface language** changes it. This guide uses the English labels of the application.
 
+## Choosing installation components
+
+Every installation and individual game update opens **Choose components** before the file preview. Select the mod, each NVIDIA DLL separately (Super Resolution, Ray Reconstruction, Frame Generation or Neural Rendering), a Streamline plugin set, Intel XeSS / XeFG / XeLL, and optional DLSS-G dependencies where available. The role appears beside each DLL name. Unchecked files are kept as they are; an explicit selection does not add other components automatically.
+
+**Choose components** also stays available on an installed game's page, even when the mod is up to date. Use it to add a component you skipped earlier without reinstalling the mod. Choices are remembered per game for bulk updates. Keeping current Streamline plugins is the initial default; the game's original interposer is preserved. Selecting an update does not restore originals that were replaced earlier; use the game's backups for that.
+
 ## Games without DLSS (2.0.0)
 
 With **RTX Encore 2.0.0 or later**, a game that ships no DLSS can still get, on the image it displays: DLSS (DLAA at the game's resolution, or upscaling to the screen's), Neural Rendering, and, in games that have no frame generation of their own, frame generation: NVIDIA DLSS Frame Generation on DirectX 11, DirectX 12 and Vulkan, or Intel XeFG (X2 to X6 on DirectX 12, Vulkan and DirectX 11), per the frame generation engine chosen in the mod's menu, with a multiplier you can change while playing. All of it is experimental and off by default; the HUD is processed with the image. The mod's [Games without DLSS](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/GAMES-WITHOUT-DLSS.md) page explains how it works and its limits.

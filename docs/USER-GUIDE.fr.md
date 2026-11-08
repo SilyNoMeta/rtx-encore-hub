@@ -6,6 +6,12 @@
 
 RTX Encore Hub installe [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) dans vos jeux, tient à jour le mod et les DLL NVIDIA, vérifie qu'un jeu démarre bien avec, et sait toujours revenir en arrière. L'interface suit la langue de Windows, en douze langues : français, anglais, allemand, espagnol, néerlandais, polonais, portugais du Brésil, vietnamien, russe, arabe (de droite à gauche), japonais et chinois simplifié ; les autres langues utilisent l'anglais. **Paramètres → Langue de l'interface** la change. Ce guide reprend les libellés français de l'application.
 
+## Choisir les composants à installer
+
+Chaque installation et mise à jour individuelle ouvre **Choisir les composants** avant l’aperçu des fichiers. Choisissez le mod, chaque DLL NVIDIA séparément (Super Resolution, Ray Reconstruction, Frame Generation ou Neural Rendering), un jeu de plugins Streamline, Intel XeSS / XeFG / XeLL et les dépendances DLSS-G proposées. Le rôle figure à côté du nom de chaque DLL. Les fichiers décochés sont conservés tels quels ; aucun autre composant n’est ajouté automatiquement à ce choix explicite.
+
+**Choisir les composants** reste accessible sur la fiche d’un jeu installé, même si le mod est à jour. Vous pouvez ainsi ajouter un composant ignoré au départ sans réinstaller le mod. Les choix sont mémorisés par jeu pour les mises à jour groupées. Au départ, les plugins Streamline actuels sont conservés ; l’interposer d’origine du jeu est préservé. Choisir une mise à jour ne restaure pas les originaux remplacés auparavant : utilisez les sauvegardes du jeu pour cela.
+
 ## Jeux sans DLSS (2.0.0)
 
 Avec **RTX Encore 2.0.0 ou ultérieur**, un jeu qui n’a pas de DLSS peut quand même avoir, sur l’image qu’il affiche : le DLSS (DLAA à la résolution du jeu, ou agrandissement à celle de l’écran), le Neural Rendering et, dans les jeux qui n’ont pas de génération d’images à eux, la génération d’images : NVIDIA DLSS Frame Generation en DirectX 12 et Vulkan, ou Intel XeFG (X2 à X6 en DirectX 12, Vulkan et DirectX 11), selon le moteur de génération d’images choisi dans le menu du mod, avec un multiplicateur que vous pouvez changer en jouant. Tout cela est expérimental et désactivé par défaut ; le HUD est traité avec l’image. La page [Jeux sans DLSS](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/GAMES-WITHOUT-DLSS.fr.md) du mod explique le fonctionnement et les limites.

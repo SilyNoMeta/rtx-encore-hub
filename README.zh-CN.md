@@ -28,7 +28,7 @@
 
 <sub>免费，利用业余时间开发。如果它对您有帮助，欢迎<a href="https://github.com/sponsors/SilyNoMeta">在 GitHub Sponsors 上支持本项目</a> ❤</sub>
 
-<p>❤️ 感谢 <a href="https://github.com/mennogreg">@mennogreg</a> 和 <a href="https://github.com/Scarhead666">@Scarhead666</a> 对 RTX Encore 开发的支持。</p>
+<p>❤️ 感谢 <a href="https://github.com/mennogreg">@mennogreg</a>、<a href="https://github.com/Scarhead666">@Scarhead666</a> 和 <a href="https://github.com/MrMicko">@MrMicko</a> 对 RTX Encore 开发的支持。</p>
 
 </div>
 
@@ -40,7 +40,9 @@
 
 **安装时选择。** 首次为没有原生 DLSS 或帧生成的游戏安装时，Hub 会分别询问 **无 / Smooth Motion / DLSS-G / XeFG** 和 **无 / DLSS / XeSS**，没有预选项。除非选择放大到屏幕分辨率，否则 DLSS 默认以游戏分辨率运行（DLAA）。更新会保留设置；应用前，计划会列出文件与设置更改。
 
-## Hub 2.0.0
+## Hub 2.1.0
+
+**Hub 2.1.0：**每次安装和更新时都可**选择组件**（每个 NVIDIA DLL、Streamline 和 Intel 文件分别选择，之后也可在游戏页面补装），并支持 RTX Encore 2.1.0 的 **XeFG 稳定游戏帧节奏**，让 XeFG 从 X3 起保持流畅。[版本说明](docs/notes/2.1.0.zh-CN.md)。
 
 > [!TIP]
 > **没有 DLSS 的游戏。**配合 RTX Encore 2.0.0，本身不带 DLSS 的游戏也能对其显示的画面使用 DLSS（DLAA 或放大到屏幕分辨率）、神经渲染和帧生成（DLSS Frame Generation 或 Intel XeFG，取决于所选引擎）。用 Hub 安装或更新模组时，这些功能所需的一切都会一并带来：模组旁的 NVIDIA DLL、Intel 运行库；当游戏既没有自己的帧生成也没有自己的 Streamline 时，还有放在可执行文件旁的六个指定版本 DLSS Frame Generation 文件。请在模组菜单或**此游戏的全部设置**中逐项开启；**还原游戏**会移除所添加的内容。实验性功能。[工作原理](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/GAMES-WITHOUT-DLSS.zh-CN.md)。
@@ -72,7 +74,7 @@ Mod 1.5.1 及更高版本在 RTX 20 上始终使用 Smooth Motion V2；下文提
 
 **Intel XeSS / XeFG 仍高度实验性。** 兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。
 
-[Hub 2.0.0](docs/notes/2.0.0.zh-CN.md) · [RTX Encore 2.0.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.0.0)
+[Hub 2.1.0](docs/notes/2.1.0.zh-CN.md) · [RTX Encore 2.1.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.1.0)
 
 ![Hub 的游戏库，包含封面、每个安装的状态和更新横幅](screenshots/library.zh.png)
 

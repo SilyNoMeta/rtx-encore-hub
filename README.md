@@ -28,7 +28,7 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 
 <sub>Free, made on personal time. If it is useful to you, you can <a href="https://github.com/sponsors/SilyNoMeta">support the project on GitHub Sponsors</a> ❤</sub>
 
-<p>❤️ Thank you to <a href="https://github.com/mennogreg">@mennogreg</a> and <a href="https://github.com/Scarhead666">@Scarhead666</a> for supporting the development of RTX Encore.</p>
+<p>❤️ Thank you to <a href="https://github.com/mennogreg">@mennogreg</a>, <a href="https://github.com/Scarhead666">@Scarhead666</a> and <a href="https://github.com/MrMicko">@MrMicko</a> for supporting the development of RTX Encore.</p>
 
 </div>
 
@@ -40,7 +40,9 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 
 **Choose during installation.** For a first installation in a game without native DLSS or frame generation, the Hub asks independently for **None / Smooth Motion / DLSS-G / XeFG** and **None / DLSS / XeSS**. Nothing is preselected. DLSS starts at the game’s resolution (DLAA), unless you choose screen-resolution upscaling. Updates preserve your settings; the plan lists the files and settings before applying them.
 
-## Hub 2.0.0
+## Hub 2.1.0
+
+**Hub 2.1.0:** **Choose components** for every install and update (each NVIDIA DLL, Streamline, Intel files picked separately, and added later from the game page) and **Steady game pacing for XeFG** with RTX Encore 2.1.0, which smooths XeFG from X3. [Release notes](docs/notes/2.1.0.md).
 
 > [!TIP]
 > **Games without DLSS.** With RTX Encore 2.0.0, a game that ships no DLSS can still get DLSS (DLAA or upscaling to your screen's resolution), Neural Rendering and frame generation (DLSS Frame Generation or Intel XeFG, per the engine you choose), applied to the image it displays. Install or update the mod with the Hub and everything these features use comes with it: the NVIDIA DLLs beside the mod, the Intel runtimes and, where the game has no frame generation or Streamline of its own, the six exact DLSS Frame Generation files beside the executable. Turn each feature on in the mod's menu or in **All game settings**; **Restore game** removes what was added. Experimental. [How it works](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/GAMES-WITHOUT-DLSS.md).
@@ -72,7 +74,7 @@ Install and update RTX Encore, keep its runtimes matched, and manage your games 
 
 **Intel XeSS / XeFG remain very experimental.** Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering.
 
-[Hub 2.0.0](docs/notes/2.0.0.md) · [RTX Encore 2.0.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.0.0)
+[Hub 2.1.0](docs/notes/2.1.0.md) · [RTX Encore 2.1.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.1.0)
 
 ![The Hub's game library, with cover art, the state of each install and the update banner](screenshots/library.png)
 
