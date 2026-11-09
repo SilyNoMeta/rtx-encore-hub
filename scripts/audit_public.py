@@ -14,6 +14,9 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 # Run this copy from a prepared public checkout (copied as scripts/audit_public.py).
 ALLOWED = {
+    "docs/notes/2.2.0.md", "docs/notes/2.2.0.fr.md", "docs/notes/2.2.0.zh-CN.md",
+    "docs/notes/2.1.0.md", "docs/notes/2.1.0.fr.md", "docs/notes/2.1.0.zh-CN.md",
+    "docs/notes/2.0.1.md", "docs/notes/2.0.1.fr.md", "docs/notes/2.0.1.zh-CN.md",
     "docs/notes/2.0.0.md", "docs/notes/2.0.0.fr.md", "docs/notes/2.0.0.zh-CN.md",
     "docs/notes/1.6.0.md", "docs/notes/1.6.0.fr.md", "docs/notes/1.6.0.zh-CN.md",
     "docs/notes/1.5.3.md", "docs/notes/1.5.3.fr.md", "docs/notes/1.5.3.zh-CN.md",
@@ -118,7 +121,7 @@ def main():
                         errors.append(f"Active SVG content: {name}")
                     if any(key.lower().startswith("on") for key in element.attrib):
                         errors.append(f"SVG event handler: {name}")
-                    if any(key.split("}")[-1] == "href" and not value.startswith("#")
+                    if any(key.split("}")[-1] == "href" and not (value.startswith("#") or value.startswith("data:image/png;base64,"))
                            for key, value in element.attrib.items()):
                         errors.append(f"External SVG dependency: {name}")
             except ET.ParseError:

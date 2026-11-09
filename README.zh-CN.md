@@ -40,6 +40,12 @@
 
 **安装时选择。** 首次为没有原生 DLSS 或帧生成的游戏安装时，Hub 会分别询问 **无 / Smooth Motion / DLSS-G / XeFG** 和 **无 / DLSS / XeSS**，没有预选项。除非选择放大到屏幕分辨率，否则 DLSS 默认以游戏分辨率运行（DLAA）。更新会保留设置；应用前，计划会列出文件与设置更改。
 
+## Hub 2.2.0
+
+**Hub 2.2.0：**设置 NIS 与可选 FXAA/SMAA，预览并自定义叠加层，还可控制 RTX Encore 2.2.0 中默认开启的 DLSS-G Auto 覆盖。[版本说明](docs/notes/2.2.0.zh-CN.md)。
+
+**延续 2.1.0 的主要功能：**每次安装或更新均可单独选择 NVIDIA、Streamline 和 Intel 文件。搭配模组 2.1.0 或更新版本时，XeFG 稳定游戏帧节奏默认开启，也可在 Hub 游戏设置中调整。[2.1.0 版本说明](docs/notes/2.1.0.zh-CN.md)。
+
 ## Hub 2.1.0
 
 **Hub 2.1.0：**每次安装和更新时都可**选择组件**（每个 NVIDIA DLL、Streamline 和 Intel 文件分别选择，之后也可在游戏页面补装），并支持 RTX Encore 2.1.0 的 **XeFG 稳定游戏帧节奏**，让 XeFG 从 X3 起保持流畅。[版本说明](docs/notes/2.1.0.zh-CN.md)。
@@ -74,7 +80,7 @@ Mod 1.5.1 及更高版本在 RTX 20 上始终使用 Smooth Motion V2；下文提
 
 **Intel XeSS / XeFG 仍高度实验性。** 兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。
 
-[Hub 2.1.0](docs/notes/2.1.0.zh-CN.md) · [RTX Encore 2.1.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.1.0)
+[Hub 2.2.0](docs/notes/2.2.0.zh-CN.md) · [RTX Encore 2.2.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.2.0)
 
 ![Hub 的游戏库，包含封面、每个安装的状态和更新横幅](screenshots/library.zh.png)
 

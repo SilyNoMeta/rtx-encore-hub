@@ -40,6 +40,12 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 
 **Choose during installation.** For a first installation in a game without native DLSS or frame generation, the Hub asks independently for **None / Smooth Motion / DLSS-G / XeFG** and **None / DLSS / XeSS**. Nothing is preselected. DLSS starts at the game’s resolution (DLAA), unless you choose screen-resolution upscaling. Updates preserve your settings; the plan lists the files and settings before applying them.
 
+## Hub 2.2.0
+
+**Hub 2.2.0:** configure NIS with optional FXAA/SMAA, preview and personalize the overlay, and control the default-on DLSS-G Auto override with RTX Encore 2.2.0. [Release notes](docs/notes/2.2.0.md).
+
+**From 2.1.0:** Choose components on each install or update, down to individual NVIDIA, Streamline and Intel files. Steady game pacing for XeFG is on by default with mod 2.1.0 or newer, and the Hub exposes it in game settings. [2.1.0 notes](docs/notes/2.1.0.md).
+
 ## Hub 2.1.0
 
 **Hub 2.1.0:** **Choose components** for every install and update (each NVIDIA DLL, Streamline, Intel files picked separately, and added later from the game page) and **Steady game pacing for XeFG** with RTX Encore 2.1.0, which smooths XeFG from X3. [Release notes](docs/notes/2.1.0.md).
@@ -74,7 +80,7 @@ Install and update RTX Encore, keep its runtimes matched, and manage your games 
 
 **Intel XeSS / XeFG remain very experimental.** Compatibility depends on the mod, game, graphics API and runtimes. Report problems with a reviewed diagnostic archive; neither installed files nor a requested multiplier prove successful rendering.
 
-[Hub 2.1.0](docs/notes/2.1.0.md) · [RTX Encore 2.1.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.1.0)
+[Hub 2.2.0](docs/notes/2.2.0.md) · [RTX Encore 2.2.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.2.0)
 
 ![The Hub's game library, with cover art, the state of each install and the update banner](screenshots/library.png)
 

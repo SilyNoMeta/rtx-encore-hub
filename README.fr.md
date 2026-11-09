@@ -40,6 +40,12 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 
 **Choisir à l’installation.** Lors de la première installation dans un jeu sans DLSS ni génération d’images natifs, le Hub demande séparément **Aucun / Smooth Motion / DLSS-G / XeFG** et **Aucun / DLSS / XeSS**. Aucun choix n’est présélectionné. DLSS démarre à la résolution du jeu (DLAA), sauf si vous choisissez la reconstruction à la résolution de l’écran. Les mises à jour conservent vos réglages ; le plan présente les fichiers et les réglages avant application.
 
+## Hub 2.2.0
+
+**Hub 2.2.0 :** réglez NIS avec FXAA/SMAA en option, prévisualisez et personnalisez l'overlay et contrôlez l'override du mode Auto de DLSS-G, activé par défaut avec RTX Encore 2.2.0. [Notes de version](docs/notes/2.2.0.fr.md).
+
+**Depuis la 2.1.0 :** choisissez les composants à chaque installation ou mise à jour, jusqu'aux fichiers NVIDIA, Streamline et Intel individuels. La cadence régulière du jeu pour XeFG est activée par défaut avec le mod 2.1.0 ou plus récent et réglable dans le Hub. [Notes de la 2.1.0](docs/notes/2.1.0.fr.md).
+
 ## Hub 2.1.0
 
 **Hub 2.1.0 :** **Choisir les composants** à chaque installation et mise à jour (chaque DLL NVIDIA, Streamline et les fichiers Intel choisis séparément, et ajoutés plus tard depuis la fiche du jeu) et **Cadence du jeu régulière pour XeFG** avec RTX Encore 2.1.0, qui rend XeFG fluide à partir de X3. [Notes de version](docs/notes/2.1.0.fr.md).
@@ -74,7 +80,7 @@ Installez et mettez à jour RTX Encore, gardez ses runtimes cohérents et gérez
 
 **Intel XeSS / XeFG restent très expérimentaux.** Leur compatibilité dépend du mod, du jeu, de l’API graphique et des runtimes. Signalez les problèmes avec une archive de diagnostic relue ; la présence des fichiers ou un multiplicateur demandé ne prouvent pas le rendu effectif.
 
-[Hub 2.1.0](docs/notes/2.1.0.fr.md) · [RTX Encore 2.1.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.1.0)
+[Hub 2.2.0](docs/notes/2.2.0.fr.md) · [RTX Encore 2.2.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.2.0)
 
 ![La bibliothèque du Hub, avec les jaquettes, l'état de chaque installation et le bandeau des mises à jour](screenshots/library.fr.png)
 
