@@ -32,6 +32,13 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 
 </div>
 
+## Nouveau en 2.3.0
+
+Réglez RTX Encore 2.3.0, comparez les placements du Neural Rendering et installez FSR 1 depuis la version stable.
+
+[2.3.0](docs/notes/2.3.0.fr.md)
+
+
 **Le Discord de RTX Encore est ouvert.** Partagez vos essais de la 2.0.0, comparez vos réglages ou demandez de l’aide pour le mod et le Hub. [Rejoindre le Discord](https://discord.gg/Zwmq4Xc2Br).
 
 > [!NOTE]

@@ -239,3 +239,22 @@ RTX Encore 1.3.0 removed OpenNR and the Cyber Engine Tweaks panel, so the Hub no
 
 
 **Native Smooth Motion on RTX 40/50** requires RTX Encore 1.4.5 or newer and a supported driver. Use the Smooth Motion settings, choose the game’s actual graphics API and restart. API detection is a static recommendation, not proof of the active renderer. The mod’s 2x FPS counter is an estimate; it does not count interpolated frames.
+
+
+## 2.3.0
+
+### Matching 2.3.0 controls
+
+Game motion vectors is offered with the new default and fallback behavior; NR exposure and manual XeFG pacing are available with mod 2.3.0. Older installed mods retain their supported choices and defaults.
+
+### FSR 1 in guided installation
+
+FSR 1 is recognized from the stable release ZIP, local folders and installed proxy/ASI versions. NIS and FSR 1 share spatial sharpness and applicable DirectX 11 SDR AA controls; compatible HDR/Vulkan routes remain available.
+
+### NR appearance and comparison
+
+Apply seven version-matched looks without changing pass count, models, resolution or exposure. Compare Post-SR, Pre-SR and Final image exports, with the selected placement named on each card.
+
+### Preserve existing installations
+
+Existing explicit settings are preserved. Automatic NR exposure is added only when creating a new configuration; an existing file without the exposure key keeps its previous behavior. Community profiles support Final image and the shared manual XeFG controls.

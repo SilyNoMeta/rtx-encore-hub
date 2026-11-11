@@ -32,6 +32,13 @@
 
 </div>
 
+## 2.3.0 新功能
+
+配置 RTX Encore 2.3.0，比较 Neural Rendering 处理位置，并从稳定版安装 FSR 1。
+
+[2.3.0](docs/notes/2.3.0.zh-CN.md)
+
+
 **RTX Encore 的 Discord 服务器现已开放。** 欢迎分享 2.0.0 的测试结果、交流设置，或就模组和 Hub 寻求帮助。[加入 Discord](https://discord.gg/Zwmq4Xc2Br)。
 
 > [!NOTE]
