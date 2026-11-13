@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RTX Encore 2.4.0 · Hub 2.4.0</title>
-<meta name="description" content="RTX Encore 2.4.0 ajoute le placement NR par passe, l’anticrénelage spatial en DirectX et Vulkan avec HDR, et une échelle DLSS personnalisée jusqu’à 33 %. Le Hub 2.4.0 permet de choisir une version du mod et de revenir en arrière.">
+<title>RTX Encore 2.4.1 · Hub 2.4.0</title>
+<meta name="description" content="RTX Encore 2.4.1 réunit le placement NR par passe, l’anticrénelage spatial DirectX/Vulkan avec HDR, l’échelle DLSS jusqu’à 33 % et le correctif des menus FG du jeu bloqués à X2. Le Hub 2.4.0 permet de choisir la version du mod et reste le Hub associé.">
 <link rel="canonical" href="https://encore.nometa.fr/fr/">
 <link rel="alternate" hreflang="en" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="fr" href="https://encore.nometa.fr/fr/">
@@ -14,8 +14,8 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preload" href="../assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
-<meta property="og:title" content="RTX Encore 2.4.0 · Hub 2.4.0">
-<meta property="og:description" content="RTX Encore 2.4.0 ajoute le placement NR par passe, l’anticrénelage spatial en DirectX et Vulkan avec HDR, et une échelle DLSS personnalisée jusqu’à 33 %. Le Hub 2.4.0 permet de choisir une version du mod et de revenir en arrière.">
+<meta property="og:title" content="RTX Encore 2.4.1 · Hub 2.4.0">
+<meta property="og:description" content="RTX Encore 2.4.1 réunit le placement NR par passe, l’anticrénelage spatial DirectX/Vulkan avec HDR, l’échelle DLSS jusqu’à 33 % et le correctif des menus FG du jeu bloqués à X2. Le Hub 2.4.0 permet de choisir la version du mod et reste le Hub associé.">
 <meta property="og:url" content="https://encore.nometa.fr/fr/">
 <meta property="og:image" content="https://encore.nometa.fr/assets/social-card.png">
 <meta property="og:image:width" content="1200">
@@ -35,18 +35,19 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 2.4.0 · Hub 2.4.0</span>
+<span class="badge">RTX Encore 2.4.1 · Hub 2.4.0</span>
 <h1>Plus d’images.<br>Plus de jeux.<br><em>RTX Encore.</em></h1>
-<p class="lead">RTX Encore 2.4.0 ajoute le placement NR par passe, l’anticrénelage spatial en DirectX et Vulkan avec HDR, et une échelle DLSS personnalisée jusqu’à 33 %. Le Hub 2.4.0 permet de choisir une version du mod et de revenir en arrière.</p>
+<p class="lead">RTX Encore 2.4.1 réunit le placement NR par passe, l’anticrénelage spatial DirectX/Vulkan avec HDR, l’échelle DLSS jusqu’à 33 % et le correctif des menus FG du jeu bloqués à X2. Le Hub 2.4.0 permet de choisir la version du mod et reste le Hub associé.</p>
 <p class="sub">Intel XeSS / XeFG, Pre-SR, le NR fovéal et Smooth Motion sur RTX 20 restent expérimentaux. La compatibilité dépend du jeu, de l’API graphique et des runtimes. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Signaler un problème</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.4.0">Télécharger Hub 2.4.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.4.0">Télécharger RTX Encore 2.4.0</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.4.0">Télécharger Hub 2.4.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.4.1">Télécharger RTX Encore 2.4.0</a></div>
 <p class="under">Windows 10 et 11, x64 · douze langues · s&#x27;installe sans droits d&#x27;administrateur</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
 <h2>RTX Encore 2.4.0 et Hub 2.4.0</h2>
 <p class="sub">Le Neural Rendering reste expérimental et désactivé par défaut. La compatibilité dépend du jeu, de l’API, du GPU, du pilote et des runtimes. Aucun gain universel de FPS ou de qualité d’image n’est promis.</p>
-<div class="news-grid"><div class="card"><h3>Neural Rendering à plusieurs étapes</h3><p>Affectez chacune des une à quatre passes NR à Pre-SR, Post-SR ou Image finale, ou conservez le placement global. L’exécution suit le pipeline de l’image en préservant l’apparence de chaque passe. Les configurations existantes gardent leur comportement. Les hooks DLSS natifs couvrent les chemins DX11, DX12 et Vulkan compatibles ; chaque étape conserve ses exigences d’entrées, HUD, HDR et FG. Une étape tardive indisponible peut être refusée même si une étape précédente fonctionne.</p></div>
+<div class="news-grid"><div class="card"><h3>2.4.1 : correctif du menu FG du jeu</h3><p>RTX Encore 2.4.1 corrige une régression de la 2.4.0 qui pouvait limiter le menu de génération d’images du jeu à X2, alors que X3/X4 fonctionnaient depuis l’overlay RTX Encore. Merci à la personne ayant signalé le problème dans S.T.A.L.K.E.R. 2 pour les logs de démarrage détaillés et les vérifications X3/X4. Les logs confirment la régression initiale ; le correctif reste à confirmer dans son jeu. Le Hub 2.4.0 reste compatible et ne nécessite pas de mise à jour.</p></div>
+<div class="card"><h3>Neural Rendering à plusieurs étapes</h3><p>Affectez chacune des une à quatre passes NR à Pre-SR, Post-SR ou Image finale, ou conservez le placement global. L’exécution suit le pipeline de l’image en préservant l’apparence de chaque passe. Les configurations existantes gardent leur comportement. Les hooks DLSS natifs couvrent les chemins DX11, DX12 et Vulkan compatibles ; chaque étape conserve ses exigences d’entrées, HUD, HDR et FG. Une étape tardive indisponible peut être refusée même si une étape précédente fonctionne.</p></div>
 <div class="card"><h3>FXAA et SMAA, HDR compris</h3><p>L’anticrénelage spatial optionnel avant ou après NIS/FSR 1 prend désormais en charge les chemins DirectX 11, DirectX 12 et Vulkan compatibles en SDR, HDR10 et scRGB. Cela étend le support DX11 SDR de la 2.3.0. Le résultat sur écran HDR physique et dans chaque jeu dépend toujours de la configuration.</p></div>
 <div class="card"><h3>Échelle DLSS personnalisée : 33–100 %</h3><p>L’échelle personnalisée DLSS Super Resolution descend à 33 % par axe, avec les mêmes bornes dans le Hub. Une résolution d’entrée réduite échange du détail source contre un coût de rendu inférieur ; le résultat dépend du jeu et du GPU.</p></div>
 <div class="card"><h3>Génération d’images et VRAM</h3><p>Les contrôles de marge VRAM physique évitent le double comptage des allocations. Les alertes de budget VRAM sont informatives et ne désactivent plus à elles seules la génération d’images. Cela ne garantit pas assez de mémoire pour toutes les configurations.</p></div>
@@ -60,7 +61,7 @@
 <section class="community wrap" aria-labelledby="community-title">
 <div>
 <h2 id="community-title">Le Discord de RTX Encore est ouvert</h2>
-<p>RTX Encore 2.4.0 ajoute le placement NR par passe, l’anticrénelage spatial en DirectX et Vulkan avec HDR, et une échelle DLSS personnalisée jusqu’à 33 %. Le Hub 2.4.0 permet de choisir une version du mod et de revenir en arrière.</p>
+<p>RTX Encore 2.4.1 réunit le placement NR par passe, l’anticrénelage spatial DirectX/Vulkan avec HDR, l’échelle DLSS jusqu’à 33 % et le correctif des menus FG du jeu bloqués à X2. Le Hub 2.4.0 permet de choisir la version du mod et reste le Hub associé.</p>
 </div>
 <a class="button discord" href="https://discord.gg/Zwmq4Xc2Br"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.8 19.8 0 0 0-4.885-1.515c-.21.38-.452.892-.62 1.3a18.2 18.2 0 0 0-5.42 0 14 14 0 0 0-.628-1.3 19.7 19.7 0 0 0-4.888 1.52C.785 8.95-.053 13.41.366 17.808a20 20 0 0 0 5.993 3.03c.484-.654.915-1.35 1.287-2.082a13 13 0 0 1-2.027-.966l.497-.386c3.908 1.82 8.16 1.82 12.022 0l.498.386a13 13 0 0 1-2.03.968c.372.73.802 1.427 1.287 2.08a20 20 0 0 0 5.995-3.03c.492-5.1-.84-9.52-3.571-13.438ZM8.02 15.1c-1.173 0-2.134-1.073-2.134-2.392s.94-2.394 2.134-2.394c1.205 0 2.155 1.083 2.134 2.394 0 1.32-.94 2.392-2.134 2.392Zm7.96 0c-1.173 0-2.134-1.073-2.134-2.392s.94-2.394 2.134-2.394c1.205 0 2.155 1.083 2.134 2.394 0 1.32-.93 2.392-2.134 2.392Z"/></svg>Rejoindre le Discord</a>
 </section>
