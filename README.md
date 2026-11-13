@@ -32,6 +32,12 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 
 </div>
 
+## RTX Encore Hub 2.4.0
+
+Choose a mod version, return to an earlier release, configure per-pass NR placement and use custom DLSS scales down to 33%.
+
+[2.4.0](docs/notes/2.4.0.md)
+
 ## New in 2.3.0
 
 Configure RTX Encore 2.3.0, compare Neural Rendering placements and install FSR 1 from the stable release.

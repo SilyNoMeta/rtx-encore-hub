@@ -32,6 +32,12 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 
 </div>
 
+## RTX Encore Hub 2.4.0
+
+Choisissez une version du mod, revenez à une publication précédente, réglez le placement NR par passe et l’échelle DLSS jusqu’à 33 %.
+
+[2.4.0](docs/notes/2.4.0.fr.md)
+
 ## Nouveau en 2.3.0
 
 Réglez RTX Encore 2.3.0, comparez les placements du Neural Rendering et installez FSR 1 depuis la version stable.
