@@ -258,3 +258,26 @@ Sept looks liés à la version du mod, sans changer passes, modèles, résolutio
 ### Installations existantes préservées
 
 Les choix explicites sont conservés. L’exposition NR automatique est ajoutée seulement à la création d’une configuration ; un fichier existant sans la clé garde son comportement. Les profils communautaires acceptent Image finale et les nouvelles commandes XeFG partagées.
+
+
+## 2.4.0
+
+Choisissez une version du mod, revenez à une publication précédente, réglez le placement NR par passe et l’échelle DLSS jusqu’à 33 %.
+
+### Choix de version et réparation des composants dans le Hub
+
+Choisissez une version publiée du mod dans les paramètres pour la conserver ou revenir à une version précédente. Le Hub associé expose le placement NR de la 2.4.0 et l’échelle à 33 %, reconnaît NVIDIA 621.24 et installe/répare les dépendances Streamline SR nécessaires. Les anciens mods gardent les commandes qui leur correspondent.
+
+### Neural Rendering à plusieurs étapes
+
+Affectez chacune des une à quatre passes NR à Pre-SR, Post-SR ou Image finale, ou conservez le placement global. L’exécution suit le pipeline de l’image en préservant l’apparence de chaque passe. Les configurations existantes gardent leur comportement. L’intégration DLSS native couvrent les chemins DX11, DX12 et Vulkan compatibles ; chaque étape conserve ses exigences d’entrées, HUD, HDR et FG. Une étape tardive indisponible peut être refusée même si une étape précédente fonctionne.
+
+### FXAA et SMAA, HDR compris
+
+L’anticrénelage spatial optionnel avant ou après NIS/FSR 1 prend désormais en charge les chemins DirectX 11, DirectX 12 et Vulkan compatibles en SDR, HDR10 et scRGB. Cela étend le support DX11 SDR de la 2.3.0. Le résultat sur écran HDR physique et dans chaque jeu dépend toujours de la configuration.
+
+### Échelle DLSS personnalisée : 33–100 %
+
+L’échelle personnalisée DLSS Super Resolution descend à 33 % par axe, avec les mêmes bornes dans le Hub. Une résolution d’entrée réduite échange du détail source contre un coût de rendu inférieur ; le résultat dépend du jeu et du GPU.
+
+Le Neural Rendering reste expérimental et désactivé par défaut. La compatibilité dépend du jeu, de l’API, du GPU, du pilote et des runtimes. Aucun gain universel de FPS ou de qualité d’image n’est promis.

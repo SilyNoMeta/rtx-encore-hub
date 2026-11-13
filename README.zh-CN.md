@@ -32,6 +32,12 @@
 
 </div>
 
+## RTX Encore Hub 2.4.0
+
+选择模组版本、回退至旧版、设置逐遍 NR 位置，并使用最低 33% 的自定义 DLSS 比例。
+
+[2.4.0](docs/notes/2.4.0.zh-CN.md)
+
 ## 2.3.0 新功能
 
 配置 RTX Encore 2.3.0，比较 Neural Rendering 处理位置，并从稳定版安装 FSR 1。

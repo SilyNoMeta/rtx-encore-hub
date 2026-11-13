@@ -258,3 +258,26 @@ Apply seven version-matched looks without changing pass count, models, resolutio
 ### Preserve existing installations
 
 Existing explicit settings are preserved. Automatic NR exposure is added only when creating a new configuration; an existing file without the exposure key keeps its previous behavior. Community profiles support Final image and the shared manual XeFG controls.
+
+
+## 2.4.0
+
+Choose a mod version, return to an earlier release, configure per-pass NR placement and use custom DLSS scales down to 33%.
+
+### Hub version selection and component repair
+
+Select a published mod version in Hub settings to pin it or return to an earlier release. The matching Hub exposes 2.4.0 NR placement controls and 33% custom scales, recognizes NVIDIA 621.24, and repairs/installs the required Streamline SR dependencies. Older mod versions retain their applicable controls.
+
+### Neural Rendering at several stages
+
+Assign each of the one to four NR passes to Pre-SR, Post-SR or Final image, or inherit the global placement. Execution follows the image pipeline, preserving each pass’s appearance settings. Existing configurations retain their behavior. Native game-DLSS integration support compatible DX11, DX12 and Vulkan routes; each stage keeps its existing input, HUD, HDR and FG requirements. An unavailable later stage can be refused even when an earlier stage runs.
+
+### FXAA and SMAA, including HDR
+
+Optional spatial anti-aliasing before or after NIS/FSR 1 now supports compatible DirectX 11, DirectX 12 and Vulkan paths in SDR, HDR10 and scRGB. This extends the DX11 SDR support of 2.3.0. Physical HDR display and individual game results still depend on the setup.
+
+### Custom DLSS render scale: 33–100%
+
+Custom DLSS Super Resolution scale now reaches 33% per axis, with matching Hub bounds. Lower input resolutions trade source detail for rendering cost; results depend on the game and GPU.
+
+Neural Rendering remains experimental and off by default. Compatibility depends on the game, API, GPU, driver and runtime. No universal FPS or image-quality gain is promised.
