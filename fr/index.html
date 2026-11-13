@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RTX Encore 2.3.0 · Neural Rendering sur l’image finale · FSR 1 · Hub 2.3.0</title>
-<meta name="description" content="RTX Encore 2.3.0 apporte le Neural Rendering sur l’image finale, les vecteurs de mouvement du jeu par défaut, une nouvelle console en jeu et FSR 1 avec prise en charge du HDR.">
+<title>RTX Encore 2.4.0 · Hub 2.4.0</title>
+<meta name="description" content="RTX Encore 2.4.0 ajoute le placement NR par passe, l’anticrénelage spatial en DirectX et Vulkan avec HDR, et une échelle DLSS personnalisée jusqu’à 33 %. Le Hub 2.4.0 permet de choisir une version du mod et de revenir en arrière.">
 <link rel="canonical" href="https://encore.nometa.fr/fr/">
 <link rel="alternate" hreflang="en" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="fr" href="https://encore.nometa.fr/fr/">
@@ -14,8 +14,8 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preload" href="../assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
-<meta property="og:title" content="RTX Encore 2.3.0 · Neural Rendering sur l’image finale · FSR 1 · Hub 2.3.0">
-<meta property="og:description" content="RTX Encore 2.3.0 apporte le Neural Rendering sur l’image finale, les vecteurs de mouvement du jeu par défaut, une nouvelle console en jeu et FSR 1 avec prise en charge du HDR.">
+<meta property="og:title" content="RTX Encore 2.4.0 · Hub 2.4.0">
+<meta property="og:description" content="RTX Encore 2.4.0 ajoute le placement NR par passe, l’anticrénelage spatial en DirectX et Vulkan avec HDR, et une échelle DLSS personnalisée jusqu’à 33 %. Le Hub 2.4.0 permet de choisir une version du mod et de revenir en arrière.">
 <meta property="og:url" content="https://encore.nometa.fr/fr/">
 <meta property="og:image" content="https://encore.nometa.fr/assets/social-card.png">
 <meta property="og:image:width" content="1200">
@@ -35,32 +35,32 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 2.3.0 · Hub 2.3.0</span>
+<span class="badge">RTX Encore 2.4.0 · Hub 2.4.0</span>
 <h1>Plus d’images.<br>Plus de jeux.<br><em>RTX Encore.</em></h1>
-<p class="lead">RTX Encore 2.3.0 apporte le Neural Rendering sur l’image finale, les vecteurs de mouvement du jeu par défaut, une nouvelle console en jeu et FSR 1 avec prise en charge du HDR. DirectX 12 · DirectX 11 · Vulkan.</p>
+<p class="lead">RTX Encore 2.4.0 ajoute le placement NR par passe, l’anticrénelage spatial en DirectX et Vulkan avec HDR, et une échelle DLSS personnalisée jusqu’à 33 %. Le Hub 2.4.0 permet de choisir une version du mod et de revenir en arrière.</p>
 <p class="sub">Intel XeSS / XeFG, Pre-SR, le NR fovéal et Smooth Motion sur RTX 20 restent expérimentaux. La compatibilité dépend du jeu, de l’API graphique et des runtimes. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Signaler un problème</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.3.0">Télécharger Hub 2.3.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.3.0">Télécharger RTX Encore 2.3.0</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.4.0">Télécharger Hub 2.4.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.4.0">Télécharger RTX Encore 2.4.0</a></div>
 <p class="under">Windows 10 et 11, x64 · douze langues · s&#x27;installe sans droits d&#x27;administrateur</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>RTX Encore 2.3.0 et Hub 2.3.0</h2>
-<p class="sub">La compatibilité dépend du jeu, de l’API, du GPU et des runtimes admis. Le Neural Rendering et les chemins expérimentaux conservent les limites décrites dans leurs guides. Aucun nouveau gain universel de FPS n’est annoncé.</p>
-<div class="news-grid"><div class="card"><h3>Neural Rendering sur l’image finale</h3><p>Traitez les images compatibles après les effets du jeu, avant la génération d’images et l’affichage, en DirectX 12, DirectX 11 et Vulkan. Des entrées scène/HUD séparées compatibles permettent de préserver le HUD ; un HUD déjà intégré à la scène est traité avec elle. Une à quatre passes, NR fovéal et HDR sur les chemins compatibles. En Vulkan, choisissez Image finale avant le lancement ou redémarrez après la bascule. Le guide NR détaille les combinaisons prises en charge.</p></div>
-<div class="card"><h3>Vecteurs de mouvement du jeu par défaut</h3><p>Pour la génération d’images ajoutée aux jeux avec DLSS Super Resolution mais sans DLSS Frame Generation, Game motion vectors utilise les vecteurs disponibles du jeu en DirectX 12, DirectX 11 et Vulkan, avec repli automatique vers l’estimation RTX Encore. Ils alimentent aussi le NR Image finale compatible. Les choix explicites existants sont conservés. Les chemins DX11/Vulkan utilisant les entrées du jeu existaient déjà ; la 2.3.0 expose ce choix commun et en fait le défaut. Les cinq choix sont désormais affichés de façon cohérente dans le mod et le Hub.</p></div>
-<div class="card"><h3>Une nouvelle console en jeu</h3><p>Navigation réorganisée, cartes de moteurs plus lisibles et pipeline de traitement visible pour retrouver les réglages de reconstruction, génération d’images, NR et performances. Le NR présente l’apparence globale, les réglages par passe et des profils multipasses complets.</p></div>
-<div class="card"><h3>FSR 1 rejoint NIS, HDR compris</h3><p>AMD FidelityFX Super Resolution 1 rejoint NVIDIA Image Scaling pour les jeux sans DLSS. Les chemins de présentation DirectX 11, DirectX 12 et Vulkan compatibles acceptent SDR, HDR10 et scRGB. La netteté spatiale se règle à chaud. FXAA/SMAA avant ou après la mise à l’échelle restent limités au DirectX 11 SDR. Choisissez une résolution fenêtrée inférieure, au même format d’image, avec un agrandissement strict jusqu’à 2x par axe.</p></div>
-<div class="card"><h3>Looks NR et exposition</h3><p>Sept looks sont disponibles dans le mod et le Hub : Standard, Discret, Naturel, Cinématique, Visages, Peau douce et Référence NVIDIA. Un look modifie l’apparence et remet les surcharges d’apparence par passe sur Global, sans changer le nombre de passes, les modèles, la résolution ni l’exposition. L’exposition NR propose Jeu, Automatique, Mesurée et Manuelle pour les entrées DLSS linéaires scène compatibles. Une nouvelle configuration utilise Automatique ; un fichier existant sans cette clé conserve Jeu.</p></div>
-<div class="card"><h3>Comparer l’image et son coût</h3><p>Le laboratoire Image et performances compare Post-SR, Pre-SR et Image finale, avec captures, mesures et export. Le Hub affiche les placements sélectionnés sur les cartes de comparaison. Comparez des conditions identiques ; le temps GPU NR mesure le traitement NR, pas tous les transferts ni le pipeline graphique complet.</p></div>
-<div class="card"><h3>Cadence XeFG plus sélective</h3><p>À partir de X3, le mode automatique attend des intervalles durablement irréguliers avant d’intervenir et conserve une correction seulement si elle améliore la régularité dans son budget de perte des FPS de base. Il relâche la contrainte et rétablit une correction efficace si nécessaire. Le mode manuel expose un budget de 0 à 30 %, la détection et les ajustements automatiques, à chaud. Le mode automatique utilise un budget de 4 %.</p></div>
-<div class="card"><h3>RTX Encore Hub 2.3.0</h3><p>Le Hub associé reconnaît les archives FSR 1 stables et les proxy/ASI installés, propose Game motion vectors, l’exposition NR et la cadence XeFG manuelle, tout en respectant les versions anciennes du mod. L’installation guidée prend en charge NIS/FSR 1 et leur AA applicable. Le schéma communautaire accepte Image finale et les nouvelles commandes XeFG partagées. NIS, Overlay Studio, options Tensor Cores et choix des composants par fichier restent disponibles.</p></div>
+<h2>RTX Encore 2.4.0 et Hub 2.4.0</h2>
+<p class="sub">Le Neural Rendering reste expérimental et désactivé par défaut. La compatibilité dépend du jeu, de l’API, du GPU, du pilote et des runtimes. Aucun gain universel de FPS ou de qualité d’image n’est promis.</p>
+<div class="news-grid"><div class="card"><h3>Neural Rendering à plusieurs étapes</h3><p>Affectez chacune des une à quatre passes NR à Pre-SR, Post-SR ou Image finale, ou conservez le placement global. L’exécution suit le pipeline de l’image en préservant l’apparence de chaque passe. Les configurations existantes gardent leur comportement. Les hooks DLSS natifs couvrent les chemins DX11, DX12 et Vulkan compatibles ; chaque étape conserve ses exigences d’entrées, HUD, HDR et FG. Une étape tardive indisponible peut être refusée même si une étape précédente fonctionne.</p></div>
+<div class="card"><h3>FXAA et SMAA, HDR compris</h3><p>L’anticrénelage spatial optionnel avant ou après NIS/FSR 1 prend désormais en charge les chemins DirectX 11, DirectX 12 et Vulkan compatibles en SDR, HDR10 et scRGB. Cela étend le support DX11 SDR de la 2.3.0. Le résultat sur écran HDR physique et dans chaque jeu dépend toujours de la configuration.</p></div>
+<div class="card"><h3>Échelle DLSS personnalisée : 33–100 %</h3><p>L’échelle personnalisée DLSS Super Resolution descend à 33 % par axe, avec les mêmes bornes dans le Hub. Une résolution d’entrée réduite échange du détail source contre un coût de rendu inférieur ; le résultat dépend du jeu et du GPU.</p></div>
+<div class="card"><h3>Génération d’images et VRAM</h3><p>Les contrôles de marge VRAM physique évitent le double comptage des allocations. Les alertes de budget VRAM sont informatives et ne désactivent plus à elles seules la génération d’images. Cela ne garantit pas assez de mémoire pour toutes les configurations.</p></div>
+<div class="card"><h3>Correctifs de compatibilité</h3><p>Intégration SR natif, mouvement du jeu et routage Intel pour FC27. KCD2 conserve le contrôle du moteur de menu avec les exports clients NGX. Correction des limites des anciens runtimes DLSS-G et de l’activité affichée en X2. Ajout des profils hors ligne du pilote NVIDIA 621.24 ; les runtimes et matériels doivent rester compatibles.</p></div>
+<div class="card"><h3>Horizon et Image finale</h3><p>Correction des entrées des hooks de soumission D3D12, de la télémétrie FG native, des entrées Pre-SR RGB10 et de la composition scène/HUD en Image finale. Pre-SR/Post-SR/Image finale et la télémétrie ont été confirmés sur un candidat précédent. Le dernier correctif de scintillement du HUD est couvert par les tests et replays, mais reste à confirmer en jeu ; les attentes intermittentes en cinématique restent à examiner. Le NR D3D12 à mouvement jitteré reste un diagnostic désactivé par défaut.</p></div>
+<div class="card"><h3>Choix de version et réparation des composants dans le Hub</h3><p>Choisissez une version publiée du mod dans les paramètres pour la conserver ou revenir à une version précédente. Le Hub associé expose le placement NR de la 2.4.0 et l’échelle à 33 %, reconnaît NVIDIA 621.24 et installe/répare les dépendances Streamline SR nécessaires. Les anciens mods gardent les commandes qui leur correspondent.</p></div>
+<div class="card"><h3>Game motion vectors</h3><p>Toujours disponible depuis la 2.3.0 : la génération d’images ajoutée aux jeux DLSS-SR sans DLSS-FG utilise par défaut les vecteurs du jeu en DX12, DX11 et Vulkan, avec repli automatique vers RTX Encore. Les choix explicites existants sont conservés.</p></div>
 </div>
 </div></section>
 
 <section class="community wrap" aria-labelledby="community-title">
 <div>
 <h2 id="community-title">Le Discord de RTX Encore est ouvert</h2>
-<p>RTX Encore 2.3.0 apporte le Neural Rendering sur l’image finale, les vecteurs de mouvement du jeu par défaut, une nouvelle console en jeu et FSR 1 avec prise en charge du HDR.</p>
+<p>RTX Encore 2.4.0 ajoute le placement NR par passe, l’anticrénelage spatial en DirectX et Vulkan avec HDR, et une échelle DLSS personnalisée jusqu’à 33 %. Le Hub 2.4.0 permet de choisir une version du mod et de revenir en arrière.</p>
 </div>
 <a class="button discord" href="https://discord.gg/Zwmq4Xc2Br"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.8 19.8 0 0 0-4.885-1.515c-.21.38-.452.892-.62 1.3a18.2 18.2 0 0 0-5.42 0 14 14 0 0 0-.628-1.3 19.7 19.7 0 0 0-4.888 1.52C.785 8.95-.053 13.41.366 17.808a20 20 0 0 0 5.993 3.03c.484-.654.915-1.35 1.287-2.082a13 13 0 0 1-2.027-.966l.497-.386c3.908 1.82 8.16 1.82 12.022 0l.498.386a13 13 0 0 1-2.03.968c.372.73.802 1.427 1.287 2.08a20 20 0 0 0 5.995-3.03c.492-5.1-.84-9.52-3.571-13.438ZM8.02 15.1c-1.173 0-2.134-1.073-2.134-2.392s.94-2.394 2.134-2.394c1.205 0 2.155 1.083 2.134 2.394 0 1.32-.94 2.392-2.134 2.392Zm7.96 0c-1.173 0-2.134-1.073-2.134-2.392s.94-2.394 2.134-2.394c1.205 0 2.155 1.083 2.134 2.394 0 1.32-.93 2.392-2.134 2.392Z"/></svg>Rejoindre le Discord</a>
 </section>
@@ -103,7 +103,7 @@
 <div class="hub">
 <figure><div class="shot"><img src="../assets/library.fr.jpg" alt="La bibliothèque du Hub, avec l&#x27;état de chaque installation et le bandeau des mises à jour" width="1440" height="900" loading="lazy"></div><figcaption>Capture de l&#x27;application réelle, sur une bibliothèque de démonstration faite de dossiers de jeux factices.</figcaption></figure>
 <ol class="points">
-<li><h3>Choisissez ce qui est installé</h3><p>Le Hub 2.3.0 ouvre <b>Choisir les composants</b> avant chaque installation et mise à jour : le mod, chaque DLL NVIDIA, Streamline et les fichiers Intel, choisis séparément. Les fichiers décochés restent tels quels, et un composant ignoré s’ajoute plus tard depuis la fiche du jeu.</p></li>
+<li><h3>Choisissez ce qui est installé</h3><p>Le Hub 2.4.0 ouvre <b>Choisir les composants</b> avant chaque installation et mise à jour : le mod, chaque DLL NVIDIA, Streamline et les fichiers Intel, choisis séparément. Les fichiers décochés restent tels quels, et un composant ignoré s’ajoute plus tard depuis la fiche du jeu.</p></li>
 <li><h3>Lisser X3 / X4 : Automatique</h3><p>Avec le mod 2.0.0, le mod apprend jeu par jeu si Streamline doit espacer X3 et X4. Le Hub montre ce qu’il a appris ; Mesurer de nouveau recommence.</p></li>
 <li><h3>Votre langue, en jeu aussi</h3><p>Le Hub parle désormais douze langues (merci au rapporteur de l’issue 12), et Langue du menu du mod règle celle du menu en jeu, désormais en onze langues : Comme le Hub par défaut, jamais par-dessus une langue choisie en jeu à l’installation ou à la mise à jour.</p></li>
 <li><h3>Trouver un jeu avec Ctrl+F</h3><p>Depuis n’importe quelle page du Hub 1.6.0, <code>Ctrl+F</code> sélectionne la recherche de jeux de la barre de titre.</p></li>
@@ -158,7 +158,7 @@
 
 <div class="wrap cta">
 <h2>Prêt à l&#x27;essayer ?</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.3.0">Télécharger Hub 2.3.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, le mod</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.4.0">Télécharger Hub 2.4.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, le mod</a></div>
 </div>
 </main>
 

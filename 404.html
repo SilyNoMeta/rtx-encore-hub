@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RTX Encore 2.3.0 · Final image Neural Rendering · FSR 1 · Hub 2.3.0</title>
-<meta name="description" content="RTX Encore 2.3.0 brings Final image Neural Rendering, game motion vectors by default, a redesigned in-game Console and FSR 1 with HDR support.">
+<title>RTX Encore 2.4.0 · Hub 2.4.0</title>
+<meta name="description" content="RTX Encore 2.4.0 adds NR placement per pass, spatial anti-aliasing across DirectX and Vulkan with HDR, and DLSS custom scales down to 33%. Hub 2.4.0 lets you choose a mod version and roll back.">
 <link rel="canonical" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="en" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="fr" href="https://encore.nometa.fr/fr/">
@@ -14,8 +14,8 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
-<meta property="og:title" content="RTX Encore 2.3.0 · Final image Neural Rendering · FSR 1 · Hub 2.3.0">
-<meta property="og:description" content="RTX Encore 2.3.0 brings Final image Neural Rendering, game motion vectors by default, a redesigned in-game Console and FSR 1 with HDR support.">
+<meta property="og:title" content="RTX Encore 2.4.0 · Hub 2.4.0">
+<meta property="og:description" content="RTX Encore 2.4.0 adds NR placement per pass, spatial anti-aliasing across DirectX and Vulkan with HDR, and DLSS custom scales down to 33%. Hub 2.4.0 lets you choose a mod version and roll back.">
 <meta property="og:url" content="https://encore.nometa.fr/">
 <meta property="og:image" content="https://encore.nometa.fr/assets/social-card.png">
 <meta property="og:image:width" content="1200">
@@ -35,32 +35,32 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 2.3.0 · Hub 2.3.0</span>
+<span class="badge">RTX Encore 2.4.0 · Hub 2.4.0</span>
 <h1>More frames.<br>More games.<br><em>RTX Encore.</em></h1>
-<p class="lead">RTX Encore 2.3.0 brings Final image Neural Rendering, game motion vectors by default, a redesigned in-game Console and FSR 1 with HDR support. DirectX 12 · DirectX 11 · Vulkan.</p>
+<p class="lead">RTX Encore 2.4.0 adds NR placement per pass, spatial anti-aliasing across DirectX and Vulkan with HDR, and DLSS custom scales down to 33%. Hub 2.4.0 lets you choose a mod version and roll back.</p>
 <p class="sub">Intel XeSS / XeFG, Pre-SR, foveated NR and Smooth Motion on RTX 20 remain experimental. Compatibility depends on the game, graphics API and runtimes. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Report an issue</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.3.0">Download Hub 2.3.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.3.0">Download RTX Encore 2.3.0</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.4.0">Download Hub 2.4.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.4.0">Download RTX Encore 2.4.0</a></div>
 <p class="under">Windows 10 and 11, x64 · twelve languages · installs without administrator rights</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>RTX Encore 2.3.0 and Hub 2.3.0</h2>
-<p class="sub">Compatibility depends on the game, graphics API, GPU and admitted runtimes. Neural Rendering and the existing experimental routes retain the limits described in their guides. No new universal FPS gain is claimed.</p>
-<div class="news-grid"><div class="card"><h3>Final image Neural Rendering</h3><p>Process compatible game images after post-processing, before frame generation and display, in DirectX 12, DirectX 11 and Vulkan. Compatible separate scene/HUD inputs preserve the HUD; a HUD already baked into the scene is processed with it. One to four passes, foveated NR and HDR are supported on compatible routes. Vulkan: select Final image before launch, or restart after switching to it. See the Neural Rendering guide for the supported combinations.</p></div>
-<div class="card"><h3>Game motion vectors, now the default</h3><p>For added frame generation in games with DLSS Super Resolution but no DLSS Frame Generation, Game motion vectors uses the game’s available motion in DirectX 12, DirectX 11 and Vulkan, with automatic fallback to RTX Encore estimation. It also supplies compatible Final image NR. Existing explicit motion choices are preserved. Earlier DX11/Vulkan game-input routes remain available; 2.3.0 exposes the shared choice and makes it the default. The same five choices are now shown consistently throughout the mod and Hub.</p></div>
-<div class="card"><h3>A new in-game Console</h3><p>Reorganized navigation, clearer engine cards and a visible image-processing pipeline make it easier to find upscaling, frame generation, Neural Rendering and performance controls. NR exposes global appearance, per-pass controls and complete multipass profiles.</p></div>
-<div class="card"><h3>FSR 1 alongside NIS, including HDR</h3><p>AMD FidelityFX Super Resolution 1 joins NVIDIA Image Scaling for games without DLSS. Both support compatible DirectX 11, DirectX 12 and Vulkan presentation paths in SDR, HDR10 and scRGB. Adjust spatial sharpness live. Optional FXAA/SMAA before or after scaling remains limited to DirectX 11 SDR. Spatial scaling requires a lower windowed resolution, the same aspect ratio and a strict upscale up to 2x per axis.</p></div>
-<div class="card"><h3>NR looks and exposure</h3><p>Seven appearance recipes are available in the mod and Hub: Standard, Subtle, Natural, Cinematic, Faces, Soft skin and NVIDIA reference. Applying a look changes appearance and clears per-pass appearance overrides, while preserving pass count, models, resolution and exposure. NR exposure offers Game, Automatic, Measured and Manual for compatible scene-linear DLSS inputs. New configurations use Automatic; existing files without the key keep Game behavior.</p></div>
-<div class="card"><h3>Compare the image and its cost</h3><p>The Image and performance lab can compare Post-SR, Pre-SR and Final image, with captures, measurements and exports. The Hub displays the selected placement pair and supports the resulting comparisons. Compare matching conditions; NR GPU time covers the NR work, not every transfer or the entire graphics pipeline.</p></div>
-<div class="card"><h3>More selective XeFG pacing</h3><p>From X3, automatic source pacing looks for persistent uneven intervals before intervening and keeps a correction only when it improves regularity within its source-FPS loss budget. It relaxes the constraint and restores an effective correction when needed. Manual mode exposes a 0–30% loss budget, detection and automatic-adjustment switches, applied live. Automatic uses a 4% budget.</p></div>
-<div class="card"><h3>RTX Encore Hub 2.3.0</h3><p>The matching Hub recognizes stable FSR 1 archives and installed proxy/ASI files, exposes Game motion vectors, NR exposure and XeFG manual pacing, and keeps older mod versions gated correctly. Guided setup supports NIS/FSR 1 and their applicable AA controls. The community schema accepts Final image and the new shared XeFG controls. NIS, Overlay Studio, Tensor Core options and per-file component selection from earlier releases remain available.</p></div>
+<h2>RTX Encore 2.4.0 and Hub 2.4.0</h2>
+<p class="sub">Neural Rendering remains experimental and off by default. Compatibility depends on the game, API, GPU, driver and runtime. No universal FPS or image-quality gain is promised.</p>
+<div class="news-grid"><div class="card"><h3>Neural Rendering at several stages</h3><p>Assign each of the one to four NR passes to Pre-SR, Post-SR or Final image, or inherit the global placement. Execution follows the image pipeline, preserving each pass’s appearance settings. Existing configurations retain their behavior. Native game-DLSS hooks support compatible DX11, DX12 and Vulkan routes; each stage keeps its existing input, HUD, HDR and FG requirements. An unavailable later stage can be refused even when an earlier stage runs.</p></div>
+<div class="card"><h3>FXAA and SMAA, including HDR</h3><p>Optional spatial anti-aliasing before or after NIS/FSR 1 now supports compatible DirectX 11, DirectX 12 and Vulkan paths in SDR, HDR10 and scRGB. This extends the DX11 SDR support of 2.3.0. Physical HDR display and individual game results still depend on the setup.</p></div>
+<div class="card"><h3>Custom DLSS render scale: 33–100%</h3><p>Custom DLSS Super Resolution scale now reaches 33% per axis, with matching Hub bounds. Lower input resolutions trade source detail for rendering cost; results depend on the game and GPU.</p></div>
+<div class="card"><h3>Frame generation and VRAM</h3><p>Physical VRAM headroom checks avoid double-counting allocations. VRAM budget warnings are informational and no longer disable frame generation by themselves. This does not guarantee enough memory for every configuration.</p></div>
+<div class="card"><h3>Compatibility fixes</h3><p>FC27 gains integrated native SR/game-motion and Intel routing fixes. KCD2 retains menu engine ownership with NGX client exports. Legacy DLSS-G runtime limits and X2 activity reporting are corrected. NVIDIA 621.24 offline driver profiles are added; admission remains specific to supported runtimes and hardware.</p></div>
+<div class="card"><h3>Horizon and Final image</h3><p>Correct D3D12 submission-hook inputs, native FG telemetry, RGB10 Pre-SR inputs and Final image scene/HUD composition. Pre-SR/Post-SR/Final operation and telemetry were confirmed on an earlier candidate. The final HUD flicker correction has automated/replay coverage but still needs in-game confirmation; intermittent cinematic Waiting remains under investigation. D3D12 jittered-motion NR remains a diagnostic trial, disabled by default.</p></div>
+<div class="card"><h3>Hub version selection and component repair</h3><p>Select a published mod version in Hub settings to pin it or return to an earlier release. The matching Hub exposes 2.4.0 NR placement controls and 33% custom scales, recognizes NVIDIA 621.24, and repairs/installs the required Streamline SR dependencies. Older mod versions retain their applicable controls.</p></div>
+<div class="card"><h3>Game motion vectors</h3><p>Still available from 2.3.0: added frame generation in DLSS-SR games without DLSS-FG uses game motion vectors by default in DX12, DX11 and Vulkan, with automatic RTX Encore fallback. Existing explicit choices are preserved.</p></div>
 </div>
 </div></section>
 
 <section class="community wrap" aria-labelledby="community-title">
 <div>
 <h2 id="community-title">RTX Encore now has a Discord</h2>
-<p>RTX Encore 2.3.0 brings Final image Neural Rendering, game motion vectors by default, a redesigned in-game Console and FSR 1 with HDR support.</p>
+<p>RTX Encore 2.4.0 adds NR placement per pass, spatial anti-aliasing across DirectX and Vulkan with HDR, and DLSS custom scales down to 33%. Hub 2.4.0 lets you choose a mod version and roll back.</p>
 </div>
 <a class="button discord" href="https://discord.gg/Zwmq4Xc2Br"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.8 19.8 0 0 0-4.885-1.515c-.21.38-.452.892-.62 1.3a18.2 18.2 0 0 0-5.42 0 14 14 0 0 0-.628-1.3 19.7 19.7 0 0 0-4.888 1.52C.785 8.95-.053 13.41.366 17.808a20 20 0 0 0 5.993 3.03c.484-.654.915-1.35 1.287-2.082a13 13 0 0 1-2.027-.966l.497-.386c3.908 1.82 8.16 1.82 12.022 0l.498.386a13 13 0 0 1-2.03.968c.372.73.802 1.427 1.287 2.08a20 20 0 0 0 5.995-3.03c.492-5.1-.84-9.52-3.571-13.438ZM8.02 15.1c-1.173 0-2.134-1.073-2.134-2.392s.94-2.394 2.134-2.394c1.205 0 2.155 1.083 2.134 2.394 0 1.32-.94 2.392-2.134 2.392Zm7.96 0c-1.173 0-2.134-1.073-2.134-2.392s.94-2.394 2.134-2.394c1.205 0 2.155 1.083 2.134 2.394 0 1.32-.93 2.392-2.134 2.392Z"/></svg>Join the Discord</a>
 </section>
@@ -103,7 +103,7 @@
 <div class="hub">
 <figure><div class="shot"><img src="assets/library.jpg" alt="The Hub&#x27;s game library, with the state of each install and the update banner" width="1440" height="900" loading="lazy"></div><figcaption>Real application capture, on a demonstration library of stand-in game folders.</figcaption></figure>
 <ol class="points">
-<li><h3>Choose what gets installed</h3><p>Hub 2.3.0 opens <b>Choose components</b> before every install and update: the mod, each NVIDIA DLL, Streamline and the Intel files, picked separately. Unchecked files stay as they are, and a skipped component can be added later from the game page.</p></li>
+<li><h3>Choose what gets installed</h3><p>Hub 2.4.0 opens <b>Choose components</b> before every install and update: the mod, each NVIDIA DLL, Streamline and the Intel files, picked separately. Unchecked files stay as they are, and a skipped component can be added later from the game page.</p></li>
 <li><h3>Smooth out X3 / X4: Automatic</h3><p>With mod 2.0.0, the mod learns per game whether Streamline should pace X3 and X4. The Hub shows what it learned; Measure again starts over.</p></li>
 <li><h3>Your language, in game too</h3><p>The Hub now speaks twelve languages (thanks to the reporter of issue 12), and Mod menu language sets the in-game menu’s, now in eleven languages: Same as Hub by default, never over a language picked in game on install or update.</p></li>
 <li><h3>Find a game with Ctrl+F</h3><p>From any page of Hub 1.6.0, <code>Ctrl+F</code> selects the game search in the title bar.</p></li>
@@ -158,7 +158,7 @@
 
 <div class="wrap cta">
 <h2>Ready to try it?</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.3.0">Download Hub 2.3.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.4.0">Download Hub 2.4.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
 </div>
 </main>
 
