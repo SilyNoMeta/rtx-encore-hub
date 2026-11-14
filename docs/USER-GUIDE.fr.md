@@ -4,7 +4,7 @@
 
 [English](USER-GUIDE.md) · [简体中文](USER-GUIDE.zh-CN.md) · [Retour au projet](../README.fr.md)
 
-RTX Encore Hub installe [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) dans vos jeux, tient à jour le mod et les DLL NVIDIA, vérifie qu'un jeu démarre bien avec, et sait toujours revenir en arrière. L'interface suit la langue de Windows, en douze langues : français, anglais, allemand, espagnol, néerlandais, polonais, portugais du Brésil, vietnamien, russe, arabe (de droite à gauche), japonais et chinois simplifié ; les autres langues utilisent l'anglais. **Paramètres → Langue de l'interface** la change. Ce guide reprend les libellés français de l'application.
+RTX Encore Hub installe [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) dans vos jeux, tient à jour le mod et les DLL NVIDIA, vérifie qu'un jeu démarre bien avec, et sait toujours revenir en arrière. L'interface suit la langue de Windows, en treize langues : français, anglais, allemand, espagnol, néerlandais, polonais, portugais du Brésil, vietnamien, russe, arabe (de droite à gauche), japonais, coréen et chinois simplifié ; les autres langues utilisent l'anglais. **Paramètres → Langue de l'interface** la change. Ce guide reprend les libellés français de l'application.
 
 ## Choisir les composants à installer
 
@@ -188,6 +188,8 @@ Au premier démarrage après une mise à jour depuis les 1.0.x, 1.1.x ou 1.2.x, 
 
 Gardez le dossier complet `%LOCALAPPDATA%\EncoreHub`, ou `data` à côté du Hub portable, tant qu’un jeu doit pouvoir être restauré. Il contient désormais des originaux partagés entre plusieurs jeux, en plus des réglages et de l’historique. Gardez Hub 1.2.4 ou ultérieur pour restaurer les états migrés ; les anciens Hub refusent leurs nouvelles références. **Paramètres → Espace utilisé** montre la place prise par l’application, les sauvegardes, les runtimes téléchargés, les archives RTX Encore, les jaquettes, les journaux et les autres données du Hub, ainsi que les anciennes sauvegardes encore présentes dans les dossiers des jeux ; une analyse partielle est signalée, et son total est alors un minimum. Désinstaller le programme installé conserve ces données ; les supprimer fait perdre les copies de restauration correspondantes.
 
+Un dossier de jeu peut contenir des sauvegardes que ce Hub n'a pas écrites : un dossier `rtx-encore-backups` ou un fichier `rtx-encore-backup-owner.txt` laissés par un autre dossier de données du Hub (Hub réinstallé, Hub portable, fichiers copiés depuis un autre PC). La fiche du jeu affiche alors un avertissement. Installation, mise à jour et restauration restent possibles, et ces fichiers ne sont jamais modifiés ni supprimés : retirez-les vous-même quand vous n'en avez plus besoin.
+
 Le cache du mod conserve uniquement les ZIP originaux des versions actuellement proposées sur les canaux stable et candidate. Les anciennes versions et les anciens dossiers extraits sont retirés après vérification en ligne de la liste des publications. Un ancien cache extrait peut donc nécessiter un nouveau téléchargement unique. Les sources d’installation sont extraites temporairement.
 
 Sur NTFS, les DLL NVIDIA, Intel et Streamline téléchargées utilisent la compression LZX de Windows. Les DLL déjà en cache sont compressées en arrière-plan après la lecture de la bibliothèque, même si les téléchargements automatiques sont désactivés ; aucune version en cache n’est supprimée. Windows fournit les octets d’origine à la lecture : installation et vérification des signatures fonctionnent comme avant. Le compteur d’espace utilisé tient compte de la compression des runtimes ; dans l’Explorateur, le gain apparaît dans **Taille sur le disque**, tandis que **Taille** reste identique. Les volumes incompatibles (dont les supports portables exFAT), les fichiers verrouillés et ceux qui ne gagnent rien restent sous leur forme ordinaire ; un échec de compression ne bloque pas l’installation.
@@ -279,5 +281,13 @@ L’anticrénelage spatial optionnel avant ou après NIS/FSR 1 prend désormais 
 ### Échelle DLSS personnalisée : 33–100 %
 
 L’échelle personnalisée DLSS Super Resolution descend à 33 % par axe, avec les mêmes bornes dans le Hub. Une résolution d’entrée réduite échange du détail source contre un coût de rendu inférieur ; le résultat dépend du jeu et du GPU.
+
+Le Neural Rendering reste expérimental et désactivé par défaut. La compatibilité dépend du jeu, de l’API, du GPU, du pilote et des runtimes. Aucun gain universel de FPS ou de qualité d’image n’est promis.
+
+## 2.4.2
+
+Correspond à RTX Encore 2.4.2. La numérotation du Hub passe de 2.4.0 à 2.4.2 pour suivre celle du mod.
+
+Toutes les fonctions de la 2.4.0 restent inchangées : choix de la version du mod et retour en arrière, placement NR par passe, échelle DLSS personnalisée jusqu’à 33 % et réparation des dépendances Streamline SR.
 
 Le Neural Rendering reste expérimental et désactivé par défaut. La compatibilité dépend du jeu, de l’API, du GPU, du pilote et des runtimes. Aucun gain universel de FPS ou de qualité d’image n’est promis.

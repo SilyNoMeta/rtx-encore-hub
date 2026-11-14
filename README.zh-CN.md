@@ -20,7 +20,7 @@
 [![加入 Discord](https://img.shields.io/badge/%E5%8A%A0%E5%85%A5_Discord-454FC4?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Zwmq4Xc2Br)
 
 [![Windows 10 和 11，x64](https://img.shields.io/badge/平台-Windows_10_%C2%B7_11_x64-8ab4f8?style=flat-square&labelColor=171c22)](#快速开始)
-[![十二种界面语言](https://img.shields.io/badge/界面-12_种语言-c4b5fd?style=flat-square&labelColor=171c22)](#快速开始)
+[![十三种界面语言](https://img.shields.io/badge/界面-13_种语言-c4b5fd?style=flat-square&labelColor=171c22)](#快速开始)
 
 [![下载适用于 Windows x64 的最新版本](assets/download.zh-CN.svg)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 
@@ -32,68 +32,36 @@
 
 </div>
 
-## RTX Encore Hub 2.4.0
+## RTX Encore Hub 2.4.2
 
-选择模组版本、回退至旧版、设置逐遍 NR 位置，并使用最低 33% 的自定义 DLSS 比例。
+**与 RTX Encore 2.4.2 配套。** Hub 版本号从 2.4.0 直接升到 2.4.2，以与模组保持一致；2.4.0 的所有功能保持不变。
 
-[2.4.0](docs/notes/2.4.0.zh-CN.md)
+- 🌐 **韩语：**Hub 的第十三种界面语言，也是 RTX Encore 2.4.2 游戏内菜单的语言。
+- 🛟 **无法识别的备份不再阻止操作：**其他 Hub 数据文件夹留下的备份文件夹只会显示警告；安装、更新和还原仍可进行。
 
-## 2.3.0 新功能
-
-配置 RTX Encore 2.3.0，比较 Neural Rendering 处理位置，并从稳定版安装 FSR 1。
-
-[2.3.0](docs/notes/2.3.0.zh-CN.md)
-
-
-**RTX Encore 的 Discord 服务器现已开放。** 欢迎分享 2.0.0 的测试结果、交流设置，或就模组和 Hub 寻求帮助。[加入 Discord](https://discord.gg/Zwmq4Xc2Br)。
+**[下载 Hub 2.4.2](https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.4.2)** · [版本说明](docs/notes/2.4.2.zh-CN.md) · [RTX Encore 2.4.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.4.2)
 
 > [!NOTE]
 > **Windows x64。** 请打开[发布页面](https://github.com/SilyNoMeta/rtx-encore-hub/releases)并下载 `RTX-Encore-Hub-Setup-<version>.exe`，或无需安装的 `RTX-Encore-Hub-Portable-<version>.zip`。安装程序尚未进行代码签名，因此首次运行时 Windows 可能显示 SmartScreen 警告；每个发布版本都会给出安装程序的 SHA-256。Hub 与 RTX Encore 模组分别发布。
 
-
 **安装时选择。** 首次为没有原生 DLSS 或帧生成的游戏安装时，Hub 会分别询问 **无 / Smooth Motion / DLSS-G / XeFG** 和 **无 / DLSS / XeSS**，没有预选项。除非选择放大到屏幕分辨率，否则 DLSS 默认以游戏分辨率运行（DLAA）。更新会保留设置；应用前，计划会列出文件与设置更改。
-
-## Hub 2.2.0
-
-**Hub 2.2.0：**设置 NIS 与可选 FXAA/SMAA，预览并自定义叠加层，还可控制 RTX Encore 2.2.0 中默认开启的 DLSS-G Auto 覆盖。[版本说明](docs/notes/2.2.0.zh-CN.md)。
-
-**延续 2.1.0 的主要功能：**每次安装或更新均可单独选择 NVIDIA、Streamline 和 Intel 文件。搭配模组 2.1.0 或更新版本时，XeFG 稳定游戏帧节奏默认开启，也可在 Hub 游戏设置中调整。[2.1.0 版本说明](docs/notes/2.1.0.zh-CN.md)。
-
-## Hub 2.1.0
-
-**Hub 2.1.0：**每次安装和更新时都可**选择组件**（每个 NVIDIA DLL、Streamline 和 Intel 文件分别选择，之后也可在游戏页面补装），并支持 RTX Encore 2.1.0 的 **XeFG 稳定游戏帧节奏**，让 XeFG 从 X3 起保持流畅。[版本说明](docs/notes/2.1.0.zh-CN.md)。
 
 > [!TIP]
 > **没有 DLSS 的游戏。**配合 RTX Encore 2.0.0，本身不带 DLSS 的游戏也能对其显示的画面使用 DLSS（DLAA 或放大到屏幕分辨率）、神经渲染和帧生成（DLSS Frame Generation 或 Intel XeFG，取决于所选引擎）。用 Hub 安装或更新模组时，这些功能所需的一切都会一并带来：模组旁的 NVIDIA DLL、Intel 运行库；当游戏既没有自己的帧生成也没有自己的 Streamline 时，还有放在可执行文件旁的六个指定版本 DLSS Frame Generation 文件。请在模组菜单或**此游戏的全部设置**中逐项开启；**还原游戏**会移除所添加的内容。实验性功能。[工作原理](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/GAMES-WITHOUT-DLSS.zh-CN.md)。
 
-**Hub 2.0.0 是一个大版本。**配合 RTX Encore 2.0.0，完全没有 DLSS 的游戏现在也能获得 DLSS、帧生成和 Neural Rendering，由 RTX Encore 专为它们编写的运动估计引擎驱动，Hub 会安装它们所需的一切。RTX Encore 和 Hub 还换上了全新的视觉形象和标志，RTX Encore 也开设了自己的 Discord。
-
-**Hub 2.0.0：**支持没有 DLSS 的游戏，平滑 X3 / X4 新增**自动**，新增**模组菜单语言**偏好（默认与 Hub 相同；在游戏中选择的语言会被保留），界面支持十二种语言（[#12](https://github.com/SilyNoMeta/rtx-encore-hub/issues/12)）。[版本说明](docs/notes/2.0.0.zh-CN.md)。
-
-**Hub 1.6.0：**`Ctrl+F` 跳到游戏搜索，还原游戏可同时删除模组的设置和日志，并支持模组 1.6.0。[版本说明](docs/notes/1.6.0.zh-CN.md)。
-
-**Hub 1.5.3：**RTX 30/40/50 Tensor 控制、V-Sync 三选项及 RR 预设 F。[版本说明](docs/notes/1.5.3.zh-CN.md)。
-
-Mod 1.5.1 及更高版本在 RTX 20 上始终使用 Smooth Motion V2；下文提及的历史 V1/V2 选择仅适用于 mod 1.3.0–1.5.0。
-
-**Hub 1.5.0：**为模组 1.5.0 或更新版本提供两个独立即时控制项：**XeSS Tensor Core** 和 **XeFG Tensor Core**。初始验证：**RTX 4090、NVIDIA 621.01、DirectX 12**。均属实验功能，默认关闭。[版本说明](docs/notes/1.5.0.zh-CN.md)。
-
-从统一游戏库安装和更新 RTX Encore，管理配套运行库与游戏。Hub 与模组分别发布。
-
-- **RTX Encore 1.3.0 的设置。** 开启模组的实验性中央优先 NR 并选择预设，或在 RTX 20 显卡上选择 Smooth Motion V1 或 V2。两者都需要 RTX Encore 1.3.0。**设置 → 存储空间** 显示 Hub 所占空间。
-- **Hub 日志导出** — 即使无法打开游戏页面，也能从设置或出错页面导出近期 Hub 活动和错误。分享前请检查压缩包。
-- **共享备份，保留还原能力** — 多个游戏的原始文件和历史记录中，相同字节仅保存一次。自动迁移保留设置并清理已验证的旧副本。还原迁移后的状态需要 Hub 1.2.4 或更高版本。
-- **记住选择** — 游戏页面会记住预设、倍率和选项。滚动时仍可使用返回和应用；修改仍需确认。
-- **更快的游戏库** — 先显示缓存游戏，再在后台验证。收藏、卡片操作、搜索、托盘模式和记住的可执行文件选择让游戏更易访问。
-- **Intel 引擎及配套运行库** — 在模组支持的场景中选择实验性 XeSS 重建或 XeFG 帧生成。Hub 安装、验证、备份和还原其文件；文件存在不能证明引擎已激活。
-- **逐轮 NR 与 HDR 输入** — 分别设置最多四轮 NR，或继承全局风格。共用 HDR 输入与曝光设置跟随所选重建引擎，不会启用显示器 HDR。
-- **诊断与共享配置** — 查看健康页面、生成诊断并分享兼容的逐游戏画面偏好。共享配置仍为实验性功能。
-
-**继续保留 Hub 1.3.0 的功能：** RTX Encore 1.3.0 的设置（中央优先 NR、RTX 20 的 Smooth Motion V1 或 V2）、设置中的存储空间，以及备份维护不再因并非 Hub 创建的备份文件夹而重复同一警告。OpenNR 和 Cyber Engine Tweaks 面板随 RTX Encore 1.3.0 移除，Hub 中的相关设置也一并移除。
-
 **Intel XeSS / XeFG 仍高度实验性。** 兼容性取决于模组、游戏、图形 API 和运行库。请附上检查后的诊断包报告问题；文件存在或请求的倍率不能证明实际渲染成功。
 
-[Hub 2.2.0](docs/notes/2.2.0.zh-CN.md) · [RTX Encore 2.2.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.2.0)
+### 往期亮点
+
+| 版本 | 主要内容 |
+| :--- | :--- |
+| **[2.4.0](docs/notes/2.4.0.zh-CN.md)** | 选择模组版本并回退到更早版本、逐遍 NR 位置、最低 33% 的自定义 DLSS 比例。 |
+| **[2.3.0](docs/notes/2.3.0.zh-CN.md)** | 配置 RTX Encore 2.3.0、对比 Neural Rendering 位置、安装 FSR 1。 |
+| **[2.2.0](docs/notes/2.2.0.zh-CN.md)** | NIS 及可选 FXAA/SMAA、叠加层预览与样式、DLSS-G Auto 覆盖。 |
+| **[2.1.0](docs/notes/2.1.0.zh-CN.md)** | 每次安装或更新时选择组件、XeFG 稳定游戏帧节奏。 |
+| **[2.0.0](docs/notes/2.0.0.zh-CN.md)** | 无 DLSS 游戏、X3 / X4 自动平滑、模组菜单语言、十二种界面语言。 |
+
+每个版本的说明都在[发布页](https://github.com/SilyNoMeta/rtx-encore-hub/releases)。有问题或想分享结果？[加入 Discord](https://discord.gg/Zwmq4Xc2Br)。
 
 ![Hub 的游戏库，包含封面、每个安装的状态和更新横幅](screenshots/library.zh.png)
 
@@ -146,7 +114,7 @@ Mod 1.5.1 及更高版本在 RTX 20 上始终使用 Smooth Motion V2；下文提
 4. 在**健康检查**中，**启动并验证**会启动游戏，并告诉您它的第一分钟情况如何。
 5. RTX Encore 发布新版本时，游戏库中的**全部更新**会更新所有游戏。
 
-界面跟随 Windows 的语言，支持**十二种语言**：英语、法语、德语、西班牙语、荷兰语、波兰语、巴西葡萄牙语、越南语、俄语、阿拉伯语、日语和简体中文；其他语言使用英语。可在**设置 → 界面语言**中更改。
+界面跟随 Windows 的语言，支持**十三种语言**：英语、法语、德语、西班牙语、荷兰语、波兰语、巴西葡萄牙语、越南语、俄语、阿拉伯语、日语、韩语和简体中文；其他语言使用英语。可在**设置 → 界面语言**中更改。
 
 关于更新、还原、Hub 存放数据的位置以及它在网络上读取的内容，请阅读**[用户指南](docs/USER-GUIDE.zh-CN.md)**。
 

@@ -4,7 +4,7 @@
 
 [Français](USER-GUIDE.fr.md) · [简体中文](USER-GUIDE.zh-CN.md) · [Back to the project](../README.md)
 
-RTX Encore Hub installs [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) in your games, keeps the mod and the NVIDIA DLLs up to date, checks that a game starts well with it, and can always go back. The interface follows the language of Windows, in twelve languages: English, French, German, Spanish, Dutch, Polish, Brazilian Portuguese, Vietnamese, Russian, Arabic (right to left), Japanese and Simplified Chinese; other languages use English. **Settings → Interface language** changes it. This guide uses the English labels of the application.
+RTX Encore Hub installs [RTX Encore](https://github.com/SilyNoMeta/rtx-encore) in your games, keeps the mod and the NVIDIA DLLs up to date, checks that a game starts well with it, and can always go back. The interface follows the language of Windows, in thirteen languages: English, French, German, Spanish, Dutch, Polish, Brazilian Portuguese, Vietnamese, Russian, Arabic (right to left), Japanese, Korean and Simplified Chinese; other languages use English. **Settings → Interface language** changes it. This guide uses the English labels of the application.
 
 ## Choosing installation components
 
@@ -188,6 +188,8 @@ On the first Hub startup after upgrading from 1.0.x, 1.1.x or 1.2.x, backup opti
 
 Keep the complete `%LOCALAPPDATA%\EncoreHub` folder, or `data` beside the portable Hub, while any game needs restoration. It now holds original files shared by multiple games, as well as settings and history. Keep Hub 1.2.4 or newer to restore migrated states; older Hubs refuse their new references. **Settings → Storage usage** shows the space taken by the application, backups, downloaded runtimes, RTX Encore archives, covers, logs and other Hub data, plus older backups still in game folders; a partial scan says so, and its total is then a minimum. Uninstalling the installed program preserves these data, but deleting them loses the corresponding restoration copies.
 
+A game folder can hold backups this Hub did not write: an `rtx-encore-backups` folder or an `rtx-encore-backup-owner.txt` file left by another Hub data folder (a reinstalled Hub, the portable Hub, files copied from another PC). The game's page then shows a warning. Installs, updates and restores still work, and those files are never changed or deleted: remove them yourself once you no longer need them.
+
 The mod cache keeps only the original ZIPs of the versions currently offered on the stable and candidate channels. Older versions and the former extracted cache folders are removed after the release list is checked online. An old extracted cache may therefore need to be downloaded once again. Installation sources are extracted temporarily.
 
 On NTFS, downloaded NVIDIA, Intel and Streamline runtime DLLs use Windows LZX compression. Existing cached DLLs are compressed in the background after the library is read, even with automatic runtime downloads disabled; no cached versions are removed. Windows reads their original bytes transparently, so installation and signature checks work as before. Storage usage counts compressed runtime bytes; Explorer's **Size on disk** shows the saving, while **Size** stays the same. Unsupported volumes (including exFAT portable drives), locked files and files that do not benefit keep their ordinary form; a compression failure does not prevent installation.
@@ -279,5 +281,13 @@ Optional spatial anti-aliasing before or after NIS/FSR 1 now supports compatible
 ### Custom DLSS render scale: 33–100%
 
 Custom DLSS Super Resolution scale now reaches 33% per axis, with matching Hub bounds. Lower input resolutions trade source detail for rendering cost; results depend on the game and GPU.
+
+Neural Rendering remains experimental and off by default. Compatibility depends on the game, API, GPU, driver and runtime. No universal FPS or image-quality gain is promised.
+
+## 2.4.2
+
+Matches RTX Encore 2.4.2. The Hub numbers go from 2.4.0 to 2.4.2 to follow the mod.
+
+Every 2.4.0 feature is unchanged: mod version selection and rollback, per-pass NR placement, custom DLSS scales down to 33% and Streamline SR dependency repair.
 
 Neural Rendering remains experimental and off by default. Compatibility depends on the game, API, GPU, driver and runtime. No universal FPS or image-quality gain is promised.

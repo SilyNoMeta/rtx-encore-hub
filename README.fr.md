@@ -20,7 +20,7 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 [![Rejoindre le Discord](https://img.shields.io/badge/Rejoindre_Discord-454FC4?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Zwmq4Xc2Br)
 
 [![Windows 10 et 11, x64](https://img.shields.io/badge/plateforme-Windows_10_%C2%B7_11_x64-8ab4f8?style=flat-square&labelColor=171c22)](#bien-démarrer)
-[![Interface en douze langues](https://img.shields.io/badge/interface-12_langues-c4b5fd?style=flat-square&labelColor=171c22)](#bien-démarrer)
+[![Interface en treize langues](https://img.shields.io/badge/interface-13_langues-c4b5fd?style=flat-square&labelColor=171c22)](#bien-démarrer)
 
 [![Télécharger la dernière version pour Windows x64](assets/download.fr.svg)](https://github.com/SilyNoMeta/rtx-encore-hub/releases)
 
@@ -32,68 +32,36 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 
 </div>
 
-## RTX Encore Hub 2.4.0
+## RTX Encore Hub 2.4.2
 
-Choisissez une version du mod, revenez à une publication précédente, réglez le placement NR par passe et l’échelle DLSS jusqu’à 33 %.
+**Correspond à RTX Encore 2.4.2.** La numérotation du Hub passe de 2.4.0 à 2.4.2 pour suivre celle du mod ; toutes les fonctions de la 2.4.0 sont inchangées.
 
-[2.4.0](docs/notes/2.4.0.fr.md)
+- 🌐 **Coréen :** treizième langue de l'interface du Hub, et langue du menu en jeu de RTX Encore 2.4.2.
+- 🛟 **Les sauvegardes non reconnues ne bloquent plus rien :** un dossier de sauvegarde laissé par un autre dossier de données du Hub n'affiche plus qu'un avertissement ; installation, mise à jour et restauration restent possibles.
 
-## Nouveau en 2.3.0
-
-Réglez RTX Encore 2.3.0, comparez les placements du Neural Rendering et installez FSR 1 depuis la version stable.
-
-[2.3.0](docs/notes/2.3.0.fr.md)
-
-
-**Le Discord de RTX Encore est ouvert.** Partagez vos essais de la 2.0.0, comparez vos réglages ou demandez de l’aide pour le mod et le Hub. [Rejoindre le Discord](https://discord.gg/Zwmq4Xc2Br).
+**[Télécharger le Hub 2.4.2](https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.4.2)** · [Notes de version](docs/notes/2.4.2.fr.md) · [RTX Encore 2.4.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.4.2)
 
 > [!NOTE]
 > **Windows x64.** Ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`, ou `RTX-Encore-Hub-Portable-<version>.zip`, qui n'installe rien. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.
 
-
 **Choisir à l’installation.** Lors de la première installation dans un jeu sans DLSS ni génération d’images natifs, le Hub demande séparément **Aucun / Smooth Motion / DLSS-G / XeFG** et **Aucun / DLSS / XeSS**. Aucun choix n’est présélectionné. DLSS démarre à la résolution du jeu (DLAA), sauf si vous choisissez la reconstruction à la résolution de l’écran. Les mises à jour conservent vos réglages ; le plan présente les fichiers et les réglages avant application.
-
-## Hub 2.2.0
-
-**Hub 2.2.0 :** réglez NIS avec FXAA/SMAA en option, prévisualisez et personnalisez l'overlay et contrôlez l'override du mode Auto de DLSS-G, activé par défaut avec RTX Encore 2.2.0. [Notes de version](docs/notes/2.2.0.fr.md).
-
-**Depuis la 2.1.0 :** choisissez les composants à chaque installation ou mise à jour, jusqu'aux fichiers NVIDIA, Streamline et Intel individuels. La cadence régulière du jeu pour XeFG est activée par défaut avec le mod 2.1.0 ou plus récent et réglable dans le Hub. [Notes de la 2.1.0](docs/notes/2.1.0.fr.md).
-
-## Hub 2.1.0
-
-**Hub 2.1.0 :** **Choisir les composants** à chaque installation et mise à jour (chaque DLL NVIDIA, Streamline et les fichiers Intel choisis séparément, et ajoutés plus tard depuis la fiche du jeu) et **Cadence du jeu régulière pour XeFG** avec RTX Encore 2.1.0, qui rend XeFG fluide à partir de X3. [Notes de version](docs/notes/2.1.0.fr.md).
 
 > [!TIP]
 > **Jeux sans DLSS.** Avec RTX Encore 2.0.0, un jeu qui n’a pas de DLSS peut quand même avoir le DLSS (DLAA ou agrandissement à la résolution de votre écran), le Neural Rendering et la génération d’images (DLSS Frame Generation ou Intel XeFG, selon le moteur choisi), appliqués à l’image qu’il affiche. Installez ou mettez à jour le mod avec le Hub, et tout ce dont ces fonctions se servent vient avec : les DLL NVIDIA à côté du mod, les runtimes Intel et, là où le jeu n’a ni génération d’images ni Streamline à lui, les six fichiers exacts de DLSS Frame Generation à côté de l’exécutable. Activez chaque fonction dans le menu du mod ou dans **Tous les réglages de ce jeu** ; **Restaurer le jeu** retire ce qui a été ajouté. Expérimental. [Comment ça marche](https://github.com/SilyNoMeta/rtx-encore/blob/main/docs/GAMES-WITHOUT-DLSS.fr.md).
 
-**Le Hub 2.0.0 est une version majeure.** Les jeux qui n’ont aucun DLSS reçoivent désormais DLSS, la génération d’images et le Neural Rendering avec RTX Encore 2.0.0, portés par un moteur d’estimation du mouvement que RTX Encore a écrit pour eux, et le Hub installe tout ce dont ils se servent. RTX Encore et le Hub changent aussi d’identité visuelle, avec un nouveau logo, et RTX Encore ouvre son Discord.
-
-**Hub 2.0.0 :** jeux sans DLSS, Lisser X3 / X4 en **Automatique**, une préférence **Langue du menu du mod** (Comme le Hub par défaut ; une langue choisie en jeu est gardée) et douze langues d’interface ([#12](https://github.com/SilyNoMeta/rtx-encore-hub/issues/12)). [Notes de version](docs/notes/2.0.0.fr.md).
-
-**Hub 1.6.0 :** `Ctrl+F` va à la recherche de jeux, Restaurer le jeu peut aussi supprimer les réglages et journaux du mod, et le mod 1.6.0 est pris en charge. [Notes de version](docs/notes/1.6.0.fr.md).
-
-**Hub 1.5.3 :** commandes Tensor pour RTX 30/40/50, V-Sync Jeu / Désactivée / Activée et preset RR F. [Notes de version](docs/notes/1.5.3.fr.md).
-
-Avec le mod 1.5.1 ou suivant, Smooth Motion sur RTX 20 utilise toujours V2 ; les choix historiques V1/V2 mentionnés ci-dessous concernent uniquement les mods 1.3.0 à 1.5.0.
-
-**Hub 1.5.0 :** commandes indépendantes à chaud pour **XeSS Tensor Cores** et **XeFG Tensor Cores**, avec le mod 1.5.0 ou ultérieur. Qualification initiale : **RTX 4090, NVIDIA 621.01 et DirectX 12**. Options expérimentales et désactivées par défaut. [Notes de version](docs/notes/1.5.0.fr.md).
-
-Installez et mettez à jour RTX Encore, gardez ses runtimes cohérents et gérez vos jeux depuis une bibliothèque unique. Le Hub et le mod ont des publications distinctes.
-
-- **Réglages de RTX Encore 1.3.0.** Activez le NR fovéal expérimental du mod et choisissez un préréglage, ou choisissez Smooth Motion V1 ou V2 sur une carte RTX 20. Les deux nécessitent RTX Encore 1.3.0. **Paramètres → Espace utilisé** montre la place prise par le Hub.
-- **Journaux du Hub exportables** — Exportez l’activité récente et les erreurs depuis les Réglages ou une fiche en erreur, même si les fiches des jeux ne s’ouvrent pas. Relisez l’archive avant de la partager.
-- **Sauvegardes partagées, restauration conservée** — Les octets identiques des originaux et de l’historique ne sont conservés qu’une fois entre les jeux. La migration automatique conserve les réglages et nettoie les anciennes copies vérifiées. Restaurer un état migré nécessite Hub 1.2.4 ou ultérieur.
-- **Choix mémorisés** — La fiche jeu conserve les choix de preset, multiplicateur et options. Retour et Appliquer restent accessibles pendant le défilement ; les changements demandent toujours confirmation.
-- **Une bibliothèque plus rapide** — Les jeux en cache apparaissent avant la vérification en arrière-plan. Favoris, actions sur les cartes, recherche, mode barre des tâches et choix d’exécutable mémorisé facilitent l’accès aux jeux.
-- **Moteurs Intel et runtimes associés** — Choisissez la reconstruction XeSS ou la génération d’images XeFG expérimentales là où le mod les prend en charge. Le Hub installe, vérifie, sauvegarde et restaure leurs fichiers ; leur présence ne prouve pas qu’un moteur fonctionne.
-- **NR par passe et entrées HDR** — Réglez chacune des quatre passes NR possibles ou héritez du style global. Les réglages communs d’entrée HDR et d’exposition suivent le moteur de reconstruction choisi ; ils n’activent pas le HDR de l’écran.
-- **Diagnostics et profils partagés** — Consultez la page Santé, préparez un diagnostic et partagez des préférences visuelles compatibles par jeu. Les profils partagés restent expérimentaux.
-
-**Toujours disponible depuis le Hub 1.3.0 :** les réglages de RTX Encore 1.3.0 (NR fovéal, Smooth Motion V1 ou V2 sur RTX 20), l’espace utilisé dans les Paramètres, et une maintenance des sauvegardes qui ne répète plus le même avertissement pour un dossier de sauvegarde que le Hub n’a pas créé. OpenNR et le panneau Cyber Engine Tweaks sont partis avec RTX Encore 1.3.0, et leurs réglages avec eux dans le Hub.
-
 **Intel XeSS / XeFG restent très expérimentaux.** Leur compatibilité dépend du mod, du jeu, de l’API graphique et des runtimes. Signalez les problèmes avec une archive de diagnostic relue ; la présence des fichiers ou un multiplicateur demandé ne prouvent pas le rendu effectif.
 
-[Hub 2.2.0](docs/notes/2.2.0.fr.md) · [RTX Encore 2.2.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.2.0)
+### Rappel des versions précédentes
+
+| Version | Ce qu’elle apportait |
+| :--- | :--- |
+| **[2.4.0](docs/notes/2.4.0.fr.md)** | Choix de la version du mod et retour à une publication précédente, placement NR par passe, échelle DLSS jusqu’à 33 %. |
+| **[2.3.0](docs/notes/2.3.0.fr.md)** | Réglages de RTX Encore 2.3.0, comparaison des placements du Neural Rendering, installation de FSR 1. |
+| **[2.2.0](docs/notes/2.2.0.fr.md)** | NIS avec FXAA/SMAA en option, aperçu et styles de l’overlay, forçage de l’Auto de DLSS-G. |
+| **[2.1.0](docs/notes/2.1.0.fr.md)** | Choix des composants à chaque installation ou mise à jour, cadence régulière du jeu pour XeFG. |
+| **[2.0.0](docs/notes/2.0.0.fr.md)** | Jeux sans DLSS, Lissage X3 / X4 Automatique, langue du menu du mod, douze langues d’interface. |
+
+Chaque version a ses notes dans les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases). Des questions ou des résultats à partager ? [Rejoindre le Discord](https://discord.gg/Zwmq4Xc2Br).
 
 ![La bibliothèque du Hub, avec les jaquettes, l'état de chaque installation et le bandeau des mises à jour](screenshots/library.fr.png)
 
@@ -146,7 +114,7 @@ Chaque DLL NVIDIA est montrée avec la version du jeu, la meilleure copie de cet
 4. Dans **Santé**, **Lancer et vérifier** démarre le jeu et vous dit comment s'est passée sa première minute.
 5. Quand un nouveau RTX Encore sort, **Tout mettre à jour** dans la bibliothèque met à jour tous les jeux.
 
-L'interface suit la langue de Windows, en **douze langues** : français, anglais, allemand, espagnol, néerlandais, polonais, portugais du Brésil, vietnamien, russe, arabe, japonais et chinois simplifié ; les autres langues reçoivent l'anglais. Changez-la dans **Paramètres → Langue de l'interface**.
+L'interface suit la langue de Windows, en **treize langues** : français, anglais, allemand, espagnol, néerlandais, polonais, portugais du Brésil, vietnamien, russe, arabe, japonais, coréen et chinois simplifié ; les autres langues reçoivent l'anglais. Changez-la dans **Paramètres → Langue de l'interface**.
 
 Lisez le **[guide d'utilisation](docs/USER-GUIDE.fr.md)** pour les mises à jour, la restauration, l'endroit où le Hub garde ses données et ce qu'il lit sur le réseau.
 
