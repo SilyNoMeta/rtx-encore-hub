@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RTX Encore 2.4.2 · Hub 2.4.2</title>
-<meta name="description" content="RTX Encore 2.4.2 fixes frame generation stuck at X2 or X1 in Kingdom Come: Deliverance II and speaks Korean. Hub 2.4.2 is the matching Hub, now in Korean, and no longer blocked by backups it does not recognize.">
+<title>RTX Encore 2.5.0 · Hub 2.5.0</title>
+<meta name="description" content="RTX Encore 2.5.0 adds MWSR spatial upscaling, improves Vulkan XeSS and XeFG, and addresses ReShade crashes in Townfall. Hub 2.5.0 lets you change the in-game menu key and record shortcuts.">
 <link rel="canonical" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="en" href="https://encore.nometa.fr/">
 <link rel="alternate" hreflang="fr" href="https://encore.nometa.fr/fr/">
@@ -14,8 +14,8 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
-<meta property="og:title" content="RTX Encore 2.4.2 · Hub 2.4.2">
-<meta property="og:description" content="RTX Encore 2.4.2 fixes frame generation stuck at X2 or X1 in Kingdom Come: Deliverance II and speaks Korean. Hub 2.4.2 is the matching Hub, now in Korean, and no longer blocked by backups it does not recognize.">
+<meta property="og:title" content="RTX Encore 2.5.0 · Hub 2.5.0">
+<meta property="og:description" content="RTX Encore 2.5.0 adds MWSR spatial upscaling, improves Vulkan XeSS and XeFG, and addresses ReShade crashes in Townfall. Hub 2.5.0 lets you change the in-game menu key and record shortcuts.">
 <meta property="og:url" content="https://encore.nometa.fr/">
 <meta property="og:image" content="https://encore.nometa.fr/assets/social-card.png">
 <meta property="og:image:width" content="1200">
@@ -35,35 +35,28 @@
 
 <main>
 <div class="wrap hero">
-<span class="badge">RTX Encore 2.4.2 · Hub 2.4.2</span>
+<span class="badge">RTX Encore 2.5.0 · Hub 2.5.0</span>
 <h1>More frames.<br>More games.<br><em>RTX Encore.</em></h1>
-<p class="lead">RTX Encore 2.4.2 fixes frame generation stuck at X2 or X1 in Kingdom Come: Deliverance II and speaks Korean. Hub 2.4.2 is the matching Hub, now in Korean, and no longer blocked by backups it does not recognize.</p>
+<p class="lead">RTX Encore 2.5.0 adds MWSR spatial upscaling, improves Vulkan XeSS and XeFG, and addresses ReShade crashes in Townfall. Hub 2.5.0 lets you change the in-game menu key and record shortcuts.</p>
 <p class="sub">Intel XeSS / XeFG, Pre-SR, foveated NR and Smooth Motion on RTX 20 remain experimental. Compatibility depends on the game, graphics API and runtimes. <a href="https://github.com/SilyNoMeta/rtx-encore/issues/new/choose">Report an issue</a>.</p>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.4.2">Download Hub 2.4.2</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.4.2">Download RTX Encore 2.4.2</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.5.0">Download Hub 2.5.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.5.0">Download RTX Encore 2.5.0</a></div>
 <p class="under">Windows 10 and 11, x64 · thirteen languages · installs without administrator rights</p>
 </div>
 
 <section class="news" id="features"><div class="wrap">
-<h2>RTX Encore 2.4.0 and Hub 2.4.0</h2>
-<p class="sub">Neural Rendering remains experimental and off by default. Compatibility depends on the game, API, GPU, driver and runtime. No universal FPS or image-quality gain is promised.</p>
-<div class="news-grid"><div class="card"><h3>2.4.2: frame generation in Kingdom Come: Deliverance II</h3><p>The multiplier is no longer capped at X2 when the game’s own Streamline provides DLSS Frame Generation, the overlay no longer shows “Ada”, and XeFG no longer refuses every frame with an upscaler. The maintainer checked these fixes in the game.</p></div>
-<div class="card"><h3>2.4.2: Korean, and no more blocking backups</h3><p>The Hub and the in-game menu are now available in Korean (thanks to the reporter of issue 17). A backup folder left by another Hub data folder, after a reinstall or with the portable Hub, no longer blocks installs, updates or restores: the game's page only shows a warning (issue 15).</p></div>
-<div class="card"><h3>2.4.1: game FG menu fix</h3><p>RTX Encore 2.4.1 fixes a 2.4.0 regression that could leave the game’s own frame-generation menu limited to X2 even though X3/X4 worked from RTX Encore’s overlay. Thanks to the S.T.A.L.K.E.R. 2 reporter for the detailed startup logs and X3/X4 checks. The logs confirm the original regression; the fixed build still needs confirmation in their game.</p></div>
-<div class="card"><h3>Neural Rendering at several stages</h3><p>Assign each of the one to four NR passes to Pre-SR, Post-SR or Final image, or inherit the global placement. Execution follows the image pipeline, preserving each pass’s appearance settings. Existing configurations retain their behavior. Native game-DLSS hooks support compatible DX11, DX12 and Vulkan routes; each stage keeps its existing input, HUD, HDR and FG requirements. An unavailable later stage can be refused even when an earlier stage runs.</p></div>
-<div class="card"><h3>FXAA and SMAA, including HDR</h3><p>Optional spatial anti-aliasing before or after NIS/FSR 1 now supports compatible DirectX 11, DirectX 12 and Vulkan paths in SDR, HDR10 and scRGB. This extends the DX11 SDR support of 2.3.0. Physical HDR display and individual game results still depend on the setup.</p></div>
-<div class="card"><h3>Custom DLSS render scale: 33–100%</h3><p>Custom DLSS Super Resolution scale now reaches 33% per axis, with matching Hub bounds. Lower input resolutions trade source detail for rendering cost; results depend on the game and GPU.</p></div>
-<div class="card"><h3>Frame generation and VRAM</h3><p>Physical VRAM headroom checks avoid double-counting allocations. VRAM budget warnings are informational and no longer disable frame generation by themselves. This does not guarantee enough memory for every configuration.</p></div>
-<div class="card"><h3>Compatibility fixes</h3><p>FC27 gains integrated native SR/game-motion and Intel routing fixes. KCD2 retains menu engine ownership with NGX client exports. Legacy DLSS-G runtime limits and X2 activity reporting are corrected. NVIDIA 621.24 offline driver profiles are added; admission remains specific to supported runtimes and hardware.</p></div>
-<div class="card"><h3>Horizon and Final image</h3><p>Correct D3D12 submission-hook inputs, native FG telemetry, RGB10 Pre-SR inputs and Final image scene/HUD composition. Pre-SR/Post-SR/Final operation and telemetry were confirmed on an earlier candidate. The final HUD flicker correction has automated/replay coverage but still needs in-game confirmation; intermittent cinematic Waiting remains under investigation. D3D12 jittered-motion NR remains a diagnostic trial, disabled by default.</p></div>
-<div class="card"><h3>Hub version selection and component repair</h3><p>Select a published mod version in Hub settings to pin it or return to an earlier release. The matching Hub exposes 2.4.0 NR placement controls and 33% custom scales, recognizes NVIDIA 621.24, and repairs/installs the required Streamline SR dependencies. Older mod versions retain their applicable controls.</p></div>
-<div class="card"><h3>Game motion vectors</h3><p>Still available from 2.3.0: added frame generation in DLSS-SR games without DLSS-FG uses game motion vectors by default in DX12, DX11 and Vulkan, with automatic RTX Encore fallback. Existing explicit choices are preserved.</p></div>
+<h2>RTX Encore 2.5.0 and Hub 2.5.0</h2>
+<p class="sub">Compatibility depends on the game, GPU, API and runtime. Games without native DLSS use estimated motion and process the HUD with the image. Maintainer tests include The Sims 4, Skyrim and Elden Ring on RTX 4090; they do not certify every game or GPU. X5/X6 and Neural Rendering remain experimental. 2.1.0 fixes were checked by the maintainer in each named game with test builds, on an RTX 4090 or RTX 3070 Ti Laptop; final 2.1.0 binaries have no separate in-game retest.</p>
+<div class="news-grid"><div class="card"><h3>MWSR spatial upscaling</h3><p>MoonlightWeb Super Resolution by Bruno Martin becomes the default spatial upscaler. NIS and FSR 1 remain available on compatible DirectX 11, DirectX 12 and Vulkan paths.</p></div>
+<div class="card"><h3>XeSS and XeFG on Vulkan</h3><p>Experimental XeSS SR Tensor acceleration is available on supported NVIDIA GPUs. XeFG handles more game motion-vector layouts, and XeSS SR can recover after a temporary fallback to DLSS in Red Dead Redemption 2.</p></div>
+<div class="card"><h3>ReShade and frame generation</h3><p>This update addresses Townfall crashes involving ReShade and DLSS-G, DLSS Super Resolution or Ray Reconstruction. The final build still needs a Townfall retest. Black bars can still trigger the frame generation fallback to estimated motion.</p></div>
+<div class="card"><h3>In-game menu key and shortcuts</h3><p>Set the key that opens Encore’s menu from the Hub, apply it to installed games and record shortcuts directly from your keyboard.</p></div>
 </div>
 </div></section>
 
 <section class="community wrap" aria-labelledby="community-title">
 <div>
 <h2 id="community-title">RTX Encore now has a Discord</h2>
-<p>RTX Encore 2.4.2 fixes frame generation stuck at X2 or X1 in Kingdom Come: Deliverance II and speaks Korean. Hub 2.4.2 is the matching Hub, now in Korean, and no longer blocked by backups it does not recognize.</p>
+<p>RTX Encore 2.5.0 adds MWSR spatial upscaling, improves Vulkan XeSS and XeFG, and addresses ReShade crashes in Townfall. Hub 2.5.0 lets you change the in-game menu key and record shortcuts.</p>
 </div>
 <a class="button discord" href="https://discord.gg/Zwmq4Xc2Br"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.8 19.8 0 0 0-4.885-1.515c-.21.38-.452.892-.62 1.3a18.2 18.2 0 0 0-5.42 0 14 14 0 0 0-.628-1.3 19.7 19.7 0 0 0-4.888 1.52C.785 8.95-.053 13.41.366 17.808a20 20 0 0 0 5.993 3.03c.484-.654.915-1.35 1.287-2.082a13 13 0 0 1-2.027-.966l.497-.386c3.908 1.82 8.16 1.82 12.022 0l.498.386a13 13 0 0 1-2.03.968c.372.73.802 1.427 1.287 2.08a20 20 0 0 0 5.995-3.03c.492-5.1-.84-9.52-3.571-13.438ZM8.02 15.1c-1.173 0-2.134-1.073-2.134-2.392s.94-2.394 2.134-2.394c1.205 0 2.155 1.083 2.134 2.394 0 1.32-.94 2.392-2.134 2.392Zm7.96 0c-1.173 0-2.134-1.073-2.134-2.392s.94-2.394 2.134-2.394c1.205 0 2.155 1.083 2.134 2.394 0 1.32-.93 2.392-2.134 2.392Z"/></svg>Join the Discord</a>
 </section>
@@ -79,7 +72,7 @@
 
 <section id="nr"><div class="wrap">
 <h2>Neural Rendering, before and after</h2>
-<p class="sub">Neural Rendering uses NVIDIA’s network to adjust a compatible game image at the SR stage or, with Final image, after the game’s post-effects. One to four passes, per-pass appearance and HDR are available on supported routes. RTX Encore runs it on RTX 20, 30 and 40, with its own RTX 30 optimizations. Experimental, off by default.</p>
+<p class="sub">Neural Rendering is NVIDIA&#x27;s network that works on the image DLSS produces: one to four passes, a style for each, HDR included. RTX Encore runs it on RTX 20, 30 and 40, with its own optimizations for RTX 30. Experimental, off by default.</p>
 <div class="compare-nr">
 <input type="radio" name="nr-view" id="nr-on" checked><input type="radio" name="nr-view" id="nr-off">
 <div class="tabs"><label for="nr-on">With Neural Rendering</label><label for="nr-off">Without Neural Rendering</label></div>
@@ -161,7 +154,7 @@
 
 <div class="wrap cta">
 <h2>Ready to try it?</h2>
-<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.4.2">Download Hub 2.4.2</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
+<div class="actions"><a class="button primary" href="https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.5.0">Download Hub 2.5.0</a><a class="button" href="https://github.com/SilyNoMeta/rtx-encore">RTX Encore, the mod</a></div>
 </div>
 </main>
 
