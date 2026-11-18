@@ -30,6 +30,8 @@ In **Frame rate → Frame generation → Engine**, choose **DLSS-FG** or **XeFG*
 
 **Settings → Mod menu language** chooses the language of RTX Encore's in-game menu (mod 2.0.0 or later): **Same as Hub**, the default, or one of the menu's eleven languages, each written in its own name. Same as Hub follows the Hub's interface language; the menu has no Arabic and shows English instead.
 
+**Settings → Install defaults → In-game menu key** chooses the key that opens RTX Encore's menu, for a keyboard without Insert or a game where the menu cannot be reached to change it. An install or an update writes it in games whose `rtx-encore.jsonc` names no key yet; a key chosen in the game's menu is kept. **Apply to games**, on the key or on a preset, writes that value in every game where the Hub installed the mod, over the game's own; **Apply to installed games** writes the presets and the key together. A confirmation lists the values first, each game's write can be undone from its settings, games with an anti-cheat are left aside, and a preset the game's DLLs do not have is skipped. The key takes effect the next time the game starts. Component versions are not written this way: they apply when a game is updated.
+
 An install or an update of the mod writes this language in `rtx-encore.jsonc` only when the game's settings name none yet: a language you picked in the in-game menu is kept. Changing the preference in the Hub writes it in every game where the Hub installed the mod, over the in-game choice; each game gets its own operation, which can be undone, and games with an anti-cheat are left aside. The in-game menu can still change it at any time.
 
 ## XeSS and XeFG Tensor Cores (1.5.0)

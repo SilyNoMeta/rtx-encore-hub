@@ -32,14 +32,11 @@ It finds your games, installs the mod with the NVIDIA files it needs, keeps all 
 
 </div>
 
-## RTX Encore Hub 2.4.2
+## RTX Encore Hub 2.5.0
 
-**Matches RTX Encore 2.4.2.** The Hub numbers go from 2.4.0 to 2.4.2 to follow the mod; every 2.4.0 feature is unchanged.
+**Choose the in-game menu key and record per-game shortcuts directly in the Hub.**
 
-- 🌐 **Korean:** the Hub's thirteenth interface language, and the in-game menu language of RTX Encore 2.4.2.
-- 🛟 **Unrecognized backups no longer block anything:** a backup folder left by another Hub data folder only shows a warning; installs, updates and restores still work.
-
-**[Download Hub 2.4.2](https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.4.2)** · [Release notes](docs/notes/2.4.2.md) · [RTX Encore 2.4.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.4.2)
+**[Download Hub 2.5.0](https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.5.0)** · [Release notes](docs/notes/2.5.0.md) · [RTX Encore 2.5.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.5.0)
 
 > [!NOTE]
 > **Windows x64.** Open the [releases](https://github.com/SilyNoMeta/rtx-encore-hub/releases) and download `RTX-Encore-Hub-Setup-<version>.exe`, or `RTX-Encore-Hub-Portable-<version>.zip`, which installs nothing. The installer is not code-signed yet, so Windows may show a SmartScreen warning the first time; each release gives the SHA-256 of its installer. The Hub and the RTX Encore mod have separate releases.

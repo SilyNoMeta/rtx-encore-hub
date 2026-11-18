@@ -32,14 +32,11 @@ Il trouve vos jeux, installe le mod avec les fichiers NVIDIA qu'il lui faut, tie
 
 </div>
 
-## RTX Encore Hub 2.4.2
+## RTX Encore Hub 2.5.0
 
-**Correspond à RTX Encore 2.4.2.** La numérotation du Hub passe de 2.4.0 à 2.4.2 pour suivre celle du mod ; toutes les fonctions de la 2.4.0 sont inchangées.
+**Choisissez la touche du menu en jeu et saisissez les raccourcis par jeu directement dans le Hub.**
 
-- 🌐 **Coréen :** treizième langue de l'interface du Hub, et langue du menu en jeu de RTX Encore 2.4.2.
-- 🛟 **Les sauvegardes non reconnues ne bloquent plus rien :** un dossier de sauvegarde laissé par un autre dossier de données du Hub n'affiche plus qu'un avertissement ; installation, mise à jour et restauration restent possibles.
-
-**[Télécharger le Hub 2.4.2](https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.4.2)** · [Notes de version](docs/notes/2.4.2.fr.md) · [RTX Encore 2.4.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.4.2)
+**[Télécharger le Hub 2.5.0](https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.5.0)** · [Notes de version](docs/notes/2.5.0.fr.md) · [RTX Encore 2.5.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.5.0)
 
 > [!NOTE]
 > **Windows x64.** Ouvrez les [publications](https://github.com/SilyNoMeta/rtx-encore-hub/releases) et téléchargez `RTX-Encore-Hub-Setup-<version>.exe`, ou `RTX-Encore-Hub-Portable-<version>.zip`, qui n'installe rien. L'installateur n'est pas encore signé : Windows peut afficher un avertissement SmartScreen au premier lancement ; chaque publication donne le SHA-256 de son installateur. Le Hub et le mod RTX Encore ont des publications distinctes.

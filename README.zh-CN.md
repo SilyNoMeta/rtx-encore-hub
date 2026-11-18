@@ -32,14 +32,11 @@
 
 </div>
 
-## RTX Encore Hub 2.4.2
+## RTX Encore Hub 2.5.0
 
-**与 RTX Encore 2.4.2 配套。** Hub 版本号从 2.4.0 直接升到 2.4.2，以与模组保持一致；2.4.0 的所有功能保持不变。
+**直接从 Hub 选择游戏内菜单键并为每个游戏录入快捷键。**
 
-- 🌐 **韩语：**Hub 的第十三种界面语言，也是 RTX Encore 2.4.2 游戏内菜单的语言。
-- 🛟 **无法识别的备份不再阻止操作：**其他 Hub 数据文件夹留下的备份文件夹只会显示警告；安装、更新和还原仍可进行。
-
-**[下载 Hub 2.4.2](https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.4.2)** · [版本说明](docs/notes/2.4.2.zh-CN.md) · [RTX Encore 2.4.2](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.4.2)
+**[下载 Hub 2.5.0](https://github.com/SilyNoMeta/rtx-encore-hub/releases/tag/v2.5.0)** · [版本说明](docs/notes/2.5.0.zh-CN.md) · [RTX Encore 2.5.0](https://github.com/SilyNoMeta/rtx-encore/releases/tag/v2.5.0)
 
 > [!NOTE]
 > **Windows x64。** 请打开[发布页面](https://github.com/SilyNoMeta/rtx-encore-hub/releases)并下载 `RTX-Encore-Hub-Setup-<version>.exe`，或无需安装的 `RTX-Encore-Hub-Portable-<version>.zip`。安装程序尚未进行代码签名，因此首次运行时 Windows 可能显示 SmartScreen 警告；每个发布版本都会给出安装程序的 SHA-256。Hub 与 RTX Encore 模组分别发布。
